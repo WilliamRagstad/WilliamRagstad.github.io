@@ -6,17 +6,22 @@ body {
 
 	color: rgba(255,255,255,0.65);
 
-	background-color: #222;
+	background-color: #444;
 	background-image: url("./assets/backgrounds/retro-space.jpg");
 	background-position: center 0, 0 0, 0 0;
 	background-repeat: no-repeat;
 	background-size: cover;
+    background-blend-mode: overlay;
 
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 * {
     box-sizing: border-box;
+}
+
+h1 {
+	font-size: 300%;
 }
 
 a {
@@ -37,9 +42,10 @@ li {
 
 
 .container-new {
-    max-width: 980px;
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
+    padding: 1px 0 30px 0;
 }
 .text-center {
     text-align: center !important;
@@ -59,6 +65,10 @@ li {
 }
 .list-style-none {
     list-style: none !important;
+}
+
+.vert-align-m {
+	vertical-align: middle;
 }
 
 .f4 {
@@ -108,4 +118,14 @@ ul, ol {
     text-shadow: 0 1px 0 rgba(255,255,255,0.25);
     background: #9f7be1;
     border-color: #9f7be1
+}
+
+.background-b {
+	background-color: rgba(0, 0, 0, 0.2);
+	box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.background-w {
+	background-color: rgba(255, 255, 255, 0.11);
+	box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
 }

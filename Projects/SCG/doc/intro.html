@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Documentation - SCG</title>
+</head>
+<body class="column">
+    <div class="top-right">
+        <button id="theme"></button>
+    </div>
+    <div class="row">
+        <h1><span class="super">William's</span>Simple Compiler Generator</h1>
+    </div>
+    <div class="row">
+        <a href="../index.html">&lt; Back</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam consectetur quasi cum dolore doloremque voluptatibus. Quibusdam, assumenda! Natus iusto dolorem quidem incidunt autem error sunt itaque fugit at. Corrupti.</p>
+        <h2>Grammar</h2>
+        <p>
+            The first part of the compilation process is the lexical analysis stage where characters are transformed into tokens.
+            After this part, all tokens are parsed into what is called a abstract syntax tree (AST).
+            This is exactly what the grammar is specifying, what rules the lexer and parser should follow.
+            For this, we use a PEG (parsing expression grammar) parser library called <a href="https://pegjs.org/">pegjs</a>.
+            <br>
+            Read more about the <a href="https://pegjs.org/documentation#grammar-syntax-and-semantics" target="_blank">Grammar Syntax and Semantics</a> documentation used by pegjs.
+        </p>
+        <h2>Code generation</h2>
+        <p>
+            To specify a code generation stage is optional, but keep in mind that the compiler function will be named 'interpret()' instead of 'compile()'.
+            <br>
+            The code generator is located in the second column in the first row in the editor.
+            The first function in the code must be the entry point, meaning the first function is always called by the built compiler.
+        </p>
+    </div>
+</body>
+<script src="../dist/bundle.js"></script>
+</html>

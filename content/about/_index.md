@@ -1,20 +1,19 @@
 +++
-title = 'About'
+title = 'About me'
 date = 2024-01-07T18:18:07+01:00
 draft = true
 +++
 
-# About me
-
-Hello, I'm a nerdy polyglot software and-systems engineer/developer from Sweden.
-Welcome to my blog! This is my corner of the internet where I write about stuff.
-I love to learn new things and I'm always curious about how things work.
+Hello and Welcome to my blog! \
+This is my corner of the internet where I write about stuff.
+I'm a nerdy polyglot software and-systems engineer/developer from Sweden,
+currently studying Computer Science at [KTH Royal Institute of Technology](https://www.kth.se/en).
 
 > ## Fun facts
 > - I play the cello 🎻
 > - I love point and click adventure games.
 
-I'm especially interested in the following topics:
+I'm *especially* interested in the following topics:
 - Computer science
     - Algorithms & Data structures
     - Programming languages
@@ -40,4 +39,3 @@ I'm especially interested in the following topics:
     - Design
     - Clean Code
 
-I'm currently studying Computer Science at [KTH Royal Institute of Technology](https://www.kth.se/en).

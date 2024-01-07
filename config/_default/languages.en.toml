@@ -1,7 +1,7 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Blowfish"
+title = "William's Blog"
 
 [params]
 displayName = "EN"
@@ -63,3 +63,18 @@ dateFormat = "2 January 2006"
 #     { youtube = "https://youtube.com/username" },
 #     { ko-fi = "https://ko-fi.com/username" },
 #   ]
+
+[author]
+name = "William Rågstad"
+image = "img/william.jpg"
+headline = "*Building the software of tomorrow*"
+bio = "I'm a software developer and a computer science student at KTH in Sweden."
+links = [
+    { github = "https://github.com/WilliamRagstad" },
+    { dev = "https://dev.to/williamragstad" },
+    { codepen = "https://codepen.io/WilliamRagstad" },
+    { stack-overflow = "https://stackoverflow.com/users/5698805/william-r" },
+    { twitter = "https://twitter.com/WilliamRagstad" },
+    { youtube = "https://www.youtube.com/@williamragstad" },
+    { linkedin = "https://www.linkedin.com/in/william-ragstad/" },
+]

@@ -13,7 +13,11 @@ enableSearch = true
 enableCodeCopy = false
 
 # mainSections = ["section1", "section2"]
+# mainSections = ["posts", "notes", "projects", "about"]
 # robots = ""
+
+showLikes = true
+showViews = true
 
 disableImageOptimization = false
 disableTextInHeader = false
@@ -21,9 +25,9 @@ disableTextInHeader = false
 # defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
-# highlightCurrentMenuArea = true
-# smartTOC = true
-# smartTOCHideUnfocusedChildren = true
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = true
 
 [header]
 layout = "basic" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
@@ -38,7 +42,7 @@ showScrollToTop = true
 [homepage]
 layout = "profile" # valid options: page, profile, hero, card, background, custom
 #homepageImage = "IMAGE.jpg" # used in: hero, and card
-showRecent = false
+showRecent = true
 showRecentItems = 5
 showMoreLink = false
 showMoreLinkDest = "/posts"
@@ -48,8 +52,8 @@ layoutBackgroundBlur = false # only used when layout equals background
 
 [article]
 showDate = true
-showViews = false
-showLikes = false
+showViews = true
+showLikes = true
 showDateUpdated = false
 showAuthor = true
 showHero = false
@@ -71,7 +75,7 @@ showTableOfContents = false
 # relatedContentLimit = 3
 showTaxonomies = false
 showAuthorsBadges = false
-showWordCount = true
+showWordCount = false
 # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
 showZenMode = false
 
@@ -82,8 +86,8 @@ layoutBackgroundBlur = true        # only used when heroStyle equals background 
 layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
 showBreadcrumbs = false
 showSummary = false
-showViews = false
-showLikes = false
+showViews = true
+showLikes = true
 showTableOfContents = false
 showCards = false
 groupByYear = true
@@ -99,8 +103,8 @@ showTermCount = true
 showHero = false
 # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = false
-showViews = false
-showLikes = false
+showViews = true
+showLikes = true
 showTableOfContents = false
 cardView = false
 
@@ -116,13 +120,13 @@ cardView = false
 cardViewScreenWidth = false
 
 [firebase]
-# apiKey = "XXXXXX"
-# authDomain = "XXXXXX"
-# projectId = "XXXXXX"
-# storageBucket = "XXXXXX"
-# messagingSenderId = "XXXXXX"
-# appId = "XXXXXX"
-# measurementId = "XXXXXX"
+apiKey = "AIzaSyCzUBC_3cZI2DSv69gNITUMUMzBu_lL4C0"
+authDomain = "williamr-dev.firebaseapp.com"
+projectId = "williamr-dev"
+storageBucket = "williamr-dev.appspot.com"
+messagingSenderId = "518148589627"
+appId = "1:518148589627:web:cb6d8d1fefecee88e6b41e"
+measurementId = "G-DX27WHZTY0"
 
 [fathomAnalytics]
 # site = "ABC12345"

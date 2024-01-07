@@ -29,11 +29,11 @@ weight = 10
 #  name = "Parent"
 #  weight = 20
 
-#[[main]]
-#  name = "example sub-menu 1"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
+[[main]]
+name = "Archives"
+parent = "Posts"
+pageRef = "posts"
+weight = 10
 
 #[[main]]
 #  name = "example sub-menu 2"
@@ -54,11 +54,13 @@ weight = 10
 
 [[main]]
 name = "Categories"
+parent = "Posts"
 pageRef = "categories"
 weight = 20
 
 [[main]]
 name = "Tags"
+parent = "Posts"
 pageRef = "tags"
 weight = 30
 

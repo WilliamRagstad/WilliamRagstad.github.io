@@ -25,8 +25,8 @@ disableTextInHeader = false
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
-smartTOC = true
-smartTOCHideUnfocusedChildren = true
+# smartTOC = true
+# smartTOCHideUnfocusedChildren = true
 
 [header]
 layout = "basic" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
@@ -41,7 +41,7 @@ showScrollToTop = true
 [homepage]
 layout = "profile" # valid options: page, profile, hero, card, background, custom
 #homepageImage = "IMAGE.jpg" # used in: hero, and card
-showRecent = true
+showRecent = false
 showRecentItems = 5
 showMoreLink = true
 showMoreLinkDest = "/posts"
@@ -57,22 +57,22 @@ showDateUpdated = false
 showAuthor = true
 showHero = false
 # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
-layoutBackgroundBlur = true        # only used when heroStyle equals background or thumbAndBackground
-layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
-showBreadcrumbs = false
+layoutBackgroundBlur = true                                                                 # only used when heroStyle equals background or thumbAndBackground
+layoutBackgroundHeaderSpace = true                                                          # only used when heroStyle equals background
+showBreadcrumbs = true
 showDraftLabel = true
-showEdit = false
-# editURL = "https://github.com/username/repo/"
+showEdit = true
+editURL = "https://github.com/WilliamRagstad/WilliamRagstad.github.io/tree/master/content/"
 editAppendPath = true
 seriesOpened = false
 showHeadingAnchors = true
 showPagination = true
 invertPagination = false
 showReadingTime = true
-showTableOfContents = false
+showTableOfContents = true
 # showRelatedContent = false
 # relatedContentLimit = 3
-showTaxonomies = false
+showTaxonomies = true
 showAuthorsBadges = false
 showWordCount = false
 # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
@@ -85,12 +85,12 @@ layoutBackgroundBlur = true        # only used when heroStyle equals background 
 layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
 showBreadcrumbs = false
 showSummary = false
-showViews = true
-showLikes = true
+showViews = false
+showLikes = false
 showTableOfContents = false
-showCards = false
+showCards = true
 groupByYear = true
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 constrainItemsWidth = false
 
@@ -134,7 +134,7 @@ measurementId = "G-DX27WHZTY0"
 [buymeacoffee]
 identifier = "williamragstad"
 globalWidget = true
-globalWidgetMessage = "Enjoying what you see?\nBuy me a coffee!"
+# globalWidgetMessage = "Enjoying what you see?\nBuy me a coffee!"
 globalWidgetColor = "#99CC00"
 # globalWidgetPosition = "Right"
 

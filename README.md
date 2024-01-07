@@ -8,3 +8,11 @@ Here I will post about my projects and other things I find interesting among oth
 - About me
 - Resume (CV)
 - Links to my social media
+
+## Configuration
+
+- https://blowfish.page/docs/installation/
+- https://blowfish.page/docs/configuration/
+
+Comments
+- https://disqus.com/

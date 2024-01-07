@@ -13,7 +13,6 @@ enableSearch = true
 enableCodeCopy = false
 
 # mainSections = ["section1", "section2"]
-# mainSections = ["posts", "notes", "projects", "about"]
 # robots = ""
 
 showLikes = true

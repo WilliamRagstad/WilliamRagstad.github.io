@@ -133,7 +133,7 @@ measurementId = "G-DX27WHZTY0"
 
 [buymeacoffee]
 identifier = "williamragstad"
-globalWidget = true
+globalWidget = false
 # globalWidgetMessage = "Enjoying what you see?\nBuy me a coffee!"
 globalWidgetColor = "#99CC00"
 # globalWidgetPosition = "Right"

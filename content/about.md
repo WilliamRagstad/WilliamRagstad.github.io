@@ -3,10 +3,10 @@ title = 'About me'
 date = 2024-01-07
 +++
 
-Hello and Welcome to my blog! \
+### Welcome
 This is my corner of the internet where I write about stuff.
 I'm a nerdy polyglot programmer deeply passionate about technology and innovation.
-I've studied Computer Science at [KTH Royal Institute of Technology](https://www.kth.se/en) from 2019 and am working as a Software Engineer consultant at [Willsoft](https://www.linkedin.com/company/willsoft-it).
+I've studied Computer Science at [KTH Royal Institute of Technology](https://www.kth.se/en) and am working as a Software Engineer consultant at [Willsoft](https://www.linkedin.com/company/willsoft-it).
 
 I'm *especially* interested in the following topics for example:
 - **Computer science**: Algorithms and Data structures, Programming languages, Language Design, Compilers, Interpreters, Virtual machines, Operating systems, Networking.

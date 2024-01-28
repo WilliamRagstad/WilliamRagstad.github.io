@@ -17,3 +17,5 @@ I'm *especially* interested in the following topics for example:
 
 And *much more*!
 If you have any questions or just want to chat, feel free to contact me on [Twitter](https://twitter.com/WilliamRagstad) or [LinkedIn](https://www.linkedin.com/in/william-ragstad/).
+
+### > [Contact me!](/contact/)

@@ -1,7 +1,6 @@
 +++
 title = 'My Bookshelf'
 date = 2024-01-07T18:16:29+01:00
-draft = true
 +++
 
 Here is a list of books I have read, currently reading or have on my to-read list.

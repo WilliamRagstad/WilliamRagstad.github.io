@@ -11,7 +11,7 @@ Compilers, interpreters and other projects related to programming languages.
 
 ### Lento
 
-The **Lento** programming language is a statically typed, compiled, imperative, object-oriented programming language with a focus on simplicity and readability.
+A general purpose, strong and statically typed, lazy evaluated, programming language with aim to purify the object-oriented paradigm with functional concepts. Designed with a focus on simplicity and readability in mind.
 
 {{< figure
     src="https://github.com/lento-lang/Lento/blob/main/assets/logo_white.png?raw=true"
@@ -80,7 +80,7 @@ The **Lento** programming language is a statically typed, compiled, imperative, 
 
 ### Mini
 
-`mini` is a minimal programming language that is built for the purpose of teaching programming language design. The language is dynamically typed and expression-based. It is designed to be easy to learn and use. There are support for both functional and object oriented programming paradigms.
+A minimal programming language that is built for the **purpose of teaching programming language design**. The language is dynamically typed and expression-based. It is designed to be easy to learn and use. There are support for both functional and object oriented programming paradigms.
 
 {{< figure
     src="https://github.com/mini-lang/mini-lang/blob/main/assets/logo_small.png?raw=true"

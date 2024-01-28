@@ -126,7 +126,7 @@ A minimal programming language that is built for the **purpose of teaching progr
 
 ### WebX
 
-A DSL and framework for hypermedia system driven web backends, and API development.
+A DSL and framework for building minimal but powerful hypermedia system driven web backends and REST API development using a HTML first approach.
 
 {{< figure
     src="https://github.com/webx-net/webx/blob/master/assets/logo_grad.png?raw=true"
@@ -143,6 +143,9 @@ A DSL and framework for hypermedia system driven web backends, and API developme
     {{< keyword icon="code" >}} Web {{< /keyword >}}
     {{< keyword icon="code" >}} Backend {{< /keyword >}}
     {{< keyword icon="code" >}} Framework {{< /keyword >}}
-    {{< keyword icon="sun" >}} Runtime {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} REST API {{< /keyword >}}
     {{< keyword icon="lightbulb" >}} Language Design {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} TypeScript {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} Deno Runtime {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} Server-Side Rendering {{< /keyword >}}
 {{< /keywordList >}}

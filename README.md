@@ -16,3 +16,9 @@ Here I will post about my projects and other things I find interesting among oth
 
 Comments
 - https://disqus.com/
+
+## Run locally
+
+```bash
+> hugo serve -D
+```

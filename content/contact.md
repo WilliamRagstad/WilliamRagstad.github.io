@@ -4,6 +4,7 @@ date = 2024-01-28
 +++
 
 If you have any questions or just want to chat, feel free to contact me on any of my socials.
+I’m open to discussions about almost anything, from projects and programming stuff to movies, music and games!
 
 ### Social media
 - [{{< icon "github" >}} &nbsp; GitHub](https://www.gitbub.com/WilliamRagstad)

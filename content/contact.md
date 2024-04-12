@@ -7,6 +7,7 @@ If you have any questions or just want to chat, feel free to contact me on any o
 I’m open to discussions about almost anything, from projects and programming stuff to movies, music and games!
 
 ### Social media
+
 - [{{< icon "github" >}} &nbsp; GitHub](https://www.gitbub.com/WilliamRagstad)
 - [{{< icon "twitter" >}} &nbsp; Twitter](https://twitter.com/WilliamRagstad)
 - [{{< icon "youtube" >}} &nbsp; YouTube](https://www.youtube.com/@williamragstad)

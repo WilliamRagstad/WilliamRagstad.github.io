@@ -7,6 +7,7 @@ showTableOfContents = true
 Here is a list of projects I have worked on. Some of them are finished, some are still in progress and some are just ideas.
 
 ## Programming Languages
+
 Compilers, interpreters and other projects related to programming languages.
 
 ### Lento
@@ -80,7 +81,10 @@ A general purpose, strong and statically typed, lazy evaluated, programming lang
 
 ### Mini
 
-A minimal programming language that is built for the **purpose of teaching programming language design**. The language is dynamically typed and expression-based. It is designed to be easy to learn and use. There are support for both functional and object oriented programming paradigms.
+A minimal programming language that is built for the **purpose of teaching programming language design**.
+The language is dynamically typed and expression-based.
+It is designed to be easy to learn and use.
+There are support for both functional and object oriented programming paradigms.
 
 {{< figure
     src="https://github.com/mini-lang/mini-lang/blob/main/assets/logo_small.png?raw=true"

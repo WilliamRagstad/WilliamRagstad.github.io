@@ -7,7 +7,7 @@ draft = true
 
 As I *yet* have not studied advanced theoretical computer science, type theory, logic, etc.
 I have recently been trying to learn the basics on my own.
-Previous attempts on researching other subjects has time and time again led me back to **rewriting systems**[^RW],
+Previous attempts on researching other subjects has time and time again led me back to the fundamental concept of **rewriting systems**[^RW],
 and I have decided to take a deeper dive into the basics to prepare myself for more advanced topics in the future.
 
 > #### :exclamation: **Disclaimer**

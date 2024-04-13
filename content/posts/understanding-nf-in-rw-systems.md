@@ -25,6 +25,7 @@ A rewriting system is a formal system that consists of a set of rules that descr
 They are used to model a wide range of *computational processes* and *reasoning* in for example *lambda calculus*[^LamCalc].
 Rewriting systems are used in many areas of computer science, including programming languages, compilers, and automated theorem proving.
 Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
+A confluent and terminating ARS is called **convergent** or **canonical**[^RW].
 
 An abstract rewriting system *(ARS)* consists of a **set of elements**, **terms**[^T] made up from elements, and **binary relations**[^BinRel] on **terms**[^T] (rewrite rules).
 The relation is denoted by \\( \rarr \\) and is called the **reduction** or **rewrite relation**[^ARS][^RW][^BinRel].
@@ -32,6 +33,24 @@ Though the relation is not performing any "reducing" action or computation in th
 The system is defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
 Formally, **\\( (A, R) \\) is an abstract rewriting system** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** (rules) \\( R \subseteq A \times A \\).
 Alternative notations for the system are \\( (A, \rarr) \\) where \\( \rarr \\) is the rewrite relation.
+
+### Termination
+
+Termination describes whether a rewriting system has a finite number of rewrites for any term in the system.
+An ARS is said to be terminating if there is no infinite chain \\( x_{0} \rightarrow x_{1} \rightarrow x_{2} \rightarrow \cdots \\) of rewrites[^Termination].
+
+### Confluence
+
+*"Confluence describes which terms in such a system can be rewritten in more than one way, to yield the same result"*[^Conf].
+A rewriting system is said to be **confluent**[^Conf] if, for any terms \\( t, s, u \\) such that \\( t \rarr^* s \land t \rarr^* u \\), there exists a term \\( v \\) such that \\( s \rarr^* v \land u \rarr^* v \\).
+
+{{< mermaid >}}
+graph LR;
+ t -->|*| s
+ t -->|*| u
+ s -->|*| v
+ u -->|*| v
+{{< /mermaid >}}
 
 ### Example (A, B, C)
 

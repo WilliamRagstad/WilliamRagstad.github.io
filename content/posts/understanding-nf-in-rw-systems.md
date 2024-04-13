@@ -7,7 +7,7 @@ draft = true
 
 As I *yet* have not studied advanced theoretical computer science, type theory, logic, etc.
 I have recently been trying to learn the basics on my own.
-Previous attempts on researching other subjects has time and time again led me back to **rewriting systems**[^RW],
+Previous attempts on researching other subjects has time and time again led me back to the fundamental concept of **rewriting systems**[^RW],
 and I have decided to take a deeper dive into the basics to prepare myself for more advanced topics in the future.
 
 > #### :exclamation: **Disclaimer**
@@ -26,7 +26,7 @@ They are used to model a wide range of *computational processes* and *reasoning*
 Rewriting systems are used in many areas of computer science, including programming languages, compilers, and automated theorem proving.
 Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
 
-A rewriting system consists of a **set of elements** (terms/objects) and a **binary relation** on these elements.
+A rewriting system consists of a **set of elements**, terms made up from elements, and **binary relations** on terms (rules).
 The relation is denoted by \\( \rarr \\) and is called the **reduction** or **rewrite relation**[^ARS][^RW][^BinRel].
 Though the relation is not performing any "reducing" action or computation in the traditional sense, it is merely a relation that describes how one term can be rewritten to another term.
 The system is defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
@@ -52,13 +52,13 @@ graph LR;
  a -.->|Transitive| c
 {{< /mermaid >}}
 
-In this system, the term \\( a \\) can be rewritten to \\( b \\) and \\( b \\) can be rewritten to \\( c \\).
+In this system, the element and term \\( a \\) can be rewritten to \\( b \\) and \\( b \\) can be rewritten to \\( c \\).
 The term \\( a \\) can be rewritten to \\( c \\) by applying the rules \\( a \rarr b \\) and \\( b \rarr c \\) in sequence.
-This is an example of a simple rewriting system, and more complex systems can be defined with more elements and rules.
+This is an example of a simple rewriting system.
 
 ### Example (Logic)
 
-Let's consider a more complex example, a rewriting system that models logical reasoning.
+Let's consider a more complex example, a rewriting system that models logic.
 The set of elements is \\( \lbrace \top, \bot, p, q, r \rbrace \\) where \\( \top \\) represents *true* and \\( \bot \\) represents *false*, and the rules are[^RW]:
 
 $$

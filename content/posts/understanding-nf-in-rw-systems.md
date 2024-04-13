@@ -59,24 +59,24 @@ This is an example of a simple rewriting system, and more complex systems can be
 ### Example (Logic)
 
 Let's consider a more complex example, a rewriting system that models logical reasoning.
-The set of elements is \\( \lbrace p, q, r \rbrace \\) and the rules are[^RW]:
+The set of elements is \\( \lbrace \top, \bot, p, q, r \rbrace \\) where \\( \top \\) represents *true* and \\( \bot \\) represents *false*, and the rules are[^RW]:
 
 $$
 \begin{align*}
-\lnot \lnot p & \rarr p \\\
-p \land q & \rarr q \land p \\\
+\lnot \lnot p &\rarr p \\\
+p \land q &\rarr q \land p \\\
 p \lor q &\rarr q \lor p \\\
-\lnot (p \land q) & \rarr \lnot p \lor \lnot q \\\
-\lnot (p \lor q) & \rarr \lnot p \land \lnot q \\\
-p \land (q \land r) & \rarr (p \land q) \land r \\\
+\lnot (p \land q) &\rarr \lnot p \lor \lnot q \\\
+\lnot (p \lor q) &\rarr \lnot p \land \lnot q \\\
+p \land (q \land r) &\rarr (p \land q) \land r \\\
 p \lor (q \lor r) &\rarr (p \lor q) \lor r \\\
-(p \land q) \lor r & \rarr (p \lor r) \land (q \lor r) \\\
+(p \land q) \lor r &\rarr (p \lor r) \land (q \lor r) \\\
 \\\
 p \land \top &\rarr p \\\
-p \land \bot &\rarr \bot \\\
-p \land \neg p &\rarr \bot \\\
-p \lor \top &\rarr \top \\\
 p \lor \bot &\rarr p \\\
+p \land \bot &\rarr \bot \\\
+p \lor \top &\rarr \top \\\
+p \land \neg p &\rarr \bot \\\
 p \lor \neg p &\rarr \top \\\
 \end{align*}
 $$

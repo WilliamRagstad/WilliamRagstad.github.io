@@ -13,7 +13,7 @@ and I have decided to take a deeper dive into the basics to prepare myself for m
 > #### :exclamation: **Disclaimer**
 >
 > - I am not an expert in the field in any way, this article is merely a collection of my notes and thoughts on the subject, and exists to help me understand the topic of rewriting systems better.
-> - I will use terms abstract rewriting systems[^ARS] (ARS) and rewriting systems interchangeably, as I am not focusing on any specific type of rewriting system (Frankly, I am not sure if there is a difference between the two terms).
+> - I will use the terms abstract rewriting systems[^ARS] (ARS) and rewriting systems interchangeably, as I am not focusing on any specific type of rewriting system (Frankly, I am not sure if there is a difference between the two).
 > - This work will in no way be exhaustive, but rather a short personal exploration and self-study.
 
 I will be using various resources, including books, papers and online articles to help me understand the topic better, and I hope you find this article helpful in your own learning journey as well.
@@ -21,19 +21,21 @@ A great book I have found on the subject is ***Term Rewriting and All That*** [^
 
 ## What are Rewriting Systems?
 
-A rewriting system is a formal system that consists of a set of rules that describe how to rewrite terms and are a fundamental concept in computer science, mathematics, and logic.
+A rewriting system is a formal system that consists of a set of rules that describe how to rewrite terms and are a fundamental concept in computer science, mathematics, and logic[^Logic].
 They are used to model a wide range of *computational processes* and *reasoning* in for example *lambda calculus*[^LamCalc].
 Rewriting systems are used in many areas of computer science, including programming languages, compilers, and automated theorem proving.
 Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
 
-A rewriting system consists of a **set of elements**, terms made up from elements, and **binary relations** on terms (rules).
+An abstract rewriting system *(ARS)* consists of a **set of elements**, **terms**[^T] made up from elements, and **binary relations**[^BinRel] on **terms**[^T] (rewrite rules).
 The relation is denoted by \\( \rarr \\) and is called the **reduction** or **rewrite relation**[^ARS][^RW][^BinRel].
 Though the relation is not performing any "reducing" action or computation in the traditional sense, it is merely a relation that describes how one term can be rewritten to another term.
 The system is defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
+Formally, **\\( (A, R) \\) is an abstract rewriting system** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** (rules) \\( R \subseteq A \times A \\).
+Alternative notations for the system are \\( (A, \rarr) \\) where \\( \rarr \\) is the rewrite relation.
 
 ### Example (A, B, C)
 
-Consider the following rewriting system with the set of elements \\( \lbrace a, b, c \rbrace \\) and the rules:
+Consider the following rewriting system with the set of *ground and linear*[^GLT] elements \\( \lbrace a, b, c \rbrace \\) and the rules:
 
 $$
 \begin{align*}
@@ -49,7 +51,6 @@ The graph is shown below:
 graph LR;
  a --> b
  b --> c
- a -.->|Transitive| c
 {{< /mermaid >}}
 
 In this system, the element and term \\( a \\) can be rewritten to \\( b \\) and \\( b \\) can be rewritten to \\( c \\).
@@ -58,8 +59,10 @@ This is an example of a simple rewriting system.
 
 ### Example (Logic)
 
-Let's consider a more complex example, a rewriting system that models logic.
-The set of elements is \\( \lbrace \top, \bot, p, q, r \rbrace \\) where \\( \top \\) represents *true* and \\( \bot \\) represents *false*, and the rules are[^RW]:
+Let's consider a more complex example, a rewriting system that models **logic**[^Logic] and basics of **boolean algebra**[^BoolAlg].
+The set of **elements** is \\( \lbrace \top, \bot \rbrace \\) where \\( \top \\) represents *true* and \\( \bot \\) represents *false*.
+A **Term** \\( t \\) can be made up of literal elements and *propositional variables*[^PropVar] \\( p, q, r, \ldots \in V \\), formalized as \\( t ::= \top \mid \bot \mid V \mid \lnot t \mid t \land t \mid t \lor t \\).
+The **rules**[^RW] represent **logical axioms**[^Logic], **logical equivalences**[^Eq] *and* **boolean algebra identities**[^BoolAlg], defined as:
 
 $$
 \begin{align*}
@@ -81,13 +84,39 @@ p \lor \neg p &\rarr \top \\\
 \end{align*}
 $$
 
+These rewrite relations often have a more complex term on the left-hand side and a simpler term on the right-hand side.
+This is a common pattern and hints at the **normalization**[^NF] properties of the system, discussed in the next section.
+
 This system models logical reasoning and can be used to prove theorems and derive new logical formulas, and is an example of how rewriting systems can be used in practice.
 
-<!--
-This article exists to help myself dig into the topic of abstract rewriting systems, normalizations, confluence and termination.
-and the normal forms that can be derived from them. I will be using the book "Term Rewriting and All That" by Franz Baader and Tobias Nipkow as a guide.
-understand the concept of normal forms in rewriting systems. It is a concept that is often misunderstood, but it is crucial to understand if you want to work with rewriting systems. In this article, we will explain what normal forms are, why they are important, and how they can be used in practice.
--->
+## Normal Forms
+
+A term in **normal form**[^NF] (NF) is an irreducible, canonical representation of a term in a rewriting system.
+That is, **no rewrite rules can be applied to the term to produce a new term**. Formally, if \\( (A, \rarr) \\) is an ARS, a **term \\( t \\)**, \\( t \in A \\) **is in normal form** if there is exists no other term \\( s \in A \\) such that \\( t \rarr s \\).
+
+$$
+\begin{align*}
+t \text{ is in normal form} &\iff \nexists s \in A \text{ such that } t \rarr s \\\
+\end{align*}
+$$
+
+A term is said to be **strongly normalizing** (SN) if all possible rewrites eventually terminate and reach some normal form.
+An ARS is **strongly normalizing** if all terms in the system are strongly normalizing (terminating)[^NF][^Termination].
+
+$$
+\begin{align*}
+& t \text{ is strongly normalizing} \iff \forall s \in A \\\
+& \text{ such that } t \rarr^* s \text{, } s \text{ is in normal form} \\\
+\end{align*}
+$$
+
+The denotation \\( t \rarr^* s \\) means that *there is* some sequence of rewrites transforming the term \\( t \\) to \\( s \\) *(including zero rewrites)*,
+\\( t_0 \rarr t_1 \rarr \ldots \rarr t_n = s \\) where \\( n \geq 0 \\).
+
+Normal forms are important because they provide a unique term used to compare for equivalence[^Eq] and to prove properties of the system.
+In some systems, not all terms have a normal form, and the system is said to be **non-terminating**[^SimpleTerm][^TermRW][^Termination] and is the reason some rewriting systems are **non-deterministic** and **undecidable**[^RW].
+
+<!----------------------------------------------------------------->
 
 [^RW]: "Rewriting Systems", https://en.wikipedia.org/wiki/Rewriting.
 [^ARS]: “Abstract Rewriting System”, https://en.wikipedia.org/wiki/Abstract_rewriting_system.
@@ -97,6 +126,12 @@ understand the concept of normal forms in rewriting systems. It is a concept tha
 [^NF]: “Normal form”, https://en.wikipedia.org/wiki/Normal_form_(abstract_rewriting).
 [^TRaAT]: "Term Rewriting and All That" by *Franz Baader* and *Tobias Nipkow*. Find the book on [Cambridge Core](https://www.cambridge.org/core/books/term-rewriting-and-all-that/71768055278D0DEF4FFC74722DE0D707) or [Cambridge University Press](https://www.cambridge.org/9780521779203).
 [^LamCalc]: "Lambda calculus", https://en.wikipedia.org/wiki/Lambda_calculus.
+[^Termination]: "Termination", https://en.wikipedia.org/wiki/Rewriting#Termination.
 [^SimpleTerm]: Aart Middeldorp and Hans Zantema, “Simple Termination of Rewrite Systems,” Theoretical Computer Science 175, no. 1 (March 1997): 127–58, https://doi.org/10.1016/S0304-3975(96)00172-7.
 [^TermRW]: Nachum Dershowitz, “Termination of Rewriting,” Journal of Symbolic Computation 3, no. 1–2 (February 1987): 69–115, https://doi.org/10.1016/S0747-7171(87)80022-6.
 [^BinRel]: "Binary relation", https://en.wikipedia.org/wiki/Binary_relation.
+[^BoolAlg]: "Boolean algebra", https://en.wikipedia.org/wiki/Boolean_algebra.
+[^Logic]: "Logic", https://en.wikipedia.org/wiki/Logic.
+[^GLT]: "Ground and Linear Terms", https://en.wikipedia.org/wiki/Term_(logic)#Ground_and_linear_terms.
+[^T]: "Term (logic)", https://en.wikipedia.org/wiki/Term_(logic).
+[^PropVar]: "Propositional variable", https://en.wikipedia.org/wiki/Propositional_variable.

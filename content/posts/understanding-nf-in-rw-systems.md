@@ -5,19 +5,19 @@ draft = true
 +++
 {{< katex >}}
 
-As I *yet* have not studied advanced theoretical computer science, type theory, logic, etc.
+As I have not *yet* studied advanced theoretical computer science courses in subjects like type theory, logic, abstract algebra, category theory, and so on. \
 I have recently been trying to learn the basics on my own.
-Previous attempts on researching other subjects has time and time again led me back to the fundamental concept of **rewriting systems**[^RW],
+Previous research attempts has time and time again led me back to the fundamentals of **rewriting systems**[^RW],
 and I have decided to take a deeper dive into the basics to prepare myself for more advanced topics in the future.
 
 > #### :exclamation: **Disclaimer**
 >
-> - I am not an expert in the field in any way, this article is merely a collection of my notes and thoughts on the subject, and exists to help me understand the topic of rewriting systems better.
-> - I will use the terms abstract rewriting systems[^ARS] (ARS) and rewriting systems interchangeably, as I am not focusing on any specific type of rewriting system (Frankly, I am not sure if there is a difference between the two).
-> - This work will in no way be exhaustive, but rather a short personal exploration and self-study.
+> I am not an expert in the field in any way, this article is merely a collection of my notes and thoughts on the subject, and exists to help me understand the topic of rewriting systems better.
+> This work will in no way be exhaustive, but rather a short personal exploration and self-study.
 
 I will be using various resources, including books, papers and online articles to help me understand the topic better, and I hope you find this article helpful in your own learning journey as well.
-A great book I have found on the subject is ***Term Rewriting and All That*** [^TRaAT] by *Franz Baader* and *Tobias Nipkow*, I may refer to it as TRaAT moving forward.
+A great book I have found on the subject is ***Term Rewriting and All That*** [^TRaAT] by *Franz Baader* and *Tobias Nipkow*.
+I will use the terms abstract rewriting systems[^ARS] (ARS) and rewriting systems interchangeably, as I am not focusing on any specific type of rewriting system (Frankly, I am not sure if there is a difference between the two).
 
 ## What are Rewriting Systems?
 

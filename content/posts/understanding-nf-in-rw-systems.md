@@ -24,15 +24,16 @@ I will use the terms abstract rewriting systems[^ARS] (ARS) and rewriting system
 A rewriting system is a formal system that consists of a set of rules that describe how to rewrite terms and are a fundamental concept in computer science, mathematics, and logic[^Logic].
 They are used to model a wide range of *computational processes* and *reasoning* in for example *lambda calculus*[^LamCalc].
 Rewriting systems are used in many areas of computer science, including programming languages, compilers, and automated theorem proving.
-Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
-A confluent and terminating ARS is called **convergent** or **canonical**[^RW].
 
 An abstract rewriting system *(ARS)* consists of a **set of elements**, **terms**[^T] made up from elements, and **binary relations**[^BinRel] on **terms**[^T] (rewrite rules).
 The relation is denoted by \\( \rarr \\) and is called the **reduction** or **rewrite relation**[^ARS][^RW][^BinRel].
 Though the relation is not performing any "reducing" action or computation in the traditional sense, it is merely a relation that describes how one term can be rewritten to another term.
 The system is defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
 Formally, **\\( (A, R) \\) is an abstract rewriting system** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** (rules) \\( R \subseteq A \times A \\).
-Alternative notations for the system are \\( (A, \rarr) \\) where \\( \rarr \\) is the rewrite relation.
+An lternative notation for rewriting systems is \\( (A, \rarr) \\) where \\( \rarr \\) is the rewrite relations.
+
+Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
+A confluent and terminating ARS is called **convergent** or **canonical**[^RW].
 
 ### Termination
 

@@ -21,7 +21,7 @@ showViews = true
 disableImageOptimization = false
 disableTextInHeader = false
 
-# defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
+# defaultBackgroundImage = "IMAGE.jpg" # used as default for background images
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
@@ -57,13 +57,13 @@ showDateUpdated = false
 showAuthor = true
 showHero = false
 # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
-layoutBackgroundBlur = true                                                                 # only used when heroStyle equals background or thumbAndBackground
-layoutBackgroundHeaderSpace = true                                                          # only used when heroStyle equals background
+layoutBackgroundBlur = true        # only used when heroStyle equals background or thumbAndBackground
+layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
 showBreadcrumbs = true
 showDraftLabel = true
-showEdit = true
-editURL = "https://github.com/WilliamRagstad/WilliamRagstad.github.io/tree/master/content/"
-editAppendPath = true
+# showEdit = true
+# editURL = "https://github.com/WilliamRagstad/WilliamRagstad.github.io/tree/master/content/"
+# editAppendPath = true
 seriesOpened = false
 showHeadingAnchors = true
 showPagination = true

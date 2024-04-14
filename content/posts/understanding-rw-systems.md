@@ -94,6 +94,19 @@ $$
 These rewrite relations often have a more complex term on the left-hand side and a simpler term on the right-hand side.
 This is a common pattern and hints at the **normalization**[^NF] properties of the system, discussed in the next section.
 
+Below is an example of how the rewrite system can be used to simplify a logical formula: \\( \lnot((p \land q) \lor \lnot q) \rarr \lnot(p \land q) \\).
+
+{{< mermaid >}}
+graph LR;
+
+s1("¬((p ∧ q) ∨ ¬q)") -->|DeMorgan| s2("¬(p ∧ q) ∧ ¬¬q")
+s2 -->|Involution| s3("¬(p ∧ q) ∧ q")
+s3 -->|DeMorgan| s4("(¬p ∨ ¬q) ∧ q")
+s4 -->|Distribution| s5("¬p ∧ q ∨ ¬q ∧ q")
+s5 -->|Inverse| s6("¬p ∧ q")
+
+{{< /mermaid >}}
+
 This system models logical reasoning and can be used to prove theorems and derive new logical formulas, and is an example of how rewriting systems can be used in practice.
 
 ## More Notions

@@ -28,12 +28,14 @@ A rewriting system is a formal system that consists of a set of rules that descr
 They are used to model a wide range of *computational processes* and *reasoning* in for example *lambda calculus*[^LamCalc].
 Rewriting systems are used in many areas of computer science, including programming languages, compilers, and automated theorem proving.
 
-An abstract rewriting system *(ARS)* consists of a **set of elements**, **terms**[^T] made up from elements, and **binary relations**[^BinRel] on **terms**[^T] (rewrite rules).
-The set of terms \\(T\\) can sometimes be a combination of variables (\\(V \subseteq T\\)), constants (\\(C \subseteq T\\)) and operators (\\(O \subseteq T\\)).
-A relation is denoted by \\( \rarr \\) and is called the **reduction** or **rewrite relation**[^ARS][^RW][^BinRel].
-Though the relation is not performing any "reducing" action or computation in the traditional sense, it is merely a relation that describes how one term can be rewritten to another term.
-The system is defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
-Formally, **\\( (A, R) \\) is an abstract rewriting system** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** (rules) \\( R \subseteq A \times A \\).
+An abstract rewriting system *(ARS)* consists of a **set of elements \\( A \\)**, the set of **terms \\(T\\)**[^T] made up from elements, and **binary relations \\(R\\)**[^BinRel] on **terms**[^T] (rewrite rules).
+The set of terms  can *sometimes* be a combination of elements (\\(A \subseteq T\\)), variables (\\(V \subseteq T\\)), operators (\\(O \subseteq T\\)), etc.
+This depends on the model domain of the system.
+A relation between two terms is denoted by \\( \rarr \\) and is called the **reduction**, **rewrite relation** or **rule**[^ARS][^RW][^BinRel].
+Though the relation is not actually performing any *"reducing" action* or *computation*, it is merely a description of how one term can be *rewritten* into another term.
+The system is thus defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
+Formally, **\\( (A, R) \\) is an abstract rewriting system** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** from one term to another \\( R \subseteq A \times A \\).
+Again, where terms \\( t \in T \\) are made up of elements \\( A \\), like \\( t ::= A \mid \ldots \\), and potentially more constructs depending on domain (shown by \\( \ldots \\)).
 
 Alternative notations for rewriting systems might use \\( (A, \rarr) \\) where \\( \rarr \\) denotes the rewrite relation set.
 Others might use multiple relation sets to define a system, denoted as \\( (A, \rarr_1, \rarr_2, \ldots, \rarr_n) \\), which together define the relation set \\( R = \rarr_1 \cup \rarr_2 \cup \ldots \cup \rarr_n \\) in \\( (A, R) \\).

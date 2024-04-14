@@ -35,24 +35,6 @@ An alternative notation for rewriting systems is \\( (A, \rarr) \\) where \\( \r
 Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
 A confluent and terminating ARS is called **convergent** or **canonical**[^RW].
 
-### Termination
-
-Termination describes whether a rewriting system has a finite number of rewrites for any term in the system.
-An ARS is said to be terminating if there is no infinite chain \\( x_{0} \rightarrow x_{1} \rightarrow x_{2} \rightarrow \cdots \\) of rewrites[^Termination].
-
-### Confluence
-
-*"Confluence describes which terms in such a system can be rewritten in more than one way, to yield the same result"*[^Conf].
-A rewriting system is said to be **confluent**[^Conf] if, for any terms \\( t, s, u \\) such that \\( t \rarr^* s \land t \rarr^* u \\), there exists a term \\( v \\) such that \\( s \rarr^* v \land u \rarr^* v \\).
-
-{{< mermaid >}}
-graph LR;
- t -->|∗| s
- t -->|∗| u
- s -->|∗| v
- u -->|∗| v
-{{< /mermaid >}}
-
 ### Example (A, B, C)
 
 Consider the following rewriting system with the set of *ground and linear*[^GLT] elements \\( \lbrace a, b, c \rbrace \\) and the rules:
@@ -108,6 +90,24 @@ These rewrite relations often have a more complex term on the left-hand side and
 This is a common pattern and hints at the **normalization**[^NF] properties of the system, discussed in the next section.
 
 This system models logical reasoning and can be used to prove theorems and derive new logical formulas, and is an example of how rewriting systems can be used in practice.
+
+## Termination
+
+Termination describes whether a rewriting system has a finite number of rewrites for any term in the system.
+An ARS is said to be terminating if there is no infinite chain \\( x_{0} \rightarrow x_{1} \rightarrow x_{2} \rightarrow \cdots \\) of rewrites[^Termination].
+
+## Confluence
+
+*"Confluence describes which terms in such a system can be rewritten in more than one way, to yield the same result"*[^Conf].
+A rewriting system is said to be **confluent**[^Conf] if, for any terms \\( t, s, u \\) such that \\( t \rarr^* s \land t \rarr^* u \\), there exists a term \\( v \\) such that \\( s \rarr^* v \land u \rarr^* v \\).
+
+{{< mermaid >}}
+graph LR;
+ t -->|∗| s
+ t -->|∗| u
+ s -->|∗| v
+ u -->|∗| v
+{{< /mermaid >}}
 
 ## Normal Forms
 

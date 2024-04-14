@@ -30,7 +30,7 @@ The relation is denoted by \\( \rarr \\) and is called the **reduction** or **re
 Though the relation is not performing any "reducing" action or computation in the traditional sense, it is merely a relation that describes how one term can be rewritten to another term.
 The system is defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
 Formally, **\\( (A, R) \\) is an abstract rewriting system** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** (rules) \\( R \subseteq A \times A \\).
-An lternative notation for rewriting systems is \\( (A, \rarr) \\) where \\( \rarr \\) is the rewrite relations.
+An alternative notation for rewriting systems is \\( (A, \rarr) \\) where \\( \rarr \\) is the rewrite relations.
 
 Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
 A confluent and terminating ARS is called **convergent** or **canonical**[^RW].

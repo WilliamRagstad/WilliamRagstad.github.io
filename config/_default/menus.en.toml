@@ -1,7 +1,7 @@
 # -- Main Menu --
 # The main menu is displayed in the header at the top of the page.
 # Acceptable parameters are name, pageRef, page, url, title, weight.
-# 
+#
 # The simplest menu configuration is to provide:
 #   name = The name to be displayed for this menu link
 #   pageRef = The identifier of the page or section to link to
@@ -63,16 +63,22 @@ weight = 10
 #  weight = 20
 
 [[main]]
+name = "Series"
+parent = "Posts"
+pageRef = "series"
+weight = 20
+
+[[main]]
 name = "Categories"
 parent = "Posts"
 pageRef = "categories"
-weight = 20
+weight = 30
 
 [[main]]
 name = "Tags"
 parent = "Posts"
 pageRef = "tags"
-weight = 30
+weight = 40
 
 
 # -- Footer Menu --
@@ -81,11 +87,21 @@ weight = 30
 
 
 [[footer]]
-name = "Tags"
-pageRef = "tags"
+name = "Series"
+pageRef = "series"
 weight = 10
 
 [[footer]]
 name = "Categories"
 pageRef = "categories"
 weight = 20
+
+[[footer]]
+name = "Tags"
+pageRef = "tags"
+weight = 30
+
+[[footer]]
+name = "RSS"
+url = "/index.xml"
+weight = 50

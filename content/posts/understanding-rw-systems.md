@@ -29,7 +29,7 @@ They are used to model a wide range of *computational processes* and *reasoning*
 Rewriting systems are used in many areas of computer science, including programming languages, compilers, and automated theorem proving.
 
 An abstract rewriting system *(ARS)* consists of a **set of elements**, **terms**[^T] made up from elements, and **binary relations**[^BinRel] on **terms**[^T] (rewrite rules).
-The set of terms (\\(T\\)) can sometimes be a combination of variables (\\(V \subseteq T\\)), constants (\\(C \subseteq T\\)) and operators (\\(O \subseteq T\\)).
+The set of terms \\(T\\) can sometimes be a combination of variables (\\(V \subseteq T\\)), constants (\\(C \subseteq T\\)) and operators (\\(O \subseteq T\\)).
 A relation is denoted by \\( \rarr \\) and is called the **reduction** or **rewrite relation**[^ARS][^RW][^BinRel].
 Though the relation is not performing any "reducing" action or computation in the traditional sense, it is merely a relation that describes how one term can be rewritten to another term.
 The system is defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.

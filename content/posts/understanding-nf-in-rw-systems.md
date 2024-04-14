@@ -47,10 +47,10 @@ A rewriting system is said to be **confluent**[^Conf] if, for any terms \\( t, s
 
 {{< mermaid >}}
 graph LR;
- t -->|*| s
- t -->|*| u
- s -->|*| v
- u -->|*| v
+ t -->|∗| s
+ t -->|∗| u
+ s -->|∗| v
+ u -->|∗| v
 {{< /mermaid >}}
 
 ### Example (A, B, C)

@@ -29,14 +29,14 @@ They are used to model a wide range of *computational processes* and *reasoning*
 Rewriting systems are used in many areas of computer science, including programming languages, compilers, and automated theorem proving.
 
 An abstract rewriting system *(ARS)* consists of a **set of elements**, **terms**[^T] made up from elements, and **binary relations**[^BinRel] on **terms**[^T] (rewrite rules).
-The relation is denoted by \\( \rarr \\) and is called the **reduction** or **rewrite relation**[^ARS][^RW][^BinRel].
+The set of terms (\\(T\\)) can sometimes be a combination of variables (\\(V \subseteq T\\)), constants (\\(C \subseteq T\\)) and operators (\\(O \subseteq T\\)).
+A relation is denoted by \\( \rarr \\) and is called the **reduction** or **rewrite relation**[^ARS][^RW][^BinRel].
 Though the relation is not performing any "reducing" action or computation in the traditional sense, it is merely a relation that describes how one term can be rewritten to another term.
 The system is defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
 Formally, **\\( (A, R) \\) is an abstract rewriting system** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** (rules) \\( R \subseteq A \times A \\).
-An alternative notation for rewriting systems is \\( (A, \rarr) \\) where \\( \rarr \\) is the rewrite relations.
 
-Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
-A confluent and terminating ARS is called **convergent** or **canonical**[^RW].
+Alternative notations for rewriting systems might use \\( (A, \rarr) \\) where \\( \rarr \\) denotes the rewrite relation set.
+Others might use multiple relation sets to define a system, denoted as \\( (A, \rarr_1, \rarr_2, \ldots, \rarr_n) \\), which together define the relation set \\( R = \rarr_1 \cup \rarr_2 \cup \ldots \cup \rarr_n \\) in \\( (A, R) \\).
 
 ### Example (A, B, C)
 
@@ -94,12 +94,40 @@ This is a common pattern and hints at the **normalization**[^NF] properties of t
 
 This system models logical reasoning and can be used to prove theorems and derive new logical formulas, and is an example of how rewriting systems can be used in practice.
 
-## Termination
+## More Notions
+
+When reading papers using rewriting systems, we'll need to understand some extended denotations of the rewrite relation \\( \rarr \\).
+<!-- These include the **reflexive closure** \\( \rarr^+ \\), **transitive closure** \\( \rarr^* \\), **symmetric closure** \\( \rarr^= \\), and **reflexive-transitive closure** \\( \rarr^* \\). -->
+
+### Transitive Closure
+
+Denotations include \\( \xrightarrow{+} \\) and \\( \rarr^+ \\).
+
+### Reflexive Transitive Closure
+
+Denotations include \\( \xrightarrow{\*} \\) and \\( \rarr^* \\).
+
+This is the **smallest** relation that contains the original relation \\( \rarr \\) and is **reflexive** and **transitive**[^BinRel].
+
+## Properties
+
+Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
+A confluent and terminating ARS is called **convergent** or **canonical**[^RW].
+
+### Termination
 
 Termination describes whether a rewriting system has a finite number of rewrites for any term in the system.
-An ARS is said to be terminating if there is no infinite chain \\( x_{0} \rightarrow x_{1} \rightarrow x_{2} \rightarrow \cdots \\) of rewrites[^Termination].
+An ARS is said to be terminating if there is **no infinite chain** \\( x_{0} \rightarrow x_{1} \rightarrow x_{2} \rightarrow \cdots \\) of rewrites[^Termination].
 
-## Confluence
+$$
+\begin{align*}
+& \text{ARS is terminating} \iff \forall x_i \in A \\\
+% & \text{there is no infinite chain of rewrites } x_{0} \rightarrow x_{1} \rightarrow x_{2} \rightarrow \cdots \\\
+& \nexists x_{0}, x_{1}, x_{2}, \ldots \text{ such that } x_{0} \rightarrow x_{1} \rightarrow x_{2} \rightarrow \cdots \\\
+\end{align*}
+$$
+
+### Confluence
 
 *"Confluence describes which terms in such a system can be rewritten in more than one way, to yield the same result"*[^Conf].
 A rewriting system is said to be **confluent** if, for any terms \\( t, s, u \\) such that \\( t \rarr^* s \land t \rarr^* u \\), there exists a term \\( v \\) such that \\( s \rarr^* v \land u \rarr^* v \\)[^Conf].
@@ -112,7 +140,9 @@ graph LR;
  u -->|∗| v
 {{< /mermaid >}}
 
-## Normal Forms
+In a confluent system, the (TODO) relation is called the **confluence relation**.
+
+### Normal Forms
 
 A term in **normal form**[^NF] (NF) is an irreducible, canonical representation of a term in a rewriting system.
 That is, **no rewrite rules can be applied to the term to produce a new term**. Formally, if \\( (A, \rarr) \\) is an ARS, a **term \\( t \\)**, \\( t \in A \\) **is in normal form** if there is exists no other term \\( s \in A \\) such that \\( t \rarr s \\).

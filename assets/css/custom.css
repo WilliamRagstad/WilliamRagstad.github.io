@@ -1,0 +1,44 @@
+a {
+	overflow-wrap: break-word;
+}
+
+sup + sup :before {
+	content: ', ';
+	color: white;
+}
+
+.edgeLabels .edgeLabel:empty {
+	display: none;
+}
+.edgeLabels .edgeLabel {
+	padding: 4px;
+	border-radius: 4px;
+}
+
+.mermaid {
+	--mermaid-edge-background: #1a1a1ae0;
+	--mermaid-edge-color: rgba(var(--color-primary-400), 1); /* var(--tw-prose-links) #7b7b7b #00ff73; */
+	--mermaid-edge-stroke-color: rgba(var(--color-primary-400), 0.5); /* var(--tw-prose-invert-links) #5f5f5f; */
+	--mermaid-node-background: rgba(var(--color-neutral-300), 1);
+	--mermaid-node-border: rgba(var(--color-neutral-500), 1); /* rgba(var(--color-secondary-400), 1) */
+}
+
+:is(:where(.dark) .mermaid .edgeLabel) {
+  color: white !important;
+  background-color: var(--mermaid-edge-background) !important;
+}
+
+:is(:where(.dark) .mermaid .flowchart-link) {
+	stroke: var(--mermaid-edge-color) !important;
+}
+
+:is(:where(.dark) .mermaid .marker) {
+	stroke: var(--mermaid-edge-stroke-color) !important;
+	fill: var(--mermaid-edge-color) !important;
+}
+
+:is(:where(.dark) .mermaid .node rect) {
+	fill: var(--mermaid-node-background) !important;
+    stroke: var(--mermaid-node-border) !important;
+    stroke-width: 1px;
+}

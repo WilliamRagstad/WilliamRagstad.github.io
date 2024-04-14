@@ -102,7 +102,7 @@ An ARS is said to be terminating if there is no infinite chain \\( x_{0} \righta
 ## Confluence
 
 *"Confluence describes which terms in such a system can be rewritten in more than one way, to yield the same result"*[^Conf].
-A rewriting system is said to be **confluent**[^Conf] if, for any terms \\( t, s, u \\) such that \\( t \rarr^* s \land t \rarr^* u \\), there exists a term \\( v \\) such that \\( s \rarr^* v \land u \rarr^* v \\).
+A rewriting system is said to be **confluent** if, for any terms \\( t, s, u \\) such that \\( t \rarr^* s \land t \rarr^* u \\), there exists a term \\( v \\) such that \\( s \rarr^* v \land u \rarr^* v \\)[^Conf].
 
 {{< mermaid >}}
 graph LR;

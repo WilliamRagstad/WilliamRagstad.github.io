@@ -94,7 +94,7 @@ $$
 These rewrite relations often have a more complex term on the left-hand side and a simpler term on the right-hand side.
 This is a common pattern and hints at the **normalization**[^NF] properties of the system, discussed in the next section.
 
-Below is an example of how the rewrite system can be used to simplify a logical formula: \\( \lnot((p \land q) \lor \lnot q) \rarr \lnot(p \land q) \\).
+Below is an example of how the rewrite system can be used to simplify a logical formula: \\( \lnot((p \land q) \lor \lnot q)\\) to \\(\lnot(p \land q) \\).
 
 {{< mermaid >}}
 graph LR;

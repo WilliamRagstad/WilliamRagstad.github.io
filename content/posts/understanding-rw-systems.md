@@ -3,7 +3,8 @@ title = 'Understanding Rewriting Systems'
 date = 2024-04-12T21:00:59+02:00
 series = ["Understanding"]
 series_order = 1
-tags = ["rewriting systems", "computer science", "logic", "mathematics"]
+tags = ["rewriting systems", "notes", "research", "understanding"]
+categories = ["computer science", "mathematics", "logic"]
 draft = true
 +++
 {{< katex >}}

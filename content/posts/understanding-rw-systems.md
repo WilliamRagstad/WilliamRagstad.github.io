@@ -125,6 +125,9 @@ Denotations include \\( \xrightarrow{\*} \\) and \\( \rarr^* \\).
 
 This is the **smallest** relation that contains the original relation \\( \rarr \\) and is **reflexive** and **transitive**[^BinRel].
 
+TODO: The denotation \\( t \rarr^* s \\) means that *there is* some sequence of rewrites transforming the term \\( t \\) to \\( s \\) *(including zero rewrites)*,
+\\( t_0 \rarr t_1 \rarr \ldots \rarr t_n = s \\) where \\( n \geq 0 \\).
+
 ## Properties
 
 Some properties of abstract term rewriting systems are **termination**[^SimpleTerm][^TermRW], **confluence**[^Conf], **normalization**[^NF], **completion**[^Comp][^TRaAT] and **equivalence**[^Eq].
@@ -179,8 +182,18 @@ $$
 \end{align*}
 $$
 
-The denotation \\( t \rarr^* s \\) means that *there is* some sequence of rewrites transforming the term \\( t \\) to \\( s \\) *(including zero rewrites)*,
-\\( t_0 \rarr t_1 \rarr \ldots \rarr t_n = s \\) where \\( n \geq 0 \\).
+To illustrate the distinction between weak and strong normalization, consider the following ARS:
+
+$$
+\begin{align*}
+A &\rarr B \\\
+A &\rarr (AA) \\\
+\end{align*}
+$$
+
+The term \\(A\\) is **weakly normalizing** because it *can* be rewritten to \\(B\\), a normal form.
+However, it's not strongly normalizing since an infinite sequence of expansions can occur: \\(A \rightarrow (AA) \rightarrow ((AA)A) \rightarrow \ldots\\).
+This highlights that while weak normalization ensures that a result can be found, strong normalization guarantees that the process of finding that result is always finite.
 
 Normal forms are important because they provide a unique term used to compare for equivalence[^Eq] and to prove properties of the system.
 In some systems, not all terms have a normal form, and the system is said to be **non-terminating**[^SimpleTerm][^TermRW][^Termination] and is the reason some rewriting systems are **non-deterministic** and **undecidable**[^RW].

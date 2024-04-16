@@ -11,13 +11,15 @@ I've studied Computer Science at [KTH Royal Institute of Technology](https://www
 
 I'm *especially* interested in the following topics for example:
 
-- **Computer science**: Algorithms and Data structures, Programming languages, Language Design, Compilers, Interpreters, Virtual machines, Operating systems, Networking.
+- **Theory**: Mathematics, Logic, Type theory, Lambda calculus, Computability, Complexity, Information theory, Category theory, Graph theory.
+- **Computer science**: Algorithms and Data structures, Programming Language design, Compilers, Interpreters, Virtual machines, Operating systems, Networking.
 - **Software Development**: Architecture, Design, Clean Code, Testing, CI/CD, DevOps, Cloud computing, Microservices, Containers, Serverless, Web development, Mobile development, Desktop development, Embedded development, IoT, AI/Machine learning.
-- **IT Security**: Penetration testing, Cryptography, Malware analysis, Exploit development, Forensics, Reverse engineering.
+- **IT Security**: Penetration testing, Cryptography, Forensics, Reverse engineering.
 - **Game development**: Game engines, Mechanics, Art, Graphics, Physics, Multiplayer.
 - **Graphics**: Shaders, Ray tracing, Animation, Lighting, Rendering, 3D modeling, 3D printing, Image processing.
 
 And *much more*!
+You'll find a mix of articles, tutorials, projects, and other content related to the topics above on this blog.
 If you have any questions or just want to chat, feel free to contact me on [Twitter](https://twitter.com/WilliamRagstad) or [LinkedIn](https://www.linkedin.com/in/william-ragstad/).
 
 ### > [Contact me!](/contact/)

@@ -182,7 +182,10 @@ $$
 ### Confluence
 
 *"Confluence describes which terms in such a system can be rewritten in more than one way, to yield the same result"*.[^Conf]
-A rewriting system is said to be **confluent** if, for any terms \\( t, s, u \\) such that \\( t \rarr^* s \land t \rarr^* u \\), there exists a term \\( v \\) such that \\( s \rarr^* v \land u \rarr^* v \\).[^Conf]
+A rewriting system is said to be **confluent** if,
+for any terms \\( t, s, u \\) such that \\( t \rarr^* s \land t \rarr^* u \\),
+there exists a term \\( v \\) such that \\( s \rarr^* v \land u \rarr^* v \\).[^Conf]
+In a confluent system, the (TODO) relation is called the **confluence relation**.
 
 {{< mermaid >}}
 graph LR;
@@ -192,7 +195,20 @@ graph LR;
  u -->|∗| v
 {{< /mermaid >}}
 
-In a confluent system, the (TODO) relation is called the **confluence relation**.
+Confluence is a property that implies that if a term can be rewritten in more than one way (leading to multiple possible outcomes),
+all these paths will eventually converge to a common rewrite outcome, regardless of the choices made during rewriting.
+Formally, denoting that any term \\(a\\) can reach any term \\(b\\) (and vice versa) through a sequence of forward and backward steps, is instrumental in analyzing confluence.
+If this closure holds between any two rewrite results of the same term, the system is confluent.
+The symmetric closure \\( \xleftrightarrow{\*} \\) is used to define confluence.
+
+An ARS possess the **Church-Rosser property** if and only if \\( x \xleftrightarrow{\*} y \\) implies \\( x \downarrow y \\) for all terms \\( x, y \\) in the system.[^Conf][^ARS]
+
+$$
+\begin{align*}
+& \text{Church-Rosser property} \iff \\\
+& \forall x, y \in A, x \xleftrightarrow{\*} y \implies x \downarrow y \\\
+\end{align*}
+$$
 
 ### Normal Forms
 

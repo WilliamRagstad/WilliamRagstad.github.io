@@ -148,9 +148,9 @@ The first closure we'll look at is the **transitive closure** of a relation.
 > A binary relation \\(R\\) on a set \\(X\\) is transitive if, for all elements \\(a, b, c \in X\\), whenever \\(R\\) relates \\(a\\) to \\(b\\) and \\(b\\) to \\(c\\), then \\(R\\) also relates \\(a\\) to \\(c\\).
 
 The transitive closure of a relation extends the original relation \\( \rarr \\) so that it includes **direct** and **sequences of transformations** between terms.
-For example, if term \\( a \\) can transform into term \\( b \\) (noted \\( a \rarr b \\)) and term \\( b \\) can transform into term \\( c \\) (noted \\( b \rarr c \\)),
-then in the transitive closure, term \\( a \\) is considered to directly reach term \\( c \\) (notated \\( a \rarr^+ c \\)).
-The example is represented in the graph below, where instead of one \\( b \\) term, there are any number of terms \\( b_1, b_2, \ldots, b_N \\).
+For example, if term \\( a \rarr b \\) and term \\( b \rarr c \\),
+then in the transitive closure, term \\( a \\) is considered to directly reach term \\( c \\), notated \\( a \rarr^+ c \\).
+The example below generalize to any number of intermediate terms \\( b_1, b_2, \ldots, b_N \\).
 
 {{< mermaid >}}
 graph LR;

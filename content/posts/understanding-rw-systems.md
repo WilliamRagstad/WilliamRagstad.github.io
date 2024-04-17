@@ -105,14 +105,14 @@ s2 -->|Involution| s3("¬(p ∧ q) ∧ q")
 s3 -->|DeMorgan| s4("(¬p ∨ ¬q) ∧ q")
 s4 -->|Distribution| s5("¬p ∧ q ∨ ¬q ∧ q")
 s5 -->|Inverse| s6("¬p ∧ q")
-
 {{< /mermaid >}}
 
 This system models logical reasoning and can be used to prove theorems and derive new logical formulas, and is an example of how rewriting systems can be used in practice.
 
-## More Notions
+## More Notation
 
-When reading papers using rewriting systems, we'll need to understand some extended denotations of the rewrite relation \\( \rarr \\).
+When reading papers using rewriting systems, we'll need to understand some extended denotation.
+Let's go through some of these:
 <!-- These include the **reflexive closure** \\( \rarr^+ \\), **transitive closure** \\( \rarr^* \\), **symmetric closure** \\( \rarr^= \\), and **reflexive-transitive closure** \\( \rarr^* \\). -->
 
 ### Transitive Closure

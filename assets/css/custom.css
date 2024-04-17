@@ -42,3 +42,7 @@ sup + sup :before {
     stroke: var(--mermaid-node-border) !important;
     stroke-width: 1px;
 }
+
+.prose :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)) {
+	font-weight: 300;
+}

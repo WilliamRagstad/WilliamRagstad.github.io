@@ -98,7 +98,7 @@ This is a common pattern and hints at the **normalization**[^NF] properties of t
 Below is an example of how the rewrite system can be used to simplify a logical formula: \\( \lnot((p \land q) \lor \lnot q)\\) to \\(\lnot(p \land q) \\).
 
 {{< mermaid >}}
-graph LR;
+graph TD;
 
 s1("¬((p ∧ q) ∨ ¬q)") -->|DeMorgan| s2("¬(p ∧ q) ∧ ¬¬q")
 s2 -->|Involution| s3("¬(p ∧ q) ∧ q")

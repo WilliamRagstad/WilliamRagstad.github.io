@@ -205,7 +205,7 @@ t \text{ is in normal form} &\iff \nexists s \in A \text{ such that } t \rarr s 
 \end{align*}
 $$
 
-A term is said to be **strongly normalizing** (SN) if all possible rewrites eventually terminate and reach some normal form.
+A term is said to be **strongly normalizing (SN)** if all possible rewrites eventually terminate and reach some normal form.
 An ARS is **strongly normalizing** if all terms in the system are strongly normalizing (terminating).[^NF][^Termination]
 
 $$
@@ -215,7 +215,7 @@ $$
 \end{align*}
 $$
 
-To illustrate the distinction between weak and strong normalization, consider the following ARS:
+To illustrate the distinction between strong and **weak normalization (WN)**, consider the following ARS:
 
 $$
 \begin{align*}
@@ -225,8 +225,18 @@ A &\rarr (AA) \\\
 $$
 
 The term \\(A\\) is **weakly normalizing** because it *can* be rewritten to \\(B\\), a normal form.
-However, it's not strongly normalizing since an infinite sequence of expansions can occur: \\(A \rightarrow (AA) \rightarrow ((AA)A) \rightarrow \ldots\\).
-This highlights that while weak normalization ensures that a result can be found, strong normalization guarantees that the process of finding that result is always finite.
+However, it's **not strongly normalizing** since an infinite sequence of expansions can occur (see below).
+This highlights that while ***weak normalization** ensures that a result **can be found***, ***strong normalization** guarantees that the process of finding that result **is always finite***.
+
+{{< mermaid >}}
+graph LR;
+ A --> B
+ A --> AA
+ AA -->|+| BB
+ AA -->|∗| AAAA
+ AAAA -->|+| BBBB
+ AAAA -->|∗| AAAAA(...)
+{{< /mermaid >}}
 
 Normal forms are important because they provide a unique term used to compare for equivalence[^Eq] and to prove properties of the system.
 In some systems, not all terms have a normal form, and the system is said to be **non-terminating**[^SimpleTerm][^TermRW][^Termination] and is the reason some rewriting systems are **non-deterministic** and **undecidable**.[^RW]

@@ -115,6 +115,12 @@ When reading papers using rewriting systems, we'll need to understand some exten
 Let's go through some of these:
 <!-- These include the **reflexive closure** \\( \rarr^+ \\), **transitive closure** \\( \rarr^* \\), **symmetric closure** \\( \rarr^= \\), and **reflexive-transitive closure** \\( \rarr^* \\). -->
 
+### Direct Reduction
+
+> Denotations include \\( R \\), \\( \xrightarrow{} \\) and \\( \rarr \\).
+
+A **regular relation** that represents **a single step** in a rewriting process where one term is **directly transformed** into another based on a *specific* rewrite rule.
+
 ### Transitive Closure
 
 Denotations include \\( \xrightarrow{+} \\) and \\( \rarr^+ \\).

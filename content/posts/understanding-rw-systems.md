@@ -150,6 +150,17 @@ This is the **smallest** relation that contains the original relation \\( \rarr 
 TODO: The denotation \\( t \rarr^* s \\) means that *there is* some sequence of rewrites transforming the term \\( t \\) to \\( s \\) *(including zero rewrites)*,
 \\( t_0 \rarr t_1 \rarr \ldots \rarr t_n = s \\) where \\( n \geq 0 \\).
 
+### Joinability
+
+A less formal term of normal forms are **joinable** terms, where two terms are joinable if they can be rewritten to the same term.
+\\( x \downarrow y \\) denotes that there exists a term \\( z \in A \\) such that \\( x \rarr^* z \land y \rarr^* z \\), alternatively written as \\( x \xrightarrow{\*} z \xleftarrow{\*} y \\).
+
+{{< mermaid >}}
+graph TD;
+ x -->|∗| z
+ y -->|∗| z
+{{< /mermaid >}}
+
 ## Properties
 
 Some properties of abstract term rewriting systems are **termination**,[^SimpleTerm][^TermRW] **confluence**,[^Conf] **normalization**,[^NF] **completion**[^Comp][^TRaAT] and **equivalence**.[^Eq]

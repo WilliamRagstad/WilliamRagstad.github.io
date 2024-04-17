@@ -260,3 +260,6 @@ In some systems, not all terms have a normal form, and the system is said to be 
 [^GLT]: "Ground and Linear Terms", https://en.wikipedia.org/wiki/Term_(logic)#Ground_and_linear_terms.
 [^T]: "Term (logic)", https://en.wikipedia.org/wiki/Term_(logic).
 [^PropVar]: "Propositional variable", https://en.wikipedia.org/wiki/Propositional_variable.
+[^Closure]: "Closure (mathematics)", https://en.wikipedia.org/wiki/Closure_(mathematics).
+[^TransitiveClosure]: "Transitive closure", https://en.wikipedia.org/wiki/Transitive_closure.
+[^TransitiveRelation]: "Transitive relation", https://en.wikipedia.org/wiki/Transitive_relation.

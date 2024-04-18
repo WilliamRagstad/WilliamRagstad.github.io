@@ -224,6 +224,14 @@ graph LR;
  b --> a
 {{< /mermaid >}}
 
+Formally a symmetric closure \\( S \\) of a relation \\( R \\) on the set of elements \\( A \\) is defined as:
+
+$$
+\begin{align*}
+S = R \cup R^{-1} \hspace{2mm} \text{where} \hspace{2mm} R^{-1} = \lbrace a, b \in A \mid (b, a) \in R \rbrace
+\end{align*}
+$$
+
 ### Reflexive Transitive Symmetric Closure
 
 > Denotations include: \\( \xleftrightarrow{\*} \\) and \\( \lrarr^* \\).

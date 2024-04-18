@@ -181,9 +181,8 @@ graph LR;
  a --> b1 --> b2 -.-> bN --> c
 {{< /mermaid >}}
 
-Simply put, \\( a \rarr^+ c \\) means that *there is* some sequence of rewrites transforming the term \\( t \\) to \\( s \\) *(excluding zero rewrites)*,
-
-This is the **smallest** relation that contains the original relation \\( \rarr \\) *and* is **transitive**.[^TransitiveRelation][^TransitiveClosure]
+Simply put, \\( a \rarr^+ c \\) means that *there is* some sequence of rewrites transforming the term \\( a \\) to \\( c \\) *(including one or more rewrites)*.
+This is the **smallest** relation that contains the original relation \\( \rarr \\) *and* is the **transitive** property of terms.[^TransitiveRelation][^TransitiveClosure]
 
 ### Reflexive Transitive Closure
 

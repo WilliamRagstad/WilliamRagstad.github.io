@@ -318,6 +318,35 @@ $$
 \end{align*}
 $$
 
+### Convergence
+
+Convergence is a combination of confluence and termination.
+A rewriting system is convergent if it is both confluent and terminating.
+Convergence guarantees that every term can be rewritten to a unique normal form.
+
+### Consistency
+
+In the context of logic and type systems, consistency refers to the property that there are no terms that can be both proved and disproved within the system.
+For rewriting systems, particularly those representing logical proofs, consistency means that there is no term that can be rewritten to both a theorem and its negation.
+
+### Decidability
+
+A rewriting system has the property of decidability if there is an effective procedure (algorithm) to determine whether,
+for any two given terms, one term can be rewritten to the other.
+This property is important for automated reasoning systems where it's necessary to know whether a certain state can be reached.
+
+### Completion
+
+A rewriting system is complete if it is both confluent and strongly normalizing.
+Completeness is often desired in theorem proving and formal verification since it ensures that every valid proof can be found through a systematic search of the rewriting system.
+
+### Equivalence
+
+The property of equivalence in rewriting systems refers to the scenario where different sequences of rewrites on a term or from a term lead to outcomes that can be considered equivalent under the rewriting rules.
+The reflexive transitive symmetric closure \\( \xleftrightarrow{\*} \\) is the smallest equivalence relation containing the original rewrite relation \\( \rarr \\).
+This closure indicates that any two terms related by this closure can be transformed into each other through a series of rewriting steps,
+forward or backward, indicating that they are equivalent in the context of the rewriting system.
+
 ### Normal Forms
 
 A term in **normal form**[^NF] (NF) is an irreducible, canonical representation of a term in a rewriting system.

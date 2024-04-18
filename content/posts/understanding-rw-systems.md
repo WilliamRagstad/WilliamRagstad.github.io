@@ -443,3 +443,4 @@ I hope this article has helped you understand the basics of rewriting systems an
 [^ReflectiveClosure]: "Reflective closure", https://en.wikipedia.org/wiki/Reflexive_closure.
 [^ReflectiveRelation]: "Reflexive relation", https://en.wikipedia.org/wiki/Reflexive_relation.
 [^SymmetricClosure]: "Symmetric closure", https://en.wikipedia.org/wiki/Symmetric_closure.
+[^EquivalenceRelation]: "Equivalence relation", https://en.wikipedia.org/wiki/Equivalence_relation.

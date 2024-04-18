@@ -156,6 +156,10 @@ Simply put, a **closure**-relation is just like **a regular relation**, but **wi
 This is done by extending a basic relation \\( R \\) or \\( \rarr \\) to **expand the set of allowable transformations between terms**.
 Closures are fundamental in understanding how terms can evolve in a system beyond simple direct transformations, incorporating **sequences**, **reversals**, and **self-referential** transformations, among others.
 
+{{< figure src="/img/math/binary-relations.png" alt="Closures of a relation" caption="Closures of a relation by [Joel David Hamkins](https://jdh.hamkins.org/) on [Infinitely More](https://www.infinitelymore.xyz/p/closures-of-a-relation)." >}}
+
+Above is a diagram showing the different types of closures of a relation.
+
 ### Transitive Closure
 
 > Denotations include: \\( R^+ \\), \\( \xrightarrow{+} \\) and \\( \rarr^+ \\).

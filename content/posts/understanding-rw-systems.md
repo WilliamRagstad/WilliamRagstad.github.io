@@ -121,7 +121,7 @@ Let's go through some of these:
 
 ### Direct Reduction
 
-> Denotations include \\( R \\), \\( \xrightarrow{} \\) and \\( \rarr \\).
+> Denotations include: \\( R \\), \\( \xrightarrow{} \\) and \\( \rarr \\).
 
 A **regular relation** that represents **a single step** in a rewriting process where one term is **directly transformed** into another based on a *specific* rewrite rule.
 
@@ -143,7 +143,7 @@ Closures are fundamental in understanding how terms can evolve in a system beyon
 
 ### Transitive Closure
 
-> Denotations include \\( R^+ \\), \\( \xrightarrow{+} \\) and \\( \rarr^+ \\).
+> Denotations include: \\( R^+ \\), \\( \xrightarrow{+} \\) and \\( \rarr^+ \\).
 
 The first closure we'll look at is the **transitive closure** of a relation.
 
@@ -159,7 +159,7 @@ The example below generalize to any number of intermediate terms \\( b_1, b_2, \
 {{< mermaid >}}
 graph LR;
  a --> c
- a --> b1 --> b2 -.->|∗| bN --> c
+ a --> b1 --> b2 -.-> bN --> c
 {{< /mermaid >}}
 
 Simply put, \\( a \rarr^+ c \\) means that *there is* some sequence of rewrites transforming the term \\( t \\) to \\( s \\) *(excluding zero rewrites)*,
@@ -168,7 +168,7 @@ This is the **smallest** relation that contains the original relation \\( \rarr 
 
 ### Reflexive Transitive Closure
 
-Denotations include \\( \xrightarrow{\*} \\) and \\( \rarr^* \\).
+> Denotations include: \\( R^* \\), \\( \xrightarrow{\*} \\) and \\( \rarr^* \\).
 
 This is the **smallest** relation that contains the original relation \\( \rarr \\) and is **reflexive** and **transitive**.[^BinRel]
 
@@ -176,6 +176,8 @@ TODO: The denotation \\( t \rarr^* s \\) means that *there is* some sequence of 
 \\( t_0 \rarr t_1 \rarr \ldots \rarr t_n = s \\) where \\( n \geq 0 \\).
 
 ### Joinability
+
+> Denotation: \\( \downarrow \\).
 
 A less formal term of normal forms are **joinable** terms, where two terms are joinable if they can be rewritten to the same term.
 \\( x \downarrow y \\) denotes that there exists a term \\( z \in A \\) such that \\( x \rarr^* z \land y \rarr^* z \\), alternatively written as \\( x \xrightarrow{\*} z \xleftarrow{\*} y \\).

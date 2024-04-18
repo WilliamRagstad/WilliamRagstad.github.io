@@ -162,7 +162,7 @@ Above is a diagram showing the different types of closures of a relation.
 
 ### Transitive Closure
 
-> Denotations include: \\( R^+ \\), \\( \xrightarrow{+} \\) and \\( \rarr^+ \\).
+> Denotations include: \\( \xrightarrow{+} \\) and \\( \rarr^+ \\).
 
 The first closure we'll look at is the **transitive closure** of a relation.
 
@@ -186,7 +186,7 @@ This is the **smallest** relation that contains the original relation \\( \rarr 
 
 ### Reflexive Transitive Closure
 
-> Denotations include: \\( R^* \\), \\( \xrightarrow{\*} \\) and \\( \rarr^* \\).
+> Denotations include: \\( \xrightarrow{\*} \\) and \\( \rarr^* \\).
 
 A **reflexive** relation \\( R^* \\) is a relation where every element in \\(A\\) is **related to itself**.
 This *can* be formally defined as:[^ReflectiveRelation]

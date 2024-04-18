@@ -315,6 +315,8 @@ t \text{ is in normal form} &\iff \nexists s \in A \text{ such that } t \rarr s 
 \end{align*}
 $$
 
+#### Strong Normalization
+
 A term is said to be **strongly normalizing (SN)** if all possible rewrites eventually terminate and reach some normal form.
 An ARS is **strongly normalizing** if all terms in the system are strongly normalizing (terminating).[^NF][^Termination]
 
@@ -324,6 +326,8 @@ $$
 & \text{ such that } t \rarr^* s \text{, } s \text{ is in normal form} \\\
 \end{align*}
 $$
+
+#### Weak Normalization
 
 To illustrate the distinction between strong and **weak normalization (WN)**, consider the following ARS:
 
@@ -347,6 +351,8 @@ graph LR;
  AAAA -->|+| BBBB
  AAAA -->|∗| AAAAA(...)
 {{< /mermaid >}}
+
+#### Conclusion Normalization
 
 Normal forms are important because they provide a unique term used to compare for equivalence[^Eq] and to prove properties of the system.
 In some systems, not all terms have a normal form, and the system is said to be **non-terminating**[^SimpleTerm][^TermRW][^Termination] and is the reason some rewriting systems are **non-deterministic** and **undecidable**.[^RW]

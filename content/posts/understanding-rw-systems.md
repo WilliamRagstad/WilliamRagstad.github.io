@@ -27,7 +27,7 @@ I will use the terms abstract rewriting systems (ARS) and rewriting systems inte
 
 ## What are Rewriting Systems?
 
-A rewriting system is a formal system that consists of a set of rules that describe how to rewrite terms and are a fundamental concept in computer science, mathematics, and logic.[^Logic]
+A rewriting system is a **formal system** that consists of a set of rules that describe how to rewrite terms and are a fundamental concept in computer science, mathematics, and logic.[^Logic][^RW][^ARS]
 They are used to model a wide range of *computational processes* and *reasoning* in for example *lambda calculus*.[^LamCalc]
 Rewriting systems are used in many areas of computer science, including programming languages, compilers, and automated theorem proving.
 

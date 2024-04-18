@@ -115,9 +115,10 @@ This system models logical reasoning and can be used to prove theorems and deriv
 
 ## More Notation
 
-When reading papers using rewriting systems, we'll need to understand some extended denotation.
-Let's go through some of these:
-<!-- These include the **reflexive closure** \\( \rarr^+ \\), **transitive closure** \\( \rarr^* \\), **symmetric closure** \\( \rarr^= \\), and **reflexive-transitive closure** \\( \rarr^* \\). -->
+Before reading any academic papers using rewriting systems,
+we'll need to understand some extended denotation used to describe the rules and properties of rewriting systems.
+Note, I'm trying to be as comprehensive as possible, but there are lots of different notations used in the literature.
+Also, I'm not an expert, so take this with a grain of salt.
 
 ### Direct Reduction
 

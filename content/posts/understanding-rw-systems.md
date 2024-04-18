@@ -188,6 +188,12 @@ graph TD;
  y -->|∗| z
 {{< /mermaid >}}
 
+### Composition
+
+> Denotation: \\( \circ \\).
+
+Composition is a binary operation that combines two relations to form a new relation.
+For example, using the denotation of a reflexive transitive closure relations, \\( \xrightarrow{\*} \\), the composition of two relations \\( R^* \circ S^* \\) is defined as \\( \lbrace (a, c) \mid \exists b \in A, a \xrightarrow{\*}_R b \land b \xrightarrow{\*}_S c \rbrace \\), and can be expressed by the operator \\( \xrightarrow{\*}_R \circ \xrightarrow{\*}_S \\).
 
 <!----------------------------------------------------------------->
 

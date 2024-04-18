@@ -336,7 +336,7 @@ An ARS is **strongly normalizing** if all terms in the system are strongly norma
 
 $$
 \begin{align*}
-& t \text{ is strongly normalizing} \iff \forall s \in A \\\
+& t \text{ is strongly normalizing} \iff \bold{\forall} s \in A \\\
 & \text{ such that } t \rarr^* s \text{, } s \text{ is in normal form} \\\
 \end{align*}
 $$
@@ -365,6 +365,13 @@ graph LR;
  AAAA -->|+| BBBB
  AAAA -->|∗| AAAAA(...)
 {{< /mermaid >}}
+
+$$
+\begin{align*}
+& t \text{ is weakly normalizing} \iff \bold{\exists} s \in A \\\
+& \text{ such that } t \rarr^* s \text{ and } s \text{ is in normal form} \\\
+\end{align*}
+$$
 
 #### Conclusion Normalization
 

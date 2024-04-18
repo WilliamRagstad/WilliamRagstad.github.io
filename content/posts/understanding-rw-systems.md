@@ -189,10 +189,28 @@ This is the **smallest** relation that contains the original relation \\( \rarr 
 
 > Denotations include: \\( R^* \\), \\( \xrightarrow{\*} \\) and \\( \rarr^* \\).
 
-This is the **smallest** relation that contains the original relation \\( \rarr \\) and is **reflexive** and **transitive**.[^BinRel]
+A **reflexive** relation \\( R^* \\) is a relation where every element in \\(A\\) is **related to itself**.
+This *can* be formally defined as:[^ReflectiveRelation]
 
-TODO: The denotation \\( t \rarr^* s \\) means that *there is* some sequence of rewrites transforming the term \\( t \\) to \\( s \\) *(including zero rewrites)*,
-\\( t_0 \rarr t_1 \rarr \ldots \rarr t_n = s \\) where \\( n \geq 0 \\).
+{{< mermaid >}}
+graph LR;
+ a --> a
+ a --> b
+ b --> b
+{{< /mermaid >}}
+
+$$
+\begin{align*}
+& \text{Relation } R \text{ is reflexive } \iff & \forall x \in A, & \ x R x \\\
+& & \text{or} \hspace{4mm} & \ x \rarr x \\\
+& & \text{or} \hspace{4mm} & \ (x, x) \in R
+\end{align*}
+$$
+
+As every intersection of reflexive relations is reflexive, this defines a closure.
+A **reflexive-transitive closure** is a closing relation that is both **reflexive** and **transitive**.[^ReflectiveClosure][^TransitiveRelation][^TransitiveClosure]
+That is having the properties of both the **transitive** and **reflexive** closures, meaning that it includes **direct**, **sequence** and **self-referential** transformations between terms.
+
 
 ### Joinability
 

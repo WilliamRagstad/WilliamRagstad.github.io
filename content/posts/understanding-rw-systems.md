@@ -23,6 +23,8 @@ I will be using various resources, including books, papers and online articles t
 A great book I have found on the subject is ***Term Rewriting and All That*** by *Franz Baader* and *Tobias Nipkow*.[^TRaAT]
 I will use the terms abstract rewriting systems (ARS) and rewriting systems interchangeably,[^ARS] as I am not focusing on any specific type of rewriting system (Frankly, I am not sure if there is a difference between the two).
 
+<!----------------------------------------------------------------->
+
 ## What are Rewriting Systems?
 
 A rewriting system is a formal system that consists of a set of rules that describe how to rewrite terms and are a fundamental concept in computer science, mathematics, and logic.[^Logic]
@@ -109,6 +111,8 @@ s5 -->|Inverse| s6("¬p ∧ q")
 
 This system models logical reasoning and can be used to prove theorems and derive new logical formulas, and is an example of how rewriting systems can be used in practice.
 
+<!----------------------------------------------------------------->
+
 ## More Notation
 
 When reading papers using rewriting systems, we'll need to understand some extended denotation.
@@ -181,6 +185,9 @@ graph TD;
  x -->|∗| z
  y -->|∗| z
 {{< /mermaid >}}
+
+
+<!----------------------------------------------------------------->
 
 ## Properties
 
@@ -277,6 +284,9 @@ graph LR;
 
 Normal forms are important because they provide a unique term used to compare for equivalence[^Eq] and to prove properties of the system.
 In some systems, not all terms have a normal form, and the system is said to be **non-terminating**[^SimpleTerm][^TermRW][^Termination] and is the reason some rewriting systems are **non-deterministic** and **undecidable**.[^RW]
+
+
+<!----------------------------------------------------------------->
 
 <!----------------------------------------------------------------->
 

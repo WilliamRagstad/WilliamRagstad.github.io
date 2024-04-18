@@ -138,6 +138,20 @@ It's easy to get confused with the term, as it may have a different meaning in o
 > Similarly, a subset is said to be closed under a collection of operations if it is closed under each of the operations individually.
 > The closure of a subset is the result of a closure operator applied to the subset. The closure of a subset under some operations is the smallest superset that is closed under these operations. It is often called the span (for example linear span) or the generated set.[^Closure]
 
+I interpret this as a **closure** being a **set of elements** that when some **operation** is applied to them, the result **is always a member of the same set**.
+Thus the operation is **closed** under the set of elements, meaning no elements are *lost or gained* after the operation, coming from any other set elsewhere, somehow.
+
+The classical example here is of course the **natural numbers** being **closed under addition** but **not under subtraction**.
+Because adding two natural numbers always results in another natural number, and subtracting two natural numbers may result in a negative number, which is not a natural number.
+
+$$
+\begin{align*}
+& \forall a, b \in \mathbb{N} \iff a + b \in \mathbb{N} \hspace{1cm} \text{OK} & \\\
+& \not \forall a, b \in \mathbb{N} \not \Rarr a - b \in \mathbb{N} \hspace{1cm} \text{Not OK} & \\\
+\end{align*}
+$$
+
+So, what does this mean in the context of rewriting systems?
 Simply put, a **closure**-relation is just like **a regular relation**, but **with additional properties**.[^Closure]
 This is done by extending a basic relation \\( R \\) or \\( \rarr \\) to **expand the set of allowable transformations between terms**.
 Closures are fundamental in understanding how terms can evolve in a system beyond simple direct transformations, incorporating **sequences**, **reversals**, and **self-referential** transformations, among others.

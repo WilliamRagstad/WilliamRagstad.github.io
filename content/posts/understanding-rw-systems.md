@@ -378,3 +378,4 @@ In some systems, not all terms have a normal form, and the system is said to be 
 [^TransitiveRelation]: "Transitive relation", https://en.wikipedia.org/wiki/Transitive_relation.
 [^ReflectiveClosure]: "Reflective closure", https://en.wikipedia.org/wiki/Reflexive_closure.
 [^ReflectiveRelation]: "Reflexive relation", https://en.wikipedia.org/wiki/Reflexive_relation.
+[^SymmetricClosure]: "Symmetric closure", https://en.wikipedia.org/wiki/Symmetric_closure.

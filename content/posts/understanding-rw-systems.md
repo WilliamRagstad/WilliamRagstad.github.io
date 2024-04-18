@@ -210,6 +210,28 @@ As every intersection of reflexive relations is reflexive, this defines a closur
 A **reflexive-transitive closure** is a closing relation that is both **reflexive** and **transitive**.[^ReflectiveClosure][^TransitiveRelation][^TransitiveClosure]
 That is having the properties of both the **transitive** and **reflexive** closures, meaning that it includes **direct**, **sequence** and **self-referential** transformations between terms.
 
+### Symmetric Closure
+
+> Denotations include: \\( \xleftrightarrow{} \\) and \\( \lrarr \\).
+
+This is a relation that is **symmetric** if, for all elements \\(a, b \in X\\), whenever \\(R\\) relates \\(a\\) to \\(b\\), then \\(R\\) also relates \\(b\\) to \\(a\\).
+This is a closure that includes **bi-directional** transformations between terms.
+Formally, a relation \\( R \\) *is symmetric if* \\( a \rarr b \implies b \rarr a \\), where \\( \lrarr \ = (\rarr \cup \rarr^{-1}) \\) and \\( \rarr^{-1} \ = \lbrace (b, a) \mid (a, b) \in \rarr \rbrace \\).[^ARS][^BinRel]
+
+{{< mermaid >}}
+graph LR;
+ a --> b
+ b --> a
+{{< /mermaid >}}
+
+### Reflexive Transitive Symmetric Closure
+
+> Denotations include: \\( \xleftrightarrow{\*} \\) and \\( \lrarr^* \\).
+
+This is a relation that is both **reflexive**, **transitive** and **symmetric**.
+That is having the properties of the **transitive** and **reflexive** closures, and the **symmetric** property, meaning that it includes **direct**, **sequence**, **self-referential** and **bi-directional** transformations between terms.[^ReflectiveRelation][^TransitiveRelation][^TransitiveClosure][^ReflectiveClosure][^SymmetricClosure]
+
+Similarly, the **reflexive transitive symmetric closure** *or* **equivalence closure** of a relation is the smallest equivalence relation.[^Closure]
 
 ### Joinability
 

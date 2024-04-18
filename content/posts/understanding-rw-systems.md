@@ -407,8 +407,16 @@ $$
 Normal forms are important because they provide a unique term used to compare for equivalence[^Eq] and to prove properties of the system.
 In some systems, not all terms have a normal form, and the system is said to be **non-terminating**[^SimpleTerm][^TermRW][^Termination] and is the reason some rewriting systems are **non-deterministic** and **undecidable**.[^RW]
 
-
 <!----------------------------------------------------------------->
+
+## Conclusion
+
+Today we have explored the basics of rewriting systems, including the fundamental concepts, notation, and properties.
+We have seen how rewriting systems are used as a fundamental model for computational processes and reasoning in computer science, mathematics, and logic.
+They consist of a set of elements, terms, and rewrite rules that describe how terms can be transformed.
+Rewriting systems are used in many areas, including programming languages, compilers, and automated theorem proving.
+
+I hope this article has helped you understand the basics of rewriting systems and that you have learned something new.
 
 <!----------------------------------------------------------------->
 

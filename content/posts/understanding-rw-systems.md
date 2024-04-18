@@ -234,12 +234,18 @@ $$
 
 ### Reflexive Transitive Symmetric Closure
 
-> Denotations include: \\( \xleftrightarrow{\*} \\) and \\( \lrarr^* \\).
+> Denotations include: \\( \xleftrightarrow{\*} \\), \\( \lrarr^* \\) and \\( \sim \\).
 
 This is a relation that is both **reflexive**, **transitive** and **symmetric**.
 That is having the properties of the **transitive** and **reflexive** closures, and the **symmetric** property, meaning that it includes **direct**, **sequence**, **self-referential** and **bi-directional** transformations between terms.[^ReflectiveRelation][^TransitiveRelation][^TransitiveClosure][^ReflectiveClosure][^SymmetricClosure]
 
-Similarly, the **reflexive transitive symmetric closure** *or* **equivalence closure** of a relation is the smallest equivalence relation.[^Closure]
+Similarly, the **reflexive transitive symmetric closure** *or* **equivalence closure** of a relation is the smallest equivalence relation.[^Closure][^EquivalenceRelation]
+
+For all \\( a, b, c \in A \\):[^EquivalenceRelation]
+
+- **Reflexive**: \\( a \rarr^* a \\).
+- **Transitive**: \\( a \rarr^* b \land b \rarr^* c \implies a \rarr^* c \\).
+- **Symmetric**: \\( a \rarr^* b \implies b \rarr^* a \\).
 
 ### Joinability
 

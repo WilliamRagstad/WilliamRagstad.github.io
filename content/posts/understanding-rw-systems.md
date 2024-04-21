@@ -113,6 +113,7 @@ This system models logical reasoning and can be used to prove theorems and deriv
 
 <!----------------------------------------------------------------->
 
+<!--& toc-collapse, center &-->
 ## More Notation
 
 Before reading any academic papers using rewriting systems,
@@ -269,6 +270,7 @@ For example, using the denotation of a reflexive transitive closure relations, \
 
 <!----------------------------------------------------------------->
 
+<!--& toc-collapse, center &-->
 ## Properties
 
 Some properties of abstract term rewriting systems are **termination**,[^SimpleTerm][^TermRW] **confluence**,[^Conf] **normalization**,[^NF] **completion**[^Comp][^TRaAT] and **equivalence**.[^Eq]

@@ -46,3 +46,11 @@ sup + sup :before {
 .prose :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)) {
 	font-weight: 300;
 }
+
+#main-content > article > section details.toc-right > div {
+	padding-left: calc(1.25rem + 16px);
+}
+
+#main-content > article > section details.toc-right > div li > details > summary {
+	margin-left: -16px;
+}

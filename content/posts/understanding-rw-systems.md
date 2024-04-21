@@ -96,6 +96,7 @@ $$
 
 These rewrite relations often have a more complex term on the left-hand side and a simpler term on the right-hand side.
 This is a common pattern and hints at the **normalization**[^NF] properties of the system, discussed in the next section.
+Using this system we can write any expression in its conjunctive normal form (CNF) or disjunctive normal form (DNF) by applying the rules in sequence.[^CNF]
 
 Below is an example of how the rewrite system can be used to simplify a logical formula: \\( \lnot((p \land q) \lor \lnot q)\\) to \\(\lnot(p \land q) \\).
 
@@ -435,6 +436,7 @@ I hope this article has helped you understand the basics of rewriting systems an
 [^TermRW]: Nachum Dershowitz, “Termination of Rewriting,” Journal of Symbolic Computation 3, no. 1–2 (February 1987): 69–115, https://doi.org/10.1016/S0747-7171(87)80022-6.
 [^BinRel]: "Binary relation", https://en.wikipedia.org/wiki/Binary_relation.
 [^BoolAlg]: "Boolean algebra", https://en.wikipedia.org/wiki/Boolean_algebra.
+[^CNF]: "Conjunctive normal form", https://en.wikipedia.org/wiki/Conjunctive_normal_form.
 [^Logic]: "Logic", https://en.wikipedia.org/wiki/Logic.
 [^GLT]: "Ground and Linear Terms", https://en.wikipedia.org/wiki/Term_(logic)#Ground_and_linear_terms.
 [^T]: "Term (logic)", https://en.wikipedia.org/wiki/Term_(logic).

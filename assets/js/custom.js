@@ -19,7 +19,7 @@ function getTargetElement(command_selector) {
 
 function applyCustomization() {
 	let appliedCustomization = false;
-	for (const commandElement of document.querySelectorAll('command')) {
+	for (const commandElement of document.querySelectorAll('command-')) {
 		let targetSelector = commandElement.getAttribute('for');
 		if (!targetSelector) {
 			console.error('No target specified for command:', commandElement);
@@ -72,7 +72,7 @@ function applyCustomization() {
 }
 
 function main() {
-	window.customElements.define('command', class extends HTMLElement { });
+	window.customElements.define('command-', class extends HTMLElement { });
 	let body_observer = new MutationObserver((mutations) => {
 		mutations.forEach((mutation) => {
 			if (mutation.addedNodes.length > 0) {

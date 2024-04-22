@@ -114,8 +114,8 @@ This system models logical reasoning and can be used to prove theorems and deriv
 
 <!----------------------------------------------------------------->
 
-<command for="#more-notation" toc-collapse/>
-<command for="#more-notation:parent" center/>
+<command- for="#more-notation" toc-collapse/>
+<command- for="#more-notation:parent" center/>
 
 ## More Notation
 
@@ -273,8 +273,8 @@ For example, using the denotation of a reflexive transitive closure relations, \
 
 <!----------------------------------------------------------------->
 
-<command for="#properties" toc-collapse/>
-<command for="#properties:parent" center/>
+<command- for="#properties" toc-collapse/>
+<command- for="#properties:parent" center/>
 
 ## Properties
 

@@ -72,6 +72,7 @@ function applyCustomization() {
 }
 
 function main() {
+	window.customElements.define('command', class extends HTMLElement { });
 	let body_observer = new MutationObserver((mutations) => {
 		mutations.forEach((mutation) => {
 			if (mutation.addedNodes.length > 0) {

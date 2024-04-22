@@ -73,6 +73,7 @@ function main() {
 	});
 	body_observer.observe(document.body, { childList: true, subtree: true });
 	applyCustomization();
+	console.log('Customization applied');
 }
 
 main();

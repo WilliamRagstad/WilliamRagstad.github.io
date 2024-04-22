@@ -1,66 +1,74 @@
-function isCommandTag(node /* Node */) {
-	return node.nodeType === Node.COMMENT_NODE && node.nodeValue.startsWith('&') && node.nodeValue.endsWith('&');
-}
-
-function closestCommandTag(element /* Node */) {
-	// Check neighboring nodes
-	let prev = element.previousSibling;
-	let next = element.nextSibling;
-	while (prev && prev.nodeType === Node.TEXT_NODE && prev.nodeValue.trim() === '') {
-		prev = prev.previousSibling;
+function getTargetElement(command_selector) {
+	let target_selectors = command_selector.split(':parent');
+	let default_selector = target_selectors[0];
+	let element = document.querySelector(default_selector);
+	if (!element) {
+		console.error('Element not found:', default_selector);
+		return null;
 	}
-	while (next && next.nodeType === Node.TEXT_NODE && next.nodeValue.trim() === '') {
-		next = next.nextSibling;
-	}
-	if (prev && isCommandTag(prev)) {
-		return prev;
-	}
-	if (next && isCommandTag(next)) {
-		return next;
-	}
-	// Check child nodes
-	let children = Array.from(element.childNodes);
-	if (children.length > 0) {
-		return children.find(isCommandTag);
-	}
-	return null;
-}
-
-function applyHeaderCustomization() {
-	const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-	for (const header of headers) {
-		let comment = closestCommandTag(header);
-		if (comment) {
-			let commands = comment.nodeValue.slice(1, -1).split(',').map((x) => x.trim());
-			for (const command of commands) {
-				console.log('Command:', command);
-				switch (command) {
-					case 'toc-collapse':
-						makeTocCollapse(header);
-						break;
-					case 'center':
-						header.style.textAlign = 'center';
-						break;
-					case 'right':
-						header.style.textAlign = 'right';
-						break;
-					case 'bold':
-						header.style.fontWeight = 'bold';
-						break;
-					case 'italic':
-						header.style.fontStyle = 'italic';
-						break;
-					case 'underline':
-						header.style.textDecoration = 'underline';
-						break;
-				}
-			}
+	while (target_selectors.length > 1) {
+		let target_selector = target_selectors.shift();
+		element = element.parentElement;
+		if (!element) {
+			console.error('Element not found:', target_selector);
+			return null;
 		}
 	}
+	return element;
 }
 
 function applyCustomization() {
-	applyHeaderCustomization();
+	let appliedCustomization = false;
+	for (const commandElement of document.querySelectorAll('command')) {
+		let targetSelector = commandElement.getAttribute('for');
+		if (!targetSelector) {
+			console.error('No target specified for command:', commandElement);
+			continue;
+		}
+		let targetElement = getTargetElement(targetSelector);
+		if (targetElement) {
+			commandElement.removeAttribute('for');
+			for (const attribute of commandElement.attributes) {
+				let prevApplied = appliedCustomization;
+				appliedCustomization = true;
+				switch (attribute.name) {
+					case 'toc-collapse':
+						makeTocCollapse(targetElement.id);
+						break;
+					case 'center':
+						targetElement.style.textAlign = 'center';
+						break;
+					case 'right':
+						targetElement.style.textAlign = 'right';
+						break;
+					case 'bold':
+						targetElement.style.fontWeight = 'bold';
+						break;
+					case 'italic':
+						targetElement.style.fontStyle = 'italic';
+						break;
+					case 'underline':
+						targetElement.style.textDecoration = 'underline';
+						break;
+					case 'class':
+						targetElement.classList.add(attribute.value);
+						break;
+					case 'style':
+						targetElement.style.cssText += attribute.value;
+						break;
+					default:
+						console.error('Unknown command:', attribute.name);
+						appliedCustomization = prevApplied;
+						break;
+				}
+			}
+		} else {
+			console.error('Target not found:', targetSelector);
+			continue;
+		}
+		commandElement.remove();
+	}
+	if (appliedCustomization) console.log('Customization applied');
 }
 
 function main() {
@@ -73,15 +81,13 @@ function main() {
 	});
 	body_observer.observe(document.body, { childList: true, subtree: true });
 	applyCustomization();
-	console.log('Customization applied');
 }
 
 main();
 
 // ========= Commands =========
 
-function makeTocCollapse(header /* Node */) {
-	const header_id = header.querySelector(".anchor").id;
+function makeTocCollapse(header_id /* Node */) {
 	const toc_link = document.querySelector(`.toc li > a[href="#${header_id}"]`);
 	const toc_item = toc_link.parentElement;
 	const toc_sublist = toc_item.querySelector("ul");

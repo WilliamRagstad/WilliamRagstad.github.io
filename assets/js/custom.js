@@ -2,89 +2,67 @@ function getTargetElement(command_selector) {
 	let target_selectors = command_selector.split(':parent');
 	let default_selector = target_selectors[0];
 	let element = document.querySelector(default_selector);
-	if (!element) {
-		console.error('Element not found:', default_selector);
+	if (!element)
 		return null;
-	}
 	while (target_selectors.length > 1) {
-		let target_selector = target_selectors.shift();
+		target_selectors.shift();
 		element = element.parentElement;
-		if (!element) {
-			console.error('Element not found:', target_selector);
+		if (!element)
 			return null;
-		}
 	}
 	return element;
 }
 
-function applyCustomization() {
-	let appliedCustomization = false;
-	for (const commandElement of document.querySelectorAll('command-')) {
-		let targetSelector = commandElement.getAttribute('for');
-		if (!targetSelector) {
-			console.error('No target specified for command:', commandElement);
-			continue;
-		}
-		let targetElement = getTargetElement(targetSelector);
-		if (targetElement) {
-			commandElement.removeAttribute('for');
-			for (const attribute of commandElement.attributes) {
-				let prevApplied = appliedCustomization;
-				appliedCustomization = true;
-				switch (attribute.name) {
-					case 'toc-collapse':
-						makeTocCollapse(targetElement.id);
-						break;
-					case 'center':
-						targetElement.style.textAlign = 'center';
-						break;
-					case 'right':
-						targetElement.style.textAlign = 'right';
-						break;
-					case 'bold':
-						targetElement.style.fontWeight = 'bold';
-						break;
-					case 'italic':
-						targetElement.style.fontStyle = 'italic';
-						break;
-					case 'underline':
-						targetElement.style.textDecoration = 'underline';
-						break;
-					case 'class':
-						targetElement.classList.add(attribute.value);
-						break;
-					case 'style':
-						targetElement.style.cssText += attribute.value;
-						break;
-					default:
-						console.error('Unknown command:', attribute.name);
-						appliedCustomization = prevApplied;
-						break;
-				}
-			}
-		} else {
-			console.error('Target not found:', targetSelector);
-			continue;
-		}
-		commandElement.remove();
+class CommandElement extends HTMLElement {
+	constructor() {
+		super();
 	}
-	if (appliedCustomization) console.log('Customization applied');
-}
-
-function main() {
-	window.customElements.define('command-', class extends HTMLElement { });
-	let body_observer = new MutationObserver((mutations) => {
-		mutations.forEach((mutation) => {
-			if (mutation.addedNodes.length > 0) {
-				applyCustomization();
+	connectedCallback() {
+		let target_selector = this.getAttribute('for');
+		if (!target_selector) {
+			console.error('No target specified for command:', this);
+			return;
+		}
+		let target_element = getTargetElement(target_selector);
+		if (!target_element) {
+			console.error('Target not found:', target_selector);
+			return;
+		}
+		this.removeAttribute('for');
+		for (const attribute of this.attributes) {
+			switch (attribute.name) {
+				case 'toc-collapse':
+					makeTocCollapse(target_element.id);
+					break;
+				case 'center':
+					target_element.style.textAlign = 'center';
+					break;
+				case 'right':
+					target_element.style.textAlign = 'right';
+					break;
+				case 'bold':
+					target_element.style.fontWeight = 'bold';
+					break;
+				case 'italic':
+					target_element.style.fontStyle = 'italic';
+					break;
+				case 'underline':
+					target_element.style.textDecoration = 'underline';
+					break;
+				case 'class':
+					target_element.classList.add(attribute.value);
+					break;
+				case 'style':
+					target_element.style.cssText += attribute.value;
+					break;
+				default:
+					console.error('Unknown command:', attribute.name);
+					break;
 			}
-		});
-	});
-	body_observer.observe(document.body, { childList: true, subtree: true });
-	applyCustomization();
+		}
+		console.log('Customization applied');
+	}
 }
-
-main();
 
 // ========= Commands =========
 
@@ -103,3 +81,6 @@ function makeTocCollapse(header_id /* Node */) {
 	details.appendChild(toc_sublist);
 	toc_item.appendChild(details);
 }
+
+// Register the custom element
+customElements.define('command-', CommandElement);

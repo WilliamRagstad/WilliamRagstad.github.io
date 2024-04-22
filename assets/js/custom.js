@@ -63,7 +63,7 @@ function applyCustomization() {
 	applyHeaderCustomization();
 }
 
-(() => {
+function main() {
 	let body_observer = new MutationObserver((mutations) => {
 		mutations.forEach((mutation) => {
 			if (mutation.addedNodes.length > 0) {
@@ -73,7 +73,9 @@ function applyCustomization() {
 	});
 	body_observer.observe(document.body, { childList: true, subtree: true });
 	applyCustomization();
-})();
+}
+
+main();
 
 // ========= Commands =========
 

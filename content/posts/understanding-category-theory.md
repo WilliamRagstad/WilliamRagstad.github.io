@@ -2,7 +2,7 @@
 title = 'Understanding Category Theory'
 date = 2024-04-18T20:54:27+02:00
 series = ['Understanding']
-series_order = 2
+series_order = 4
 tags = ["category theory"]
 categories = ["computer science", "mathematics"]
 draft = true

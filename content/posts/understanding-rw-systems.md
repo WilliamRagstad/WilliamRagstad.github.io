@@ -3,7 +3,7 @@ title = 'Understanding Rewriting Systems'
 date = 2024-04-12T21:00:59+02:00
 series = ["Understanding"]
 series_order = 1
-tags = ["rewriting systems", "notes", "research", "understanding"]
+tags = ["rewriting systems", "relations", "formal systems"]
 categories = ["computer science", "mathematics", "logic"]
 draft = false
 +++

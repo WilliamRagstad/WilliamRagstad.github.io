@@ -5,7 +5,7 @@ series = ["Understanding"]
 series_order = 1
 tags = ["rewriting systems", "notes", "research", "understanding"]
 categories = ["computer science", "mathematics", "logic"]
-draft = true
+draft = false
 +++
 {{< katex >}}
 

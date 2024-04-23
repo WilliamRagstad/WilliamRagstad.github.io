@@ -367,7 +367,7 @@ $$
 
 #### Strong Normalization
 
-A term is said to be **strongly normalizing (SN)** if all possible rewrites eventually terminate and reach some normal form.
+A term is said to be **strongly normalizing (SN)** if *all possible rewrites* eventually reach a normal form and terminate in a finite number of steps.
 An ARS is **strongly normalizing** if all terms in the system are strongly normalizing (terminating).[^NF][^Termination]
 
 $$
@@ -377,7 +377,46 @@ $$
 \end{align*}
 $$
 
+Consider the following ARS:
+
+$$
+\begin{align*}
+a &\rarr c \\\
+b &\rarr c \\\
+c &\rarr d \\\
+c &\rarr e \\\
+d &\rarr f \\\
+e &\rarr f \\\
+d &\rarr g \\\
+f &\rarr h \\\
+\end{align*}
+$$
+
+The **normal forms** of this system are \\( h \\) and \\( g \\).
+Visualizing the relations above, we can see that any term can be rewritten to either \\( h \\) or \\( g \\) in a finite number of steps, making the system strongly normalizing.
+
+{{< mermaid >}}
+graph LR;
+ a --> c
+ b --> c
+ c --> d
+ c --> e
+ d --> f
+ e --> f
+ d --> g
+ f --> h
+{{< /mermaid >}}
+
 #### Weak Normalization
+
+A term is said to be **weakly normalizing (WN)** if *any* rewrites reach a normal form and terminates in a finite number of steps.
+
+$$
+\begin{align*}
+& t \text{ is weakly normalizing} \iff \bold{\exists} s \in A \\\
+& \text{ such that } t \rarr^* s \text{ and } s \text{ is in normal form} \\\
+\end{align*}
+$$
 
 To illustrate the distinction between strong and **weak normalization (WN)**, consider the following ARS:
 
@@ -401,13 +440,6 @@ graph LR;
  AAAA -->|+| BBBB
  AAAA -->|∗| AAAAA(...)
 {{< /mermaid >}}
-
-$$
-\begin{align*}
-& t \text{ is weakly normalizing} \iff \bold{\exists} s \in A \\\
-& \text{ such that } t \rarr^* s \text{ and } s \text{ is in normal form} \\\
-\end{align*}
-$$
 
 #### Conclusion Normalization
 

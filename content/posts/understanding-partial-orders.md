@@ -11,7 +11,7 @@ draft = true
 
 This article is part of a series on understanding mathematical concepts.
 In this post, we will explore the concept of partial orders and their properties.
-The reason I started investigating this topic is because I watched a talk by **Emily Riehl** on [A categorical view of computational effects](https://www.youtube.com/watch?v=Ssx2_JKpB3U&t=1030s), where she mentioned that *"omega complete partial orders are a category relevant to computer science"*. This intrigued me, and I wanted to understand more about partial orders and their properties.
+The reason I started investigating this topic is because I watched a talk by **Emily Riehl** on [A categorical view of computational effects](https://youtu.be/Ssx2_JKpB3U?t=601), where she mentioned that *"omega complete partial orders is a category relevant to computer science"*. This intrigued me, and I wanted to understand more about partial orders and their properties.
 
 ## Introduction
 

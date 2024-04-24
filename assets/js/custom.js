@@ -38,6 +38,18 @@ class CommandElement extends HTMLElement {
 		super();
 	}
 	connectedCallback() {
+		const defer = this.getAttribute('defer') !== null;
+		if (defer) {
+			this.removeAttribute('defer');
+		}
+		if (defer) {
+			setTimeout(() => this.init(), 0);
+		} else {
+			this.init();
+		}
+	}
+
+	init() {
 		if (this.hasAttribute('for')) {
 			const target = getTargetElement(this.getAttribute('for'));
 			if (!target) {

@@ -1,5 +1,5 @@
-function getTargetElement(command_selector) {
-	let target_selectors = command_selector.split(':parent');
+function getTargetElement(selector) {
+	let target_selectors = selector.split(':parent');
 	let default_selector = target_selectors[0];
 	let element = document.querySelector(default_selector);
 	if (!element)
@@ -7,10 +7,30 @@ function getTargetElement(command_selector) {
 	while (target_selectors.length > 1) {
 		target_selectors.shift();
 		element = element.parentElement;
-		if (!element)
+		if (!element) {
+			console.warn('Parent not found for:', selector);
 			return null;
+		}
 	}
 	return element;
+}
+
+function getAllTargetElements(selector) {
+	let target_selectors = selector.split(':parent');
+	let default_selector = target_selectors[0];
+	let elements = Array.from(document.querySelectorAll(default_selector));
+	if (elements.length === 0)
+		return [];
+	while (target_selectors.length > 1) {
+		target_selectors.shift();
+		elements = elements.map(element => element.parentElement);
+		// Check if any parent is null
+		if (elements.includes(null)) {
+			console.warn('Parent not found for:', selector);
+			return [];
+		}
+	}
+	return elements;
 }
 
 class CommandElement extends HTMLElement {
@@ -18,49 +38,65 @@ class CommandElement extends HTMLElement {
 		super();
 	}
 	connectedCallback() {
-		let target_selector = this.getAttribute('for');
-		if (!target_selector) {
-			console.error('No target specified for command:', this);
-			return;
+		if (this.hasAttribute('for')) {
+			const target = getTargetElement(this.getAttribute('for'));
+			if (!target) {
+				console.error('Target not found:', this.getAttribute('for'));
+				return;
+			}
+			this.removeAttribute('for');
+			this.applyCommand(target);
+		} else if (this.hasAttribute('for-all')) {
+			const targets = getAllTargetElements(this.getAttribute('for-all'));
+			if (targets.length === 0) {
+				console.error('No targets found:', this.getAttribute('for-all'));
+				return;
+			}
+			this.removeAttribute('for-all');
+			for (const target of targets) {
+				this.applyCommand(target);
+			}
+		} else {
+			console.error('No target specified for command:', this, 'Use the "for" or "for-all" attribute');
 		}
-		let target_element = getTargetElement(target_selector);
-		if (!target_element) {
-			console.error('Target not found:', target_selector);
-			return;
-		}
-		this.removeAttribute('for');
+		console.log('Customization applied');
+	}
+
+	applyCommand(target) {
 		for (const attribute of this.attributes) {
 			switch (attribute.name) {
 				case 'toc-collapse':
-					makeTocCollapse(target_element.id);
+					makeTocCollapse(target.id);
 					break;
 				case 'center':
-					target_element.style.textAlign = 'center';
+					target.style.textAlign = 'center';
 					break;
 				case 'right':
-					target_element.style.textAlign = 'right';
+					target.style.textAlign = 'right';
 					break;
 				case 'bold':
-					target_element.style.fontWeight = 'bold';
+					target.style.fontWeight = 'bold';
 					break;
 				case 'italic':
-					target_element.style.fontStyle = 'italic';
+					target.style.fontStyle = 'italic';
 					break;
 				case 'underline':
-					target_element.style.textDecoration = 'underline';
+					target.style.textDecoration = 'underline';
 					break;
 				case 'class':
-					target_element.classList.add(attribute.value);
+					target.classList.add(attribute.value);
 					break;
 				case 'style':
-					target_element.style.cssText += attribute.value;
+					target.style.cssText += attribute.value;
+					break;
+				case 'remove-element':
+					target.remove();
 					break;
 				default:
 					console.error('Unknown command:', attribute.name);
 					break;
 			}
 		}
-		console.log('Customization applied');
 	}
 }
 

@@ -50,8 +50,7 @@ Often there also exist **a minimum element** \\(\exists m \in X\\) such that: \\
 
 ### Weak Partial Order
 
-In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular* **partial order**, the relation \\(\leq\\) is a binary relation on \\(X\\) that satisfies the following properties:[^PartiallyOrderedSet][^PartialOrder_Wolfram]
-
+In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular* **partial order**, the relation \\(\leq\\) is a binary relation on \\(X\\) satisfying the properties:[^PartiallyOrderedSet][^PartialOrder_Wolfram]
 \\(\forall a \in X\\):
 
 - **Reflexivity**: \\(a \leq a\\)
@@ -60,8 +59,7 @@ In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular
 
 ### Strong Partial Order
 
-In a **strong**, **irreflexive**, or **strict partial order**, the relation \\(<\\) is a binary relation on \\(X\\) that satisfies the following properties:[^StrictPartialOrder][^PartialOrder_Wolfram][^PartiallyOrderedSet]
-
+In a **strong**, **irreflexive**, or **strict partial order**, the relation \\(<\\) is a binary relation on \\(X\\) that satisfying the properties:[^StrictPartialOrder][^PartialOrder_Wolfram][^PartiallyOrderedSet]
 \\(\forall a \in X\\):
 
 - **Irreflexivity**: \\(a \nless a\\)

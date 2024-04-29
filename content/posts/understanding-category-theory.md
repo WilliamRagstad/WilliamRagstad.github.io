@@ -8,6 +8,7 @@ categories = ["computer science", "mathematics"]
 draft = true
 +++
 {{< katex >}}
+<command- for-all="span.katex-mathml" remove-element defer>
 
 This article is part of a series on understanding mathematical concepts.
 In this post, we will explore the concept of category theory and its applications.

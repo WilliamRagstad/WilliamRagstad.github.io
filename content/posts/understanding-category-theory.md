@@ -11,5 +11,5 @@ draft = true
 <command- for-all="span.katex-mathml" remove-element defer>
 
 This article is part of a series on understanding mathematical concepts.
-In this post, we will explore the concept of category theory and its applications.
-I've long been fascinated by the idea of category theory and its applications in computer science and mathematics.
+In this post, we will explore the concept of category theory.
+I've long been fascinated by the subject and applications in computer science and mathematics.

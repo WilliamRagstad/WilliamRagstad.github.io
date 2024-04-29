@@ -44,7 +44,9 @@ But also in computer science to model data structures, algorithms, scheduling ta
 -->
 
 A **partially ordered set** (or **poset** for short) described an ordered pair **\\(P = (X, \leq)\\)** consisting of a **set \\(X\\)** (called the ground set of \\(P\\)) and a partial order **relation \\(\leq\\) on \\(X\\)**.[^PartiallyOrderedSet][^PartialOrder_Wolfram]
-The names \\(X\\) and \\(P\\) where arbitrarily chosen, and the symbol \\(\leq\\) is commonly used to denote the partial order relation.
+The names \\(X\\) and \\(P\\) where arbitrarily chosen, and the symbol \\(\leq\\) is *commonly* used to denote a partial order relation.
+
+Often there also exist **a minimum element** \\(\exists m \in X\\) such that: \\(\forall a \in X\\), \\(m \leq a\\).
 
 ### Weak Partial Order
 
@@ -55,8 +57,6 @@ In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular
 - **Reflexivity**: \\(a \leq a\\)
 - **Antisymmetry**: if \\(a \leq b\\) and \\(b \leq a\\) then \\(a = b\\)
 - **Transitivity**: if \\(a \leq b\\) and \\(b \leq c\\) then \\(a \leq c\\)
-
-Often there also exist **a minimum element** \\(\exists m \in X\\) such that \\(\forall a \in X\\), \\(m \leq a\\).
 
 ### Strong Partial Order
 

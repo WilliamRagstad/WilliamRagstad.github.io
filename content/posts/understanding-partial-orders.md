@@ -43,7 +43,7 @@ But also in computer science to model data structures, algorithms, scheduling ta
     - Complete Lattices
 -->
 
-A **partially ordered set** (or **poset** for short) is an ordered pair \\(P = (X, \leq)\\) consisting of a **set \\(X\\)** (called the ground set of \\(P\\)) and a partial order **relation \\(\leq\\) on \\(X\\)**.
+A **partially ordered set** (or **poset** for short) described an ordered pair **\\(P = (X, \leq)\\)** consisting of a **set \\(X\\)** (called the ground set of \\(P\\)) and a partial order **relation \\(\leq\\) on \\(X\\)**.[^PartiallyOrderedSet][^PartialOrder_Wolfram]
 The names \\(X\\) and \\(P\\) where arbitrarily chosen, and the symbol \\(\leq\\) is commonly used to denote the partial order relation.
 
 ### Weak Partial Order

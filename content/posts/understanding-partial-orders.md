@@ -12,7 +12,8 @@ draft = true
 
 This article is part of a series on understanding mathematical concepts.
 In this post, we will explore the concept of partial orders and their properties.
-The reason I started investigating this topic is because I watched a talk by **Emily Riehl** on [A categorical view of computational effects](https://youtu.be/Ssx2_JKpB3U?t=601), where she mentioned that *"omega complete partial orders is a category relevant to computer science"*. This intrigued me, and I wanted to understand more about partial orders and their properties.
+The reason I started investigating this topic is because I watched a talk by **Emily Riehl** on [A categorical view of computational effects](https://youtu.be/Ssx2_JKpB3U?t=601), where she mentioned that *"omega complete partial orders is a category relevant to computer science"*. Also in another talk by **Eugenia Cheng** on [Category Theory in Life](https://youtu.be/ho7oagHeqNc?t=919), she mentioned that the factors of numbers like 30, 42, and 56 can be generalized and *"fit together in the same cube structure which is otherwise known as a partially ordered set, but it's also an example of a category with arrows as morphisms"*.
+This intrigued me, and I wanted to understand more about partial orders and their properties.
 
 ## Introduction
 

@@ -58,6 +58,16 @@ In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular
 
 Often there also exist **a minimum element** \\(\exists m \in X\\) such that \\(\forall a \in X\\), \\(m \leq a\\).
 
+### Strong Partial Order
+
+In a **strong**, **irreflexive**, or **strict partial order**, the relation \\(<\\) is a binary relation on \\(X\\) that satisfies the following properties:[^StrictPartialOrder][^PartialOrder_Wolfram][^PartiallyOrderedSet]
+
+\\(\forall a \in X\\):
+
+- **Irreflexivity**: \\(a \nless a\\)
+- **Asymmetry**: if \\(a < b\\) then \\(b \nless a\\)
+- **Transitivity**: if \\(a < b\\) and \\(b < c\\) then \\(a < c\\)
+
 <!----------------------------------------------------------------->
 
 ## Notation

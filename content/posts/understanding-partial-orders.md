@@ -20,14 +20,10 @@ This intrigued me, and I wanted to understand more about partial orders and thei
 ## Introduction
 <!-- Briefly define what partial orders are and their significance in mathematics and computer science. -->
 
-Partial orders are a fundamental concept in mathematics and computer science.
-They are used to model relationships between elements of a set.
-Understanding partial orders is essential for understanding more advanced topics in mathematics and computer science.
-Partial orders are used in various fields, such as order theory, set theory, and category theory.
-They are also used in computer science to model data structures, algorithms and computational effects in programming languages.
-
-A **partially ordered set** (or **poset** for short) is an ordered pair \\(P = (X, \leq)\\) consisting of a **set \\(X\\)** (called the ground set of \\(P\\)) and a partial order **relation \\(\leq\\) on \\(X\\)**.
-The names \\(X\\) and \\(P\\) where arbitrarily chosen, and the symbol \\(\leq\\) is commonly used to denote the partial order relation.
+Partial orders are described in a branch of mathematics called **order theory**, and lay the foundation for understanding more advanced topics in mathematics and computer science.[^OrderTheory][^ListOfOrderTheoryTopics]
+They are used to **model relationships between elements of a set**.
+Partial orders are used in various fields, such as set theory, and category theory.
+But also in computer science to model data structures, algorithms, scheduling tasks, and computational effects in programming languages for example.
 
 <!----------------------------------------------------------------->
 
@@ -46,6 +42,11 @@ The names \\(X\\) and \\(P\\) where arbitrarily chosen, and the symbol \\(\leq\\
     - Weak Orders
     - Complete Lattices
 -->
+
+A **partially ordered set** (or **poset** for short) is an ordered pair \\(P = (X, \leq)\\) consisting of a **set \\(X\\)** (called the ground set of \\(P\\)) and a partial order **relation \\(\leq\\) on \\(X\\)**.
+The names \\(X\\) and \\(P\\) where arbitrarily chosen, and the symbol \\(\leq\\) is commonly used to denote the partial order relation.
+
+### Weak Partial Order
 
 In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular* **partial order**, the relation \\(\leq\\) is a binary relation on \\(X\\) that satisfies the following properties:[^PartiallyOrderedSet][^PartialOrder_Wolfram]
 

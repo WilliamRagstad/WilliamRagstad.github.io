@@ -15,7 +15,10 @@ In this post, we will explore the concept of partial orders and their properties
 The reason I started investigating this topic is because I watched a talk by **Emily Riehl** on [A categorical view of computational effects](https://youtu.be/Ssx2_JKpB3U?t=601), where she mentioned that *"omega complete partial orders is a category relevant to computer science"*. Also in another talk by **Eugenia Cheng** on [Category Theory in Life](https://youtu.be/ho7oagHeqNc?t=919), she mentioned that the factors of numbers like 30, 42, and 56 can be generalized and *"fit together in the same cube structure which is otherwise known as a partially ordered set, but it's also an example of a category with arrows as morphisms"*.
 This intrigued me, and I wanted to understand more about partial orders and their properties.
 
+<!----------------------------------------------------------------->
+
 ## Introduction
+<!-- Briefly define what partial orders are and their significance in mathematics and computer science. -->
 
 Partial orders are a fundamental concept in mathematics and computer science.
 They are used to model relationships between elements of a set.
@@ -26,7 +29,23 @@ They are also used in computer science to model data structures, algorithms and 
 A **partially ordered set** (or **poset** for short) is an ordered pair \\(P = (X, \leq)\\) consisting of a **set \\(X\\)** (called the ground set of \\(P\\)) and a partial order **relation \\(\leq\\) on \\(X\\)**.
 The names \\(X\\) and \\(P\\) where arbitrarily chosen, and the symbol \\(\leq\\) is commonly used to denote the partial order relation.
 
-## Partial Order
+<!----------------------------------------------------------------->
+
+## Definitions
+<!--
+    - Define the terms used in the context of partial orders.
+    - Explain the defining properties of partial orders: reflexivity, antisymmetry, and transitivity.
+    - Discuss the concept of posets (partially ordered sets).
+    - Cover Relations
+    - Chains
+    - Lattices
+    - Complete Partial Orders
+    - Total Orders
+    - Preorders
+    - Strict Partial Orders
+    - Weak Orders
+    - Complete Lattices
+-->
 
 In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular* **partial order**, the relation \\(\leq\\) is a binary relation on \\(X\\) that satisfies the following properties:[^PartiallyOrderedSet][^PartialOrder_Wolfram]
 
@@ -39,6 +58,67 @@ In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular
 Often there also exist **a minimum element** \\(\exists m \in X\\) such that \\(\forall a \in X\\), \\(m \leq a\\).
 
 <!----------------------------------------------------------------->
+
+## Notation
+<!--
+    - Discuss the notation used to represent partial orders.
+    - Hasse Diagrams
+    - Cover Relations
+-->
+
+<!----------------------------------------------------------------->
+
+## Examples
+<!--
+    - Provide examples of partial orders.
+    - Discuss the properties of the examples.
+    - Provide common examples of partial orders in daily mathematics and theoretical computer science.
+    - Explain how partial orders relate to other mathematical structures like lattices and chains.
+-->
+
+<!----------------------------------------------------------------->
+
+## Properties
+<!--
+    - Discuss the properties of partial orders.
+    - Explore important properties such as the existence of least upper bounds and greatest lower bounds.
+    - Discuss conditions under which these bounds exist.
+    - Explain the significance of the properties in mathematics and computer science.
+    - Discuss the relationship between partial orders and other mathematical structures.
+    - Discuss the properties of partial orders in relation to lattices, chains, complete partial orders, total orders, preorders, strict partial orders, and weak orders.
+-->
+
+<!----------------------------------------------------------------->
+
+## Applications
+<!--
+    - Discuss the applications and significance of partial orders in mathematics and computer science.
+    - Explore how partial orders are used to model relationships between elements of a set.
+    - Discuss how partial orders are used in data structures, algorithms, and computational effects in programming languages.
+    - Explain how partial orders are used in category theory and set theory.
+    - Illustrate how partial orders are used in data structure organization, scheduling tasks, and other computer science applications.
+-->
+
+<!----------------------------------------------------------------->
+
+## Advanced Topics
+<!--
+    - Introduce concepts of complete partial orders and their relevance in theoretical computer science, particularly in domain theory and fixed point theorems.
+-->
+
+<!----------------------------------------------------------------->
+
+## Conclusion
+<!--
+    - Summarize the key points discussed in the article.
+    - Discuss the significance of understanding partial orders in mathematics and computer science.
+    - Provide references for further reading on the topic.
+    - Summarize the importance of understanding partial orders and potential areas of further research or application.
+    - Conclude with a call to action for readers to explore the topic further.
+    - Provide a list of references and resources for further reading.
+    - Acknowledge the contributions of researchers and authors in the field of order theory and partial orders.
+    - Thank the readers for their time and interest in the topic.
+-->
 
 <!----------------------------------------------------------------->
 

@@ -54,3 +54,17 @@ sup + sup :before {
 #main-content > article > section details.toc-right > div li > details > summary {
 	margin-left: -16px;
 }
+
+#main-content > article > section .article-content ul {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+#main-content > article > section .article-content ul > li {
+	margin-top: 0.25rem !important;
+	margin-bottom: 0.25rem !important;
+}
+
+#main-content > article > section .article-content p:has(+ ul) {
+	margin-bottom: 0.5rem !important;
+}

@@ -57,11 +57,11 @@ There are two types of partial orders: **weak partial orders** and **strong part
 In a **weak**, **reflexive**, **non-strict partial order**, or simply a *regular* **partial order**, the relation \\(\leq\\) is a binary relation on \\(X\\).[^PartiallyOrderedSet][^PartialOrder_Wolfram]
 In a **strong**, **irreflexive**, or **strict partial order**, the relation \\(<\\) is a binary relation on \\(X\\) that satisfying the properties:[^StrictPartialOrder][^PartialOrder_Wolfram][^PartiallyOrderedSet]
 
-| \\(\forall a \in X\\) | Weak Partial Order                                       | \\(\forall a \in X\\) | Strong Partial Order                            |
-| --------------------- | -------------------------------------------------------- | --------------------- | ----------------------------------------------- |
-| **Reflexivity**       | \\(a \leq a\\)                                           | **Irreflexivity**     | \\(a \nless a\\)                                |
-| **Antisymmetry**      | if \\(a \leq b\\) and \\(b \leq a\\) then \\(a = b\\)    | **Asymmetry**         | if \\(a < b\\) then \\(b \nless a\\)            |
-| **Transitivity**      | if \\(a \leq b\\) and \\(b \leq c\\) then \\(a \leq c\\) | **Transitivity**      | if \\(a < b\\) and \\(b < c\\) then \\(a < c\\) |
+| \\(\forall a, b \in X\\) | Weak Partial Order                                       | \\(\forall a, b \in X\\) | Strong Partial Order                            |
+| ------------------------ | -------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
+| **Reflexivity**          | \\(a \leq a\\)                                           | **Irreflexivity**        | \\(a \nless a\\)                                |
+| **Antisymmetry**         | \\(a \leq b \land b \leq a \newline \implies a = b\\)    | **Asymmetry**            | \\(a < b \newline \implies b \nless a\\)        |
+| **Transitivity**         | \\(a \leq b \land b \leq c \newline \implies a \leq c\\) | **Transitivity**         | \\(a < b \land b < c \newline \implies a < c\\) |
 
 <!----------------------------------------------------------------->
 

@@ -18,25 +18,8 @@ This intrigued me, and I wanted to learn more about order theory to be able to f
 <!----------------------------------------------------------------->
 
 ## Introduction
-<!-- Briefly define what partial orders are and their significance in mathematics and computer science. -->
-
-Order theory is a branch of mathematics that studies the arrangement of elements in a certain order,
-defined by a binary relation that describes how elements compare to each other.
-It encompasses various types of orders, such as partial orders, total orders, well orders, lattices, etc. each defined by specific properties that the relations must satisfy.
-The relationships between elements of a set provides a framework for reasoning about the structure of ordered sets.
-This article provides a brief introduction and exploration of the key concepts and applications in order theory.
-
-## Partial Orders
-
-Partial orders are described in a branch of mathematics called **order theory**, and lay the foundation for understanding more advanced topics in mathematics and computer science.[^OrderTheory][^ListOfOrderTheoryTopics]
-They are used to **model relationships between elements of a set**.
-Partial orders are used in various fields, such as set theory, and category theory.
-But also in computer science to model data structures, algorithms, scheduling tasks, and computational effects in programming languages for example.
-
-<!----------------------------------------------------------------->
-
-### Definitions
 <!--
+    - Briefly define what partial orders are and their significance in mathematics and computer science.
     - Define the terms used in the context of partial orders.
     - Explain the defining properties of partial orders: reflexivity, antisymmetry, and transitivity.
     - Discuss the concept of posets (partially ordered sets).
@@ -50,6 +33,22 @@ But also in computer science to model data structures, algorithms, scheduling ta
     - Weak Orders
     - Complete Lattices
 -->
+
+Order theory is a branch of mathematics that studies the arrangement of elements in a certain order,
+defined by a binary relation that describes how elements compare to each other.
+It encompasses various types of orders, such as partial orders, total orders, well orders, lattices, etc. each defined by specific properties that the relations must satisfy.
+The relationships between elements of a set provides a framework for reasoning about the structure of ordered sets.
+Order theory is used in various fields, such as set theory, category theory, and computer science, to model data structures, algorithms, scheduling tasks, and computational effects in programming languages for example.
+It essentially lays the foundation for understanding more advanced topics in mathematics and computer science.[^OrderTheory][^ListOfOrderTheoryTopics]
+This article provides a brief introduction and exploration of the key concepts and applications in order theory.
+
+## Fundamental Concepts
+
+To fully understand order theory, it is essential to grasp the fundamental concepts, terminologies and diagram notations that underpin the theory.
+
+### Partial Orders
+
+Partial orders are used to **model relationships between elements of a set**.
 
 A **partially ordered set** (or **poset** for short) described an ordered pair **\\(P = (X, \leq)\\)** consisting of a **set \\(X\\)** (called the ground set of \\(P\\)) and a partial order **relation \\(\leq\\) on \\(X\\)**.[^PartiallyOrderedSet][^PartialOrder_Wolfram]
 The names \\(X\\) and \\(P\\) where arbitrarily chosen, and the symbol \\(\leq\\) is *commonly* used to denote a partial order relation.

@@ -10,18 +10,20 @@ draft = true
 {{< katex >}}
 <command- for-all="span.katex-mathml" remove-element defer>
 
-This article is part of a series on understanding mathematical concepts.
-In this post, we will explore the concept of partial orders and their properties.
-The reason I started investigating this topic is because I watched a talk by **Emily Riehl** on [A categorical view of computational effects](https://youtu.be/Ssx2_JKpB3U?t=601), where she mentioned that *"omega complete partial orders is a category relevant to computer science"*. Also in another talk by **Eugenia Cheng** on [Category Theory in Life](https://youtu.be/ho7oagHeqNc?t=919), she mentioned that the factors of numbers like 30, 42, and 56 can be generalized and *"fit together in the same cube structure which is otherwise known as a partially ordered set, but it's also an example of a category with arrows as morphisms"*.
-This intrigued me, and I wanted to understand more about partial orders and their properties.
+This article is part of a series on understanding different concepts in mathematics and computer science.
+In this post, we will explore the concept of order theory.
+*The reason* I started investigating this topic is because I watched a talk by **Emily Riehl** on [A categorical view of computational effects](https://youtu.be/Ssx2_JKpB3U?t=601), where she mentioned that *"omega complete partial orders is a category relevant to computer science"*. Also in another talk by **Eugenia Cheng** on [Category Theory in Life](https://youtu.be/ho7oagHeqNc?t=919), she mentioned that the factors of numbers like 30, 42, and 56 can be generalized and *"fit together in the same cube structure which is otherwise known as a partially ordered set, but it's also an example of a category with arrows as morphisms"*.
+This intrigued me, and I wanted to learn more about order theory to be able to further understand more advanced topics.
 
 <!----------------------------------------------------------------->
 
 ## Introduction
 <!-- Briefly define what partial orders are and their significance in mathematics and computer science. -->
 
-Order theory is a branch of mathematics that studies the relationships between elements of a set.
-It provides a framework for understanding the structure of ordered sets, such as partial orders, total orders, and lattices.
+Order theory is a branch of mathematics that studies the arrangement of elements in a certain order,
+defined by a binary relation that describes how elements compare to each other.
+It encompasses various types of orders, such as partial orders, total orders, well orders, lattices, etc. each defined by specific properties that the relations must satisfy.
+The relationships between elements of a set provides a framework for reasoning about the structure of ordered sets.
 This article provides a brief introduction and exploration of the key concepts and applications in order theory.
 
 ## Partial Orders

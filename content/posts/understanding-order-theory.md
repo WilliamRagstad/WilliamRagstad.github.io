@@ -64,6 +64,20 @@ In a **strong**, **irreflexive**, or **strict partial order**, the relation \\(<
 | **Antisymmetry**         | \\(a \leq b \land b \leq a \newline \implies a = b\\)    | **Asymmetry**            | \\(a < b \newline \implies b \nless a\\)        |
 | **Transitivity**         | \\(a \leq b \land b \leq c \newline \implies a \leq c\\) | **Transitivity**         | \\(a < b \land b < c \newline \implies a < c\\) |
 
+### Total Orders
+
+### Preorders
+
+### Complete Partial Orders
+
+### Chains
+
+### Lattices
+
+### Cover Relations
+
+### Hasse Diagrams
+
 <!----------------------------------------------------------------->
 
 ## Notation

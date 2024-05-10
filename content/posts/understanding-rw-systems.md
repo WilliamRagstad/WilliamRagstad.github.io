@@ -21,7 +21,7 @@ and I have decided to take a deeper dive into the basics to prepare myself for m
 
 I will be using various resources, including books, papers and online articles to help me understand the topic better, and I hope you find this article helpful in your own learning journey as well.
 A great book I have found on the subject is ***Term Rewriting and All That*** by *Franz Baader* and *Tobias Nipkow*.[^TRaAT]
-I will use the terms abstract rewriting systems (ARS) and rewriting systems interchangeably,[^ARS] as I am not focusing on any specific type of rewriting system (Frankly, I am not sure if there is a difference between the two).
+I will use the terms abstract rewriting systems, or abstract reduction systems *(ARS)* and rewriting systems interchangeably,[^ARS][^AbstractReductionSystems][^TRaAT] as I am not focusing on any specific type of rewriting system (Frankly, I am not sure if there is a difference between the two).
 
 <!----------------------------------------------------------------->
 
@@ -37,7 +37,7 @@ This depends on the model domain of the system.
 A relation between two terms is denoted by \\( \rarr \\) and is called the **reduction**, **rewrite relation** or **rule**.[^ARS][^RW][^BinRel]
 Though the relation is not actually performing any *"reducing" action* or *computation*, it is merely a description of how one term can be *rewritten* into another term.
 The system is thus defined by a **set of rules** that describe how terms can be rewritten (transformed), and these rules are applied to terms to produce new terms.
-Formally, **\\( (A, R) \\) is an abstract rewriting system** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** from one term to another \\( R \subseteq A \times A \\).
+Formally, **\\( (A, R) \\) is an ARS** where **\\( A \\) is a set of elements** and **\\( R \\) is a set of rewrite relations** from one term to another \\( R \subseteq A \times A \\).
 Again, where terms \\( t \in T \\) are made up of elements \\( A \\), like \\( t ::= A \mid \ldots \\), and potentially more constructs depending on domain (shown by \\( \ldots \\)).
 
 Alternative notations for rewriting systems might use \\( (A, \rarr) \\) where \\( \rarr \\) denotes the rewrite relation set.
@@ -461,6 +461,7 @@ I hope this article has helped you understand the basics of rewriting systems an
 
 [^RW]: "Rewriting Systems", https://en.wikipedia.org/wiki/Rewriting.
 [^ARS]: “Abstract Rewriting System”, https://en.wikipedia.org/wiki/Abstract_rewriting_system.
+[^AbstractReductionSystems]: Enno Ohlebusch, “Abstract Reduction Systems,” in Advanced Topics in Term Rewriting, ed. Enno Ohlebusch (New York, NY: Springer, 2002), 7–35, https://doi.org/10.1007/978-1-4757-3661-8_2.
 [^Conf]: “Confluence”, https://en.wikipedia.org/wiki/Confluence_(abstract_rewriting).
 [^Comp]: “Completion (logic)”, https://en.wikipedia.org/wiki/Completeness_(logic).
 [^Eq]: “Equivalence (logic), https://en.wikipedia.org/wiki/Logical_equivalence.

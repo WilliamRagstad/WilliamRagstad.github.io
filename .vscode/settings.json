@@ -1,0 +1,21 @@
+{
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#333018",
+		"titleBar.activeBackground": "#473e22",
+		"titleBar.activeForeground": "#f3f182"
+	},
+	"colorTabs.config": [
+		{
+			"regex": ".*/posts/.*",
+			"color": "#477e22"
+		},
+		{
+			"regex": ".*/bookshelf/.*",
+			"color": "#473eb2"
+		},
+		{
+			"regex": ".*/projects/.*",
+			"color": "#c75222"
+		}
+	]
+}

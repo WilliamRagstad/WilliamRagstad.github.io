@@ -1,0 +1,272 @@
++++
+title = 'Pratt Parsing Technique'
+date = 2024-07-13T17:32:10+02:00
+draft = false
+series = ['Parsing Techniques']
+series_order = 1
+tags = ["pratt parsing", "recursive descent parsing", "top-down parsing", "operator precedence parsing"]
+categories = ["compilers", "parsing", "algorithms"]
++++
+{{< katex >}}
+
+One of my many interests is in understanding how programming languages are designed and implemented.
+This includes learning about the different parsing techniques[^Parsing] used to parse expressions in programming languages.
+One such parsing technique that I am highly fond of is the **pratt parsing technique**.
+
+In this post, I will explore the Pratt parsing technique and how it is used.
+I will also compare it with other parsing techniques such as **recursive descent parsing** and **precedence climbing**.
+
+## Introduction
+
+The Pratt parsing technique is a **top-down operator precedence parsing technique**[^OperatorPrecedenceParsing] that is used to parse complex expressions with operators in **context-free**[^ContextFreeLanguage] **formal grammars**[^FormalGrammar] such as programming languages.
+It is an extension of the **recursive descent parsing** technique that can handle both operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity] in a simple and efficient manner.
+This extended technique was introduced by **Vaughan Pratt**[^Pratt] in 1973.
+The main advantage of the Pratt parsing technique is therefore:
+
+- **Simplicity**: The Pratt parsing technique simplifies handling operators with different precedence levels and associativity rules without the need for complex parsing tables.
+- **Efficiency**: The Pratt parsing technique is efficient and can handle complex expressions in a single pass with minimal overhead, making it suitable for real-time applications.
+- **Flexibility**: The Pratt parsing technique is flexible and can be extended to handle new operators and precedence levels easily. It is also easy to understand and implement.
+- **Dynamism**: The Pratt parsing technique can be used to parse expressions with **dynamically changing operators** and precedence levels **at runtime**, making it suitable for interactive applications.
+
+### Expressions
+
+An expression is a sequence of operands and operators that can be evaluated to produce a value. For example, the expression `3 + 4 * 5` is a simple arithmetic expression that is equivalent to `(3 + (4 * 5))` in infix notation[^InfixNotation], and `(+ 3 (* 4 5))` in prefix notation (also known as **Polish notation**[^PolishNotation]).
+Expressions can be simple or complex, and they can involve different types of operators, such as arithmetic operators (`+`, `-`, `*`, `/`), logical operators (`&&`, `||`, `!`), comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`), and others.
+
+### Humans vs. Computers
+
+As **humans**, we are used to reading and writing mathematical expressions in infix notation and often omit parentheses as ***we intuitively know the order of operations***.
+However, for a **computer** to be able to evaluate a mathematical expression in text-format, ***it needs to know the order of operations explicitly***.
+This is where parsing techniques like the Pratt parsing come into play.
+
+## Algorithm
+
+The Pratt parsing algorithm is a **recursive descent parsing** algorithm that uses a table of operator precedence levels to parse expressions.
+The algorithm is based on the idea of **precedence climbing**, where operators are assigned a precedence level that determines the order in which they are evaluated.
+
+> For the sake of simplicity, let's suppose we already have a tokenized expression returned by a lexer in the form of a list of **tokens**. This step is usually done in the **lexical analysis** phase of a compiler or interpreter.
+> **The implementation for the lexer is not shown here**, but it is assumed that the lexer provides a list of tokens that represent the input expression.
+
+Let's consider the following parser implementation in Rust:
+
+```rust
+struct Parser {
+    lexer: Lexer, // Omited for simplicity
+    operators: HashMap<Symbol, Operator>,
+}
+type Symbol = String;
+```
+
+The `Parser` struct contains a mapping of operator **symbols** to `Operator` structs.
+Each `Operator` contains information, such as its **precedence**, **position**, and **associativity**.
+
+```rust
+struct Operator {
+    precedence: Precedence,
+    position: Position,
+    associativity: Associativity,
+}
+type Precedence = u16;
+enum Position {
+    Prefix,
+    Infix,
+    Postfix,
+}
+enum Associativity {
+    Left,
+    Right,
+}
+```
+
+The methods of the `Parser` struct are used to parse expressions and build an **abstract syntax tree**[^AST] *(AST)* that represents the structure of the expression.
+
+```rust
+enum Ast {
+    Number(f64),
+    Binary(Box<Ast>, Operator, Box<Ast>),
+}
+```
+
+The `parse_top_expr` method is the entry point for parsing an expression:
+
+```rust
+fn parse_top_expr(&mut self) -> ParseResult {
+    let lhs = self.parse_primary()?;
+    self.parse_expr(lhs, 0)
+}
+```
+
+The `parse_top_expr` method first parses the **primary** expression, which is the starting point for parsing an expression.
+It then calls the `parse_expr` method to parse the rest of the expression with a precedence level of `0`.
+
+```rust
+fn parse_primary(&mut self) -> Result<Ast, ParseError> {
+    match self.lexer.next_token()? {
+        Token::Number(n) => Ok(Ast::Number(n)),
+        _ => Err(ParseError::UnexpectedToken),
+    }
+}
+```
+
+The `parse_expr` method is a **recursive method** that uses precedence climbing using a **while loop** to parse the expression with operators of increasing precedence.
+It checks the next token in the input and compares its precedence with the minimum precedence level required to parse the next expression, initially `min_prec` and then `curr_op.precedence`.
+
+```rust
+fn parse_expr(&mut self, mut lhs: Ast, min_prec: Precedence)
+    -> ParseResult {
+    while let Some(curr_op) = self.check_op(
+        self.lexer.peek_token(0), min_prec) {
+        self.lexer.next_token()?; // Consume token
+        let mut rhs = self.parse_primary()?;
+        while let Some(next_op) = self.check_op(
+            self.lexer.peek_token(0), curr_op.precedence) {
+            let next_prec = curr_op.precedence +
+                (next_op.precedence > curr_op.precedence)
+                as OperatorPrecedence; 
+            rhs = self.parse_expr(rhs, next_prec)?;
+        }
+        lhs = Ast::Binary(
+            Box::new(lhs),
+            curr_op.clone(),
+            Box::new(rhs)
+        );
+    }
+    Ok(lhs)
+}
+```
+
+The `parse_expr` method uses the `check_op` method to determine if the next token is an operator that can be used to build a binary expression. This is done by comparing the precedence of the next operator with the minimum precedence level required to parse the next expression. Essentially checking if the peeked operator is valid based on:
+
+$$
+\begin{align*}
+& Position = Infix \hspace{.5pc} \text{and} \\\
+& (Precedence \gt min\_{prec}  \hspace{.5pc} \text{or} \\\
+& \hspace{1pc} (Associativity = Right \ \text{and} \ Precedence = min\_{prec})) \\\
+& \implies \ Some(op)
+\end{align*}
+$$
+
+Suggested implementation for the `check_op` method:
+
+```rust
+fn check_op(&self, token: Token, min_prec: Precedence)
+    -> Option<Operator> {
+    if let Token::Operator(op) = token {
+        if let Some(op) = self.operators.get(&op) {
+            if op.position == Position::Infix &&
+                (op.precedence > min_prec ||
+                (op.associativity == Associativity::Right &&
+                op.precedence == min_prec)) {
+                return Some(op.clone());
+            }
+        }
+    }
+    None
+}
+```
+
+Now input expressions can be parsed using the `Parser` struct:
+
+```rust
+let input = "3 + 4 * 5";
+let lexer = Lexer::new(input);
+let mut parser = Parser::new(lexer);
+add_op(&mut parser, "+", 10, Position::Infix, Associativity::Left);
+add_op(&mut parser, "*", 20, Position::Infix, Associativity::Left);
+let ast = parser.parse_top_expr();
+```
+
+The `add_op` function is used to initialize the operator table with the operators and their precedence levels:
+
+```rust
+fn add_op(parser: &mut Parser, sym: &str, prec: Precedence,
+    pos: Position, assoc: Associativity) {
+    parser.operators.insert(sym.to_string(), Operator {
+        precedence: prec,
+        position: pos,
+        associativity: assoc,
+    });
+}
+```
+
+> Of course we have omitted the implementation of the `Lexer` struct and the `Token` enum for brevity. The `Lexer` must also be able to identify the operators and produce the corresponding `Token::Operator` tokens. A good approach is to give the `Lexer` a field:
+> ```rust
+> operators: HashSet<String>,
+> ```
+> and then check for operators when producing tokens.
+
+### Example
+
+Let's consider the expression `3 + 4 * 5` and parse it using the Pratt parsing technique manually:
+
+1. `parse_top_expr`: Parse the primary expression `3` as `Ast::Number(3)`.
+2. `parse_top_expr`: Parse an expression with a left-hand side `Ast::Number(3)` and a minimum precedence level of `0`.
+    1. `parse_expr(3, 0)`: Look ahead and check the next token `+` as an operator with precedence `10` (larger than `0`).
+    2. `parse_expr(3, 0)`: Parse the primary expression `4` as `Ast::Number(4)`.
+    3. `parse_expr(3, 0)`: Look ahead and check the next token `*` as an operator with precedence `20` (larger than `10`).
+    4. `parse_expr(3, 0)`: Recursively call `parse_expr(4, 20)`.
+        1. `parse_expr(4, 20)`: Parse the primary expression `5` as `Ast::Number(5)`.
+        2. `parse_expr(4, 20)`: No more operators to parse. *(End of input)*
+        3. `parse_expr(4, 20)`: Build and return the multiplication binary expression `Ast::Binary(Ast::Number(4), Operator::Mul, Ast::Number(5))`.
+    5. `parse_expr(3, 0)`: Build and return the addition binary expression.
+3. The final AST is:
+
+```rust
+Ast::Binary(
+    Ast::Number(3),
+    Operator::Add,
+    Ast::Binary(
+        Ast::Number(4),
+        Operator::Mul,
+        Ast::Number(5)
+    )
+)
+```
+
+## Conclusion
+
+
+The Pratt parsing technique is a powerful and flexible parsing technique that can be used to parse complex expressions and can handle operator precedence and associativity in a straightforward manner efficiently, as shown in the example above.
+It is simple to implement and understand, making it a popular choice for parsing expressions in programming languages.
+It is useful for parsing expressions in programming languages that involve operators with different precedence levels and associativity rules, that is why it is widely used and adopted in compilers and interpreters for programming languages today.
+
+I hope you found this post informative and helpful in understanding the Pratt parsing technique and that you are interested in learning more about parsing techniques and algorithms.
+
+## Related Work
+
+- [wikipedia.org](https://en.wikipedia.org/wiki/Operator-precedence_parser) - Operator-precedence parser on Wikipedia.
+- [matklad.github.io](https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html) - Simple but powerful Pratt parsing.
+- [eli.thegreenplace.net](https://eli.thegreenplace.net/2012/08/02/parsing-expressions-by-precedence-climbing) - Parsing expressions by precedence climbing.
+- [engr.mun.ca/~theo](https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm) - Expression parsing explained.
+- [crockford.com](https://crockford.com/javascript/tdop/tdop.html) - Top-down operator precedence by Douglas Crockford.
+
+<!----------------------------------------------------------------->
+
+[^PolishNotation]: [Polish notation](https://en.wikipedia.org/wiki/Polish_notation) is a notation in which every operator follows all of its operands. It is also known as  [**prefix notation**](https://simple.wikipedia.org/wiki/Prefix_notation). The notation was introduced by the Polish mathematician **Jan Łukasiewicz** in the 1920s.
+
+[^InfixNotation]: [Infix notation](https://en.wikipedia.org/wiki/Infix_notation) is a mathematical notation in which every operator is placed between its operands. It is the notation that we are most familiar with. For example, `(3 + (4 * 5))` is an infix notation expression. Parentheses surrounding groups of operands and operators are necessary to indicate the intended order in which operations are to be performed.
+
+[^Pratt]: [Vaughan Pratt](https://en.wikipedia.org/wiki/Vaughan_Pratt) is a computer scientist and professor at Stanford University. He is known for his work on parsing techniques, including the **Pratt parsing technique** and **precedence climbing**. He has also made significant contributions to the theory of formal languages and automata.
+
+[^OperatorPrecedenceParsing]: [Operator-precedence parsing](https://en.wikipedia.org/wiki/Operator-precedence_parser) is a parsing technique that uses a table of operator precedence levels to parse expressions. It is a type of **top-down parsing** that can handle operator precedence and associativity efficiently. The technique was introduced by **Joseph Weizenbaum** in 1961 and later extended by **Vaughan Pratt** in 1973 in the 1st annual ACM SIGPLAN Symposium on Proceedings of the Principles of Programming Languages. pp41-51.
+
+[^Parsing]: [Parsing](https://en.wikipedia.org/wiki/Parsing) is the process of analyzing a sequence of symbols to determine its grammatical structure with respect to a given formal grammar. It is an essential step in the compilation process of programming languages. Parsing is used to transform source code into an abstract syntax tree[^AST] that can be further processed by a compiler or interpreter.
+
+[^OperatorPrecedence]: [Operator precedence](https://en.wikipedia.org/wiki/Operator_precedence) is a rule that defines the order in which operators are evaluated in an expression. Operators with higher precedence are evaluated before operators with lower precedence. For example, in the expression `3 + 4 * 5`, the `*` operator has higher precedence than the `+` operator, so it is evaluated first.
+
+[^Associativity]: [Associativity](https://en.wikipedia.org/wiki/Associative_property) is a property of some binary operations that determines how the operations are grouped when there are multiple occurrences of the same operator in an expression. Operators can be left-associative, right-associative, or non-associative. For example, the `+` operator is left-associative, so `3 + 4 + 5` is evaluated as `(3 + 4) + 5`.
+
+[^ContextFreeLanguage]: [Context-free language](https://en.wikipedia.org/wiki/Context-free_language) is a formal language that can be generated by a context-free grammar. Context-free languages are used to describe the syntax of programming languages and other formal languages. The syntax of a context-free language is defined by a set of production rules that specify how symbols can be combined to form valid sentences in the language.
+
+[^FormalGrammar]: [Formal grammar](https://en.wikipedia.org/wiki/Formal_grammar) is a set of rules that describe the syntax of a formal language. Formal grammars are used to define the structure of programming languages, natural languages, and other formal languages. There are different types of formal grammars, such as **context-free grammars**, **regular grammars**, and **context-sensitive grammars**.
+
+[^AST]: [Abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) is a tree representation of the abstract syntactic structure of source code written in a programming language. ASTs are used in compilers and interpreters to represent the structure of the source code in a form that is easier to analyze and manipulate. ASTs are typically generated by the parsing phase of a compiler or interpreter.
+
+<!-- 
+[^LLParsing]: [LL parsing](https://en.wikipedia.org/wiki/LL_parser) is a type of **top-down parsing** that uses left-to-right scanning and leftmost derivation to parse input. The LL parsing technique is used in parsers that can predict the next production rule based on the current input symbol. LL parsers are commonly used in compilers and interpreters for programming languages.
+
+[^LRParsing]: [LR parsing](https://en.wikipedia.org/wiki/LR_parser) is a type of **bottom-up parsing** that uses left-to-right scanning and rightmost derivation to parse input. The LR parsing technique is used in parsers that can predict the next production rule based on the current input symbol and the symbols on the parsing stack. LR parsers are commonly used in compilers and interpreters for programming languages.
+
+[^ShiftReduceParsing]: [Shift-reduce parsing](https://en.wikipedia.org/wiki/Shift-reduce_parser) is a type of **bottom-up parsing** that uses a shift operation to add input symbols to the parsing stack and a reduce operation to replace a sequence of symbols on the stack with a non-terminal symbol. Shift-reduce parsing is used in parsers that can predict the next action based on the current input symbol and the symbols on the parsing stack.
+
+[^ParsingTable]: [Parsing table](https://en.wikipedia.org/wiki/Parsing_table) is a data structure used in parsing algorithms to determine the next action to take based on the current input symbol and the symbols on the parsing stack. Parsing tables are used in **LL parsing**, **LR parsing**, and **shift-reduce parsing** to guide the parsing process and ensure that the input is parsed correctly. -->

@@ -9,10 +9,10 @@ categories = ["compilers", "parsing", "algorithms"]
 +++
 {{< katex >}}
 
-One of my many interests is understanding how programming languages are designed and implemented, including learning about the different parsing techniques[^Parsing] used to parse expressions in programming languages.
-One such parsing technique that I am highly fond of is the **Pratt parsing technique**.
+One of my many hobbies is learning about language design and implementation, including the many parsing techniques[\Parsing] still used to parse expressions in modern programming languages.
+The **Pratt parsing technique** is one such method that I like.
 
-In this post, I will explore the Pratt parsing technique and its usage, explain the algorithm via an example implementation in Rust, and compare it with other methods, such as **recursive** descent parsing** and **precedence climbing**.
+This article will discuss the Pratt parsing methodology and how to use it, provide an example of the algorithm implemented in Rust, and compare it with other approaches like **precedence climbing** and **recursive descent**.
 
 ## Introduction
 

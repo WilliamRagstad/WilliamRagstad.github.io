@@ -5,20 +5,22 @@ draft = false
 series = ['Parsing Techniques']
 series_order = 1
 tags = ["pratt parsing", "recursive descent parsing", "top-down parsing", "operator precedence parsing"]
-categories = ["compilers", "parsing", "algorithms"]
+categories = ["computer science", "compilers", "parsing", "algorithms"]
 +++
 {{< katex >}}
 
-One of my many hobbies is learning about language design and implementation, including the many parsing techniques[\Parsing] still used to parse expressions in modern programming languages.
+One of my many hobbies is learning about language design and implementation, including the many parsing techniques[^Parsing] still used to parse expressions in modern programming languages.
 The **Pratt parsing technique** is one such method that I like.
 
-This article will discuss the Pratt parsing methodology and how to use it, provide an example of the algorithm implemented in Rust, and compare it with other approaches like **precedence climbing** and **recursive descent**.
+This article will discuss the Pratt parsing methodology and how to use it, provide an example of the algorithm implemented in Rust, and compare it with other similar approaches like **precedence climbing** and **recursive descent**.
 
 ## Introduction
 
 Pratt parsing is a **top-down operator precedence parsing technique**[^OperatorPrecedenceParsing] used to parse complex expressions with operators in **context-free**[^ContextFreeLanguage] **formal grammars**[^FormalGrammar], such as programming languages.
-This technique extends **recursive descent parsing**, efficiently managing operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity].
-**Vaughan Pratt**[^Pratt] introduced the enhanced technique in 1973.
+This technique extends **recursive descent parsing** and can be seen as a generalization of **precedence climbing**[^OperatorPrecedenceParsing].
+It efficiently manages to parse expressions with different operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity].
+**Vaughan Pratt**[^Pratt] introduced the enhanced technique in his paper *"Top down operator precedence"* from 1973.[^TDOP]
+
 The main advantages of Pratt parsing include:
 
 - **Simplicity**: The Pratt parsing technique simplifies handling operators with different precedence levels and associativity rules without the need for complex parsing tables, data structures, or algorithms.
@@ -166,7 +168,7 @@ fn check_op(&self, token: Token, min_prec: Precedence)
 }
 ```
 
-Now, the input can be parsed using the `Parser` struct:
+Now, the input is parsed using the `Parser` struct:
 
 ```rust
 let input = "3 + 4 * 5";
@@ -226,6 +228,45 @@ Ast::Binary(
 )
 ```
 
+## Comparison
+
+The Pratt technique is one of many parsing methods to parse expressions in context-free grammars.
+Research in the field of parsing has led to various parsing methods, each with its strengths and weaknesses.
+This section briefly compares Pratt parsing with the previous methods mentioned.
+
+### Recursive Descent Parsing
+
+It is one of the most straightforward parsing techniques commonly used in practice, as it is easy to implement and understand.
+[^RecursiveDescent]
+The **top-down parsing** technique can use recursive procedures to parse input according to a given \\(LL(k)\\) formal grammar.
+[^LLParsing]
+Each non-terminal in the grammar has a corresponding function in the parser.
+
+Benefits:
+
+- **Simplicity**: Directly mapping to the grammar rules, making it highly readable and maintainable.
+
+Drawbacks:
+
+- **Left Recursion**: Recursive descent parsing cannot handle ambiguous or left-recursive grammars.
+- **Recursive Calls**: Excessive recursive calls might affect performance and lead to stack overflow.
+
+### Precedence Climbing
+
+Precedence climbing is ***also*** another **operator-precedence parsing** technique that efficiently handles operator precedence and associativity.
+[^OperatorPrecedenceParsing]
+Though Pratt parsing predates precedence climbing, Pratt can be viewed as a generalization of precedence climbing.
+
+Benefits:
+
+- **Efficiency**: Highly efficient for binary operations.
+- **Simplicity**: Implemented with a loop and a stack.
+
+Drawbacks:
+
+- **Complexity**: Handling unary operators and other edge cases can be more complex.
+- **Maintenance**: Difficult to extend and maintain for variations of the algorithm.
+
 ## Conclusion
 
 The Pratt parsing technique is powerful and flexible, and it can parse complex expressions and handle operator precedence and associativity straightforwardly and efficiently, as shown in the example above.
@@ -252,6 +293,8 @@ I hope you found this post informative and helpful in understanding the Pratt pa
 
 [^OperatorPrecedenceParsing]: [Operator-precedence parsing](https://en.wikipedia.org/wiki/Operator-precedence_parser) is a parsing technique that uses a table of operator precedence levels to parse expressions. It is a type of **top-down parsing** that can handle operator precedence and associativity efficiently. The technique was introduced by **Joseph Weizenbaum** in 1961 and later extended by **Vaughan Pratt** in 1973 in the 1st annual ACM SIGPLAN Symposium on Proceedings of the Principles of Programming Languages. pp41-51.
 
+[^RecursiveDescent]: [Recursive descent parsing](https://en.wikipedia.org/wiki/Recursive_descent_parser) is a type of **top-down parsing** that uses a set of recursive procedures to parse input according to a given formal grammar.
+
 [^Parsing]: [Parsing](https://en.wikipedia.org/wiki/Parsing) is the process of analyzing a sequence of symbols to determine its grammatical structure with respect to a given formal grammar. It is an essential step in the compilation process of programming languages. Parsing is used to transform source code into an abstract syntax tree[^AST] that can be further processed by a compiler or interpreter.
 
 [^OperatorPrecedence]: [Operator precedence](https://en.wikipedia.org/wiki/Operator_precedence) is a rule that defines the order in which operators are evaluated in an expression. Operators with higher precedence are evaluated before operators with lower precedence. For example, in the expression `3 + 4 * 5`, the `*` operator has higher precedence than the `+` operator, so it is evaluated first.
@@ -264,8 +307,11 @@ I hope you found this post informative and helpful in understanding the Pratt pa
 
 [^AST]: [Abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) is a tree representation of the abstract syntactic structure of source code written in a programming language. ASTs are used in compilers and interpreters to represent the structure of the source code in a form that is easier to analyze and manipulate. ASTs are typically generated by the parsing phase of a compiler or interpreter.
 
-<!-- 
 [^LLParsing]: [LL parsing](https://en.wikipedia.org/wiki/LL_parser) is a type of **top-down parsing** that uses left-to-right scanning and leftmost derivation to parse input. The LL parsing technique is used in parsers that can predict the next production rule based on the current input symbol. LL parsers are commonly used in compilers and interpreters for programming languages.
+
+[^TDOP]: Pratt, Vaughan. ["Top down operator precedence."](https://web.archive.org/web/20151223215421/http://hall.org.ua/halls/wizzard/pdf/Vaughan.Pratt.TDOP.pdf) Proceedings of the 1st Annual ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (1973).
+
+<!-- 
 
 [^LRParsing]: [LR parsing](https://en.wikipedia.org/wiki/LR_parser) is a type of **bottom-up parsing** that uses left-to-right scanning and rightmost derivation to parse input. The LR parsing technique is used in parsers that can predict the next production rule based on the current input symbol and the symbols on the parsing stack. LR parsers are commonly used in compilers and interpreters for programming languages.
 

@@ -238,7 +238,8 @@ This section briefly compares Pratt parsing with the previous methods mentioned.
 
 It is one of the most straightforward parsing techniques commonly used in practice, as it is easy to implement and understand.
 [^RecursiveDescent]
-The **top-down parsing** technique can use recursive procedures to parse input according to a given \\(LL(k)\\) formal grammar.
+Recursive descent is a more general parsing technique that can handle a wider range of grammars, including \\(LL(k)\\).
+The **top-down parsing** technique can use recursive procedures to parse input.
 [^LLParsing]
 Each non-terminal in the grammar has a corresponding function in the parser.
 
@@ -255,6 +256,8 @@ Drawbacks:
 
 Precedence climbing is ***also*** another **operator-precedence parsing** technique that efficiently handles operator precedence and associativity.
 [^OperatorPrecedenceParsing]
+It is specialized for parsing expressions with infix operators and their precedence, making it ideal for arithmetic and logical expressions.
+It is **not suitable for general \\(LL(k)\\) grammars** as its primary focus is on binary operators and their precedence.
 Though Pratt parsing predates precedence climbing, Pratt can be viewed as a generalization of precedence climbing.
 
 Benefits:

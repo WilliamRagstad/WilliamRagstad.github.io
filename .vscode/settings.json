@@ -20,5 +20,18 @@
 			"regex": ".*/projects/.*",
 			"color": "#c75222"
 		}
+	],
+	"grammarly.selectors": [
+		{
+			"language": "markdown",
+			"scheme": "file"
+		}
+	],
+	"grammarly.files.include": [
+		"**/*.md",
+		"**/*.txt",
+		"**/*.html",
+		"**/*.htm",
+		"**/*.tex",
 	]
 }

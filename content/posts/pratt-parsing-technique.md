@@ -9,40 +9,38 @@ categories = ["compilers", "parsing", "algorithms"]
 +++
 {{< katex >}}
 
-One of my many interests is in understanding how programming languages are designed and implemented.
-This includes learning about the different parsing techniques[^Parsing] used to parse expressions in programming languages.
-One such parsing technique that I am highly fond of is the **pratt parsing technique**.
+One of my many interests is understanding how programming languages are designed and implemented, including learning about the different parsing techniques[^Parsing] used to parse expressions in programming languages.
+One such parsing technique that I am highly fond of is the **Pratt parsing technique**.
 
-In this post, I will explore the Pratt parsing technique and how it is used.
-I will also compare it with other parsing techniques such as **recursive descent parsing** and **precedence climbing**.
+In this post, I will explore the Pratt parsing technique and its usage, explain the algorithm via an example implementation in Rust, and compare it with other methods, such as **recursive** descent parsing** and **precedence climbing**.
 
 ## Introduction
 
-The Pratt parsing technique is a **top-down operator precedence parsing technique**[^OperatorPrecedenceParsing] that is used to parse complex expressions with operators in **context-free**[^ContextFreeLanguage] **formal grammars**[^FormalGrammar] such as programming languages.
-It is an extension of the **recursive descent parsing** technique that can handle both operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity] in a simple and efficient manner.
-This extended technique was introduced by **Vaughan Pratt**[^Pratt] in 1973.
-The main advantage of the Pratt parsing technique is therefore:
+The Pratt parsing technique is a **top-down operator precedence parsing technique**[^OperatorPrecedenceParsing] used to parse complex expressions with operators in **context-free**[^ContextFreeLanguage] **formal grammars**[^FormalGrammar] such as programming languages.
+It is an extension of the **recursive descent parsing** technique that can handle both operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity] efficiently.
+**Vaughan Pratt**[^Pratt] introduced the extended technique in 1973.
+The main advantages of Pratt parsing are therefore:
 
-- **Simplicity**: The Pratt parsing technique simplifies handling operators with different precedence levels and associativity rules without the need for complex parsing tables.
-- **Efficiency**: The Pratt parsing technique is efficient and can handle complex expressions in a single pass with minimal overhead, making it suitable for real-time applications.
-- **Flexibility**: The Pratt parsing technique is flexible and can be extended to handle new operators and precedence levels easily. It is also easy to understand and implement.
-- **Dynamism**: The Pratt parsing technique can be used to parse expressions with **dynamically changing operators** and precedence levels **at runtime**, making it suitable for interactive applications.
+- **Simplicity**: The Pratt parsing technique simplifies handling operators with different precedence levels and associativity rules without the need for complex parsing tables, data structures, or algorithms.
+- **Efficiency**: The Pratt parsing technique can handle complex expressions in a single pass with minimal overhead, making it suitable for real-time applications.
+- **Flexibility**: The Pratt parsing technique is extendable to handle new operators. It is also easy to understand and implement in practice.
+- **Dynamism**: The Pratt parsing technique can parse expressions with **dynamically changing operators** and precedence levels **at runtime**, making it suitable for interactive applications.
 
 ### Expressions
 
-An expression is a sequence of operands and operators that can be evaluated to produce a value. For example, the expression `3 + 4 * 5` is a simple arithmetic expression that is equivalent to `(3 + (4 * 5))` in infix notation[^InfixNotation], and `(+ 3 (* 4 5))` in prefix notation (also known as **Polish notation**[^PolishNotation]).
+An expression is a sequence of operands and operators.
+For example, the arithmetic expression `3 + 4 * 5`, equivalent to `(3 + (4 * 5))` in infix notation[^InfixNotation], and `(+ 3 (* 4 5))` in prefix notation (also known as **Polish notation**[^PolishNotation]).
 Expressions can be simple or complex, and they can involve different types of operators, such as arithmetic operators (`+`, `-`, `*`, `/`), logical operators (`&&`, `||`, `!`), comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`), and others.
 
 ### Humans vs. Computers
 
 As **humans**, we are used to reading and writing mathematical expressions in infix notation and often omit parentheses as ***we intuitively know the order of operations***.
-However, for a **computer** to be able to evaluate a mathematical expression in text-format, ***it needs to know the order of operations explicitly***.
-This is where parsing techniques like the Pratt parsing come into play.
+However, ***a computer must explicitly know the order of operations*** to evaluate a mathematical expression in text format.
+Therefore, parsing algorithms are essential for computers to understand how to parse expressions, and this is where techniques like Pratt parsing come into play.
 
 ## Algorithm
 
-The Pratt parsing algorithm is a **recursive descent parsing** algorithm that uses a table of operator precedence levels to parse expressions.
-The algorithm is based on the idea of **precedence climbing**, where operators are assigned a precedence level that determines the order in which they are evaluated.
+The Pratt parsing algorithm is a **recursive descent** algorithm that uses a table of operator precedences, determining their evaluation order based on **precedence climbing**.
 
 > For the sake of simplicity, let's suppose we already have a tokenized expression returned by a lexer in the form of a list of **tokens**. This step is usually done in the **lexical analysis** phase of a compiler or interpreter.
 > **The implementation for the lexer is not shown here**, but it is assumed that the lexer provides a list of tokens that represent the input expression.
@@ -78,7 +76,7 @@ enum Associativity {
 }
 ```
 
-The methods of the `Parser` struct are used to parse expressions and build an **abstract syntax tree**[^AST] *(AST)* that represents the structure of the expression.
+The `Parser` methods parse expressions and construct an **abstract syntax tree**[^AST] *(AST)*, representing the intrinsic expression's structure as a tree-like data structure.
 
 ```rust
 enum Ast {
@@ -87,7 +85,8 @@ enum Ast {
 }
 ```
 
-The `parse_top_expr` method is the entry point for parsing an expression:
+Top-level expressions are all accepted compound expressions that can be parsed directly from the input without any previous context.
+The `parse_top_expr` method is the **entry point** for parsing a new expression in this example implementation.
 
 ```rust
 fn parse_top_expr(&mut self) -> ParseResult {
@@ -96,8 +95,8 @@ fn parse_top_expr(&mut self) -> ParseResult {
 }
 ```
 
-The `parse_top_expr` method first parses the **primary** expression, which is the starting point for parsing an expression.
-It then calls the `parse_expr` method to parse the rest of the expression with a precedence level of `0`.
+The `parse_top_expr` method first parses the **primary** expression, the starting point of any expression.
+It then calls the `parse_expr` method to parse the rest of the expression with a precedence level `0`.
 
 ```rust
 fn parse_primary(&mut self) -> Result<Ast, ParseError> {
@@ -109,17 +108,17 @@ fn parse_primary(&mut self) -> Result<Ast, ParseError> {
 ```
 
 The `parse_expr` method is a **recursive method** that uses precedence climbing using a **while loop** to parse the expression with operators of increasing precedence.
-It checks the next token in the input and compares its precedence with the minimum precedence level required to parse the next expression, initially `min_prec` and then `curr_op.precedence`.
+It checks the next token in the input and compares its precedence with the minimum precedence level required to parse the following expression, initially `min_prec` and then `curr_op.precedence`.
 
 ```rust
 fn parse_expr(&mut self, mut lhs: Ast, min_prec: Precedence)
     -> ParseResult {
     while let Some(curr_op) = self.check_op(
-        self.lexer.peek_token(0), min_prec) {
+        self.lexer.peek_token(), min_prec) {
         self.lexer.next_token()?; // Consume token
         let mut rhs = self.parse_primary()?;
         while let Some(next_op) = self.check_op(
-            self.lexer.peek_token(0), curr_op.precedence) {
+            self.lexer.peek_token(), curr_op.precedence) {
             let next_prec = curr_op.precedence +
                 (next_op.precedence > curr_op.precedence)
                 as OperatorPrecedence; 
@@ -135,14 +134,16 @@ fn parse_expr(&mut self, mut lhs: Ast, min_prec: Precedence)
 }
 ```
 
-The `parse_expr` method uses the `check_op` method to determine if the next token is an operator that can be used to build a binary expression. This is done by comparing the precedence of the next operator with the minimum precedence level required to parse the next expression. Essentially checking if the peeked operator is valid based on:
+The `parse_expr` method uses the `check_op` method to determine if the next token is an operator used in a binary expression.
+The function `check_op` helps to determine the order of evaluation in `parse_expr` by checking the precedence of the **next operator** token against the current operator as the minimum precedence based on the following conditions:
 
 $$
 \begin{align*}
-& Position = Infix \hspace{.5pc} \text{and} \\\
-& (Precedence \gt min\_{prec}  \hspace{.5pc} \text{or} \\\
-& \hspace{1pc} (Associativity = Right \ \text{and} \ Precedence = min\_{prec})) \\\
-& \implies \ Some(op)
+\hspace{.5pc} & \ Position = Infix \\\
+\text{and} \hspace{.5pc} & (Precedence \gt min\_{prec} \\\
+\text{or} \hspace{.5pc} & \hspace{1pc} (Associativity = Right \\\
+\text{and} \hspace{.5pc} & \hspace{2pc} Precedence = min\_{prec})) \\\
+\implies \hspace{.2pc} & Some(op)
 \end{align*}
 $$
 
@@ -165,7 +166,7 @@ fn check_op(&self, token: Token, min_prec: Precedence)
 }
 ```
 
-Now input expressions can be parsed using the `Parser` struct:
+Now, the input can be parsed using the `Parser` struct:
 
 ```rust
 let input = "3 + 4 * 5";
@@ -176,7 +177,7 @@ add_op(&mut parser, "*", 20, Position::Infix, Associativity::Left);
 let ast = parser.parse_top_expr();
 ```
 
-The `add_op` function is used to initialize the operator table with the operators and their precedence levels:
+The `add_op` function initializes the operator table with the operators and their precedence levels:
 
 ```rust
 fn add_op(parser: &mut Parser, sym: &str, prec: Precedence,
@@ -189,11 +190,13 @@ fn add_op(parser: &mut Parser, sym: &str, prec: Precedence,
 }
 ```
 
-> Of course we have omitted the implementation of the `Lexer` struct and the `Token` enum for brevity. The `Lexer` must also be able to identify the operators and produce the corresponding `Token::Operator` tokens. A good approach is to give the `Lexer` a field:
+> Of course, we have omitted the implementation of the `Lexer` struct and the `Token` enum for brevity. The `Lexer` must also be able to identify the operators and produce the corresponding `Token::Operator` tokens. A good approach is to give the `Lexer` a field:
+>
 > ```rust
 > operators: HashSet<String>,
 > ```
-> and then check for operators when producing tokens.
+>
+> And then check for operators when producing tokens.
 
 ### Example
 
@@ -225,10 +228,9 @@ Ast::Binary(
 
 ## Conclusion
 
-
-The Pratt parsing technique is a powerful and flexible parsing technique that can be used to parse complex expressions and can handle operator precedence and associativity in a straightforward manner efficiently, as shown in the example above.
-It is simple to implement and understand, making it a popular choice for parsing expressions in programming languages.
-It is useful for parsing expressions in programming languages that involve operators with different precedence levels and associativity rules, that is why it is widely used and adopted in compilers and interpreters for programming languages today.
+The Pratt parsing technique is powerful and flexible, and it can parse complex expressions and handle operator precedence and associativity straightforwardly and efficiently, as shown in the example above.
+It is simple to implement and understand and is valuable for parsing any expression involving operators with different precedence and associativity.
+It is a popular choice for parsing in programming languages and is widely used and adopted by compilers and interpreters today.
 
 I hope you found this post informative and helpful in understanding the Pratt parsing technique and that you are interested in learning more about parsing techniques and algorithms.
 

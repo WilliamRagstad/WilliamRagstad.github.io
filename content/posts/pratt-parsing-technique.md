@@ -16,10 +16,10 @@ This article will discuss the Pratt parsing methodology and how to use it, provi
 
 ## Introduction
 
-The Pratt parsing technique is a **top-down operator precedence parsing technique**[^OperatorPrecedenceParsing] used to parse complex expressions with operators in **context-free**[^ContextFreeLanguage] **formal grammars**[^FormalGrammar] such as programming languages.
-It is an extension of the **recursive descent parsing** technique that can handle both operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity] efficiently.
-**Vaughan Pratt**[^Pratt] introduced the extended technique in 1973.
-The main advantages of Pratt parsing are therefore:
+Pratt parsing is a **top-down operator precedence parsing technique**[^OperatorPrecedenceParsing] used to parse complex expressions with operators in **context-free**[^ContextFreeLanguage] **formal grammars**[^FormalGrammar], such as programming languages.
+This technique extends **recursive descent parsing**, efficiently managing operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity].
+**Vaughan Pratt**[^Pratt] introduced the enhanced technique in 1973.
+The main advantages of Pratt parsing include:
 
 - **Simplicity**: The Pratt parsing technique simplifies handling operators with different precedence levels and associativity rules without the need for complex parsing tables, data structures, or algorithms.
 - **Efficiency**: The Pratt parsing technique can handle complex expressions in a single pass with minimal overhead, making it suitable for real-time applications.

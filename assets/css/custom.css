@@ -1,3 +1,9 @@
+
+
+.max-w-prose {
+	max-width: 80ch
+  }
+
 a {
 	overflow-wrap: break-word;
 }

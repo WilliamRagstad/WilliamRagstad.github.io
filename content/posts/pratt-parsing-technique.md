@@ -46,7 +46,7 @@ Therefore, parsing algorithms are essential for computers to understand how to p
 
 The Pratt parsing algorithm is related to **precedence climbing** but uses an operator precedence table to determine the evaluation order.
 Pratt parsing is based on the concept of **top-down operator precedence**[^TDOP], separating it from other distinct techniques.
-In contrast to **recursive descent parsing** that relies on grammar rules, Pratt parsers offer a different approach to handling operator precedence via **functions or data structures** instead of grammar rules and recursive program flow.
+In contrast to **recursive descent parsing** that relies on grammar rules, Pratt parsers offer a different approach to handling operator precedence via **functions or data structures** instead of grammar rules and recursive program flow. And Pratt parsing uses both loops and recursion to parse expressions uniquely.
 
 > **Note**:
 >

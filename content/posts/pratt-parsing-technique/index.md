@@ -355,11 +355,12 @@ Therefore, the Pratt parsing algorithm has a **linear time complexity** of \\(O(
 ### Space Complexity
 
 The Pratt parsing algorithm uses a **recursive call stack** to parse expressions, which can grow linearly with the depth of the expression tree limited by the number of operators in the input stream \\(p\\), so the space complexity is \\(O(p)\\).
+Apart from the call stack, additional space is used for storing the abstract syntax tree (AST), which also **scales with the depth of the expression tree** and recurive calls in \\(O(p)\\).
 
 The Pratt parser completly relies on the **lexer** to provide tokens, so the space complexity of the lexer is also important.
-The lexer should be able to produce tokens efficiently and store them in memory, which can be considered as \\(O(n)\\) space complexity.
+In the optimal case, the lexer should be able to produce tokens efficiently via streaming, resulting in a **constant space complexity** of \\(O(1)\\) for the lexer. However, if the lexer tokenizes the entire input into a list of tokens, the space complexity of the lexer would be \\(O(n)\\), but with a slight performance increase as a benefit.
 
-Therefore, the Pratt parsing algorithm has a **space complexity** of \\(O(p + n)\\) for parsing expressions.
+Therefore, the Pratt parsing algorithm has a **space complexity** of \\(O(p)\\), where \\(p\\) is the number of operators in the input (potential depth of the expression tree).
 
 ## Comparison
 

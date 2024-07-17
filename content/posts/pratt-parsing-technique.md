@@ -48,8 +48,13 @@ The Pratt parsing algorithm is related to **precedence climbing** but uses an op
 Pratt parsing is based on the concept of **top-down operator precedence**[^TDOP], separating it from other distinct techniques.
 In contrast to **recursive descent parsing** that relies on grammar rules, Pratt parsers offer a different approach to handling operator precedence via **functions or data structures** instead of grammar rules and recursive program flow.
 
-> For the sake of simplicity, let's suppose we already have a tokenized expression returned by a lexer in the form of a list of **tokens**. This step is usually done in the **lexical analysis** phase of a compiler or interpreter.
-> **The implementation for the lexer is not shown here**, but it is assumed that the lexer provides a list of tokens that represent the input expression.
+> **Note**:
+>
+> - The implementation for the lexer is not included.
+> For the sake of simplicity, let's assume we already have a lexer producing **tokens** using `next_token()` and `peek_token()` from the input stream.
+> This step is usually called **lexical analysis**.
+>
+> - The code snippets provided are written in Rust and are simplified for illustrative purposes. Therefore, **consider them as pseudocode** and adapt them to your specific use case.
 
 Let's consider the following parser implementation in Rust:
 
@@ -293,7 +298,7 @@ env.functions.insert("add_op".to_string(), Function::BuiltIn(
             Ast::String(pos),
             Ast::String(assoc)
         ] = args.as_slice() {
-            add_op(parser, sym, prec, pos, assoc);
+            add_op(parser, sym.as_str(), prec.into(), pos.into(), assoc.into());
             env.operators.insert(sym.clone(), func.clone());
         } else {
             eprintln!("Invalid arguments for add_op");

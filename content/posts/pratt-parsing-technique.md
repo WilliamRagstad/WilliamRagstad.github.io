@@ -203,7 +203,7 @@ fn add_op(parser: &mut Parser, sym: &str, prec: Precedence,
 }
 ```
 
-> Of course, we have omitted the implementation of the `Lexer` struct and the `Token` enum for brevity. The `Lexer` must also be able to identify the operators and produce the corresponding `Token::Operator` tokens. A good approach is to give the `Lexer` a field:
+> **Note:** Again, the implementations for the `Lexer` struct and the `Token` enum are omitted for brevity. The `Lexer` must also be able to identify the operators and produce the corresponding `Token::Operator` tokens. A good approach is to give the `Lexer` a field:
 >
 > ```rust
 > operators: HashSet<String>,
@@ -223,21 +223,37 @@ Let's consider the expression `3 + 4 * 5` and parse it using the Pratt parsing t
     4. `parse_expr(3, 0)`: Recursively call `parse_expr(4, 20)`.
         1. `parse_expr(4, 20)`: Parse the primary expression `5` as `Ast::Number(5)`.
         2. `parse_expr(4, 20)`: No more operators to parse. *(End of input)*
-        3. `parse_expr(4, 20)`: Build and return the multiplication binary expression `Ast::Binary(Ast::Number(4), Operator::Mul, Ast::Number(5))`.
+        3. `parse_expr(4, 20)`: Build and return the multiplication binary expression `Ast::Binary(Ast::Number(4), "*", Ast::Number(5))`.
     5. `parse_expr(3, 0)`: Build and return the addition binary expression.
 3. The final AST is:
 
 ```rust
 Ast::Binary(
     Ast::Number(3),
-    Operator::Add,
-    Ast::Binary(
-        Ast::Number(4),
-        Operator::Mul,
-        Ast::Number(5)
-    )
+    "+",
+    Ast::Binary(Ast::Number(4), "*", Ast::Number(5))
 )
 ```
+
+The AST represents the expression `3 + 4 * 5` as a tree structure, where the addition operator `+` is the root node, and the operands `3` and the multiplication expression `4 * 5` are the left and right children, respectively.
+This can be visualized in a tree diagram or as a graph:
+
+{{< mermaid >}}
+graph BT
+    A[+]
+    B[3]
+    C[*]
+    D[4]
+    E[5]
+    A --> B
+    A --> C
+    C --> D
+    C --> E
+{{< /mermaid >}}
+
+The tree above is drawn *"upside-down"*, with the **root node at the bottom and the leaves at the top**.
+Branches higher in the tree have higher precedence, so that the tree structure reflects the evaluation order of operations in the expression.
+At the bottom is the addition operation, which has the lowest precedence, and is evaluated last.
 
 ## Meta-Programming and Extensibility
 

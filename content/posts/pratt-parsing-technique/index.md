@@ -14,7 +14,7 @@ showHero = true
 One of my many hobbies is learning about language design and implementation, including the many parsing techniques[^Parsing] still used to parse expressions in modern programming languages.
 The **Pratt parsing technique** is one such method that I like.
 
-This article will discuss the Pratt parsing methodology and how to use it, provide an example of the algorithm implemented in Rust, go through lightweight meta-programming and extensibility, and compare it with similar approaches like **precedence climbing** and **recursive descent**.
+This article will discuss the Pratt parsing methodology and how to use it, provide an example **algorithm implementation in Rust**, go through lightweight **meta-programming and extensibility**, compare it with similar approaches like **precedence climbing** and **recursive descent**, conduct a simple **time and space complexity analysis**, and conclude with a brief summary.
 
 ## Introduction
 
@@ -332,6 +332,34 @@ This feature is particularly useful in interactive environments, such as REPLs, 
 > **Note**: The implementation above is a simplified example and does not cover all aspects of a real-world interpreter. It is intended to demonstrate the flexibility of the Pratt parsing technique in an interactive environment.
 >
 > A full interpreter would require additional features, and is therefore also **omitted** for brevity.
+
+## Complexity Analysis
+
+In this section we will briefly discuss the time and space complexity of Pratt parsing especially for readers considering using it in performance-critical applications.
+To determine the two complexities, we use **Big O notation** to describe the upper bound of the algorithm's time and space requirements. Let:
+
+- \\(n\\) number of tokens in the input expression
+- \\(p\\) number of operators in token stream
+- \\(c\\) number of characters in the input stream.
+
+### Time Complexity
+
+The `parse_expr` method in the Pratt parsing algorithm has two `while` loops that each iterate over the input tokens from the lexer using the `next_token` and `peek_token` methods, no backtracking is required.
+`parse_expr` calls `check_op` and `parse_primary` for each token, and the `check_op` method performs a constant lookup in the operator table using `self.operator.get()` in \\(O(1)\\) time.
+The `parse_primary` method also performs a constant operation using `self.lexer.next_token()` in \\(O(c)\\) time, which we can consider as \\(O(1)\\) for simplicity as the number of characters is usually small, and we assume the lexer is efficient.
+Because both loops read from the same stream of tokens, they therefore have a **linear time complexity** of \\(O(n)\\).
+In the inner loop, the `parse_expr` method recursively calls itself, but this call is actually a **continuation** of the current state limited by the lexer's input stream \\(n\\), so it does not increase the time complexity, only the space complexity.
+
+Therefore, the Pratt parsing algorithm has a **linear time complexity** of \\(O(n)\\) for parsing expressions.
+
+### Space Complexity
+
+The Pratt parsing algorithm uses a **recursive call stack** to parse expressions, which can grow linearly with the depth of the expression tree limited by the number of operators in the input stream \\(p\\), so the space complexity is \\(O(p)\\).
+
+The Pratt parser completly relies on the **lexer** to provide tokens, so the space complexity of the lexer is also important.
+The lexer should be able to produce tokens efficiently and store them in memory, which can be considered as \\(O(n)\\) space complexity.
+
+Therefore, the Pratt parsing algorithm has a **space complexity** of \\(O(p + n)\\) for parsing expressions.
 
 ## Comparison
 

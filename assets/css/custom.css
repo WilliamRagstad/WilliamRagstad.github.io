@@ -1,8 +1,6 @@
-
-
 .max-w-prose {
 	max-width: 80ch
-  }
+}
 
 a {
 	overflow-wrap: break-word;
@@ -73,4 +71,10 @@ sup + sup :before {
 
 #main-content > article > section .article-content p:has(+ ul) {
 	margin-bottom: 0.5rem !important;
+}
+
+.single_hero_basic {
+	opacity: 0.65;
+	/* filter: blur(1px); */
+	border-radius: 0.5rem;
 }

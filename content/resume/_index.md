@@ -120,6 +120,13 @@ The group is working on a new framework for constructing efficient domain-specif
 <img src="https://miking.org/assets/images/background-d53d603692ee100a53145d6fdc76a96a.jpg" alt="Miking" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
 
+{{< timelineItem icon="code" header="Software Developer" badge="2021 - 2022" subheader="Alex Therapeutics" >}}
+Worked as a Software Developer at <a href="https://www.alextherapeutics.com/" target="_blank">Alex Therapeutics</a> in the development of a digital KBT therapy platform for mental health.
+I worked with the main product (<b>React</b> and <b>Java Spring Boot</b>), and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations together.
+
+<img src="https://cdn.prod.website-files.com/5d69330c8cc2811f92af16c5/6077f0a7ed35537e64ea31f8_logo-color.png" alt="Alex Therapeutics" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0;" />
+{{< /timelineItem >}}
+
 {{< timelineItem icon="graduation-cap" header="Teaching Assistant" badge="2019 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
 Working as a Teaching Assistant (TA) in <b>parallel with my education at KTH</b>.
 Assisted or lead the following courses:
@@ -132,6 +139,14 @@ Assisted or lead the following courses:
 </ul>
 
 <img src="https://www.kth.se/polopoly_fs/1.1328905.1712134886!/image/KTHEntre_1250-551_30k.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+{{< /timelineItem >}}
+
+
+{{< timelineItem icon="graduation-cap" header="Private Tutor" badge="2019 - 2022" subheader="Superprof" >}}
+Private tutoring in Programming and Mathematics at <a href="https://www.superprof.se/kurser/programmering/sweden/" target="_blank">Superprof</a> for high school and university students in Stockholm.
+
+<img src="superprof.png" alt="Superprof" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="https://c.superprof.com/style/images/logos/superprof.svg" alt="Superprof" width="100%" style="height: 30px; object-fit: contain; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="University" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
@@ -147,7 +162,9 @@ Algorithms and Data Structures on masters level in Computer Science at Örebro U
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Junior Backend Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
-First job as a Junior Backend Developer.
+First programming job at <a href="https://www.mjukvarufabriken.se/" target="_blank">Mjukvarufabriken</a> as a Backend Developer.
+I worked on amobile app for <a href="https://www.heabent.se/" target="_blank">HEAB</a> to make routine vehicle inspections easier.
+As well as other software systems engineering related work.
 
 <img src="https://www.mjukvarufabriken.se/wp-content/uploads/mjukvarufabriken-logotype-farg.png" alt="ÖU" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; filter: drop-shadow(0 0 10px #FFF3) drop-shadow(0 0 3px #FFF) drop-shadow(0 0 1px #FFF);" />
 {{< /timelineItem >}}

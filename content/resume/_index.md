@@ -1,5 +1,5 @@
 +++
-title = 'Resume/CV'
+title = "William Rågstad - Resume"
 date = 2024-01-07
 +++
 
@@ -88,6 +88,90 @@ After graduating, I have been working as a self-employed **Software Developer** 
 
 </details>
 
+## Skills
+
+### Natural Languages
+
+<div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
+  <!-- columns of progress bars with natural languages and a skill precentage -->
+  <div> Swedish <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> English <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> Spanish <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
+  <div> Russian <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
+</div>
+
+### Programming Languages
+
+<div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
+  <!-- columns of progress bars with programming languages and a skill precentage -->
+  <div> Rust <div class="skill_bar"><div class="skill_bar_fill" style="width: 95%;"></div></div></div>
+  <div> C# <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> C++ <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> C <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Java <div class="skill_bar"><div class="skill_bar_fill" style="width: 85%;"></div></div></div>
+  <div> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> Python <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> HTML/CSS <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
+  <div> SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> F# <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Elixir <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> OCaml <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> Haskell <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
+  <div> Bash <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
+  <div> PowerShell <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
+  <div><br/> &nbsp; And many more... </div>
+</div>
+
+### Technologies
+
+<div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
+  <!-- columns of progress bars with technologies and a skill precentage -->
+  <div> Linux <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Windows <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Git <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> Docker <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> React <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Angular <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> Vue <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
+  <div> Spring Boot <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> .NET <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Node.js <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Deno <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> WebAssembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> WebRTC <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
+  <div> WebSockets <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
+  <div> GraphQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
+  <div> REST <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> gRPC <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> MongoDB <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> PostgreSQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> MySQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> MariaDB <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> HTMX <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Tailwind CSS <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><br/> &nbsp; And many more... </div>
+</div>
+
+### Tools
+
+<div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
+  <!-- columns of progress bars with tools and a skill precentage -->
+  <div> Visual Studio Code <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> NeoVim <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
+  <div> Visual Studio <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> JetBrains Rider <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
+  <div> IntelliJ IDEA <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
+  <div> GitKraken <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
+  <div> Postman <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Wireshark <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Figma <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
+  <div> Godot Engine <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
+  <div> Jira <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div><br/> &nbsp; And many more... </div>
+</div>
+
 ## Projects
 
 {{< button href="/projects/" target="_blank" >}}
@@ -122,7 +206,7 @@ The group is working on a new framework for constructing efficient domain-specif
 
 {{< timelineItem icon="code" header="Software Developer" badge="2021 - 2022" subheader="Alex Therapeutics" >}}
 Worked as a Software Developer at <a href="https://www.alextherapeutics.com/" target="_blank">Alex Therapeutics</a> in the development of a digital KBT therapy platform for mental health.
-I worked with the main product (<b>React</b> and <b>Java Spring Boot</b>), and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations together.
+I worked with the main fullstack product (<b>React</b> frontend and <b>Java Spring Boot</b>), and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations together.
 
 <img src="https://cdn.prod.website-files.com/5d69330c8cc2811f92af16c5/6077f0a7ed35537e64ea31f8_logo-color.png" alt="Alex Therapeutics" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
@@ -195,5 +279,28 @@ As well as other software systems engineering related work.
   li > div > .block {
     border-width: 2px;
     border-color: rgba(var(--color-neutral-700), var(--tw-border-opacity));
+  }
+
+  .skill_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill_bar {
+    background-color: rgba(var(--color-neutral-200), var(--tw-bg-opacity));
+    border-radius: 0.25rem;
+    height: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .skill_bar_fill {
+    background-color: rgba(var(--color-primary-500), var(--tw-bg-opacity));
+    height: 100%;
+    position: absolute;
   }
 </style>

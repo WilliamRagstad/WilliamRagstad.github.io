@@ -78,3 +78,14 @@ sup + sup :before {
 	/* filter: blur(1px); */
 	border-radius: 0.5rem;
 }
+
+.thumbnail_card {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: absolute;
+    z-index: -10;
+    opacity: 0.2;
+    filter: blur(6px);
+}

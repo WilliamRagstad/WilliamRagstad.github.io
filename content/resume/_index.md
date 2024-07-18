@@ -61,7 +61,7 @@ A nerdy polyglot programmer passionate about technology and innovation, **Softwa
 <hr/>
 
 <details class="mt-12" open>
-<summary style="margin-left: -1.25rem; margin-bottom: 2em;">
+<summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
     About Me
   </h2>
@@ -88,7 +88,12 @@ After graduating, I have been working as a self-employed **Software Developer** 
 
 </details>
 
-## Skills
+<details class="mt-12" open>
+<summary style="margin-left: -1.25rem;">
+  <h2 class="inline" style="margin-left: 0.33rem;">
+    Skills
+  </h2>
+</summary>
 
 ### Natural Languages
 
@@ -171,6 +176,8 @@ After graduating, I have been working as a self-employed **Software Developer** 
   <div> Jira <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
   <div><br/> &nbsp; And many more... </div>
 </div>
+
+</details>
 
 ## Projects
 

@@ -153,3 +153,95 @@ A DSL and framework for building minimal but powerful hypermedia system driven w
     {{< keyword icon="lightbulb" >}} Deno Runtime {{< /keyword >}}
     {{< keyword icon="lightbulb" >}} Server-Side Rendering {{< /keyword >}}
 {{< /keywordList >}}
+
+---
+
+## Development Tools
+
+Tools and utilities for development and programming.
+
+### Knight
+
+A MVC REST framework for Deno built on Oak and inspired by Spring Boot.
+Build scalable controller-based CRUD APIs with ease.
+
+{{< figure
+    src="https://raw.githubusercontent.com/WilliamRagstad/Knight/main/assets/logo.png"
+    alt="Knight logo"
+    caption="Logo from [github.com/WilliamRagstad/Knight](https://github.com/WilliamRagstad/Knight)"
+    width="170px"
+    center="true"
+>}}
+
+{{< github repo="WilliamRagstad/Knight" >}}
+
+{{< keywordList >}}
+    {{< keyword icon="code" >}} Web {{< /keyword >}}
+    {{< keyword icon="code" >}} Backend {{< /keyword >}}
+    {{< keyword icon="code" >}} Framework {{< /keyword >}}
+    {{< keyword icon="code" >}} REST API {{< /keyword >}}
+    {{< keyword icon="code" >}} Deno Runtime {{< /keyword >}}
+    {{< keyword icon="code" >}} TypeScript {{< /keyword >}}
+    {{< keyword icon="code" >}} MVC {{< /keyword >}}
+    {{< keyword icon="code" >}} CRUD {{< /keyword >}}
+    {{< keyword icon="code" >}} Oak {{< /keyword >}}
+    {{< keyword icon="code" >}} Spring Boot {{< /keyword >}}
+{{< /keywordList >}}
+
+### Pond
+
+A fully customizable and flexible static website generator inspired by Django (or Jinja) templates.
+You write all the content in Markdown, which is then combined with the correct HTML template and CSS stylesheet to produce a finished page.
+
+{{< figure
+    src="https://github.com/WilliamRagstad/Pond/raw/master/assets/logo.png"
+    alt="Pond logo"
+    caption="Logo from [github.com/WilliamRagstad/Pond](https://github.com/WilliamRagstad/Pond)"
+    width="170px"
+    center="true"
+>}}
+
+{{< github repo="WilliamRagstad/Pond" >}}
+
+{{< keywordList >}}
+    {{< keyword icon="code" >}} Web {{< /keyword >}}
+    {{< keyword icon="code" >}} Frontend {{< /keyword >}}
+    {{< keyword icon="code" >}} Static Site Generator {{< /keyword >}}
+    {{< keyword icon="code" >}} Markdown {{< /keyword >}}
+    {{< keyword icon="code" >}} HTML {{< /keyword >}}
+    {{< keyword icon="code" >}} CSS {{< /keyword >}}
+    {{< keyword icon="code" >}} Django {{< /keyword >}}
+    {{< keyword icon="code" >}} Jinja {{< /keyword >}}
+{{< /keywordList >}}
+
+---
+
+## Services and Technologies
+
+Products, websites, APIs, platforms, Software/Platform/etc as a Service (SaaS), or other technologies.
+
+### Quansy
+
+A comprehensive platform for data and content management, intended to be an all-in-one service for websites and applications.
+It is designed to be simple, fast and secure.
+It is built with a focus on performance and scalability.
+
+{{< figure
+    src="https://quansycms.wordpress.com/wp-content/uploads/2019/06/cropped-logo-1.png"
+    alt="Quansy logo"
+    caption="Logo from [quansycms.wordpress.com](https://quansycms.wordpress.com/)"
+    width="250px"
+    center="true"
+>}}
+
+{{< lead >}}
+This project is currently in closed development.
+{{< /lead >}}
+
+{{< keywordList >}}
+    {{< keyword icon="code" >}} Database {{< /keyword >}}
+    {{< keyword icon="code" >}} CMS {{< /keyword >}}
+    {{< keyword icon="code" >}} Platform {{< /keyword >}}
+    {{< keyword icon="code" >}} Web {{< /keyword >}}
+    {{< keyword icon="code" >}} Backend {{< /keyword >}}
+{{< /keywordList >}}

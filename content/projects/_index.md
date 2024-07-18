@@ -160,6 +160,30 @@ A DSL and framework for building minimal but powerful hypermedia system driven w
 
 Tools and utilities for development and programming.
 
+### APC
+
+A collection of yet "Another Parser Combinator" libraries made to build optimized, powerful and flexible parsers in a variety of languages.
+
+{{< figure
+    src="https://avatars.githubusercontent.com/u/69253022?s=200&v=4"
+    alt="APC logo"
+    caption="Logo from [https://github.com/APClib](https://github.com/APClib)"
+    width="120px"
+    center="true"
+>}}
+
+{{< github repo="APClib/APCSharp" >}}
+
+{{< keywordList >}}
+    {{< keyword icon="code" >}} Parser Combinator {{< /keyword >}}
+    {{< keyword icon="code" >}} Library {{< /keyword >}}
+    {{< keyword icon="code" >}} Development Tool {{< /keyword >}}
+    {{< keyword icon="code" >}} Optimization {{< /keyword >}}
+    {{< keyword icon="code" >}} Flexibility {{< /keyword >}}
+    {{< keyword icon="code" >}} Performance {{< /keyword >}}
+    {{< keyword icon="code" >}} Language Agnostic {{< /keyword >}}
+{{< /keywordList >}}
+
 ### Knight
 
 A MVC REST framework for Deno built on Oak and inspired by Spring Boot.

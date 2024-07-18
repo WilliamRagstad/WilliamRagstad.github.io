@@ -18,6 +18,8 @@ buildFuture = false
 # googleAnalytics = "G-XXXXXXXXX"
 googleAnalytics = "G-1L0B61Z1EB"
 
+ignoreLogs = ['error-remote-getjson']
+
 [imaging]
 anchor = 'Center'
 

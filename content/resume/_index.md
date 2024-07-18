@@ -28,7 +28,7 @@ A nerdy polyglot programmer passionate about technology and innovation, **Softwa
           </span>
         </div>
       </div>
-      <table class="text-lg mt-4 mb-0">
+      <table class="contact mt-4 mb-0">
         <tbody>
           <tr>
             <td>
@@ -276,6 +276,13 @@ As well as other software systems engineering related work.
 {{< /timeline >}}
 
 <style>
+  @media (min-width: 640px) {
+    table.contact {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+
   li > div > .block > div > h2 {
     margin-bottom: 0;
   }

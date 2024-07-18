@@ -129,56 +129,6 @@ After graduating, I have been working as a self-employed **Software Developer** 
   <div><br/> &nbsp; And many more... </div>
 </div>
 
-### Technologies
-
-<div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-  <!-- columns of progress bars with technologies and a skill precentage -->
-  <div> Linux <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Windows <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Git <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> Docker <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> React <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Angular <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
-  <div> Vue <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
-  <div> Spring Boot <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> .NET <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Node.js <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Deno <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> WebAssembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
-  <div> WebRTC <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
-  <div> WebSockets <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
-  <div> GraphQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
-  <div> REST <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> gRPC <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> MongoDB <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> PostgreSQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> MySQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> MariaDB <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> HTMX <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Tailwind CSS <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div><br/> &nbsp; And many more... </div>
-</div>
-
-### Tools
-
-<div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-  <!-- columns of progress bars with tools and a skill precentage -->
-  <div> Visual Studio Code <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> NeoVim <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
-  <div> Visual Studio <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> JetBrains Rider <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
-  <div> IntelliJ IDEA <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
-  <div> GitKraken <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
-  <div> Postman <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Wireshark <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Figma <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
-  <div> Godot Engine <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
-  <div> Jira <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div><br/> &nbsp; And many more... </div>
-</div>
-
-</details>
-
 ## Projects
 
 {{< button href="/projects/" target="_blank" >}}

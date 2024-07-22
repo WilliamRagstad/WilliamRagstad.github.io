@@ -5,7 +5,8 @@ date = 2024-01-07
 
 
 {{< lead >}}
-A nerdy polyglot programmer passionate about technology and innovation, **Software Developer, Systems Engineer, Architect, and IT-Security Specialist**.
+A highly skilled polyglot programmer with a deep passion for technology and innovation.
+**Software Developer, Systems Engineer, and IT-Security Specialist**.
 {{< /lead >}}
 
 <div
@@ -101,8 +102,9 @@ After graduating, I have been working as a self-employed **Software Developer** 
   <!-- columns of progress bars with natural languages and a skill precentage -->
   <div> Swedish <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> English <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> Spanish <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
-  <div> Russian <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
+  <div> Spanish <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
+  <div><br/> &nbsp; + 1 more </div>
+  <!-- <div> Russian <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div> -->
 </div>
 
 ### Programming Languages
@@ -126,13 +128,15 @@ After graduating, I have been working as a self-employed **Software Developer** 
   <div> Haskell <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
   <div> Bash <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
   <div> PowerShell <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
-  <div><br/> &nbsp; And many more... </div>
+  <div><br/> &nbsp; + many more </div>
 </div>
+
+</details>
 
 ## Projects
 
 {{< button href="/projects/" target="_blank" >}}
-{{<icon "code" >}} View featured projects
+{{<icon "code" >}}&nbsp;View featured projects
 {{< /button >}}
 
 ## Experience
@@ -145,7 +149,7 @@ I started my own consulting company, <a href="https://www.linkedin.com/company/w
 <ul>
   <li>Met with management and appropriate staff to understand their requirements.</li>
   <li>Worked to find the most suitable solutions for complex problems.</li>
-  <li>Created, communicated, and managed project plans.</li>
+  <li>Created, communicated and managed project plans.</li>
   <li>Collaborated to create strategic initiatives to design, code, and test solutions.</li>
   <li>Provided technical support and training to end-users.</li>
 </ul>
@@ -216,7 +220,7 @@ As well as other software systems engineering related work.
   </span>
   <span class="my-4">
   {{< button href="https://github.com/WilliamRagstad" target="_blank" >}}
-  {{<icon "github" >}} Visit my Github profile
+  {{<icon "github" >}}&nbsp;Visit my Github profile
   {{< /button >}}
   </span>
 </div>
@@ -259,6 +263,13 @@ As well as other software systems engineering related work.
     overflow: hidden;
     position: relative;
     width: 100%;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    border: solid 1px;
+  }
+
+  .dark .skill_bar {
+    border: none;
   }
 
   .skill_bar_fill {

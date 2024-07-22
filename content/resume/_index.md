@@ -154,23 +154,24 @@ I started my own consulting company, <a href="https://www.linkedin.com/company/w
   <li>Provided technical support and training to end-users.</li>
 </ul>
 
-<img src="https://media.licdn.com/dms/image/C4E1BAQEmGf2708fmNQ/company-background_10000/0/1632214169168/willsoft_it_cover?e=1721919600&v=beta&t=Ld5x-W52Nua4ct4Xrc8j4X2bzZR64PPRTyHGyQ0vt_U" alt="Willsoft" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="graduation-cap" header="Research Assistant" badge="2022 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
-
-Involved in the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the compiler backend team lead by David Broman.
-The group is working on a new framework for constructing efficient domain-specific languages with a self-learning heterogeneous model by composition of language semantics (HMC).
-
-<img src="https://miking.org/assets/images/background-d53d603692ee100a53145d6fdc76a96a.jpg" alt="Miking" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/willsoft.jpg" alt="Willsoft" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Software Developer" badge="2021 - 2022" subheader="Alex Therapeutics" >}}
 Worked as a Software Developer at <a href="https://www.alextherapeutics.com/" target="_blank">Alex Therapeutics</a> in the development of a digital KBT therapy platform for mental health.
 I worked with the main fullstack product (<b>React</b> frontend and <b>Java Spring Boot</b>), and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations together.
 
-<img src="https://cdn.prod.website-files.com/5d69330c8cc2811f92af16c5/6077f0a7ed35537e64ea31f8_logo-color.png" alt="Alex Therapeutics" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #EEE; padding: 10px" />
+<img src="experience/alex.png" alt="Alex Therapeutics" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 10px" />
 {{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Research Assistant" badge="2020 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
+
+Involved in the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the compiler backend team lead by David Broman.
+The group is working on a new framework for constructing efficient domain-specific languages with a self-learning heterogeneous model by composition of language semantics (HMC).
+
+<img src="experience/miking.jpg" alt="Miking" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+{{< /timelineItem >}}
+
 
 {{< timelineItem icon="graduation-cap" header="Teaching Assistant" badge="2019 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
 Working as a Teaching Assistant (TA) in <b>parallel with my education at KTH</b>.
@@ -183,26 +184,26 @@ Assisted or lead the following courses:
   <li>DM1595 <a href="https://www.kth.se/social/course/DM1595/" target="_blank">Program Development for Interactive Media</a></li>
 </ul>
 
-<img src="https://www.kth.se/polopoly_fs/1.1328905.1712134886!/image/KTHEntre_1250-551_30k.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Private Tutor" badge="2019 - 2022" subheader="Superprof" >}}
 Private tutoring in Programming and Mathematics at <a href="https://www.superprof.se/kurser/programmering/sweden/" target="_blank">Superprof</a> for high school and university students in Stockholm.
 
-<img src="superprof.png" alt="Superprof" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
-<img src="https://c.superprof.com/style/images/logos/superprof.svg" alt="Superprof" width="100%" style="height: 30px; object-fit: contain; margin: 2rem 0 0 0;" />
+<img src="experience/superprof.png" alt="Superprof" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/superprof.svg" alt="Superprof" width="100%" style="height: 30px; object-fit: contain; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="University" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
 Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at department of the School of Electrical Engineering and Computer Science (EECS).
 
-<img src="https://www.kth.se/polopoly_fs/1.1328905.1712134886!/image/KTHEntre_1250-551_30k.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="University" badge="2017 - 2019" subheader="Örebro University" >}}
 Algorithms and Data Structures on masters level in Computer Science at Örebro University <b>in parallel with High School</b>.
 
-<img src="https://assets.mediaflowpro.com/a/860150b89e35cce651f407ccf6956026/ORU_4477.jpg" alt="ÖU" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Junior Backend Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
@@ -210,10 +211,10 @@ First programming job at <a href="https://www.mjukvarufabriken.se/" target="_bla
 I worked on amobile app for <a href="https://www.heabent.se/" target="_blank">HEAB</a> to make routine vehicle inspections easier.
 As well as other software systems engineering related work.
 
-<img src="https://www.mjukvarufabriken.se/wp-content/uploads/mjukvarufabriken-logotype-farg.png" alt="ÖU" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #EEE; padding: 10px" />
+<img src="experience/mjukvarufabriken.png" alt="ÖU" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 10px" />
 {{< /timelineItem >}}
 
-{{< timelineItem icon="github" header="Journey Begins" badge="2010 - present" >}}
+{{< timelineItem icon="github" header="Journey Begins" badge="2010" >}}
 <div class="flex justify-between flex-wrap items-center">
   <span>
     All my projects are hosted on Github.

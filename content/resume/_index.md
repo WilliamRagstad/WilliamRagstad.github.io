@@ -143,7 +143,14 @@ After graduating, I have been working as a self-employed **Software Developer** 
 
 {{< timeline >}}
 
-{{< timelineItem icon="code" header="Software Consultant" badge="2023 - present" subheader="Founder of Willsoft" >}}
+{{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
+
+Employed as an IT-Specialist at a Swedish <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry of Defence</a> government agency.
+
+<img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Software Consultant" badge="2021" subheader="Founder of Willsoft" >}}
 I started my own consulting company, <a href="https://www.linkedin.com/company/willsoft-it" target="_blank">Willsoft</a>, providing varying services in software development and IT to small and medium-sized businesses.
 
 <ul>

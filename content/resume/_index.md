@@ -70,7 +70,7 @@ A highly skilled polyglot programmer with a deep passion for technology and inno
 
 {{< badge >}} Early experience {{< /badge >}}
 I have always been intrigued by games and computers.
-My fascination by the ability to create something out of nothing has been a driving force in my life.
+My fascination with the ability to create something out of nothing has been a driving force in my life.
 
 My first experience with programming was at the **age of 10**, and I have been hooked ever since.
 I then got my **first job at 16** as a **Junior Backend Developer**.
@@ -79,7 +79,7 @@ My early introduction to programming has given me a head start in my studies and
 {{< badge >}} Education {{< /badge >}}
 Studying **Computer Science** at [KTH Royal Institute of Technology](https://www.kth.se/en) has been a dream come true.
 I've learned so much and met so many amazing students and professors.
-Already as an **undergraduate**, I worked as a **Teaching Assistant** and **Research Assistant** along doctoral students and professors in various courses and projects. Even **teaching my fellow student colleagues** working as a TA while taking the courses myself.
+Already as an **undergraduate**, I worked as a **Teaching Assistant** and **Research Assistant** along with doctoral students and professors in various courses and projects. Even **taught my fellow student colleagues** working as a TA while taking the courses myself.
 
 {{< badge >}} Interests {{< /badge >}}
 My curiosity spans many areas, including **Competitive Programming**, **CTF**, **Hackathons**, **Startups**, **Game Dev**, **Cybersecurity**, **Systems Architecture**, **Mathematics**, **Computer Science**, **Algorithms**, **Category Theory**, **Type Theory**, **Programming Languages**, and ***much, much* more**.
@@ -99,18 +99,15 @@ After graduating, I have been working as a self-employed **Software Developer** 
 ### Natural Languages
 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-  <!-- columns of progress bars with natural languages and a skill precentage -->
   <div> Swedish <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> English <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> Spanish <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
   <div><br/> &nbsp; + 1 more </div>
-  <!-- <div> Russian <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div> -->
 </div>
 
 ### Programming Languages
 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-  <!-- columns of progress bars with programming languages and a skill precentage -->
   <div> Rust <div class="skill_bar"><div class="skill_bar_fill" style="width: 95%;"></div></div></div>
   <div> C# <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> C++ <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
@@ -136,7 +133,7 @@ After graduating, I have been working as a self-employed **Software Developer** 
 ## Projects
 
 {{< button href="/projects/" target="_blank" >}}
-{{<icon "code" >}}&nbsp;View featured projects
+{{<icon "code" >}}&nbsp;&nbsp;View featured projects
 {{< /button >}}
 
 ## Experience
@@ -145,7 +142,7 @@ After graduating, I have been working as a self-employed **Software Developer** 
 
 {{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
 
-Employed as an IT-Specialist at a Swedish <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry of Defence</a> government agency.
+Employed as an IT specialist at a Swedish <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry of Defence</a> government agency.
 
 <img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
@@ -166,14 +163,14 @@ I started my own consulting company, <a href="https://www.linkedin.com/company/w
 
 {{< timelineItem icon="code" header="Software Developer" badge="2021 - 2022" subheader="Alex Therapeutics" >}}
 Worked as a Software Developer at <a href="https://www.alextherapeutics.com/" target="_blank">Alex Therapeutics</a> in the development of a digital KBT therapy platform for mental health.
-I worked with the main fullstack product (<b>React</b> frontend and <b>Java Spring Boot</b>), and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations together.
+I worked with the main full-stack product (<b>React</b> frontend and <b>Java Spring Boot</b>) and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations.
 
 <img src="experience/alex.png" alt="Alex Therapeutics" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 10px" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Research Assistant" badge="2020 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
 
-Involved in the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the compiler backend team lead by David Broman.
+Involved in the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the compiler backend team led by David Broman.
 The group is working on a new framework for constructing efficient domain-specific languages with a self-learning heterogeneous model by composition of language semantics (HMC).
 
 <img src="experience/miking.jpg" alt="Miking" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
@@ -202,7 +199,7 @@ Private tutoring in Programming and Mathematics at <a href="https://www.superpro
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="University" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
-Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at department of the School of Electrical Engineering and Computer Science (EECS).
+Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at the Department of the School of Electrical Engineering and Computer Science (EECS).
 
 <img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
@@ -215,8 +212,8 @@ Algorithms and Data Structures on masters level in Computer Science at Örebro U
 
 {{< timelineItem icon="code" header="Junior Backend Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
 First programming job at <a href="https://www.mjukvarufabriken.se/" target="_blank">Mjukvarufabriken</a> as a Backend Developer.
-I worked on amobile app for <a href="https://www.heabent.se/" target="_blank">HEAB</a> to make routine vehicle inspections easier.
-As well as other software systems engineering related work.
+I worked on a mobile app for <a href="https://www.heabent.se/" target="_blank">HEAB</a> to make routine vehicle inspections easier.
+As well as other software systems engineering-related work.
 
 <img src="experience/mjukvarufabriken.png" alt="ÖU" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 10px" />
 {{< /timelineItem >}}
@@ -224,11 +221,11 @@ As well as other software systems engineering related work.
 {{< timelineItem icon="github" header="Journey Begins" badge="2010" >}}
 <div class="flex justify-between flex-wrap items-center">
   <span>
-    All my projects are hosted on Github.
+    All my projects are hosted on GitHub.
   </span>
   <span class="my-4">
   {{< button href="https://github.com/WilliamRagstad" target="_blank" >}}
-  {{<icon "github" >}}&nbsp;Visit my Github profile
+  {{<icon "github" >}}&nbsp;&nbsp;Visit my Github profile
   {{< /button >}}
   </span>
 </div>

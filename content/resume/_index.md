@@ -5,14 +5,17 @@ date = 2024-01-07
 
 
 {{< lead >}}
-A highly skilled polyglot programmer with a deep passion for technology and innovation.
-**Software Developer, Systems Engineer, and IT-Security Specialist**.
+`Software Developer`, `Systems Engineer`, `IT-Security Specialist`, + more
 {{< /lead >}}
 
 <div
-  class="border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+  class="border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative  mx-auto max-w-xl">
   <div class="px-6 py-4 flex justify-between items-center flex-wrap">
-    <div>
+    <div class="flex flex-col items-center mx-auto p-1">
+      <img class="mt-0 mb-0 border rounded-full medium-zoom-image" width="130" alt="William Rågstad" src="picture.jpg">
+      <span>William Rågstad</span>
+    </div>
+    <div class="mx-auto p-1">
       <div
         class="font-bold text-xl text-neutral-800 decoration-primary-500 dark:text-neutral">
         Contact me
@@ -52,12 +55,15 @@ A highly skilled polyglot programmer with a deep passion for technology and inno
         </tbody>
       </table>
     </div>
-    <div class="flex flex-col items-center mx-auto">
-      <img class="mt-0 mb-0 border rounded-full medium-zoom-image" width="130" alt="William Rågstad" src="picture.jpg">
-      <span>William Rågstad</span>
-    </div>
   </div>
 </div>
+
+<br/>
+
+{{< lead >}}
+&mdash; My goal is to **create value** via consistent **quality** and **innovation**. <br/>
+I am a **highly skilled programmer** with a deep passion for technology.
+{{< /lead >}}
 
 <hr/>
 
@@ -175,7 +181,6 @@ The group is working on a new framework for constructing efficient domain-specif
 
 <img src="experience/miking.jpg" alt="Miking" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}
-
 
 {{< timelineItem icon="graduation-cap" header="Teaching Assistant" badge="2019 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
 Working as a Teaching Assistant (TA) in <b>parallel with my education at KTH</b>.

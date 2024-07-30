@@ -115,14 +115,14 @@ After graduating, I have been working as a self-employed **Software Developer** 
 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
   <div> Rust <div class="skill_bar"><div class="skill_bar_fill" style="width: 95%;"></div></div></div>
-  <div> C# <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> C# <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> Java <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> C++ <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> C <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Java <div class="skill_bar"><div class="skill_bar_fill" style="width: 85%;"></div></div></div>
-  <div> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> Python <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> Lua <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> HTML5 / CSS3 / Sass <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
   <div> SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
@@ -156,6 +156,7 @@ After graduating, I have been working as a self-employed **Software Developer** 
   <div> Flask <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
   <div> ASP.NET <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
   <div> Spring Boot <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
+  <div> Nginx <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div><br/> &nbsp; + more </div>
 </div>
 
@@ -169,10 +170,10 @@ After graduating, I have been working as a self-employed **Software Developer** 
   <div> CLR <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> JVM <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
   <div> V8 <div class="skill_bar"><div class="skill_bar_fill" style="width: 75%;"></div></div></div>
-  <div> BEAM <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
   <div> HVM2 <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> WASM <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> WASI <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> LLVM <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> CPython VM <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
   <div><br/> &nbsp; + more </div>
 </div>
 

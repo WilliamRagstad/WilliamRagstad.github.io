@@ -258,7 +258,7 @@ Employed as an IT specialist at a Swedish <a href="https://www.government.se/gov
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Software Consultant" badge="2021" subheader="Founder of Willsoft" >}}
-I started my own consulting company, <a href="https://www.linkedin.com/company/willsoft-it" target="_blank">Willsoft</a>, providing varying services in software development and IT to small and medium-sized businesses.
+I started my own consulting company, <a href="https://www.linkedin.com/company/willsoft-it" target="_blank">Willsoft</a>, providing varying IT and software development services to small and medium-sized businesses.
 
 <ul>
   <li>Met with management and appropriate staff to understand their requirements.</li>

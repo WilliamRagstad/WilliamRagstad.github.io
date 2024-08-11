@@ -391,4 +391,9 @@ As well as other software systems engineering-related work.
     height: 100%;
     position: absolute;
   }
+
+  a > .align-text-bottom.icon {
+    vertical-align: middle;
+    padding-bottom: 4px;
+  } */
 </style>

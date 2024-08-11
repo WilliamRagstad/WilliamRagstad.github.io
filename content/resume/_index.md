@@ -107,8 +107,7 @@ After graduating, I have been working as a self-employed **Software Developer** 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
   <div> Swedish <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> English <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> Spanish <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
-  <div><br/> &nbsp; + 1 more </div>
+  <div><br/> &nbsp; + 2 more </div>
 </div>
 
 ### Programming Languages

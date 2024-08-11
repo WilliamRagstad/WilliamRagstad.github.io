@@ -61,8 +61,8 @@ date = 2024-01-07
 <br/>
 
 {{< lead >}}
-&mdash; My goal is to **create value** via consistent **quality** and **innovation**. <br/>
-I am a **highly skilled programmer** with a deep passion for technology.
+&mdash; My goal is to create **value** and **impact** through consistent **quality** and **innovation**.
+I am a **highly skilled programmer** with a deep passion for technology and learning.
 {{< /lead >}}
 
 <hr/>

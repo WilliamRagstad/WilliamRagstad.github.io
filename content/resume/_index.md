@@ -113,26 +113,26 @@ After graduating, I have been working as a self-employed **Software Developer** 
 ### Programming Languages
 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-  <div> Rust <div class="skill_bar"><div class="skill_bar_fill" style="width: 95%;"></div></div></div>
+  <div> Rust <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> C# <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> Java <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> Python <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> C++ <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> C <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Python <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> Lua <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> HTML5 / CSS3 / Sass <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
   <div> SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> Lua <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div> F# <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
   <div> Elixir <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> OCaml <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> Haskell <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
-  <div> x86/x64 Assembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
-  <div> Bash/Shell <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
+  <div> x86/x64 Assembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> Bash/Shell <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div> PowerShell <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
-  <div><br/> &nbsp; + many more </div>
+  <div><br/> &nbsp; + more </div>
 </div>
 
 </details>

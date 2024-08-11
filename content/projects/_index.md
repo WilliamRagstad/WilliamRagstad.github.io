@@ -10,6 +10,34 @@ Here is a list of projects I have worked on. Some of them are finished, some are
 
 Compilers, interpreters and other projects related to programming languages.
 
+### WebX
+
+A DSL and framework for building minimal but powerful hypermedia system driven web backends and REST API development using a HTML first approach.
+
+{{< figure
+    src="https://github.com/webx-net/webx/blob/master/assets/webx.png?raw=true"
+    alt="WebX logo"
+    caption="Logo from [webx.sh](https://webx.sh/)"
+    width="200px"
+    center="true"
+>}}
+
+{{< github repo="webx-net/webx" >}}
+
+{{< keywordList >}}
+    {{< keyword icon="code" >}} DSL {{< /keyword >}}
+    {{< keyword icon="code" >}} Web {{< /keyword >}}
+    {{< keyword icon="code" >}} Backend {{< /keyword >}}
+    {{< keyword icon="code" >}} Framework {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} REST API {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} Language Design {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} TypeScript {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} Deno Runtime {{< /keyword >}}
+    {{< keyword icon="lightbulb" >}} Server-Side Rendering {{< /keyword >}}
+{{< /keywordList >}}
+
+---
+
 ### Lento
 
 A general purpose, strong and statically typed, lazy evaluated, programming language with aim to purify the object-oriented paradigm with functional concepts. Designed with a focus on simplicity and readability in mind.
@@ -124,34 +152,6 @@ There are support for both functional and object oriented programming paradigms.
     {{< keyword icon="circle-info" >}} Interfaces {{< /keyword >}}
     {{< keyword icon="circle-info" >}} Inheritance {{< /keyword >}}
     -->
-{{< /keywordList >}}
-
----
-
-### WebX
-
-A DSL and framework for building minimal but powerful hypermedia system driven web backends and REST API development using a HTML first approach.
-
-{{< figure
-    src="https://github.com/webx-net/webx/blob/master/assets/logo_grad.png?raw=true"
-    alt="WebX logo"
-    caption="Logo from [webx.sh](https://webx.sh/)"
-    width="170px"
-    center="true"
->}}
-
-{{< github repo="webx-net/webx" >}}
-
-{{< keywordList >}}
-    {{< keyword icon="code" >}} DSL {{< /keyword >}}
-    {{< keyword icon="code" >}} Web {{< /keyword >}}
-    {{< keyword icon="code" >}} Backend {{< /keyword >}}
-    {{< keyword icon="code" >}} Framework {{< /keyword >}}
-    {{< keyword icon="lightbulb" >}} REST API {{< /keyword >}}
-    {{< keyword icon="lightbulb" >}} Language Design {{< /keyword >}}
-    {{< keyword icon="lightbulb" >}} TypeScript {{< /keyword >}}
-    {{< keyword icon="lightbulb" >}} Deno Runtime {{< /keyword >}}
-    {{< keyword icon="lightbulb" >}} Server-Side Rendering {{< /keyword >}}
 {{< /keywordList >}}
 
 ---

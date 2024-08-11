@@ -334,7 +334,7 @@ As well as other software systems engineering-related work.
   </span>
   <span class="my-4">
   {{< button href="https://github.com/WilliamRagstad" target="_blank" >}}
-  {{<icon "github" >}}&nbsp;&nbsp;Visit my Github profile
+  {{<icon "github" >}}&nbsp;&nbsp;Github Profile
   {{< /button >}}
   </span>
 </div>

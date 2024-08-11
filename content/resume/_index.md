@@ -190,10 +190,10 @@ After graduating, I have been working as a self-employed **Software Developer** 
 
 </details>
 
-<details class="mt-12" open>
+<details class="mt-12">
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
-    Fields of Expertise
+    Specializations
   </h2>
 </summary>
 

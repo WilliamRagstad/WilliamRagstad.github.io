@@ -194,7 +194,15 @@ After graduating, I have been working as a self-employed **Software Developer** 
 ## Projects
 
 {{< button href="/projects/" target="_blank" >}}
-{{<icon "code" >}}&nbsp;&nbsp;View featured projects
+{{<icon "code" >}}&nbsp;&nbsp;Featured Projects
+{{< /button >}}
+&nbsp;&nbsp;
+{{< button href="https://github.com/WilliamRagstad" target="_blank" >}}
+{{<icon "github" >}}&nbsp;&nbsp;Github Profile
+{{< /button >}}
+&nbsp;&nbsp;
+{{< button href="/posts/" target="_blank" >}}
+{{<icon "comment" >}}&nbsp;&nbsp;Blog Posts
 {{< /button >}}
 
 ## Experience

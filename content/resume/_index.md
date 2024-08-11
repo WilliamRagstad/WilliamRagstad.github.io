@@ -342,6 +342,24 @@ As well as other software systems engineering-related work.
 
 {{< /timeline >}}
 
+<script>
+    let openDetails = [];
+    // When the user prints the page, open all details elements
+    window.onbeforeprint = function() {
+        openDetails = [];
+        document.querySelectorAll('details').forEach(function(detail) {
+            if (detail.hasAttribute('open')) openDetails.push(detail);
+            detail.setAttribute('open', '');
+        });
+    };
+    // When the user exits print preview, close all details elements
+    window.onafterprint = function() {
+        document.querySelectorAll('details').forEach(function(detail) {
+            if (!openDetails.includes(detail)) detail.removeAttribute('open');
+        });
+    };
+</script>
+
 <style>
   @media (min-width: 640px) {
     table.contact {

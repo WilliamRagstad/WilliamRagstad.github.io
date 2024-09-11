@@ -67,12 +67,7 @@ I aim to bring **value** and **impact** through consistent **quality** and **inn
 
 <hr/>
 
-<details class="mt-12" open>
-<summary style="margin-left: -1.25rem;">
-  <h2 class="inline" style="margin-left: 0.33rem;">
-    About Me
-  </h2>
-</summary>
+## About Me
 
 {{< badge >}} Early experience {{< /badge >}}
 I have always been intrigued by games and computers.
@@ -92,8 +87,6 @@ My curiosity spans many areas, including **Competitive Programming**, **CTF**, *
 
 {{< badge >}} Career {{< /badge >}}
 After graduating, I have been working as a self-employed **Software Developer** and **IT Specialist** consultant at [Willsoft](https://www.linkedin.com/company/willsoft-it) where I've had the opportunity to work with many projects and clients.
-
-</details>
 
 <details class="mt-12" open>
 <summary style="margin-left: -1.25rem;">

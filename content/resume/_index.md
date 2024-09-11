@@ -247,7 +247,7 @@ View my featured projects and contributions via the links below.
 
 {{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
 
-Employed as an IT specialist at a Swedish <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry of Defence</a> government agency.
+IT specialist at a Swedish government agency under the <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry of Defence</a>.
 
 <img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}

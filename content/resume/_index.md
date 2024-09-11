@@ -227,6 +227,8 @@ After graduating, I have been working as a self-employed **Software Developer** 
 
 ## Projects
 
+View my featured projects and contributions via the links below.
+
 {{< button href="/projects/" target="_blank" >}}
 {{<icon "code" >}}&nbsp;&nbsp;Featured Projects
 {{< /button >}}

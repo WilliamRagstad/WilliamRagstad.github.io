@@ -91,6 +91,23 @@ After graduating, I have been working as a self-employed **Software Developer** 
 <details class="mt-12" open>
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
+    Highlights
+  </h2>
+</summary>
+
+- **[DEF CON CTF Qualifier](https://ctftime.org/event/2229) 2024**: Competed in [NorseCode](https://norsecode.team/) via [RoyalRoppers](https://royalroppers.team/) together with [kalmarunionen](https://ctftime.org/team/114856). Featured high-stakes cybersecurity challenges in exploit development, reverse engineering, cryptography, and more.
+
+- ***Organizer*, [Undutmaning](https://undutmaning.se/) CTF 2024**: Management of Undutmaning CTF 2024, a well-regarded cybersecurity competition. Successfully designed a variety of technical challenges.
+
+- ***Member*, [RoyalRoppers](https://royalroppers.team/) CTF Team**: Member of RoyalRoppers, contributing to several CTF competitions and demonstrating advanced problem-solving skills in areas such as reverse engineering, network security, and similar.
+
+- **[GitHub Project](https://github.com/WilliamRagstad/Font-Manager) with 200,000+ Users**: Lead developer of a GitHub project used by over 200,000 users, showcasing strong leadership and technical expertise in open-source software development.
+
+</details>
+
+<details class="mt-12" open>
+<summary style="margin-left: -1.25rem;">
+  <h2 class="inline" style="margin-left: 0.33rem;">
     Skills
   </h2>
 </summary>

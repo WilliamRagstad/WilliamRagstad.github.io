@@ -6,14 +6,21 @@ a {
 	overflow-wrap: break-word;
 }
 
-sup + sup :before {
+sup+sup :before {
 	content: ', ';
 	color: white;
+}
+
+figure {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .edgeLabels .edgeLabel:empty {
 	display: none;
 }
+
 .edgeLabels .edgeLabel {
 	padding: 4px;
 	border-radius: 4px;
@@ -21,15 +28,18 @@ sup + sup :before {
 
 .mermaid {
 	--mermaid-edge-background: #1a1a1ae0;
-	--mermaid-edge-color: rgba(var(--color-primary-400), 1); /* var(--tw-prose-links) #7b7b7b #00ff73; */
-	--mermaid-edge-stroke-color: rgba(var(--color-primary-400), 0.5); /* var(--tw-prose-invert-links) #5f5f5f; */
+	--mermaid-edge-color: rgba(var(--color-primary-400), 1);
+	/* var(--tw-prose-links) #7b7b7b #00ff73; */
+	--mermaid-edge-stroke-color: rgba(var(--color-primary-400), 0.5);
+	/* var(--tw-prose-invert-links) #5f5f5f; */
 	--mermaid-node-background: rgba(var(--color-neutral-300), 1);
-	--mermaid-node-border: rgba(var(--color-neutral-500), 1); /* rgba(var(--color-secondary-400), 1) */
+	--mermaid-node-border: rgba(var(--color-neutral-500), 1);
+	/* rgba(var(--color-secondary-400), 1) */
 }
 
 :is(:where(.dark) .mermaid .edgeLabel) {
-  color: white !important;
-  background-color: var(--mermaid-edge-background) !important;
+	color: white !important;
+	background-color: var(--mermaid-edge-background) !important;
 }
 
 :is(:where(.dark) .mermaid .flowchart-link) {
@@ -43,33 +53,67 @@ sup + sup :before {
 
 :is(:where(.dark) .mermaid .node rect) {
 	fill: var(--mermaid-node-background) !important;
-    stroke: var(--mermaid-node-border) !important;
-    stroke-width: 1px;
+	stroke: var(--mermaid-node-border) !important;
+	stroke-width: 1px;
 }
 
-.prose :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)) {
+:is(:where(.dark) .mermaid .actor),
+:is(:where(.dark) .mermaid .actor-man circle) {
+	fill: var(--mermaid-node-border) !important;
+	stroke: var(--mermaid-edge-stroke-color) !important;
+	stroke-width: 3px;
+}
+
+:is(:where(.dark) .mermaid .actor > tspan) {
+	fill: var(--mermaid-edge-color) !important;
+}
+
+:is(:where(.dark) .mermaid line) {
+	stroke: var(--mermaid-edge-stroke-color) !important;
+	stroke-width: 4px;
+}
+
+:is(:where(.dark) .mermaid .messageText) {
+	fill: white !important;
+	filter: drop-shadow(0 2px 1px black);
+	font-family: monospace;
+}
+
+:is(:where(.dark) .mermaid .messageLine0),
+:is(:where(.dark) .mermaid .messageLine1),
+:is(:where(.dark) .mermaid .messageLine2),
+:is(:where(.dark) .mermaid .messageLine3) {
+	stroke: #a8a8a8 !important;
+}
+
+:is(:where(.dark) .mermaid #arrowhead path) {
+	fill: #a8a8a8 !important;
+	stroke: #a8a8a8 !important;
+}
+
+.prose :where(blockquote):not(:where([class~=not-prose], [class~=not-prose] *)) {
 	font-weight: 300;
 }
 
-#main-content > article > section details.toc-right > div {
+#main-content>article>section details.toc-right>div {
 	padding-left: calc(1.25rem + 16px);
 }
 
-#main-content > article > section details.toc-right > div li > details > summary {
+#main-content>article>section details.toc-right>div li>details>summary {
 	margin-left: -16px;
 }
 
-#main-content > article > section .article-content ul {
+#main-content>article>section .article-content ul {
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
 
-#main-content > article > section .article-content ul > li {
+#main-content>article>section .article-content ul>li {
 	margin-top: 0.25rem !important;
 	margin-bottom: 0.25rem !important;
 }
 
-#main-content > article > section .article-content p:has(+ ul) {
+#main-content>article>section .article-content p:has(+ ul) {
 	margin-bottom: 0.5rem !important;
 }
 
@@ -80,12 +124,12 @@ sup + sup :before {
 }
 
 .thumbnail_card {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    position: absolute;
-    z-index: -10;
-    opacity: 0.2;
-    filter: blur(6px);
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	position: absolute;
+	z-index: -10;
+	opacity: 0.2;
+	filter: blur(6px);
 }

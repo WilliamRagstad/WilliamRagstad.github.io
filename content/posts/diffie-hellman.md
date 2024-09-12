@@ -65,19 +65,27 @@ sequenceDiagram
     Note over Alice, Bob: K = B^a mod p &nbsp; and &nbsp; K = A^b mod p
 {{< /mermaid >}}
 
+*Short explanation of the steps above:*
+
 1. **Setup**: Alice and Bob agree on a **prime number \\(p\\)** and a **generator \\(g\\)**.
 2. **Alice**: Alice randomly chooses a **secret number \\(a\\)** and computes \\(A = g^a \mod p\\).
 3. **Bob**: Bob randomly chooses a **secret number \\(b\\)** and computes \\(B = g^b \mod p\\).
 4. **Exchange**: Alice sends \\(A\\) to Bob and Bob sends \\(B\\) to Alice.
 5. **Key**: Alice computes \\([K = B^a \mod p]\\) and Bob computes \\([K = A^b \mod p]\\).
 
-**Now both Alice and Bob now share the same secret key \\(K\\)**.
-The initial numbers **\\(p\\) and \\(g\\)**, and the generated **\\(A\\) and \\(B\\)** are **public** and can be shared over an insecure channel **without compromising the key \\(K\\)**.
-
 > **Naming**\
 > \\(p\\) and \\(g\\) are **public parameters**.
 > Both \\(a\\) and \\(b\\) are kept secret, and are therefore called **private keys**.
 > The numbers \\(A\\) and \\(B\\) are called **public keys**, as they gets sent over the public channel `Internet`.
+
+**Now both Alice and Bob now share the same secret key \\(K\\) without anyone eavesdropping knowing it!**
+The initial numbers **\\(p\\) and \\(g\\)**, and the generated **\\(A\\) and \\(B\\)** are **public** and can be shared over an insecure channel **without compromising the key \\(K\\)**.
+
+## Drawbacks
+
+All is good until we introduce Charles, who is **not only eavesdropping** but also **actively manipulating the messages**.
+This is known as a Man-in-the-Middle (MitM) attack.
+Diffie-Hellman is **vulnerable** to this, as Charles can intercept the messages, **generate his own keys**, and **forward the messages** to the intended recipients. He can then **decrypt and read the messages**, **modify them**, and **re-encrypt** them before sending them on, breaking the encryption.
 
 [^DH]: [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) by Whitfield Diffie and Martin Hellman.
 [^ModExp]: [Modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation) is a type of exponentiation performed over a modulus.

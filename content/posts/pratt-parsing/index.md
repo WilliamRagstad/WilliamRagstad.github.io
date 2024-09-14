@@ -1,5 +1,5 @@
 +++
-title = 'Pratt Parsing Technique'
+title = 'Pratt Parsing'
 date = 2024-07-13T17:32:10+02:00
 draft = false
 series = ['Parsing Techniques']
@@ -136,7 +136,7 @@ fn parse_expr(&mut self, mut lhs: Ast, min_prec: Precedence)
             self.lexer.peek_token(), curr_op.precedence) {
             let next_prec = curr_op.precedence +
                 (next_op.precedence > curr_op.precedence)
-                as OperatorPrecedence; 
+                as OperatorPrecedence;
             rhs = self.parse_expr(rhs, next_prec)?;
         }
         lhs = Ast::Binary(
@@ -450,7 +450,7 @@ I hope you found this post informative and helpful in understanding the Pratt pa
 
 [^StackOverflow]: In computer science, a [stack overflow](https://en.wikipedia.org/wiki/Stack_overflow) occurs when a program's call stack exceeds its memory limits, causing the program to crash. Stack overflows can occur when a program makes too many recursive function calls or uses too much memory on the stack. In the context of parsing, a stack overflow can occur if the parsing algorithm uses excessive recursion or consumes too much memory on the stack.
 
-<!-- 
+<!--
 
 [^LRParsing]: [LR parsing](https://en.wikipedia.org/wiki/LR_parser) is a type of **bottom-up parsing** that uses left-to-right scanning and rightmost derivation to parse input. The LR parsing technique is used in parsers that can predict the next production rule based on the current input symbol and the symbols on the parsing stack. LR parsers are commonly used in compilers and interpreters for programming languages.
 

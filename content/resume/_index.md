@@ -95,13 +95,15 @@ After graduating, I have been working as a self-employed **Software Developer** 
   </h2>
 </summary>
 
-- **[DEF CON CTF Qualifier](https://ctftime.org/event/2229) 2024**: Competed in [NorseCode](https://norsecode.team/) via [RoyalRoppers](https://royalroppers.team/) together with [kalmarunionen](https://ctftime.org/team/114856). Featured high-stakes cybersecurity challenges in exploit development, reverse engineering, cryptography, and more.
+- ***Competitor*, [DEFCON CTF Qualifier](https://ctftime.org/event/2229) 2024**: In the [NorseCode](https://norsecode.team/) team via [RoyalRoppers](https://royalroppers.team/) together with [kalmarunionen](https://ctftime.org/team/114856). Featured *high-stakes* cybersecurity challenges.
 
-- ***Organizer*, [Undutmaning](https://undutmaning.se/) CTF 2024**: Management of Undutmaning CTF 2024, a well-regarded cybersecurity competition. Successfully designed a variety of technical challenges.
+- ***Organizer*, [Undutmaning](https://undutmaning.se/) CTF 2024**: Technical project manager of a well-regarded cyber-security competition. Built a variety of challenges, the official website, and infrastructure.
 
-- ***Member*, [RoyalRoppers](https://royalroppers.team/) CTF Team**: Member of RoyalRoppers, contributing to several CTF competitions and demonstrating advanced problem-solving skills in areas such as reverse engineering, network security, and similar.
+- ***Member*, [Miking](https://miking.org/) Research Project at KTH**: Contributed to the Miking as an **undergraduate** under the supervision of [David Broman](https://people.kth.se/~dbro/), focusing on compiler backend development and domain-specific languages.
 
-- **[GitHub Project](https://github.com/WilliamRagstad/Font-Manager) with 200,000+ Users**: Lead developer of a GitHub project used by over 200,000 users, showcasing strong leadership and technical expertise in open-source software development.
+- ***Member*, [RoyalRoppers](https://royalroppers.team/) CTF Team**: Contributing to several CTF competitions through advanced problem-solving skills in reverse engineering, web, network, and binary exploitation.
+
+- **[GitHub Project](https://github.com/WilliamRagstad/Font-Manager) with 200,000+ Users**: Lead developer showcasing strong leadership and technical expertise in open-source software development.
 
 </details>
 

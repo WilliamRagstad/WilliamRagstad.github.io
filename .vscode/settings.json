@@ -2,10 +2,7 @@
 	"workbench.colorCustomizations": {
 		"activityBar.background": "#333018",
 		"titleBar.activeBackground": "#4e4424",
-		"titleBar.activeForeground": "#f3f182",
-		"tab.activeBorder": "#4e4424",
-		"statusBar.background": "#4e4424",
-		"statusBar.foreground": "#ffffff"
+		"titleBar.activeForeground": "#f3f182"
 	},
 	"colorTabs.config": [
 		{

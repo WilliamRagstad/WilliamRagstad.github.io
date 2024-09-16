@@ -17,6 +17,10 @@ figure {
 	flex-direction: column;
 }
 
+.prose :where(blockquote):not(:where([class~=not-prose], [class~=not-prose] *)) {
+	font-style: normal;
+}
+
 .edgeLabels .edgeLabel:empty {
 	display: none;
 }

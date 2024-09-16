@@ -141,8 +141,13 @@ If no CA is available, the parties can use **certificate pinning** or other form
 ### Pohlig-Hellman Algorithm
 
 The **Pohlig-Hellman algorithm**[^PohligHellman] is a **discrete logarithm algorithm** that can be used to solve DLP in a **cyclic group**.
-The algorithm is based on the **Chinese Remainder Theorem** and can be used to solve DLP in a group of order $n$ if the factors of $n$ are known.
-This attack becomes effective when $p - 1$ factors into small primes, allowing the DLP to be broken into smaller, more manageable subproblems.
+The algorithm can be used to solve DLP in a **group of order &nbsp;$p - 1 = \text{ord}_p(g) = n$**&nbsp; if the factors of $n$ are known, by solving the DLP in the **subgroups of order $q_i$** where:
+
+$$
+\exists q_1, q_2, \ldots, q_k \text{ such that } \newline
+n = q_1 \times q_2 \times \ldots \times q_k
+$$
+
 This algorithm can be used to break the DH key exchange if the **prime number $p$** is not chosen carefully.
 
 > **Solution**
@@ -152,7 +157,7 @@ This algorithm can be used to break the DH key exchange if the **prime number $p
 > This is why it is recommended to use **2048-bit or 4096-bit prime numbers** in practice.
 >
 > Using large **safe primes**[^SSGP], which are primes of the form $p = 2q + 1$ with $q$ also being prime (a **Sophie Germain prime**[^SSGP]), enhances security.
-> Safe primes ensure that $p - 1$ has a **large prime factor**, making the subgroup of order $𝑞$ large, **rendering the Pohlig-Hellman algorithm ineffective**!
+> Safe primes ensure that $n$ has a **large prime factor**, making the subgroup of order $𝑞$ large, **rendering the Pohlig-Hellman algorithm ineffective**!
 
 ## Security
 

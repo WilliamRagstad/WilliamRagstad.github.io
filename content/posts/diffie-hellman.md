@@ -45,7 +45,7 @@ This is the essence of the **discrete logarithm problem**.
 
 ### Discrete Logarithm Problem
 
-The **discrete logarithm problem**[^DiscLog] (DLP) is the basis for the security of the Diffie-Hellman key exchange.
+The **discrete logarithm problem**[^DiscLog] (DLP) is the basis for the security of the DH key exchange.
 Finding the exponent $x$ in the equation &nbsp;$g^x = A \mod p$&nbsp; is **computationally infeasible** for large numbers.
 **No efficient classical algorithm is known** for computing discrete logarithms in general.
 In fact, it is an exponential-time algorithm.[^DiscLog]
@@ -106,7 +106,7 @@ As to any technology, there are drawbacks and vulnerabilities to recognize.
 Everything is fine until **Charles** comes into the picture.
 He is **not only eavesdropping** but also **actively manipulating the messages**.
 This is called a **Man-in-the-Middle**[^MitM] (MitM) attack.
-The Diffie-Hellman protocol is **vulnerable** to this because Charles can **generate his own keys**, and **forward the messages** to each of the other parties separately, without them knowing.
+The DH protocol is **vulnerable** to this because Charles can **generate his own keys**, and **forward the messages** to each of the other parties separately, without them knowing.
 By doing so, he can **decrypt and read the messages**, **alter them**, and **re-encrypt** them before sending them on to the intended recipient, thereby compromising the encryption and the security of the communication.
 
 {{< mermaid >}}
@@ -142,7 +142,7 @@ If no CA is available, the parties can use **certificate pinning** or other form
 
 The **Pohlig-Hellman algorithm**[^PohligHellman] is a **discrete logarithm algorithm** that can be used to solve DLP in a **cyclic group**.
 The algorithm is based on the **Chinese Remainder Theorem** and can be used to solve DLP in a group of order $n$ if the factors of $n$ are known.
-This algorithm can be used to break the Diffie-Hellman key exchange if the **prime number $p$** is not chosen carefully.
+This algorithm can be used to break the DH key exchange if the **prime number $p$** is not chosen carefully.
 
 > **Solution**
 >
@@ -158,8 +158,8 @@ This algorithm can be used to break the Diffie-Hellman key exchange if the **pri
 
 Before summing up this post about Diffie-Hellman, let's talk about the **security aspects** and what to think about when choosing the parameters or using the protocol in general.
 
-The security of the Diffie-Hellman protocol relies on good choices of the **prime number $p$** and the **generator $g$** to make **DLP** hard to solve, which is crucial for maintaining the confidentiality of the shared secret.
-Below is a list of **best practices** to keep in mind when using the Diffie-Hellman protocol to ensure secure communications:
+The security of the DH protocol relies on good choices of the **prime number $p$** and the **generator $g$** to make **DLP** hard to solve, which is crucial for maintaining the confidentiality of the shared secret.
+Below is a list of **best practices** to keep in mind when using the DH protocol to ensure secure communications:
 
 | Guideline                                                                                                                                                                 | Risk                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -169,11 +169,11 @@ Below is a list of **best practices** to keep in mind when using the Diffie-Hell
 | **Avoid Common Parameters**<br>Use **unique**, "random" **parameters** instead of well-known or predefined ones.                                                          | Using standard parameters may expose you to attacks if those parameters have **known weaknesses** or attacks using precomputed data.                                                                         |
 | **Verify Public Keys**<br>Use **certificate authorities**[^CA] (CA) and **digital signatures**[^DigSig] or **certificate pinning**[^CertPin] to authenticate public keys. | Without proper verification, attackers can perform **MitM**[^MitM] attacks and **impersonate parties** by **substituting their own public keys**, enabling them to **intercept and decrypt communications**. |
 
-Careful selection of $p$ and $g$ significantly enhances the security of the Diffie-Hellman protocol by maintaining the difficulty of the DLP, thereby safeguarding secure communications in cryptographic systems.
+Careful selection of $p$ and $g$ significantly enhances the security of the DH protocol by maintaining the difficulty of the DLP, thereby safeguarding secure communications in cryptographic systems.
 
 ## Conclusion
 
-Diffie-Hellman is vastly used in many cryptographic protocols such as **TLS/SSL**, **SSH**, **IPsec**, and **PGP**.
+Diffie-Hellman (DH) is vastly used in many cryptographic protocols such as **TLS/SSL**, **SSH**, **IPsec**, and **PGP**.
 The main benefit comes from the **forward secrecy** provided by the protocol, as new keys gets generated for each unique session.
 This makes it **more difficult** for an attacker to decrypt past sessions if the current key is compromised.
 With the **right parameters** and **good practices**, the Diffie-Hellman key exchange is a **secure and efficient** way to establish a shared secret key over an insecure channel.

@@ -78,16 +78,11 @@ sequenceDiagram
 
 *Short explanation of the steps above:*
 
-1.
-**Setup**: Alice and Bob agree on a **prime number $p$** and a **generator $g$**.
-2.
-**Alice**: Alice randomly chooses a **secret number $a$** and computes &nbsp;$A = g^a \mod p$.
-3.
-**Bob**: Bob randomly chooses a **secret number $b$** and computes &nbsp;$B = g^b \mod p$.
-4.
-**Exchange**: Alice sends $A$ to Bob and Bob sends $B$ to Alice.
-5.
-**Key**: Alice computes &nbsp;$K = B^a \mod p$&nbsp; and Bob computes &nbsp;$K = A^b \mod p$.
+1. **Setup**: Alice and Bob agree on a **prime number $p$** and a **generator $g$**.
+2. **Alice**: Alice randomly chooses a **secret number $a$** and computes &nbsp;$A = g^a \mod p$.
+3. **Bob**: Bob randomly chooses a **secret number $b$** and computes &nbsp;$B = g^b \mod p$.
+4. **Exchange**: Alice sends $A$ to Bob and Bob sends $B$ to Alice.
+5. **Key**: Alice computes &nbsp;$K = B^a \mod p$&nbsp; and Bob computes &nbsp;$K = A^b \mod p$.
 
 > **Naming**\
 > $p$ and $g$ are **public parameters**.

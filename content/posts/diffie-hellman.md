@@ -131,8 +131,7 @@ sequenceDiagram
     Charles->>Alice: C
 {{< /mermaid >}}
 
-> **Solution**
->
+> **Solution**\
 > The fundamental issue is that the parties **cannot verify the authenticity** of the public keys they receive.
 > That is, **Bob cannot be 100% sure** that the public key he receives is actually from Alice.
 >

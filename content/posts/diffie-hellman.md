@@ -33,15 +33,23 @@ It is a **fundamental concept in cryptography**.
 
 The algorithm in the DH protocol uses **modular exponentiation**[^ModExp] to compute its keys.
 It is a type of *exponentiation performed over a modulus*, meaning that the result is always in the range $[0, p-1]$ for a prime number $p$.
+$\mathbb{Z}_p^* = \{ 1, 2, \cdots, p-1 \}$ is the **cyclic multiplicative group** of $p$ with an **order** (aka, total number of elements) of $p-1$.
+In modular arithmetic, $0$ does not have a multiplicative inverse and is excluded from $\mathbb{Z}_p^*$, but included in $\mathbb{Z}_p$.
+
 Exponentiation in modular arithmetic involves computing the remainder when a number is raised to a power and divided by a modulus:
 
-$$ a^b \mod p $$
+$$
+\begin{align*}
+a^b \mod p = & \newline
+a \times a \times a \times \cdots \times a \mod p = & \quad\quad (b \text{ times)} \newline
+(a \mod p) \times \cdots \times (a \mod p) \mod p \quad
+\end{align*}
+$$
 
-For example, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; can easily be calculated using repeated modular multiplication to get the remainder $82$.
-Now, if I were to ask you which power $b$ I started with to get to 1 using $a = 3$ and $p = 5$?
-**You would have to test a lot of exponents $b$** until you find the *correct one*.
-\
-This is the essence of the **discrete logarithm problem**.
+> **Example**\
+> We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using **repeated modular multiplication** to get the remainder $82$.
+> If I were to ask you which power $b$ I started with to get to $82$ only knowing $a=5$, $p=97$, you would have to **brute-force** it by trying different exponents until you find *the correct one* ($b = 23$).\
+> This is the essence of the **discrete logarithm problem**.
 
 ### Discrete Logarithm Problem
 

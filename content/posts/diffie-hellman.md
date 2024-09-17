@@ -34,7 +34,7 @@ It is a **fundamental concept in cryptography**.
 The algorithm in the DH protocol uses **modular exponentiation**[^ModExp] to compute its keys.
 It is a type of *exponentiation performed over a modulus*, meaning that the result is always in the range $[0, p-1]$ for a prime number $p$.
 $\mathbb{Z}_p^* = \{ 1, 2, \cdots, p-1 \}$ is the **cyclic multiplicative group** of $p$ with an **order** (aka, total number of elements) of $p-1$.
-In modular arithmetic, $0$ does not have a multiplicative inverse and is excluded from $\mathbb{Z}_p^*$, but included in $\mathbb{Z}_p$.
+$0$ is excluded from $\mathbb{Z}_p^*$ because does not have a multiplicative inverse.
 
 Exponentiation in modular arithmetic involves computing the remainder when a number is raised to a power and divided by a modulus:
 
@@ -46,8 +46,8 @@ a \times a \times a \times \cdots \times a \mod p = & \quad\quad (b \text{ times
 \end{align*}
 $$
 
-The bottom equivalence is an optimization by taking the remainder after each multiplication, to keep the numbers small during the calculation.
-This results in faster and more memory-efficient computation due to the $O(n^2)$ time complexity of multiplication[^Mul].
+The bottom equivalence is an optimization by taking the remainder after each multiplication, to **keep the numbers small during the calculation**.
+This results in faster and more memory-efficient computation due to the **$O(n^2)$ time complexity** of multiplication[^Mul].
 
 > **Example**\
 > We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using **repeated modular multiplication** to get the remainder $82$.

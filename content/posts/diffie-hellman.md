@@ -46,6 +46,9 @@ a \times a \times a \times \cdots \times a \mod p = & \quad\quad (b \text{ times
 \end{align*}
 $$
 
+The bottom equivalence is an optimization by taking the remainder after each multiplication, to keep the numbers small during the calculation.
+This results in faster and more memory-efficient computation due to the $O(n^2)$ time complexity of multiplication[^Mul].
+
 > **Example**\
 > We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using **repeated modular multiplication** to get the remainder $82$.
 > If I were to ask you which power $b$ I started with to get to $82$ only knowing $a=5$, $p=97$, you would have to **brute-force** it by trying different exponents until you find *the correct one* ($b = 23$).\

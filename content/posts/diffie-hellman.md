@@ -62,7 +62,9 @@ Given this, the set of all integers $a$ satisfying $A \equiv g^a \mod p$ can be 
 $$ a \equiv \log_g A \mod \text{ord}_p(g) $$
 
 The **multiplicative order** of $g$ modulo $p$, denoted as $\text{ord}_p(g)$, is the smallest positive integer $n$ such that $g^n \mod p \equiv 1$.
-Further analysis for **why this problem is hard** can be found in the [Wikipedia article](https://en.wikipedia.org/wiki/Discrete_logarithm).
+The order of $g$ is a divisor of $p - 1$, meaning that $\text{ord}_p(g) \mid |\mathbb{Z}_p^*|$.
+
+Further analysis **why the discrete logarithm problem is hard** can be found in the [Wikipedia article](https://en.wikipedia.org/wiki/Discrete_logarithm).
 
 ## Algorithm
 

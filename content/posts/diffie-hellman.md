@@ -13,7 +13,7 @@ draft = false
 
 In secure communication and cryptography, the **Diffie-Hellman**[^DH] (DH) key exchange is a method of securely exchanging cryptographic keys over a public channel.
 It is named after **Whitfield Diffie** and **Martin Hellman**.
-The protocol allow **two parties to share a secret key over an insecure channel**, without sending the secret key directly.
+The protocol allows **two parties to share a secret key over an insecure channel**, without sending the secret key directly.
 Instead messages are exchanged in such a way that the secret key can be derived.
 
 ## Background
@@ -58,7 +58,7 @@ Further analysis for **why this problem is hard** can be found in the [Wikipedia
 
 ## Algorithm
 
-The algorithm is based on the **discrete logarithm problem**.
+The algorithm is based on **DLP**.
 As it is very hard to solve for large numbers, the algorithm is considered cryptographically secure if the parameters are chosen correctly.
 
 {{< mermaid >}}
@@ -87,7 +87,7 @@ sequenceDiagram
 > **Naming**\
 > $p$ and $g$ are **public parameters**.
 > Both $a$ and $b$ are kept secret, and are therefore called **private keys**.
-> The numbers $A$ and $B$ are called **public keys**, as they gets sent over the public channel `Internet`.
+> The numbers $A$ and $B$ are called **public keys**, as they get sent over the public channel `Internet`.
 
 **Alice and Bob now share the same secret key $K$ without anyone eavesdropping knowing it!**
 The initial numbers **$p$ and $g$**, and the generated **$A$ and $B$** are **public** and can be shared over an insecure channel **without compromising the key $K$**.
@@ -130,7 +130,7 @@ sequenceDiagram
 > This is done via a **digital signature**[^DigSig] provided by a **certificate authority**[^CA] (CA).
 > Before Alice and Bob exchange their public keys, they send them to the CA to be **signed by the CA's private key**.
 > After receiving the **signed public keys**, both Alice and Bob can **verify their authenticity** by checking the signature using the **CA's public key** which everyone has access to.
-> Only then will they trust eachother's public keys, and proceed with the key exchange.
+> Only then will they trust each other's public keys, and proceed with the key exchange.
 
 {{< alert "circle-info" >}}
 
@@ -179,7 +179,7 @@ Careful selection of $p$ and $g$ significantly enhances the security of the DH p
 ## Conclusion
 
 Diffie-Hellman (DH) is vastly used in many cryptographic protocols such as **TLS/SSL**, **SSH**, **IPsec**, and **PGP**.
-The main benefit comes from the **forward secrecy** provided by the protocol, as new keys gets generated for each unique session.
+The main benefit comes from the **forward secrecy** provided by the protocol, as new keys get generated for each unique session.
 This makes it **more difficult** for an attacker to decrypt past sessions if the current key is compromised.
 With the **right parameters** and **good practices**, the Diffie-Hellman key exchange is a **secure and efficient** way to establish a shared secret key over an insecure channel.
 

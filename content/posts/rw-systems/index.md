@@ -5,6 +5,7 @@ series = ["Understanding"]
 series_order = 1
 tags = ["rewriting systems", "relations", "formal systems"]
 categories = ["computer science", "mathematics", "logic"]
+showHero = true
 draft = false
 +++
 {{< katex >}}

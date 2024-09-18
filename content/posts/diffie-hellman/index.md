@@ -5,6 +5,7 @@ series = ['Understanding']
 series_order = 4
 tags = ["key exchange", "security", "cryptography", "verification", "digital signatures"]
 categories = ["computer science", "mathematics"]
+showHero = true
 draft = false
 +++
 {{< katex >}}

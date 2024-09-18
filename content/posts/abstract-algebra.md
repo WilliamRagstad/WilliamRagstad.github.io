@@ -1,5 +1,5 @@
 +++
-title = 'Understanding Abstract Algebra'
+title = 'Abstract Algebra'
 date = 2024-04-20T22:06:23+02:00
 series = ['Understanding']
 series_order = 3

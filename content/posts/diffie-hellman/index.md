@@ -3,8 +3,8 @@ title = 'Diffie-Hellman'
 date = 2024-09-12T20:54:08+02:00
 series = ['Understanding']
 series_order = 4
-tags = ["key exchange", "security", "cryptography", "verification", "digital signatures"]
-categories = ["computer science", "mathematics"]
+tags = ["key exchange", "security", "verification", "digital signatures"]
+categories = ["computer science", "mathematics", "cryptography"]
 showHero = true
 draft = false
 +++

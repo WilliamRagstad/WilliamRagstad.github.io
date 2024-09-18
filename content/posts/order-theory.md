@@ -1,5 +1,5 @@
 +++
-title = 'Understanding Order Theory'
+title = 'Order Theory'
 date = 2024-04-18T20:54:27+02:00
 series = ['Understanding']
 series_order = 2

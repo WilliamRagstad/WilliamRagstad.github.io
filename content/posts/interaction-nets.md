@@ -1,5 +1,5 @@
 +++
-title = 'Understanding Interaction Nets'
+title = 'Interaction Nets'
 date = 2024-05-12T20:54:27+02:00
 series = ['Understanding']
 series_order = 4

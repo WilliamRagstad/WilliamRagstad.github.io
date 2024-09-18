@@ -9,6 +9,10 @@ draft = true
 +++
 {{< katex >}}
 
+- https://ben.land/post/2022/08/15/raycasting-raytracing-sdf/
+- https://www.cl.cam.ac.uk/teaching/1819/FGraphics/1.%20Ray%20Marching%20and%20Signed%20Distance%20Fields.pdf
+- https://www.jcgt.org/published/0011/03/06/paper-lowres.pdf
+
 Signed distance functions are a powerful tool in computer graphics and computational geometry.
 They are used to represent shapes and surfaces in a way that is both efficient and flexible.
 In this post, we will explore the concept of signed distance functions and how they can be used to create complex shapes and surfaces.

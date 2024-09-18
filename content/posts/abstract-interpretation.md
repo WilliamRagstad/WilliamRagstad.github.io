@@ -12,3 +12,7 @@ draft = true
 This article is part of a series on understanding different concepts in computer science and software engineering.
 In this post, we will explore the concept of abstract interpretation.
 The reason I started investigating this topic is because I watched a talk by **Patrick Cousot** on [Abstract Interpretation: A Unified Lattice Model for Static Analysis of Programs by Construction or Approximation of Fixpoints](https://www.youtube.com/watch?v=IBlfJerAcRw), where he mentioned that *"abstract interpretation is a theory of sound approximation of the semantics of programs by abstract domains"*.
+
+- https://www.youtube.com/watch?v=IBlfJerAcRw
+- https://www.youtube.com/watch?v=H99CMUFPv0U
+- https://www.youtube.com/watch?v=j2m5YMnHvQQ

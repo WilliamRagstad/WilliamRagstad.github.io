@@ -6,7 +6,6 @@ series = ['Parsing Techniques']
 series_order = 1
 tags = ["pratt parsing", "recursive descent parsing", "top-down parsing", "operator precedence parsing"]
 categories = ["computer science", "compilers", "parsing", "algorithms"]
-image = "img/pratt-parsing-technique.jpg"
 showHero = true
 +++
 {{< katex >}}

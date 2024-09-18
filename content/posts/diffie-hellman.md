@@ -35,7 +35,7 @@ However the **multiplicative group of integers modulo[^MulGroupMod] $p$**, $\mat
 $0$ is excluded from $\mathbb{Z}_p^*$ because does not have a multiplicative inverse.
 
 > **Note**\
-> $\mathbb{Z}_p^\*$ has an **order** *(aka, total number of elements)* of $p-1$.
+> $\mathbb{Z}_p^\*$ has an **order** *(aka, total number of elements)* of $|\mathbb{Z}_p^*| = p - 1$.
 
 ### Modular Exponentiation
 
@@ -72,6 +72,10 @@ $$ a \equiv \log_g A \mod \text{ord}_p(g) $$
 
 The **multiplicative order** of $g$ modulo $p$, denoted as $\text{ord}_p(g)$, is the smallest positive integer $n$ such that $g^n \mod p \equiv 1$.
 The order of $g$ is a divisor of $p - 1$, meaning that $\text{ord}_p(g) \mid |\mathbb{Z}_p^*|$.
+
+> **Note**\
+> The **order of the generator $g$**, denoted as $\text{ord}_p(g)$, is a **divisor of $p - 1$** but not necessarily equal.
+> This means that $\text{ord}_p(g) \mid |\mathbb{Z}_p^*| \iff \text{ord}_p(g) \mid p - 1$ *for all* $g \in \mathbb{Z}_p^\*$.
 
 Further analysis **why the discrete logarithm problem is hard to solve** can be found in the [Wikipedia article](https://en.wikipedia.org/wiki/Discrete_logarithm).
 

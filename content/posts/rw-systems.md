@@ -1,5 +1,5 @@
 +++
-title = 'Understanding Rewriting Systems'
+title = 'Rewriting Systems'
 date = 2024-04-12T21:00:59+02:00
 series = ["Understanding"]
 series_order = 1

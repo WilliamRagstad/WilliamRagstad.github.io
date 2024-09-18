@@ -162,23 +162,24 @@ If no CA is available, the parties can use **certificate pinning** or other form
 
 ### Pohlig-Hellman Algorithm
 
-The **Pohlig-Hellman algorithm**[^PohligHellman] is a **discrete logarithm algorithm** that can be used to solve DLP in a **cyclic group**.
-The algorithm can be used to solve DLP in a **group of order &nbsp;$p - 1 = \text{ord}_p(g) = n$**&nbsp; if the factors of $n$ are known, by solving the DLP in the **subgroups of order $q_i$** where:
+The **Pohlig-Hellman algorithm**[^PohligHellman] is a **discrete logarithm algorithm** that can be used to **efficiently solve DLP $\iff$ *(if and only if)* either** the ***order of the group* $|\mathbb{Z}_p^\*| = p - 1$** or the ***order of the generator* $\text{ord}_p(g)$ factors into small prime numbers**.
+Thus the private keys and the shared secret can be computed, **breaking the security** of the DH key exchange.
+The algorithm split the problem into smaller **subgroups of order $q_i$**.
 
 $$
-\exists q_1, q_2, \ldots, q_k \text{ such that } \newline
-n = q_1 \times q_2 \times \ldots \times q_k
+n = \prod_{i=1}^k q_i^{e_i} = q_1^{e_1} \times q_2^{e_2} \times \cdots \times q_k^{e_k}
 $$
 
+Where, $n = \text{ord}_p(g)$&nbsp; ***or*** &nbsp;$n = p - 1$, and all **$q_i$ are the prime factors of $n$**.
 This algorithm can be used to break the DH key exchange if the **prime number $p$** is not chosen carefully.
 
 > **Solution**\
-> To mitigate the risk of the Pohlig-Hellman algorithm, it is important to choose a **large prime number $p$**.
-> The larger the prime number, the harder it is to solve DLP.
+> Because of Pohlig-Hellman algorithm working efficiently when $p-1$ or $\text{ord}_p(g)$ factors into small primes, we can choose a **large prime number $p$** such that **$p - 1$ has at least one large prime factor** to make the DLP **harder to solve**.
 > This is why it is recommended to use **2048-bit or 4096-bit prime numbers** in practice.
 >
-> Using large **safe primes**[^SSGP], which are primes of the form $p = 2q + 1$ with $q$ also being prime (a **Sophie Germain prime**[^SSGP]), enhances security.
-> Safe primes ensure that $n$ has a **large prime factor**, making the subgroup of order $𝑞$ large, **rendering the Pohlig-Hellman algorithm ineffective**!
+> To select a sufficiently large prime number $p$, we can use **safe primes**[^SSGP] on the form $p = 2q + 1$, where both $p$ and $q$ are prime.
+> Additionally, selecting a **generator $g$ with a large order** $q = \text{ord}_p(g)$ ensures computations are performed within this **large prime-order subgroup**, further enhancing security.
+> Safe primes ensure that $n$ has a **large** prime factor, **rendering the Pohlig-Hellman algorithm ineffective**!
 
 ## Security
 

@@ -168,8 +168,7 @@ $$
 
 This algorithm can be used to break the DH key exchange if the **prime number $p$** is not chosen carefully.
 
-> **Solution**
->
+> **Solution**\
 > To mitigate the risk of the Pohlig-Hellman algorithm, it is important to choose a **large prime number $p$**.
 > The larger the prime number, the harder it is to solve DLP.
 > This is why it is recommended to use **2048-bit or 4096-bit prime numbers** in practice.
@@ -211,3 +210,6 @@ With the **right parameters** and **good practices**, the Diffie-Hellman key exc
 [^SSGP]: [Safe and Sophie Germain primes](https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes) are primes on the form $2p + 1$ where $p$ is also a prime.
 [^MitM]: A [Man-in-the-Middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) is an attack where the attacker secretly relays and possibly alters the communication between two parties.
 [^CertPin]: [Certificate pinning](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning) is a security mechanism that associates a host with its expected public key or keys.
+[^Mul]: [Multiplication Algorithm](https://en.wikipedia.org/wiki/Multiplication_algorithm) is a method to multiply two numbers using a series of additions and shifts.
+[^ResidueClass]: A [residue class](https://mathworld.wolfram.com/ResidueClass.html) is a set of integers that are congruent modulo a given integer.
+[^MulGroupMod]: The [multiplicative group modulo $n$](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) is the set of integers relatively prime to $n$ under multiplication modulo $n$.

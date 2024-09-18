@@ -23,36 +23,42 @@ Let's begin with explaining some fundamental concepts used when calculating keys
 ### Modular Arithmetic
 
 Initially we need to understand the basics of **modular arithmetic**[^ModArith].
-It is a system of arithmetic for integers, where numbers "wrap around" upon reaching a certain value (the modulus) and start over from zero.
+It is a system of arithmetic for integers, where numbers **"wrap around"** upon reaching a certain value (the modulus) and **start over from zero**.
 This is often taught in **discrete mathematics** and **number theory courses**.
 It is a **fundamental concept in cryptography**.
 
 {{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Clock_group.svg/1200px-Clock_group.svg.png" width="400" caption="Adding 4 in mod 12 visualized on a clock." >}}
 
-### Modular Exponentiation
-
-The algorithm in the DH protocol uses **modular exponentiation**[^ModExp] to compute its keys.
-It is a type of *exponentiation performed over a modulus*, meaning that the result is always in the range $[0, p-1]$ for a prime number $p$.
-$\mathbb{Z}_p^* = \{ 1, 2, \cdots, p-1 \}$ is the **cyclic multiplicative group** of $p$ with an **order** (aka, total number of elements) of $p-1$.
+Thus all values in a modular system are bound to lie within the range $0$ to $p-1$ for a modulus $p$.
+This range is denoted as $\mathbb{Z}_p = \\{ 0, 1, \cdots, p-1 \\}$ and called the **residue class modulo $p$**.[^ResidueClass]
+However the **multiplicative group of integers modulo[^MulGroupMod] $p$**, $\mathbb{Z}_p^* = \\{ 1, 2, \cdots, p-1 \\}$, **is the one most relevant in the DH protocol**.
 $0$ is excluded from $\mathbb{Z}_p^*$ because does not have a multiplicative inverse.
 
+> **Note**\
+> $\mathbb{Z}_p^\*$ has an **order** *(aka, total number of elements)* of $p-1$.
+
+### Modular Exponentiation
+
+The *algorithm* in the DH protocol uses **modular exponentiation**[^ModExp] to compute its keys.
+It is a type of exponentiation performed over a modulus of $p$ with values in $\mathbb{Z}_p$.
 Exponentiation in modular arithmetic involves computing the remainder when a number is raised to a power and divided by a modulus:
 
 $$
 \begin{align*}
 a^b \mod p = & \newline
-a \times a \times a \times \cdots \times a \mod p = & \quad\quad (b \text{ times)} \newline
-(a \mod p) \times \cdots \times (a \mod p) \mod p \quad
+a \times \cdots \times a \mod p = & \quad\quad (b \text{ times)} \newline
+\cdots \times a \mod p) \times a \mod p) \times a \mod p = & \quad\quad (b \text{ times)} \newline
 \end{align*}
 $$
 
-The bottom equivalence is an optimization by taking the remainder after each multiplication, to **keep the numbers small during the calculation**.
-This results in faster and more memory-efficient computation due to the **$O(n^2)$ time complexity** of multiplication[^Mul].
+The last expression display an optimized accumulative method by taking the remainder after each multiplication, to **keep the numbers small during the calculation**.
+This results in faster and more memory-efficient computation due to **$O(n^2)$ time complexity** of multiplication[^Mul].
 
 > **Example**\
 > We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using **repeated modular multiplication** to get the remainder $82$.
-> If I were to ask you which power $b$ I started with to get to $82$ only knowing $a=5$, $p=97$, you would have to **brute-force** it by trying different exponents until you find *the correct one* ($b = 23$).\
-> This is the essence of the **discrete logarithm problem**.
+> If I were to ask you which power $b$ I started with to get to $82$ only knowing $a=5$, $p=97$, you would have to **brute-force** it by trying different exponents until you find *the correct one* ($b = 23$).
+
+This is the essence of the **discrete logarithm problem**.
 
 ### Discrete Logarithm Problem
 
@@ -67,7 +73,7 @@ $$ a \equiv \log_g A \mod \text{ord}_p(g) $$
 The **multiplicative order** of $g$ modulo $p$, denoted as $\text{ord}_p(g)$, is the smallest positive integer $n$ such that $g^n \mod p \equiv 1$.
 The order of $g$ is a divisor of $p - 1$, meaning that $\text{ord}_p(g) \mid |\mathbb{Z}_p^*|$.
 
-Further analysis **why the discrete logarithm problem is hard** can be found in the [Wikipedia article](https://en.wikipedia.org/wiki/Discrete_logarithm).
+Further analysis **why the discrete logarithm problem is hard to solve** can be found in the [Wikipedia article](https://en.wikipedia.org/wiki/Discrete_logarithm).
 
 ## Algorithm
 

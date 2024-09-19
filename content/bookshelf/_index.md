@@ -9,6 +9,10 @@ Books I'm currently reading are marked with a <span style="display: inline-block
 Books on my to-read list are left without any badges.\
 All books are **broadly categorized by genre** with a short description of the book and authors.
 
+<h2 class="ignore mb-2">Table of Contents</h2>
+<div id="toc-grid"></div>
+<hr class="mt-5"/>
+
 ## Computer Science
 
 ### Algorithms
@@ -198,4 +202,75 @@ All books are **broadly categorized by genre** with a short description of the b
     font-size: 16px;
     margin-bottom: 0.4em;
 }
+
+#toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+#toc-grid div {
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+}
+
+#toc-grid a {
+    margin: 14px 0;
+    line-height: 0;
+}
+
+#toc-grid a.h2 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#toc-grid a.h3 {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+#toc-grid a.h3:before {
+    content: "— ";
+    color: #666;
+}
+
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocGrid = document.getElementById('toc-grid');
+        const bookshelves = document.querySelectorAll('h2, h3');
+        let currentShelf = null;
+        bookshelves.forEach(shelf => {
+            if (shelf.classList.contains("ignore")) return;
+            if (shelf.tagName === 'H2') {
+                currentShelf = document.createElement('div');
+                shelfTitle = document.createElement('a');
+                shelfTitle.classList.add('h2');
+                const text = shelf.textContent.split('\n')[0].trim();
+                const id = shelf.getAttribute('id') ||
+                    text
+                    .toLowerCase()
+                    .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '')
+                    .replace(/ +/g, '-');
+                shelfTitle.href = `#${id}`;
+                shelfTitle.textContent = text;
+                currentShelf.appendChild(shelfTitle);
+                tocGrid.appendChild(currentShelf);
+            } else {
+                shelfTitle = document.createElement('a');
+                shelfTitle.classList.add('h3');
+                const text = shelf.textContent.split('\n')[0].trim();
+                const id = shelf.getAttribute('id') ||
+                    text
+                    .toLowerCase()
+                .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '')
+                .replace(/ +/g, '-');
+                shelfTitle.href = `#${id}`;
+                shelfTitle.textContent = text;
+                currentShelf.appendChild(shelfTitle);
+            }
+        });
+    });
+</script>

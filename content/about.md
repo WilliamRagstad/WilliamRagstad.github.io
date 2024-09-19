@@ -35,7 +35,7 @@ I'm *especially* interested in:
 | **Game Dev**              | Game engines,&nbsp; Mechanics,&nbsp; Art,&nbsp; Graphics,&nbsp; Physics,&nbsp; Multiplayer                                                                                                                                                                                                       |
 | *And much more!*          |                                                                                                                                                                                                                                                                                                  |
 
-You'll find a mix of [articles](/posts/), [projects](/projects/), and other content related to the topics above on this blog.
+You'll find a mix of [articles](/posts/), [projects](/projects/), and *other content* related to the topics above on this blog.
 
 ### Who are you?
 

@@ -2,7 +2,7 @@
 title = 'Order Theory'
 date = 2024-04-18T20:54:27+02:00
 series = ['Understanding']
-series_order = 2
+series_order = 3
 tags = ["order theory", "partial orders", "relations", "lattices"]
 categories = ["mathematics"]
 draft = true

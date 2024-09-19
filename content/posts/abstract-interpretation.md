@@ -2,7 +2,7 @@
 title = 'Abstract Interpretation'
 date = 2024-04-20T22:06:23+02:00
 series = ['Understanding']
-series_order = 3
+series_order = 10
 tags = ["abstract interpretation", "static analysis", "program analysis", "formal methods", "software engineering"]
 categories = ["computer science", "programming"]
 draft = true

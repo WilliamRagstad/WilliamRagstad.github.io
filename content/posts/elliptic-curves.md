@@ -2,7 +2,7 @@
 title = 'Elliptic Curve Cryptography'
 date = 2024-04-20T22:06:23+02:00
 series = ['Understanding']
-series_order = 3
+series_order = 11
 tags = ["elliptic curve", "number theory", "algebraic geometry"]
 categories = ["computer science", "mathematics", "cryptography"]
 draft = true

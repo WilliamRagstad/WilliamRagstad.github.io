@@ -2,7 +2,7 @@
 title = 'Symbolic Execution'
 date = 2024-04-20T22:06:23+02:00
 series = ['Understanding']
-series_order = 3
+series_order = 8
 tags = ["symbolic execution", "program analysis", "formal methods", "software engineering"]
 categories = ["computer science", "programming"]
 draft = true

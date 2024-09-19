@@ -2,7 +2,7 @@
 title = 'Formal Verification'
 date = 2024-04-20T22:06:23+02:00
 series = ['Understanding']
-series_order = 3
+series_order = 5
 tags = ["program verification", "formal verification", "software verification", "software correctness", "formal methods", "software engineering"]
 categories = ["computer science", "programming"]
 draft = true

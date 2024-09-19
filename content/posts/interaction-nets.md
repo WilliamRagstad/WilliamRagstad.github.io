@@ -2,7 +2,7 @@
 title = 'Interaction Nets'
 date = 2024-05-12T20:54:27+02:00
 series = ['Understanding']
-series_order = 4
+series_order = 6
 tags = ["interaction nets", "graph rewriting", "lambda calculus", "combinatory logic"]
 categories = ["computer science", "mathematics"]
 draft = true

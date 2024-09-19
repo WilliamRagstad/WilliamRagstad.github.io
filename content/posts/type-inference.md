@@ -2,7 +2,7 @@
 title = 'Type Inference'
 date = 2024-04-20T22:06:23+02:00
 series = ['Understanding']
-series_order = 3
+series_order = 9
 tags = ["type inference", "type system", "type checking", "type theory", "programming languages"]
 categories = ["computer science", "programming"]
 draft = true

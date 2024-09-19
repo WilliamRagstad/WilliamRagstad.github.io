@@ -762,6 +762,18 @@ I hope you found inspiration for your next read!
 </style>
 
 <script>
+	function clearText(text) {
+		return text.split('\n')[0].trim().replace("#","");
+	}
+
+	function toID(id, text) {
+		return id || text
+			.toLowerCase()
+			.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '')
+			.replace(/ +/g, '-');
+	}
+
+
     document.addEventListener('DOMContentLoaded', function() {
         const tocGrid = document.getElementById('toc-grid');
         const bookshelves = document.querySelectorAll('h2, h3');
@@ -772,12 +784,8 @@ I hope you found inspiration for your next read!
                 currentShelf = document.createElement('div');
                 shelfTitle = document.createElement('a');
                 shelfTitle.classList.add('h2');
-                const text = shelf.textContent.split('\n')[0].trim();
-                const id = shelf.getAttribute('id') ||
-                    text
-                    .toLowerCase()
-                    .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '')
-                    .replace(/ +/g, '-');
+                const text = clearText(shelf.textContent);
+                const id = toID(shelf.getAttribute('id'), text);
                 shelfTitle.href = `#${id}`;
                 shelfTitle.textContent = text;
                 currentShelf.appendChild(shelfTitle);
@@ -785,12 +793,8 @@ I hope you found inspiration for your next read!
             } else {
                 shelfTitle = document.createElement('a');
                 shelfTitle.classList.add('h3');
-                const text = shelf.textContent.split('\n')[0].trim();
-                const id = shelf.getAttribute('id') ||
-                    text
-                    .toLowerCase()
-                .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '')
-                .replace(/ +/g, '-');
+                const text = clearText(shelf.textContent);
+                const id = toID(shelf.getAttribute('id'), text);
                 shelfTitle.href = `#${id}`;
                 const count = shelf.nextElementSibling.querySelectorAll('.book').length;
                 shelfTitle.textContent = `${text} (${count})`;

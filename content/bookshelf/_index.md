@@ -17,7 +17,7 @@ All books are broadly categorized by genre with a short description of the book 
 <div class="bookshelf">
     <div class="book">
         <div class="cover">
-            <img src="https://images.penguinrandomhouse.com/cover/9780345453747" alt="cover"/>
+            <span><img src="https://images.penguinrandomhouse.com/cover/9780345453747" alt="cover"/></span>
         </div>
         <div class="about">
             <b>The Hitchhiker's Guide to the Galaxy</b><br/>
@@ -65,13 +65,48 @@ All books are broadly categorized by genre with a short description of the book 
     align-items: center;
 }
 
-.bookshelf .book .cover > img {
+.bookshelf .book .cover > span {
     margin: 0 auto;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
+    outline: 1px solid #666;
+    /* 3d effect with some white pages showing */
+    perspective: 1000px;
+    transform: rotateY(20deg) rotateX(-5deg) rotateZ(2deg) translateZ(10px);
+    transition: transform 0.5s;
+    position: relative;
+
+}
+
+.bookshelf .book .cover > span > img {
+    margin: 0;
     max-width: 150px;
     max-height: 225px;
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
+    outline: 1px solid #666;
+}
+
+.bookshelf .book .cover > span:hover,
+.bookshelf .book .cover > span:hover:after {
+    transform: rotate(0deg) translate(0px);
+}
+
+.bookshelf .book .cover > span:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transform: translateZ(-10px) translateX(7px) translateY(1px);
+    transition: transform 0.5s;
+    background: linear-gradient(90deg, #777 97%, #ddd);
+    border-radius: 4px;
     outline: 1px solid #666;
 }
 
@@ -102,7 +137,7 @@ All books are broadly categorized by genre with a short description of the book 
     color: rgba(var(--color-primary-400),var(--tw-text-opacity));
 }
 
-.bookshelf .book .about > .status > .rating::before {
+.bookshelf .book .about > .status > .rating:before {
     content: "Rating: ";
     font-size: 0.68em;
     vertical-align: bottom;

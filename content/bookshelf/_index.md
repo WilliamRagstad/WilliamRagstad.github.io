@@ -17,7 +17,7 @@ All books are broadly categorized by genre with a short description of the book 
 <div class="bookshelf">
     <div class="book">
         <div class="cover">
-            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404613595i/13.jpg" alt="cover"/>
+            <img src="https://images.penguinrandomhouse.com/cover/9780345453747" alt="cover"/>
         </div>
         <div class="about">
             <b>The Hitchhiker's Guide to the Galaxy</b><br/>
@@ -72,6 +72,7 @@ All books are broadly categorized by genre with a short description of the book 
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
+    outline: 1px solid #666;
 }
 
 .bookshelf .book .about {

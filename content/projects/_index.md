@@ -259,12 +259,12 @@ A simple and easy-to-use font manager for Counter-Strike: Global Offensive.
 {{< github repo="WilliamRagstad/Font-Manager" >}}
 
 {{< keywordList >}}
-	{{< keyword icon="code" >}} Desktop {{< /keyword >}}
-	{{< keyword icon="code" >}} Utility {{< /keyword >}}
-	{{< keyword icon="code" >}} Counter-Strike {{< /keyword >}}
-	{{< keyword icon="code" >}} Global Offensive {{< /keyword >}}
-	{{< keyword icon="code" >}} Font {{< /keyword >}}
-	{{< keyword icon="code" >}} Manager {{< /keyword >}}
+    {{< keyword icon="code" >}} Desktop {{< /keyword >}}
+    {{< keyword icon="code" >}} Utility {{< /keyword >}}
+    {{< keyword icon="code" >}} Counter-Strike {{< /keyword >}}
+    {{< keyword icon="code" >}} Global Offensive {{< /keyword >}}
+    {{< keyword icon="code" >}} Font {{< /keyword >}}
+    {{< keyword icon="code" >}} Manager {{< /keyword >}}
 {{< /keywordList >}}
 
 ### Quansy
@@ -291,4 +291,36 @@ This project is currently in closed development.
     {{< keyword icon="code" >}} Platform {{< /keyword >}}
     {{< keyword icon="code" >}} Web {{< /keyword >}}
     {{< keyword icon="code" >}} Backend {{< /keyword >}}
+{{< /keywordList >}}
+
+## Organizations and Teams
+
+Organizations I have either founded or been a part of.
+
+### Aphnix
+
+I founded the Minecraft map making team [Aphnix](https://aphnix.weebly.com/) in 2017.
+A group of 4 creative and talented map makers with great attention to detail and quality.
+We strive to create unique and immersive experiences for players to enjoy.
+It was disbanded in 2020.
+
+{{< figure
+	src="https://aphnix.weebly.com/uploads/7/4/4/8/74480685/published/logo-inline-mapmakers-palette-transparent-text.png?1589477465"
+	alt="Aphnix logo"
+	caption="Logo from [aphnix.com](https://aphnix.weebly.com/)"
+	width="200px"
+	center="true"
+>}}
+
+{{< lead >}}
+This project is currently inactive.
+{{< /lead >}}
+
+{{< keywordList >}}
+	{{< keyword icon="code" >}} Minecraft {{< /keyword >}}
+	{{< keyword icon="code" >}} Map Making {{< /keyword >}}
+	{{< keyword icon="code" >}} Team {{< /keyword >}}
+	{{< keyword icon="code" >}} Creative {{< /keyword >}}
+	{{< keyword icon="code" >}} Quality {{< /keyword >}}
+	{{< keyword icon="code" >}} Immersive {{< /keyword >}}
 {{< /keywordList >}}

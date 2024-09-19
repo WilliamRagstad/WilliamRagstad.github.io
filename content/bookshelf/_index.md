@@ -270,8 +270,6 @@ All books are **broadly categorized by genre** with a short description of the b
     </div>
 </div>
 
-<!-- {{< figure src="/img/books/Writing_a_C_Compilercover.jpg" alt="Writing a C Compiler" caption="Writing a C Compiler by Nora Sandler" >}} -->
-
 ### Operating Systems
 
 <div class="bookshelf">
@@ -594,6 +592,13 @@ All books are **broadly categorized by genre** with a short description of the b
 
 That's about all my books I have read so far. I will keep updating this list as I read more books.
 I hope you found inspiration for your next read!
+
+<!-- Extra to load local images -->
+<div style="display: none">
+
+![Writing a C Compiler](/img/books/Writing_a_C_Compilercover.jpg)
+
+</div>
 
 <style>
 

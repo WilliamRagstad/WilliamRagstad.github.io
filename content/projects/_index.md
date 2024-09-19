@@ -299,10 +299,10 @@ Organizations I have either founded or been a part of.
 
 ### Aphnix
 
-I founded the Minecraft map making team [Aphnix](https://aphnix.weebly.com/) in 2017.
-A group of 4 creative and talented map makers with great attention to detail and quality.
+I founded the Minecraft map making team [Aphnix](https://aphnix.weebly.com/) in 2016 and had the role of **lead developer** and **project manager**.
+A group of creative and talented map makers with great attention to detail and quality.
 We strive to create unique and immersive experiences for players to enjoy.
-It was disbanded in 2020.
+It was disbanded in 2021.
 
 {{< figure
 	src="https://aphnix.weebly.com/uploads/7/4/4/8/74480685/published/logo-inline-mapmakers-palette-transparent-text.png?1589477465"

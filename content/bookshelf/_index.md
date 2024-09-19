@@ -76,6 +76,11 @@ All books are **broadly categorized by genre** with a short description of the b
     </div>
 </div>
 
+<hr/>
+
+That's about all my books I have read so far. I will keep updating this list as I read more books.
+I hope you found inspiration for your next read!
+
 <style>
 
 .bookshelf .book {

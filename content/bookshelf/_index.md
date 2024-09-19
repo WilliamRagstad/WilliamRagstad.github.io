@@ -29,10 +29,13 @@ All books are broadly categorized by genre with a short description of the book 
             </p>
             <hr/>
             <div class="status">
-                <span>Rating: <b>★★★★☆</b></span>
+                <span class="rating">★★★★☆</span>
                 <span class="inline-block rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">read 📚</span>
             </div>
         </div>
+    </div>
+    <div class="comment">
+        My first introduction to the series was through the movie adaptation, which I found hilarious. The book is even better, with its witty humor and absurdity. I enjoyed the book immensely and would recommend it to anyone looking for a light-hearted read.
     </div>
 </div>
 
@@ -44,7 +47,7 @@ All books are broadly categorized by genre with a short description of the book 
     width: 400px; */
     display: flex;
     flex-direction: row;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 @media (max-width: 500px) {
@@ -92,5 +95,38 @@ All books are broadly categorized by genre with a short description of the book 
     justify-content: space-between;
     align-items: center;
     margin-top: 0.5em;
+}
+
+.bookshelf .book .about > .status > .rating {
+    font-size: 1.5em;
+    line-height: 0;
+    color: rgba(var(--color-primary-400),var(--tw-text-opacity));
+}
+
+.bookshelf .book .about > .status > .rating::before {
+    content: "Rating: ";
+    font-size: 0.68em;
+    vertical-align: bottom;
+    color: var(--tw-prose-body);
+}
+
+.bookshelf .comment {
+    margin-top: -2.5em;
+    margin-bottom: 3em;
+    padding: 0.75em 1em;
+    border-left: 4px solid rgba(var(--color-primary-400),var(--tw-text-opacity));
+    background-color: #c8c8c817;
+    border-radius: 4px;
+    text-align: justify;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.bookshelf .comment:before {
+    content: "Comments";
+    font-weight: bold;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 0.4em;
 }
 </style>

@@ -273,7 +273,8 @@ I hope you found inspiration for your next read!
                 .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '')
                 .replace(/ +/g, '-');
                 shelfTitle.href = `#${id}`;
-                shelfTitle.textContent = text;
+                const count = shelf.nextElementSibling.querySelectorAll('.book').length;
+                shelfTitle.textContent = `${text} (${count})`;
                 currentShelf.appendChild(shelfTitle);
             }
         });

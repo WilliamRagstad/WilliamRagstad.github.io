@@ -8,6 +8,7 @@ I’m open to discussions about almost anything, from projects and programming s
 
 ### Social media
 
+- [{{< icon "discord" >}} &nbsp; Discord](https://discordapp.com/users/dotch)
 - [{{< icon "github" >}} &nbsp; GitHub](https://www.gitbub.com/WilliamRagstad)
 - [{{< icon "twitter" >}} &nbsp; Twitter](https://twitter.com/WilliamRagstad)
 - [{{< icon "youtube" >}} &nbsp; YouTube](https://www.youtube.com/@williamragstad)

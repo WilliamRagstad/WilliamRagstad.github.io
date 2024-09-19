@@ -244,6 +244,29 @@ You write all the content in Markdown, which is then combined with the correct H
 
 Products, websites, APIs, platforms, Software/Platform/etc as a Service (SaaS), or other technologies.
 
+### Font Manager
+
+A simple and easy-to-use font manager for Counter-Strike: Global Offensive.
+
+{{< figure
+    src="https://github.com/WilliamRagstad/Font-Manager/raw/master/CSGO%20Font%20Manager/Resources/fontmanager.png?raw=true"
+    alt="Font Manager logo"
+    caption="Logo from [github.com/WilliamRagstad/Font-Manager](https://github.com/WilliamRagstad/Font-Manager)"
+    width="300px"
+    center="true"
+>}}
+
+{{< github repo="WilliamRagstad/Font-Manager" >}}
+
+{{< keywordList >}}
+	{{< keyword icon="code" >}} Desktop {{< /keyword >}}
+	{{< keyword icon="code" >}} Utility {{< /keyword >}}
+	{{< keyword icon="code" >}} Counter-Strike {{< /keyword >}}
+	{{< keyword icon="code" >}} Global Offensive {{< /keyword >}}
+	{{< keyword icon="code" >}} Font {{< /keyword >}}
+	{{< keyword icon="code" >}} Manager {{< /keyword >}}
+{{< /keywordList >}}
+
 ### Quansy
 
 A comprehensive platform for data and content management, intended to be an all-in-one service for websites and applications.

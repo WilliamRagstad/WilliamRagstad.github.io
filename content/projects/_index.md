@@ -15,10 +15,10 @@ Compilers, interpreters and other projects related to programming languages.
 A DSL and framework for building minimal but powerful hypermedia system driven web backends and REST API development using a HTML first approach.
 
 {{< figure
-    src="https://github.com/webx-net/webx/blob/master/assets/webx.png?raw=true"
+    src="https://github.com/webx-net/webx/blob/main/assets/webx.png?raw=true"
     alt="WebX logo"
     caption="Logo from [webx.sh](https://webx.sh/)"
-    width="200px"
+    width="220px"
     center="true"
 >}}
 
@@ -118,7 +118,7 @@ There are support for both functional and object oriented programming paradigms.
     src="https://github.com/mini-lang/mini-lang/blob/main/assets/logo_small.png?raw=true"
     alt="Mini logo"
     caption="Logo from [mini-lang.org](https://www.mini-lang.org/)"
-    width="250px"
+    width="280px"
     center="true"
 >}}
 
@@ -193,7 +193,7 @@ Build scalable controller-based CRUD APIs with ease.
     src="https://raw.githubusercontent.com/WilliamRagstad/Knight/main/assets/logo.png"
     alt="Knight logo"
     caption="Logo from [github.com/WilliamRagstad/Knight](https://github.com/WilliamRagstad/Knight)"
-    width="170px"
+    width="150px"
     center="true"
 >}}
 

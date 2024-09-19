@@ -6,15 +6,50 @@ date = 2024-01-07T18:16:29+01:00
 Here is a list of books I **have read**, **currently reading** or have **on my to-read list**.
 Read books are marked with a <span style="display: inline-block;"> {{< badge >}} read 📚 {{< /badge >}} </span> badge, a rating and my thoughts on it.
 Books I'm currently reading are marked with a <span style="display: inline-block;"> {{< badge >}} reading 📖 {{< /badge >}} </span> badge.
-All books are broadly categorized by genre with a short description of the book and authors.
+Books on my to-read list are left without any badges.\
+All books are **broadly categorized by genre** with a short description of the book and authors.
 
 ## Computer Science
+
+### Algorithms
+
+### Type Theory
+
+<div class="bookshelf">
+    <!-- Types and Programming Languages -->
+    <div class="book">
+        <div class="cover">
+            <span><img src="https://m.media-amazon.com/images/I/61Mq8gY9c0L._SL1500_.jpg" alt="cover"/><span>
+        </div>
+        <div class="about">
+            <b>Types and Programming Languages</b><br/>
+            <em>by Benjamin C. Pierce</em>
+            <p>
+            A comprehensive introduction to the theory of programming languages. The book covers a wide range of topics including type systems, operational semantics, and lambda calculus. It is a must-read for anyone interested in programming language theory.
+            </p>
+        </div>
+    </div>
+    <!-- Advanced Topics in Types and Programming Languages -->
+    <div class="book">
+        <div class="cover">
+            <span><img src="https://m.media-amazon.com/images/I/61YGGzND7zL._AC_UF1000,1000_QL80_.jpg" alt="cover"/></span>
+        </div>
+        <div class="about">
+            <b>Advanced Topics in Types and Programming Languages</b><br/>
+            <em>by Benjamin C. Pierce</em>
+            <p>
+            A follow-up to the author's previous book, this volume covers more advanced topics in programming language theory. It includes chapters on substructural type systems, dependent types, and gradual typing. The book is a valuable resource for researchers and practitioners alike.
+            </p>
+        </div>
+    </div>
+</div>
 
 ## Software Development
 
 ## Science Fiction
 
 <div class="bookshelf">
+    <!-- The Hitchhiker's Guide to the Galaxy -->
     <div class="book">
         <div class="cover">
             <span><img src="https://images.penguinrandomhouse.com/cover/9780345453747" alt="cover"/></span>

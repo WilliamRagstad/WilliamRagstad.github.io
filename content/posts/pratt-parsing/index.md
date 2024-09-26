@@ -419,6 +419,9 @@ I hope you found this post informative and helpful in understanding the Pratt pa
 - [engr.mun.ca/~theo](https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm) - Expression parsing explained.
 - [crockford.com](https://crockford.com/javascript/tdop/tdop.html) - Top-down operator precedence by Douglas Crockford.
 
+---
+{{< support >}}
+
 <!----------------------------------------------------------------->
 
 [^PolishNotation]: [Polish notation](https://en.wikipedia.org/wiki/Polish_notation) is a notation in which every operator follows all of its operands. It is also known as  [**prefix notation**](https://simple.wikipedia.org/wiki/Prefix_notation). The notation was introduced by the Polish mathematician **Jan Łukasiewicz** in the 1920s.

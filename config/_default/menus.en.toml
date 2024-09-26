@@ -26,11 +26,6 @@ pageRef = "about"
 weight = 30
 
 [[main]]
-name = "Contact"
-pageRef = "contact"
-weight = 40
-
-[[main]]
 name = "Bookshelf"
 pageRef = "bookshelf"
 weight = 50
@@ -107,6 +102,21 @@ pageRef = "tags"
 weight = 30
 
 [[footer]]
+name = "Contact"
+pageRef = "contact"
+weight = 40
+
+[[footer]]
+name = "Support Me"
+url = "/support"
+weight = 50
+
+[[footer]]
 name = "RSS"
 url = "/index.xml"
-weight = 50
+weight = 60
+
+[[footer]]
+name = "Sitemap"
+url = "/sitemap.xml"
+weight = 70

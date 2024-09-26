@@ -458,6 +458,9 @@ Rewriting systems are used in many areas, including programming languages, compi
 
 I hope this article has helped you understand the basics of rewriting systems and that you have learned something new.
 
+---
+{{< support >}}
+
 <!----------------------------------------------------------------->
 
 [^RW]: "Rewriting Systems", https://en.wikipedia.org/wiki/Rewriting.

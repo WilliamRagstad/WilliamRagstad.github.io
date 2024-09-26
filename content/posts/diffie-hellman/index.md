@@ -206,6 +206,9 @@ The main benefit comes from the **forward secrecy** provided by the protocol, as
 This makes it **more difficult** for an attacker to decrypt past sessions if the current key is compromised.
 With the **right parameters** and **good practices**, the Diffie-Hellman key exchange is a **secure and efficient** way to establish a shared secret key over an insecure channel.
 
+---
+{{< support >}}
+
 [^DH]: [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) by Whitfield Diffie and Martin Hellman.
 [^ModExp]: [Modular exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation) is a type of exponentiation performed over a modulus.
 [^ModArith]: [Modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic) is a system of arithmetic for integers, where numbers "wrap around" upon reaching a certain value.

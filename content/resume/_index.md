@@ -95,11 +95,11 @@ After graduating, I have been working as a self-employed **Software Developer** 
   </h2>
 </summary>
 
-- ***Competitor*, [DEFCON CTF Qualifier](https://ctftime.org/event/2229) 2024**: In the [NorseCode](https://norsecode.team/) team via [RoyalRoppers](https://royalroppers.team/) together with [kalmarunionen](https://ctftime.org/team/114856). Featured *high-stakes* cybersecurity challenges.
+- ***Competitor*, [DEFCON CTF Qualifier](https://ctftime.org/event/2229) 2024**: In the [NorseCode](https://norsecode.team/) team via [RoyalRoppers](https://royalroppers.team/) together with [kalmarunionen](https://ctftime.org/team/114856) in **Denmark**. Featured *high-stakes* cybersecurity challenges.
 
 - ***Organizer*, [Undutmaning](https://undutmaning.se/) CTF 2024**: Technical project manager of a well-regarded cyber-security competition. Built a variety of challenges, the official website, and infrastructure.
 
-- ***Member*, [Miking](https://miking.org/) Research Project at KTH**: Contributed to the Miking as an **undergraduate** under the supervision of [David Broman](https://people.kth.se/~dbro/), focusing on compiler backend development and domain-specific languages.
+- ***Participant*, [Swedish National Hacking Team](https://snht.se/) 2023**: In the [European Cybersecurity Challenge](https://ecsc.eu/) (ECSC) in **Norway**. Competed against 20+ European countries in a variety of CTF challenges.
 
 - ***Member*, [RoyalRoppers](https://royalroppers.team/) CTF Team**: Contributing to several CTF competitions through advanced problem-solving skills in reverse engineering, web, network, and binary exploitation.
 
@@ -294,8 +294,8 @@ I worked with the main full-stack product (<b>React</b> frontend and <b>Java Spr
 
 {{< timelineItem icon="graduation-cap" header="Research Assistant" badge="2020 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
 
-Involved in the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the compiler backend team led by David Broman.
-The group is working on a new framework for constructing efficient domain-specific languages with a self-learning heterogeneous model by composition of language semantics (HMC).
+Contributed to the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the <b>core compiler backend team</b> led by <a href="https://people.kth.se/~dbro/" target="_blank">David Broman</a> as an <b>undergraduate student</b>.
+I developed the compiler to extend the application domain to include <b>web browser and native JavaScript execution environments</b>.
 
 <img src="experience/miking.jpg" alt="Miking" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}

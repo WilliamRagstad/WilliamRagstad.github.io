@@ -4,8 +4,8 @@ date = 2024-01-07
 +++
 
 **If you enjoy my work or blog posts** and want to **show your thanks and support**, it is always welcome and highly appreciated!
-You can do so by **donating** to any of the following services below, or preferably by [sponsoring me on GitHub](https://github.com/sponsors/WilliamRagstad)!
-**I appreciate any and all support**, no matter how big or small! 🙏
+You can do so by **donating** to any of the following services below, or preferably by [sponsoring me on GitHub](https://github.com/sponsors/WilliamRagstad).
+**I appreciate any and all support! 🙏**
 
 <br/>
 <div class="flex flex-wrap justify-center items-center">

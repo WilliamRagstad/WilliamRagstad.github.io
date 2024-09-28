@@ -46,18 +46,76 @@ Exponentiation in modular arithmetic involves computing the remainder when a num
 
 $$
 \begin{align*}
-a^b \mod p = & \newline
-a \times \cdots \times a \mod p = & \quad\quad (b \text{ times)} \newline
-\cdots \times a \mod p) \times a \mod p) \times a \mod p = & \quad\quad (b \text{ times)} \newline
+a^n \mod p = & \newline
+a \times \cdots \times a \mod p = & \newline
+(a \mod p) \times \cdots \times (a \mod p) \mod p = & \newline
 \end{align*}
 $$
 
-The last expression display an optimized accumulative method by taking the remainder after each multiplication, to **keep the numbers small during the calculation**.
-This results in faster and more memory-efficient computation due to **$O(n^2)$ time complexity** of multiplication[^Mul].
+We can try to "optimize" the multiplications by taking the remainder after each repeated multiplication to **keep the numbers small during the entire calculation**.
+This results in *faster and more memory-efficient* computation.
+However, due to **$O(n^2)$ time complexity** of multiplication[^Mul] and the fact that the number of iterations will still be $O(n)$, which for large numbers of roughly $2048$ bits, is *a lot of multiplications* and is **computationally expensive**. \
+**But there is a way to solve this!**
 
-> **Example**\
-> We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using **repeated modular multiplication** to get the remainder $82$.
-> If I were to ask you which power $b$ I started with to get to $82$ only knowing $a=5$, $p=97$, you would have to **brute-force** it by trying different exponents until you find *the correct one* ($b = 23$).
+#### Right-to-Left Binary Method
+
+This optimized algorithm computes the modular exponentiation in a **logarithmic time complexity** of $O(\log n)$, *where $n$ is the size of the exponent*.
+It takes advantage of the **binary representation** of the exponent.
+
+```py
+def mod_exp(b, e, m):
+    result = 1
+    x = b % m
+    while e > 0:
+        if e % 2 == 1:
+            result = (result * x) % m
+        x = (x * x) % m
+        e = e >> 1
+    return result
+```
+
+#### Example
+
+We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **RTL method** above, where $e = 23_{10} = 10111_2$.
+<details>
+<summary>Step-by-step calculation</summary>
+
+---
+
+1. $r \gets 1$ &nbsp;and&nbsp; $x \gets 5 \mod 97 = 5$.
+    > Initialize the $result$ and the base number $x$.
+2. $[e = 23_{10} = 10111_2] > 0$:
+    - $10111_2 \mod 2 \equiv 1 \implies r \gets (1 \times 5) \mod 97 = 5$.
+        > Check if the last significant bit (LSB) of $e$ in base 2 is $1$. Then multiply the result with $x$ in modulo $m = 97$.
+    - $x \gets 5^2 \mod 97 = 25$ &nbsp;and&nbsp; $e \gets \lfloor\frac{10111_2}{2}\rfloor = 1011_2$.
+        > Square $x$ and shift the bits of $e$ to the right.
+3. $[e = 11_{10} = 1011_2] > 0$:
+    - $1011_2 \mod 2 \equiv 1 \implies r \gets (5 \times 25) \mod 97 = 28$.
+        > LSB is $1$, so update the result again with the new $x$.
+    - $x \gets 25^2 \mod 97 = 43$ &nbsp;and&nbsp; $e \gets \lfloor\frac{1011_2}{2}\rfloor = 101_2$.
+4. $[e = 5_{10} = 101_2] > 0$:
+    - $101_2 \mod 2 \equiv 1 \implies r \gets (28 \times 43) \mod 97 = 40$.
+    - $x \gets 43^2 \mod 97 = 6$ &nbsp;and&nbsp; $e \gets \lfloor\frac{101_2}{2}\rfloor = 10_2$.
+5. $[e = 2_{10} = 10_2] > 0$:
+    - $10_2 \mod 2 \not\equiv 1 \implies$ do nothing.
+        > The LSB is $0$, so no update is needed.
+    - $x \gets 6^2 \mod 97 = 36$ &nbsp;and&nbsp; $e \gets \lfloor\frac{10_2}{2}\rfloor = 1_2$.
+6. $[e = 1] > 0$:
+    - $1 \mod 2 \equiv 1 \implies r \gets (40 \times 36) \mod 97 = 82$.
+        > LSB is $1$, so update the result one last time.
+    - $r = 82$.
+7. $[e = 0] \not> 0 \implies$ return the result $r = 82$.
+
+---
+
+In **$\approx 5$ steps** we managed to compute $5^{23} \mod 97 = 82$ using the **Right-to-Left Binary Method**, which using repeated multiplication would have taken **$22$ steps**. The algorithm took about the same amount of iterations as expected from $\log_2(23) = 4.52 \approx 5$, which takes about $\frac{\log_2(23)}{23} \approx 19\%$ of the steps compared to repeated multiplication.
+
+---
+</details>
+<br/>
+
+If I were to ask you which power $e$ I started with to get to $82$, only knowing $b=5$, $p=97$.
+You would have to **brute-force** it by trying different exponents until you find *the correct one* ($b = 23$).
 
 This is the essence of the **discrete logarithm problem**.
 

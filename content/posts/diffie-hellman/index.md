@@ -57,10 +57,10 @@ This results in *faster and more memory-efficient* computation.
 However, due to **$O(n^2)$ time complexity** of multiplication[^Mul] and the fact that the number of iterations will still be $O(n)$, which for large numbers of roughly $2048$ bits, is *a lot of multiplications* and is **computationally expensive**. \
 **But there is a way to solve this!**
 
-#### Square-and-multiply:&nbsp; Right-to-Left Binary Method
+#### Square-and-multiply
 
 This optimized algorithm computes the modular exponentiation in a **logarithmic time complexity** of $O(\log_2 n)$, *where $n$ is the size of the exponent*.
-It takes advantage of the **binary representation** of the exponent.
+It takes advantage of the **binary representation** of the exponent and moves from the **least significant bit (LSB)** to the **most significant bit (MSB)**, also known as the **Right-to-Left Binary Method**.
 
 ```py
 def mod_exp(b, e, m):
@@ -76,7 +76,7 @@ def mod_exp(b, e, m):
 
 #### Example
 
-We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **RTL method** above, where $e = 23_{10} = 10111_2$.
+We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **SqM RLT method** above, where $e = 23_{10} = 10111_2$.
 <details>
 <summary>Step-by-step calculation</summary>
 
@@ -108,7 +108,7 @@ We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **RTL
 
 ---
 
-In **$\approx 5$ steps** we managed to compute $5^{23} \mod 97 = 82$ using the **Right-to-Left Binary Method**, which using repeated multiplication would have taken **$22$ steps**. The algorithm took about the same amount of iterations as expected from $\log_2(23) = 4.52 \approx 5$, which takes about $\frac{\log_2(23)}{23} \approx 19\%$ of the steps compared to repeated multiplication.
+In **$\approx 5$ steps** we managed to compute $5^{23} \mod 97 = 82$ using the **square-and-multiply method**, which using repeated multiplication would have taken **$22$ steps**. The algorithm took about the same amount of iterations as expected from $\log_2(23) = 4.52 \approx 5$, which takes about $\frac{\log_2(23)}{23} \approx 19\%$ of the steps compared to repeated multiplication.
 
 ---
 </details>

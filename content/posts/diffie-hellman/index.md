@@ -57,9 +57,9 @@ This results in *faster and more memory-efficient* computation.
 However, due to **$O(n^2)$ time complexity** of multiplication[^Mul] and the fact that the number of iterations will still be $O(n)$, which for large numbers of roughly $2048$ bits, is *a lot of multiplications* and is **computationally expensive**. \
 **But there is a way to solve this!**
 
-#### Right-to-Left Binary Method
+#### Square-and-multiply:&nbsp; Right-to-Left Binary Method
 
-This optimized algorithm computes the modular exponentiation in a **logarithmic time complexity** of $O(\log n)$, *where $n$ is the size of the exponent*.
+This optimized algorithm computes the modular exponentiation in a **logarithmic time complexity** of $O(\log_2 n)$, *where $n$ is the size of the exponent*.
 It takes advantage of the **binary representation** of the exponent.
 
 ```py

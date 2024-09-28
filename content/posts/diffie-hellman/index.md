@@ -59,8 +59,8 @@ However, due to **$O(n^2)$ time complexity** of multiplication[^Mul] and the fac
 
 #### Square-and-multiply
 
-This optimized algorithm computes the modular exponentiation in a **logarithmic time complexity** of $O(\log_2 n)$, *where $n$ is the size of the exponent*.
-It takes advantage of the **binary representation** of the exponent and moves from the **least significant bit (LSB)** to the **most significant bit (MSB)**, also known as the **Right-to-Left Binary Method**.
+This optimized algorithm computes the modular exponentiation by squaring[^ExpSquare], in **logarithmic time complexity** of $O(\log n)$, *where $n$ is the size of the exponent*.
+It takes advantage of the **binary representation** of the exponent and moves from the **least significant bit (LSB)** to the **most significant bit (MSB)**, also known as the **Right-to-Left Binary Method**[^ModExpRTL].
 
 ```py
 def mod_exp(b, e, m):
@@ -76,7 +76,7 @@ def mod_exp(b, e, m):
 
 #### Example
 
-We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **SqM RLT method** above, where $e = 23_{10} = 10111_2$.
+We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **SqM RTL method** above, where $e = 23_{10} = 10111_2$.
 <details>
 <summary>Step-by-step calculation</summary>
 
@@ -281,3 +281,4 @@ With the **right parameters** and **good practices**, the Diffie-Hellman key exc
 [^ResidueClass]: A [residue class](https://mathworld.wolfram.com/ResidueClass.html) is a set of integers that are congruent modulo a given integer.
 [^MulGroupMod]: The [multiplicative group modulo $n$](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) is the set of integers relatively prime to $n$ under multiplication modulo $n$.
 [^BadDH]: See discussion in https://support.checkpoint.com/results/sk/sk27054.
+[^ExpSquare]: [Exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) is a general method for fast computation of large positive integer powers of a number.

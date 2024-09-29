@@ -60,7 +60,7 @@ However, due to **$O(n^2)$ time complexity** of multiplication[^Mul] and the fac
 #### Square-and-multiply
 
 This optimized algorithm computes the modular exponentiation by squaring[^ExpSquare], in **logarithmic time complexity** of $O(\log n)$, *where $n$ is the size of the exponent*.
-It takes advantage of the **binary representation** of the exponent and moves from the **least significant bit (LSB)** to the **most significant bit (MSB)**, also known as the **Right-to-Left Binary Method**[^ModExpRTL].
+It takes advantage of the **binary representation** of the exponent and moves from the **least significant bit (LSB)** to the **most significant bit (MSB)**, also known as the **Right-to-Left Binary Method**[^ModExp][^ExpSquare].
 
 ```py
 def mod_exp(b, e, m):
@@ -76,11 +76,9 @@ def mod_exp(b, e, m):
 
 #### Example
 
-We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **SqM RTL method** above, where $e = 23_{10} = 10111_2$.
+We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **SaM RTL method** above, where $e = 23_{10} = 10111_2$.
 <details>
 <summary>Step-by-step calculation</summary>
-
----
 
 1. $r \gets 1$ &nbsp;and&nbsp; $x \gets 5 \mod 97 = 5$.
     > Initialize the $result$ and the base number $x$.
@@ -106,13 +104,10 @@ We can easily calculate, &nbsp;$5^{23} \mod 97 \equiv 82$,&nbsp; using the **SqM
     - $r = 82$.
 7. $[e = 0] \not> 0 \implies$ return the result $r = 82$.
 
----
-
-In **$\approx 5$ steps** we managed to compute $5^{23} \mod 97 = 82$ using the **square-and-multiply method**, which using repeated multiplication would have taken **$22$ steps**. The algorithm took about the same amount of iterations as expected from $\log_2(23) = 4.52 \approx 5$, which takes about $\frac{\log_2(23)}{23} \approx 19\%$ of the steps compared to repeated multiplication.
+In **$\approx 5$ steps** we managed to compute $5^{23} \mod 97 = 82$ using the **square-and-multiply method**, which using repeated multiplication would have taken **$22$ steps**. The algorithm took about the same amount of iterations as expected from $\log_2(23) = 4.52 \approx 5$, which takes about $\frac{\log_2(23)}{23} \approx \frac{5}{23} \approx 19\\%$ of the steps compared to naive repeated multiplication.
 
 ---
 </details>
-<br/>
 
 If I were to ask you which power $e$ I started with to get to $82$, only knowing $b=5$, $p=97$.
 You would have to **brute-force** it by trying different exponents until you find *the correct one* ($b = 23$).
@@ -247,13 +242,13 @@ Before summing up this post about Diffie-Hellman, let's talk about the **securit
 The security of the DH protocol relies on good choices of the **prime number $p$** and the **generator $g$** to make **DLP** hard to solve, which is crucial for maintaining the confidentiality of the shared secret.
 Below is a list of **best practices** to keep in mind when using the DH protocol to ensure secure communications:
 
-| Guideline                                                                                                                                                                 | Risk                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Choose a Large Prime Number $p$**<br>Select a prime $p$ of at least **2048 bits**.                                                                                      | Using a smaller prime makes it **feasible** for attackers to use **brute-force** methods to solve the DLP.                                                                                                                                                               |
-| **Use Safe Primes**[^SSGP]<br>Opt for $p = 2q + 1$ where **$p, q$ are prime**, ensuring $p - 1$ has a **large prime factor**.                                             | If $\text{ord}_p(g)$ or $p - 1$ factors into small primes, attackers can use the **Pohlig-Hellman**[^PohligHellman] algorithm to solve the DLP efficiently, compute the private keys and shared secret.                                                                  |
-| **Select an Appropriate Generator $g$**<br>Choose $g$ with a **large prime-order subgroup** $\text{ord}_p(g) = q$ of $\mathbb{Z}_p^*$ to operate within.                  | A generator with a small order allows attackers to exploit smaller subgroups where the DLP is easier to solve using **Pohlig-Hellman**[^PohligHellman].                                                                                                                  |
-| **Avoid Deprecated Parameters**<br>Always use the **latest reccomended** parameters from industry and trusted agencies.                                                          | Using standard parameters with **known weaknesses** may expose you to other attacks. Such as in [RFC 5114](https://www.rfc-editor.org/rfc/rfc5114#section-2.1) suggesting a group with ***too small*** 160-bit $q$ or $\text{ord}_p(g)$ value, **NOT RECOMMENDED**[^BadDH] and **MUST NOT USE**. New updated suggestions in [RFC 3526](https://www.ietf.org/rfc/rfc3526.txt), [RFC 7296](https://datatracker.ietf.org/doc/html/rfc7296), [RFC 4419](https://www.ietf.org/rfc/rfc4419.txt) among others. |
-| **Verify Public Keys**<br>Use **certificate authorities**[^CA] (CA) and **digital signatures**[^DigSig] or **certificate pinning**[^CertPin] to authenticate public keys. | Without proper verification, attackers can perform **MitM**[^MitM] attacks and **impersonate parties** by **substituting their own public keys**, enabling them to **intercept and decrypt communications**.                                                             |
+| Guideline                                                                                                                                                                 | Risk                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Choose a Large Prime Number $p$**<br>Select a prime $p$ of at least **2048 bits**.                                                                                      | Using a smaller prime makes it **feasible** for attackers to use **brute-force** methods to solve the DLP.                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Use Safe Primes**[^SSGP]<br>Opt for $p = 2q + 1$ where **$p, q$ are prime**, ensuring $p - 1$ has a **large prime factor**.                                             | If $\text{ord}_p(g)$ or $p - 1$ factors into small primes, attackers can use the **Pohlig-Hellman**[^PohligHellman] algorithm to solve the DLP efficiently, compute the private keys and shared secret.                                                                                                                                                                                                                                                                                                 |
+| **Select an Appropriate Generator $g$**<br>Choose $g$ with a **large prime-order subgroup** $\text{ord}_p(g) = q$ of $\mathbb{Z}_p^*$ to operate within.                  | A generator with a small order allows attackers to exploit smaller subgroups where the DLP is easier to solve using **Pohlig-Hellman**[^PohligHellman].                                                                                                                                                                                                                                                                                                                                                 |
+| **Avoid Deprecated Parameters**<br>Always use the **latest reccomended** parameters from industry and trusted agencies.                                                   | Using standard parameters with **known weaknesses** may expose you to other attacks. Such as in [RFC 5114](https://www.rfc-editor.org/rfc/rfc5114#section-2.1) suggesting a group with ***too small*** 160-bit $q$ or $\text{ord}_p(g)$ value, **NOT RECOMMENDED**[^BadDH] and **MUST NOT USE**. New updated suggestions in [RFC 3526](https://www.ietf.org/rfc/rfc3526.txt), [RFC 7296](https://datatracker.ietf.org/doc/html/rfc7296), [RFC 4419](https://www.ietf.org/rfc/rfc4419.txt) among others. |
+| **Verify Public Keys**<br>Use **certificate authorities**[^CA] (CA) and **digital signatures**[^DigSig] or **certificate pinning**[^CertPin] to authenticate public keys. | Without proper verification, attackers can perform **MitM**[^MitM] attacks and **impersonate parties** by **substituting their own public keys**, enabling them to **intercept and decrypt communications**.                                                                                                                                                                                                                                                                                            |
 
 Careful selection of $p$ and $g$ significantly enhances the security of the DH protocol by maintaining the difficulty of the DLP, thereby safeguarding secure communications in cryptographic systems.
 

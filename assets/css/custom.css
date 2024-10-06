@@ -6,6 +6,14 @@ a {
 	overflow-wrap: break-word;
 }
 
+a[href^="http"][target=_blank]:not([role=button]) {
+	text-decoration: none;
+}
+
+a[href^="http"][target=_blank]:not([role=button]):hover {
+	text-decoration: underline;
+}
+
 sup+sup :before {
 	content: ', ';
 	color: white;

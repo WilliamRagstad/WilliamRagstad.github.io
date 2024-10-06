@@ -9,7 +9,7 @@ date = 2024-01-07
 {{< /lead >}}
 
 <div
-  class="border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative  mx-auto max-w-xl">
+  class="border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative  mx-auto max-w-xl">
   <div class="px-6 py-4 flex justify-between items-center flex-wrap">
     <div class="flex flex-col items-center mx-auto p-1">
       <img class="mt-0 mb-0 border rounded-full medium-zoom-image" width="130" alt="William Rågstad" src="picture.jpg">
@@ -129,21 +129,20 @@ After graduating, I have been working as a self-employed **Software Developer** 
   <div> C# <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> Java <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> Python <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> C++ <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> C <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> x86/x64 Assembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> HTML5 / CSS3 / Sass <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
-  <div> SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> Lua <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div> F# <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
   <div> Elixir <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> OCaml <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> Haskell <div class="skill_bar"><div class="skill_bar_fill" style="width: 30%;"></div></div></div>
-  <div> x86/x64 Assembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div> Bash/Shell <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
-  <div> PowerShell <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
+  <div> PowerShell <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
   <div><br/> &nbsp; + more </div>
 </div>
 

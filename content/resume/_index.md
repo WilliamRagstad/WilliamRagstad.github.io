@@ -232,31 +232,29 @@ After graduating, I have been working as a self-employed **Software Developer** 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
   <div> Systems Programming <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> Web Development <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div> Compiler Design <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div> Cybersecurity <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> Architecture <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> Game Development <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> Cybersecurity <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div> Compiler Design <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div> Architecture <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
   <div> Networking <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
   <div> Operating Systems <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> Distributed Systems <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> DevOps <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> Game Development <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><br/> &nbsp; + more </div>
 </div>
 
 ### Computer Science Theory
 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-  <div> Algorithms <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div> Data Structures <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div> Algorithms <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> Design Patterns <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> Cryptography <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
-  <div> Type Theory <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
+  <div> Cryptography <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div> Interaction Nets <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> Formal Methods <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
   <div> Combinatory Logic <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
-  <div> HCI <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
-  <div> Computer Graphics <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div> Type Theory <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
+  <div> Formal Methods <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
+  <div> HCI <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
   <div> Machine Learning <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
+  <div> Computer Graphics <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
   <div><br/> &nbsp; + more </div>
 </div>
 

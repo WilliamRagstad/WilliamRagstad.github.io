@@ -90,16 +90,30 @@ After graduating, I have been working as a self-employed **Software Developer** 
   </h2>
 </summary>
 
-- ***Competitor*, [DEFCON CTF Qualifier](https://ctftime.org/event/2229) 2024**: In the [NorseCode](https://norsecode.team/) team via [RoyalRoppers](https://royalroppers.team/) together with [kalmarunionen](https://ctftime.org/team/114856) in **Denmark**. Featured *high-stakes* cybersecurity challenges.
-
-- ***Organizer*, [Undutmaning](https://undutmaning.se/) CTF 2024**: Technical project manager of a well-regarded cyber-security competition. Built a variety of challenges, the official website, and infrastructure.
-
-- ***Participant*, [Swedish National Hacking Team](https://snht.se/) 2023**: In the [European Cybersecurity Challenge](https://ecsc.eu/) (ECSC) in **Norway**. Competed against 20+ European countries in a variety of CTF challenges.
-
-- ***Member*, [RoyalRoppers](https://royalroppers.team/) CTF Team**: Contributing to several CTF competitions through advanced problem-solving skills in reverse engineering, web, network, and binary exploitation.
-
-- **[GitHub Project](https://github.com/WilliamRagstad/Font-Manager) with 200,000+ Users**: Lead developer showcasing strong leadership and technical expertise in open-source software development.
-
+<div class="flex justify-around gap-4" style="text-align: center">
+    <ul class="flex-1">
+        <li>
+            <b><em>Creator</em>, Programming Languages</b>: Designed and implemented the languages <a href="https://lento-lang.org/" target="_blank">Lento</a>, <a href="https://webx.sh/" target="_blank">Web X</a>, and <a href="https://www.mini-lang.org/" target="_blank">mini</a>, among others.
+        </li>
+        <li>
+            <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Showcasing strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">Open-Source Software</a> development. Some have gained significant traction worldwide with <b>200,000+ Users</b>.
+        </li>
+        <li>
+            <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning</a> CTF 23, 24, 25</b>: Technical project manager responsible for the official website, competition infrastructure and some challenges.
+        </li>
+    </ul>
+    <ul class="flex-1">
+        <li>
+            <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> CTF Team</b>: Advanced problem-solving skills in reverse engineering, web, network, and binary exploitation.
+        </li>
+        <li>
+            <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ European countries.
+        </li>
+        <li>
+            <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> together with <a href="https://ctftime.org/team/114856" target="_blank">kalmarunionen</a> in <b>Denmark</b>.
+        </li>
+    </ul>
+</div>
 </details>
 
 <details class="mt-12" open>

@@ -22,11 +22,6 @@ date = 2024-01-07
       </div>
       <div class="text-sm text-neutral-500 dark:text-neutral-400">
         <div style="cursor: default;" class="flex flex-row flex-wrap items-center">
-            <span>
-              Last updated
-              <time datetime="2024-04-24 20:54:27 +0200 CEST">24 April 2024</time>
-            </span>
-          <span class="px-2 text-primary-500">·</span>
           <span>
             Reach out to me on
           </span>

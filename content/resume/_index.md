@@ -292,7 +292,8 @@ My curiosity spans many areas, including **Competitive Programming**, **CTF**, *
 
 ## Projects
 
-View my featured projects and contributions via the links below.
+I have created many projects, including **Programming Languages**, **Websites**, **Games**, **Tools & Libraries**, **Research**, and **much more**.
+View my featured projects and contributions below.
 
 {{< button href="/projects/" target="_blank" >}}
 {{<icon "code" >}}&nbsp;&nbsp;Featured Projects

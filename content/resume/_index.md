@@ -5,7 +5,7 @@ date = 2024-01-07
 
 
 {{< lead >}}
-`Software Developer`, `Systems Engineer`, `IT-Security Specialist`, + more
+Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security Specialist
 {{< /lead >}}
 
 <div

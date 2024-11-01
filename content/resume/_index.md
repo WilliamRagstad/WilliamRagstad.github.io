@@ -10,12 +10,12 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 
 <div
   class="border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative  mx-auto max-w-xl">
-  <div class="px-6 py-4 flex justify-between items-center flex-wrap">
-    <div class="flex flex-col items-center mx-auto p-1">
+  <div class="px-2 py-4 flex justify-between items-center flex-wrap">
+    <div class="flex flex-col items-center mx-auto px-2">
       <img class="mt-0 mb-0 border rounded-full medium-zoom-image" width="130" alt="William Rågstad" src="picture.jpg">
-      <span>William Rågstad</span>
+      <span class="mt-2">William Rågstad</span>
     </div>
-    <div class="mx-auto p-1">
+    <div class="mx-auto px-2">
       <div
         class="font-bold text-xl text-neutral-800 decoration-primary-500 dark:text-neutral">
         Contact me
@@ -152,7 +152,7 @@ After graduating, I have been working as a self-employed **Software Developer** 
   <div><img class="lang-logo" src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg" alt="logo"/>  x86/x64 Assembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" style="padding: 3px" alt="logo"/> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="padding: 3px" alt="logo"/> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" alt="logo"/> HTML5 / CSS3 <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML5 / CSS3 <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="logo"/> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><img class="lang-logo" src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-27.png" alt="logo"/>  SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/66/F_Sharp_logo.svg" alt="logo"/>  F# <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
@@ -441,11 +441,8 @@ As well as other software systems engineering-related work.
 </script>
 
 <style>
-  @media (min-width: 640px) {
-    table.contact {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
+  table.contact {
+    line-height: 0.75rem;
   }
 
   li > div > .block > div > h2 {

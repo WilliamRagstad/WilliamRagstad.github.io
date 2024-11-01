@@ -107,10 +107,10 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
     </ul>
     <ul class="flex-1">
         <li>
-            <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> CTF Team</b>: Advanced problem-solving skills in reverse engineering, web, network, and binary exploitation.
+            <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> CTF Team</b>: Advanced problem-solving in reverse engineering, web, network, binary exploitation, cryptography, and more.
         </li>
         <li>
-            <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ European countries.
+            <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
         </li>
         <li>
             <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> together with <a href="https://ctftime.org/team/114856" target="_blank">kalmarunionen</a> in <b>Denmark</b>.

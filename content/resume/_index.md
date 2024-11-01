@@ -417,12 +417,24 @@ As well as other software systems engineering-related work.
             if (detail.hasAttribute('open')) openDetails.push(detail);
             detail.setAttribute('open', '');
         });
+        // Hide unnecessary elements
+        document.querySelector('.main-menu').style.display = 'none';
+        document.querySelector('#top-scroller').style.display = 'none';
+        document.querySelectorAll('p.py-8.border-t').forEach(function(p) {
+            p.style.display = 'none';
+        });
     };
     // When the user exits print preview, close all details elements
     window.onafterprint = function() {
         document.querySelector('html').classList.toggle('dark', dark_mode); // Restore dark mode
         document.querySelectorAll('details').forEach(function(detail) {
             if (!openDetails.includes(detail)) detail.removeAttribute('open');
+        });
+        // Show elements again
+        document.querySelector('.main-menu').style.display = 'flex';
+        document.querySelector('#top-scroller').style.display = 'block';
+        document.querySelectorAll('p.py-8.border-t').forEach(function(p) {
+            p.style.display = 'block';
         });
     };
 </script>
@@ -495,5 +507,11 @@ As well as other software systems engineering-related work.
 
   .dark .lang-logo:not(.color) {
     filter: invert(1);
+  }
+
+  /* parent of .relative.block.icon */
+  div:has(> .block.icon) {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 </style>

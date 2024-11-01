@@ -416,19 +416,6 @@ As well as other software systems engineering-related work.
 <img src="experience/mjukvarufabriken.png" alt="ÖU" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 10px" />
 {{< /timelineItem >}}
 
-{{< timelineItem icon="github" header="Journey Begins" badge="2010" >}}
-<div class="flex justify-between flex-wrap items-center">
-  <span>
-    All my projects are hosted on GitHub.
-  </span>
-  <span class="my-4">
-  {{< button href="https://github.com/WilliamRagstad" target="_blank" >}}
-  {{<icon "github" >}}&nbsp;&nbsp;Github Profile
-  {{< /button >}}
-  </span>
-</div>
-{{< /timelineItem >}}
-
 {{< /timeline >}}
 
 </div>

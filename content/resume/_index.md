@@ -424,6 +424,9 @@ As well as other software systems engineering-related work.
 <script>
     let openDetails = [];
     let dark_mode;
+    let contact_card_classes = document.querySelector('#contact-card').className;
+    // Remove ".max-w-prose" from #all-content parent element
+    document.querySelector('#all-content').parentElement.classList.remove('max-w-prose');
     // When the user prints the page, open all details elements
     window.onbeforeprint = function() {
         dark_mode = document.querySelector('html').classList.contains('dark');
@@ -439,6 +442,7 @@ As well as other software systems engineering-related work.
         document.querySelectorAll('p.py-8.border-t').forEach(function(p) {
             p.style.display = 'none';
         });
+        document.querySelector('#contact-card').className = 'mx-auto max-w-xl';
     };
     // When the user exits print preview, close all details elements
     window.onafterprint = function() {
@@ -452,6 +456,7 @@ As well as other software systems engineering-related work.
         document.querySelectorAll('p.py-8.border-t').forEach(function(p) {
             p.style.display = 'block';
         });
+        document.querySelector('#contact-card').className = contact_card_classes;
     };
 </script>
 

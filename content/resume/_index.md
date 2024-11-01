@@ -244,18 +244,6 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
   <div><br/> &nbsp; + more </div>
 </div>
 
-### Databases
-
-<div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-  <div> PostgreSQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> MySQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> MariaDb <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> SQLite <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> MongoDB <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div> Firebase <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div><br/> &nbsp; + more </div>
-</div>
-
 </details>
 
 <details class="mt-12">

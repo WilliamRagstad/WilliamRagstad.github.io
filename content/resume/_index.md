@@ -72,8 +72,6 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 > I aim to bring **value** and **impact** through consistent **quality** and **innovation**."
 {{< /lead >}}
 
-<hr/>
-
 ## About Me
 
 {{< badge >}} Early experience {{< /badge >}}

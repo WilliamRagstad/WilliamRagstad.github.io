@@ -83,15 +83,14 @@ When I studied **Computer Science** at [KTH Royal Institute of Technology](https
 I worked both as a **Teaching Assistant** in various courses and a **Research Assistant** along with doctoral students and professors, while I was still an **undergraduate** student.
 Even **taught my fellow student colleagues** working as a TA, *while taking the courses myself at the same time*.
 
-{{< badge >}} Competitions {{< /badge >}}
-I have participated in many **Competitive Programming** contests, **CTF** competitions, **Hackathons**, and **Startups**. I have also been a part of the **Swedish National Hacking Team** and the **RoyalRoppers** CTF team.
-
 <details class="mt-12" open>
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
     Highlights
   </h2>
 </summary>
+
+I have participated in many **Competitive Programming** contests, **CTF** competitions, **Hackathons**, and **Startups**. I have also been a part of the **Swedish National Hacking Team** and the **RoyalRoppers** CTF team.
 
 <div class="flex justify-around gap-4" style="text-align: center">
     <ul class="flex-1">

@@ -31,6 +31,15 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
         <tbody>
           <tr>
             <td>
+              LinkedIn
+            </td>
+            <td>
+              <a href="https://www.linkedin.com/in/william-ragstad/" target="_blank">
+                William Rågstad</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
               Email
             </td>
             <td>

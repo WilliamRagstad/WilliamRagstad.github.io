@@ -377,17 +377,14 @@ I developed the compiler to extend the application domain to include <b>web brow
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Teaching Assistant" badge="2019 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
-Working as a Teaching Assistant (TA) in <b>parallel with my education at KTH</b>.
-Assisted or lead the following courses:
+Working as a Teaching Assistant (TA) in:
 
-<ul>
-  <li>Coordinator HT19-1 <a href="https://www.stacken.kth.se/en/news/2019/intro/">Introduction to Java</a>, Stacken</li>
-  <li>ID1019 - <a href="https://www.kth.se/social/course/ID1019/" target="_blank">Programming II</a></li>
-  <li>ID1212 - <a href="https://www.kth.se/social/course/ID1212/" target="_blank">Network Programming</a></li>
-  <li>ID1206 - <a href="https://www.kth.se/social/course/ID1206/" target="_blank">Operating Systems</a></li>
-  <li>DH2642 - <a href="https://www.kth.se/social/course/DH2642/" target="_blank">Interaction programming and dynamic web</a></li>
-  <li>DM1595 - <a href="https://www.kth.se/social/course/DM1595/" target="_blank">Program Development for Interactive Media</a></li>
-</ul>
+<a href="https://www.stacken.kth.se/en/news/2019/intro/">Introduction to Java</a>,
+<a href="https://www.kth.se/social/course/ID1019/" target="_blank">Programming II</a>,
+<a href="https://www.kth.se/social/course/ID1212/" target="_blank">Network Programming</a>,
+<a href="https://www.kth.se/social/course/ID1206/" target="_blank">Operating Systems</a>,
+<a href="https://www.kth.se/social/course/DH2642/" target="_blank">Interaction programming and dynamic web</a>,
+<a href="https://www.kth.se/social/course/DM1595/" target="_blank">Program Development for Interactive Media</a>,
 
 <img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}

@@ -75,20 +75,13 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 ## About Me
 
 {{< badge >}} Early experience {{< /badge >}}
-I have always been intrigued by games and computers.
-My fascination with the ability to create something out of nothing has been a driving force in my life.
-
-My first experience with programming was at the **age of 10**, and I have been hooked ever since.
-I then got my **first job at 16** as a **Junior Backend Developer**.
-My early introduction to programming has given me a head start in my studies and career.
+My first experience with programming was at the age of **11**, and I have been hooked ever since.
+I then got my first job at **16** as a *Junior Backend Developer*.
 
 {{< badge >}} Education {{< /badge >}}
-Studying **Computer Science** at [KTH Royal Institute of Technology](https://www.kth.se/en) has been a dream come true.
-I've learned so much and met so many amazing students and professors.
-Already as an **undergraduate**, I worked as a **Teaching Assistant** and **Research Assistant** along with doctoral students and professors in various courses and projects. Even **taught my fellow student colleagues** working as a TA while taking the courses myself.
-
-{{< badge >}} Interests {{< /badge >}}
-My curiosity spans many areas, including **Competitive Programming**, **CTF**, **Hackathons**, **Startups**, **Game Dev**, **Cybersecurity**, **Systems Architecture**, **Mathematics**, **Computer Science**, **Algorithms**, **Category Theory**, **Type Theory**, **Programming Languages**, and ***much, much* more**.
+When I studied **Computer Science** at [KTH Royal Institute of Technology](https://www.kth.se/en) in Stockholm, I met many like-minded individuals and professors.
+I worked both as a **Teaching Assistant** in various courses and a **Research Assistant** along with doctoral students and professors, while I was still an **undergraduate** student.
+Even **taught my fellow student colleagues** working as a TA, *while taking the courses myself at the same time*.
 
 {{< badge >}} Career {{< /badge >}}
 After graduating, I have been working as a self-employed **Software Developer** and **IT Specialist** consultant at [Willsoft](https://www.linkedin.com/company/willsoft-it) where I've had the opportunity to work with many projects and clients.

@@ -68,8 +68,8 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 <br/>
 
 {{< lead >}}
-&mdash; As a skilled programmer passionate about technology and learning,
-I aim to bring **value** and **impact** through consistent **quality** and **innovation**.
+> "As a skilled programmer,
+> I aim to bring **value** and **impact** through consistent **quality** and **innovation**."
 {{< /lead >}}
 
 <hr/>

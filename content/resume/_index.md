@@ -1,5 +1,5 @@
 +++
-title = "William Rågstad - Resume"
+title = "William Rågstad"
 date = 2024-01-07
 +++
 

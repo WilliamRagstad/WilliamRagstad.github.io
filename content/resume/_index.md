@@ -14,6 +14,9 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
     <div class="flex flex-col items-center mx-auto px-2">
       <img class="mt-0 mb-0 border rounded-full medium-zoom-image" width="130" alt="William Rågstad" src="picture.jpg">
       <span class="mt-2">William Rågstad</span>
+      <span class="-mt-1 text-sm text-neutral-500 dark:text-neutral-400">
+        Stockholm, Sweden
+      </span>
     </div>
     <div class="mx-auto px-2">
       <div

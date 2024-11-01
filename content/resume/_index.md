@@ -8,8 +8,11 @@ date = 2024-01-07
 Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security Specialist
 {{< /lead >}}
 
-<div
-  class="border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative  mx-auto max-w-xl">
+<div id="all-content">
+<div id="about-content">
+
+<div id="contact-card"
+  class="border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative mx-auto max-w-xl">
   <div class="px-2 py-4 flex justify-between items-center flex-wrap">
     <div class="flex flex-col items-center mx-auto px-2">
       <img class="mt-0 mb-0 border rounded-full medium-zoom-image" width="130" alt="William Rågstad" src="picture.jpg">
@@ -65,7 +68,6 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
   </div>
 </div>
 
-<br/>
 
 {{< lead >}}
 > "As a skilled programmer,
@@ -331,6 +333,9 @@ If you want to see more of my projects, check out:
 {{<icon "comment" >}}&nbsp;&nbsp;Blog Posts
 {{< /button >}}
 
+</div>
+<div id="job-content">
+
 ## Experience
 
 {{< timeline >}}
@@ -429,6 +434,9 @@ As well as other software systems engineering-related work.
 
 {{< /timeline >}}
 
+</div>
+</div>
+
 <script>
     let openDetails = [];
     let dark_mode;
@@ -464,6 +472,35 @@ As well as other software systems engineering-related work.
 </script>
 
 <style>
+  /* Layout */
+
+  @media (min-width: 800px) {
+    #all-content {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+    }
+    #job-content > h2 {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 799px) {
+    #all-content {
+      padding: 0 5%;
+    }
+  }
+
+  #about-content {
+    flex: 5;
+  }
+
+  #job-content {
+    flex: 4;
+  }
+
+  /* Print styles */
+
   table.contact {
     line-height: 0.75rem;
   }

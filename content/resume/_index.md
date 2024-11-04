@@ -248,7 +248,7 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
   </h2>
 </summary>
 
-My curiosity spans many areas, including **Competitive Programming**, **CTF**, **Hackathons**, **Startups**, **Game Dev**, **Cybersecurity**, **Systems Architecture**, **Mathematics**, **Computer Science**, **Algorithms**, **Category Theory**, **Type Theory**, **Programming Languages**, and ***much, much* more**.
+I am interested in many areas including **CTFs**, **Competitive Programming**, **Cybersecurity**, **Programming Languages**, **Type Theory**, and *much more*.
 
 ### Practical Skills
 

@@ -415,7 +415,6 @@ As well as other software systems engineering-related work.
 </div>
 </div>
 
-Tags:
 {{< keywordList >}}
     {{< keyword >}}resume{{< /keyword >}}
     {{< keyword >}}cv{{< /keyword >}}

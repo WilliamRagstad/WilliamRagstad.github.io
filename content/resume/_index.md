@@ -332,6 +332,7 @@ If you want to see more of my projects, check out:
 
 ## Experience
 
+<div id="experience_list">
 {{< timeline >}}
 
 {{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
@@ -411,6 +412,7 @@ As well as other software systems engineering-related work.
 {{< /timelineItem >}}
 
 {{< /timeline >}}
+</div>
 
 </div>
 </div>
@@ -442,6 +444,7 @@ As well as other software systems engineering-related work.
     let openDetails = [];
     let dark_mode;
     let contact_card_classes = document.querySelector('#contact-card').className;
+	let experience_card_classes = document.querySelector('#experience_list > ol > li > div > .block').className;
     // Remove ".max-w-prose" from #all-content parent element
     document.querySelector('#all-content').parentElement.classList.remove('max-w-prose');
     // When the user prints the page, open all details elements
@@ -460,6 +463,17 @@ As well as other software systems engineering-related work.
             p.style.display = 'none';
         });
         document.querySelector('#contact-card').className = 'mx-auto max-w-xl';
+		// For each experience card, remove the border and padding
+		document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
+			block.className = 'block p-4';
+			// Hide any image in > p > img
+			block.querySelectorAll('p > img').forEach(function(img) {
+				img.style.display = 'none';
+			});
+		});
+		// Show print_info
+		document.querySelector('#print_info').classList.remove('hidden');
+		document.querySelector('#non_print_info').classList.add('hidden');
     };
     // When the user exits print preview, close all details elements
     window.onafterprint = function() {
@@ -474,6 +488,17 @@ As well as other software systems engineering-related work.
             p.style.display = 'block';
         });
         document.querySelector('#contact-card').className = contact_card_classes;
+		// For each experience card, reset the classes
+		document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
+			block.className = experience_card_classes;
+			// Show any image in > p > img
+			block.querySelectorAll('p > img').forEach(function(img) {
+				img.style.display = 'block';
+			});
+		});
+		// Hide print_info
+		document.querySelector('#print_info').classList.add('hidden');
+		document.querySelector('#non_print_info').classList.remove('hidden');
     };
 </script>
 
@@ -511,15 +536,15 @@ As well as other software systems engineering-related work.
     line-height: 0.75rem;
   }
 
-  li > div > .block > div > h2 {
+  li > div > .block.rounded-lg > div > h2 {
     margin-bottom: 0;
   }
-  li > div > .block > p {
+  li > div > .block.rounded-lg > p {
     margin-top: 0;
     margin-bottom: 0;
   }
-  li > div > .block {
-    border-width: 2px;
+  li > div > .block.rounded-lg {
+    border-width: 1px;
     border-color: rgba(var(--color-neutral-700), var(--tw-border-opacity));
   }
 

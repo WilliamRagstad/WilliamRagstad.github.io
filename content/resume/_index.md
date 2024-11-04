@@ -79,6 +79,7 @@ My first experience with programming was at the age of **11**, and I have been h
 I then got my first job at **16** as a *Junior Backend Developer*.
 
 {{< badge >}} Education {{< /badge >}}
+During my last years at high school, I had the chance to start my university studies **early** at [Örebro University](https://www.oru.se/utbildning/program/civilingenjor-datateknik/).
 When I studied **Computer Science** at [KTH Royal Institute of Technology](https://www.kth.se/en) in Stockholm, I met many like-minded individuals and professors.
 I worked both as a **Teaching Assistant** in various courses and a **Research Assistant** along with doctoral students and professors, while I was still an **undergraduate** student.
 Even **taught my fellow student colleagues** working as a TA, *while taking the courses myself at the same time*.
@@ -398,7 +399,7 @@ Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="University" badge="2017 - 2019" subheader="Örebro University" >}}
-Algorithms and Data Structures on masters level in Computer Science at Örebro University <b>in parallel with High School</b>.
+Algorithms and Data Structures on <b>masters level</b> in Computer Science at [Örebro University](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) <b>in parallel with High School</b>.
 
 <img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}

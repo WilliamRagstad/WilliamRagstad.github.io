@@ -346,7 +346,7 @@ If you are interested to see all of my projects, check them out here:
 
 IT specialist at a Swedish cyber defense government agency and expert authority under of the <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry Department of Defence</a>.
 
-<img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Software Consultant" badge="2021" subheader="Founder of Willsoft" >}}
@@ -360,14 +360,14 @@ I started my own consulting company, <a href="https://www.linkedin.com/company/w
   <li>Provided technical support and training to end-users.</li>
 </ul> -->
 
-<img src="experience/willsoft.jpg" alt="Willsoft" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/willsoft.jpg" alt="Willsoft" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Software Developer" badge="2021 - 2022" subheader="Alex Therapeutics" >}}
 Worked as a Software Developer at <a href="https://www.alextherapeutics.com/" target="_blank">Alex Therapeutics</a> in the development of a digital KBT therapy platform for mental health.
 I worked with the main full-stack product (<b>React</b> frontend and <b>Java Spring Boot</b>) and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations.
 
-<img src="experience/alex.png" alt="Alex Therapeutics" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 20px" />
+<img src="experience/alex.png" alt="Alex Therapeutics" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Research Assistant" badge="2020 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
@@ -375,7 +375,7 @@ I worked with the main full-stack product (<b>React</b> frontend and <b>Java Spr
 Contributed to the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the <b>core compiler backend team</b> led by <a href="https://people.kth.se/~dbro/" target="_blank">David Broman</a> as an <b>undergraduate student</b>.
 I developed the compiler to extend the application domain to include <b>web browser and native JavaScript execution environments</b>.
 
-<img src="experience/miking.jpg" alt="Miking" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/miking.jpg" alt="Miking" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Teaching Assistant" badge="2019 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
@@ -388,14 +388,14 @@ Working as a Teaching Assistant (TA) in:
 <a href="https://www.kth.se/social/course/DH2642/" target="_blank">Interaction programming and dynamic web</a>,
 <a href="https://www.kth.se/social/course/DM1595/" target="_blank">Program Development for Interactive Media</a>,
 
-<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Private Tutor" badge="2019 - 2022" subheader="Superprof" >}}
 Private tutoring in Programming and Mathematics at <a href="https://www.superprof.se/kurser/programmering/sweden/" target="_blank">Superprof</a> for high school and university students in Stockholm.
 
-<img src="experience/superprof.png" alt="Superprof" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
-<img src="experience/superprof.svg" alt="Superprof" width="100%" style="height: 50px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 10px; margin: 0" />
+<img src="experience/superprof.png" alt="Superprof" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+<img src="experience/superprof.svg" alt="Superprof" width="100%" style="height: 50px; object-fit: contain; margin: 0; background: #f2f2f2; padding: 10px;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Full-Stack Consultant" badge="2019" subheader="Connected Minds" >}}
@@ -403,13 +403,13 @@ Full-Stack Developer at <b>Connected Minds</b> a Swedish consulting company.
 I worked on the official website using <b>React</b> and <b>Node.js</b> and integrated a <b>CMS</b> for easy updates.
 Experience with <b>UI/UX design</b>, <b>SEO optimization</b> and <b>Google Analytics</b>.
 
-<img src="experience/connected-minds.png" alt="Connected Minds" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 20px" />
+<img src="experience/connected-minds.png" alt="Connected Minds" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="University" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
 Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at the Department of the School of Electrical Engineering and Computer Science (EECS).
 
-<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Systems Engineer Consultant" badge="2017" subheader="Fairyscope" >}}
@@ -417,14 +417,14 @@ Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648
 <a href="https://www.youtube.com/watch?v=ezsheNColAk" target="_blank">Fairyscope</a>, a Swedish startup that developed a mobile app and cloud service for sharing information at exhibitions and trade fairs.
 I developed <b>backend</b> systems and <b>APIs</b> for generating custom stylized QR codes and managing user data.
 
-<img src="experience/fairyscope.png" alt="Fairyscope" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 10px" />
+<img src="experience/fairyscope.png" alt="Fairyscope" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 10px" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="University" badge="2017 - 2019" subheader="Örebro University" >}}
 <b>Studied on masters level</b> in Computer Science at <a href="https://www.oru.se/utbildning/program/civilingenjor-datateknik/" target="_blank">Örebro University</a> <b>in parallel with High School</b>.
 Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering</b>, <b>Operating Systems</b>, <b>Computer Networks</b>, and <b>Mathematics</b>.
 
-<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
+<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Junior Backend Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
@@ -432,7 +432,7 @@ First programming job at <a href="https://www.mjukvarufabriken.se/" target="_bla
 I worked on a mobile app in <b>C#</b> and <b>ASP.NET</b> for <a href="https://www.heabent.se/" target="_blank">HEAB</a> to make routine vehicle inspections easier.
 As well as other software systems engineering-related work.
 
-<img src="experience/mjukvarufabriken.png" alt="ÖU" width="100%" style="height: 100px; object-fit: contain; margin: 2rem 0 0 0; background: #f2f2f2; padding: 20px" />
+<img src="experience/mjukvarufabriken.png" alt="ÖU" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
 {{< /timelineItem >}}
 
 {{< /timeline >}}

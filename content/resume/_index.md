@@ -417,6 +417,23 @@ As well as other software systems engineering-related work.
 </div>
 </div>
 
+<div id="print_info" class="hidden">
+
+View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
+
+</div>
+
+<div id="non_print_info">
+
+<span onclick="window.print();return false;">
+{{< button href="#">}}
+{{<icon "download" >}}&nbsp;Download or Print Resume&nbsp;
+{{< /button >}}
+</span>
+
+</div>
+
+<div class="hidden">
 {{< keywordList >}}
     {{< keyword >}}resume{{< /keyword >}}
     {{< keyword >}}cv{{< /keyword >}}
@@ -439,6 +456,7 @@ As well as other software systems engineering-related work.
     {{< keyword >}}technologies{{< /keyword >}}
     {{< keyword >}}specializations{{< /keyword >}}
 {{< /keywordList >}}
+</div>
 
 <script>
     let openDetails = [];

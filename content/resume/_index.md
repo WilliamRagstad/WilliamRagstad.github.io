@@ -415,6 +415,30 @@ As well as other software systems engineering-related work.
 </div>
 </div>
 
+Tags:
+{{< keywordList >}}
+    {{< keyword >}}resume{{< /keyword >}}
+    {{< keyword >}}cv{{< /keyword >}}
+    {{< keyword >}}curriculum vitae{{< /keyword >}}
+    {{< keyword >}}career{{< /keyword >}}
+    {{< keyword >}}work{{< /keyword >}}
+    {{< keyword >}}experience{{< /keyword >}}
+    {{< keyword >}}research{{< /keyword >}}
+    {{< keyword >}}teaching{{< /keyword >}}
+    {{< keyword >}}tutoring{{< /keyword >}}
+    {{< keyword >}}university{{< /keyword >}}
+    {{< keyword >}}college{{< /keyword >}}
+    {{< keyword >}}school{{< /keyword >}}
+    {{< keyword >}}education{{< /keyword >}}
+    {{< keyword >}}consulting{{< /keyword >}}
+    {{< keyword >}}projects{{< /keyword >}}
+    {{< keyword >}}skills{{< /keyword >}}
+    {{< keyword >}}programming{{< /keyword >}}
+    {{< keyword >}}languages{{< /keyword >}}
+    {{< keyword >}}technologies{{< /keyword >}}
+    {{< keyword >}}specializations{{< /keyword >}}
+{{< /keywordList >}}
+
 <script>
     let openDetails = [];
     let dark_mode;

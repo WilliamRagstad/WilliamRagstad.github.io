@@ -336,7 +336,7 @@ If you want to see more of my projects, check out:
 
 {{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
 
-IT specialist at a Swedish government agency under the <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry of Defence</a>.
+IT specialist at a Swedish cyber defense government agency and expert authority under of the <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry Department of Defence</a>.
 
 <img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 100px; object-fit: cover; margin: 2rem 0 0 0;" />
 {{< /timelineItem >}}

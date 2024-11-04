@@ -462,7 +462,7 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
     let openDetails = [];
     let dark_mode;
     let contact_card_classes = document.querySelector('#contact-card').className;
-	let experience_card_classes = document.querySelector('#experience_list > ol > li > div > .block').className;
+    let experience_card_classes = document.querySelector('#experience_list > ol > li > div > .block').className;
     // Remove ".max-w-prose" from #all-content parent element
     document.querySelector('#all-content').parentElement.classList.remove('max-w-prose');
     // When the user prints the page, open all details elements
@@ -481,17 +481,17 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
             p.style.display = 'none';
         });
         document.querySelector('#contact-card').className = 'mx-auto max-w-xl';
-		// For each experience card, remove the border and padding
-		document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
-			block.className = 'block p-4';
-			// Hide any image in > p > img
-			block.querySelectorAll('p > img').forEach(function(img) {
-				img.style.display = 'none';
-			});
-		});
-		// Show print_info
-		document.querySelector('#print_info').classList.remove('hidden');
-		document.querySelector('#non_print_info').classList.add('hidden');
+        // For each experience card, remove the border and padding
+        document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
+            block.className = 'block p-4';
+            // Hide any image in > p > img
+            block.querySelectorAll('p > img').forEach(function(img) {
+                img.style.display = 'none';
+            });
+        });
+        // Show print_info
+        document.querySelector('#print_info').classList.remove('hidden');
+        document.querySelector('#non_print_info').classList.add('hidden');
     };
     // When the user exits print preview, close all details elements
     window.onafterprint = function() {
@@ -506,17 +506,17 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
             p.style.display = 'block';
         });
         document.querySelector('#contact-card').className = contact_card_classes;
-		// For each experience card, reset the classes
-		document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
-			block.className = experience_card_classes;
-			// Show any image in > p > img
-			block.querySelectorAll('p > img').forEach(function(img) {
-				img.style.display = 'block';
-			});
-		});
-		// Hide print_info
-		document.querySelector('#print_info').classList.add('hidden');
-		document.querySelector('#non_print_info').classList.remove('hidden');
+        // For each experience card, reset the classes
+        document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
+            block.className = experience_card_classes;
+            // Show any image in > p > img
+            block.querySelectorAll('p > img').forEach(function(img) {
+                img.style.display = 'block';
+            });
+        });
+        // Hide print_info
+        document.querySelector('#print_info').classList.add('hidden');
+        document.querySelector('#non_print_info').classList.remove('hidden');
     };
 </script>
 

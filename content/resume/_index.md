@@ -294,10 +294,10 @@ View some of my featured projects and contributions below.
   <a href="https://lento-lang.org/" target="_blank"><img alt="Lento-lang" src="https://avatars.githubusercontent.com/u/79858627" class="nozoom w-1/2"></a>
   <a href="https://webx.sh/" target="_blank"><img alt="WebX" src="https://github.com/webx-net/webx/raw/main/assets/webx.png" class="nozoom"></a>
   <a href="https://mini-lang.org/" target="_blank"><img alt="mini-lang" src="https://raw.githubusercontent.com/mini-lang/mini-lang/main/assets/logo_small.png" class="nozoom"></a>
+  <a href="https://github.com/mkhan45/RustScript2" target="_blank"><img alt="RustScript" src="https://raw.githubusercontent.com/WilliamRagstad/RustScript/main/assets/logo.png" class="nozoom"></a>
   <a href="https://quansycms.wordpress.com/" target="_blank"><img alt="Quansy" src="https://quansycms.wordpress.com/wp-content/uploads/2019/06/cropped-logo-1.png" class="nozoom"></a>
   <a href="https://github.com/WilliamRagstad/Font-Manager" target="_blank"><img alt="Font Manager" src="https://raw.githubusercontent.com/WilliamRagstad/WilliamRagstad/main/img/font_manager.png" class="nozoom"></a>
   <!-- <a href="https://pace-kit.com/" target="_blank"><img alt="PACE" src="https://pace-kit.com/images/logo_hu3131d8fe39f92e2fc8fb03ff52ab8ed4_284270_320x0_resize_q80_h2_lanczos_3.webp" class="nozoom"></a> -->
-  <a href="https://github.com/mkhan45/RustScript2" target="_blank"><img alt="RustScript" src="https://raw.githubusercontent.com/WilliamRagstad/RustScript/main/assets/logo.png" class="nozoom"></a>
   <!-- <a href="https://github.com/APClib" target="_blank"><img alt="APC Lib" src="https://avatars.githubusercontent.com/u/69253022?s=200&v=4" class="nozoom w-1/2"></a> -->
   <!-- <a href="https://github.com/WilliamRagstad/AFK-Script" target="_blank"><img alt="AFK Script" src="https://github.com/WilliamRagstad/AFK-Script/raw/master/AFK-Script-Interpreter/icon.png" class="nozoom w-1/2"></a> -->
   <a href="https://github.com/WilliamRagstad/Regfuz" target="_blank"><img alt="Regfuz" src="https://raw.githubusercontent.com/WilliamRagstad/Regfuz/main/logo.png" class="nozoom"></a>
@@ -313,7 +313,7 @@ View some of my featured projects and contributions below.
   <a href="https://github.com/WilliamRagstad/NeatMathCore" target="_blank"><img alt="NeatMathCore" src="https://github.com/WilliamRagstad/NeatMathCore/raw/master/assets/logo.png" class="nozoom"></a> -->
 </div>
 
-If you want to see more of my projects, check out:
+If you are interested to see all of my projects, check them out here:
 
 {{< button href="/projects/" target="_blank" >}}
 {{<icon "code" >}}&nbsp;&nbsp;Featured Projects

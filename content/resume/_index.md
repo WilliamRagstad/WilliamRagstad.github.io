@@ -94,7 +94,7 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
 
 <ul class="highlights_list">
       <li>
-          <b><em>Creator</em>, Programming Languages</b>: Designed and implemented the languages <a href="https://lento-lang.org/" target="_blank">Lento</a>, <a href="https://webx.sh/" target="_blank">Web X</a>, and <a href="https://www.mini-lang.org/" target="_blank">mini</a>, among others.
+          <b><em>Creator</em>, Programming Languages</b>: Designed and implemented interpreters and compilers for my programming languages <a href="https://lento-lang.org/" target="_blank">Lento</a>, <a href="https://webx.sh/" target="_blank">Web X</a>, and <a href="https://www.mini-lang.org/" target="_blank">mini</a>, among others.
       </li>
       <li>
           <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Showcasing strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">Open-Source Software</a> development. Some have gained significant traction worldwide with <b>200,000+ Users</b>.

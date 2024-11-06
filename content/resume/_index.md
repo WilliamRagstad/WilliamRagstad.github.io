@@ -157,7 +157,7 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="padding: 3px" alt="logo"/> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML / CSS <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="logo"/> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
-  <div><img class="lang-logo" src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-27.png" alt="logo"/>  SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div><img class="lang-logo" src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-27.png" style="padding: 3px" alt="logo"/>  SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/66/F_Sharp_logo.svg" alt="logo"/>  F# <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
   <div><img class="lang-logo color" src="https://blog.jasonkaniekete.fr/content/images/2021/12/elixir.png" alt="logo"/>  Elixir <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/1841483?s=280&v=4" style="padding: 2px" alt="logo"/>  OCaml <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
@@ -637,7 +637,6 @@ let openDetails = [];
     width: 1.5rem;
     height: 1.5rem;
     margin: 0 0.2rem 0 0;
-    filter: saturate(1.5) brightness(0.95) contrast(0.9);
   }
 
   .dark:not(.print) .lang-logo:not(.color) {

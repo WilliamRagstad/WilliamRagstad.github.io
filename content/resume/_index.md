@@ -177,6 +177,8 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
   <div><br/> &nbsp; + more </div>
 </div>
 
+<div id="want_to_learn">
+
 ### Want to Learn
 
 <div class="learn_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
@@ -211,6 +213,8 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
   <div><img class="lang-logo color" src="https://calebstanford.com/img/2018/coq-vector-logo/coq-logo-large.png" style="padding: 0 3px" alt="logo"/> Coq</div>
   <div><img class="lang-logo color" src="https://hol-theorem-prover.org/images/small-logo.gif" style="padding: 0 1px" alt="logo"/> HOL</div>
   <div>&nbsp; + more </div>
+</div>
+
 </div>
 
 </details>
@@ -699,6 +703,15 @@ let openDetails = [];
   .print #all-content h3.group {
     margin-top: 1em;
     margin-bottom: 0.5rem;
+  }
+
+  .print #want_to_learn {
+    display: none;
+  }
+
+  .print .projects_list {
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   }
 
   .print #experience_list > ol {

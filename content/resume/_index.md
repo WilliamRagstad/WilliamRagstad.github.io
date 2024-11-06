@@ -695,6 +695,10 @@ let openDetails = [];
     margin-top: 1em;
   }
 
+  .print #all-content details > summary::marker {
+    color: transparent;
+  }
+
   .print #all-content h2.group {
     margin-top: 1.25em;
     margin-bottom: 0.5rem;

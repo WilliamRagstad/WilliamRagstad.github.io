@@ -737,7 +737,11 @@ let openDetails = [];
   }
 
   .print #experience_list li .block > .flex {
-    margin-bottom: -0.5rem;
+    margin-bottom: -1.75rem;
+  }
+
+  .print #experience_list li .block > .mt-0 {
+    text-align: center;
   }
 
   .print #experience_list li .block {

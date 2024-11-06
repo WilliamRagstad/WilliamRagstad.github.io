@@ -517,15 +517,35 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
         document.querySelector('#contact-card').className = 'mx-auto max-w-xl';
         // For each experience card, remove the border and padding
         document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
-            block.className = 'block p-4';
+            block.className = 'block';
             // Hide any image in > p > img
             block.querySelectorAll('p > img').forEach(function(img) {
                 img.style.display = 'none';
             });
+
+            // Remove bottom margin from h2 elements
+            block.querySelectorAll('h2.mt-0').forEach(function(h2) {
+                h2.style.marginBottom = '0';
+            });
+        });
+        // Add a negative margin to all experience li elements
+        document.querySelectorAll('#experience_list > ol > li').forEach(function(li) {
+            li.style.paddingLeft = '0';
         });
         // Show print_info
         document.querySelector('#print_info').classList.remove('hidden');
         document.querySelector('#non_print_info').classList.add('hidden');
+        // Make text 80% size
+        document.querySelector('#all-content').style.fontSize = '80%';
+        // Add negative margin to contact-card
+        document.querySelector('#contact-card').style.margin = '-1.5rem 0';
+        // Remove experience list left padding and graphical bullet points
+        document.querySelector('#experience_list > ol').style.paddingLeft = '0';
+        document.querySelector('#experience_list > ol').style.borderLeft = 'none';
+        // Hide the timeline icons
+        document.querySelectorAll('#experience_list > ol > li > div > .rounded-full').forEach(function(icon) {
+            icon.style.display = 'none';
+        });
     };
     // When the user exits print preview, close all details elements
     window.onafterprint = function() {
@@ -548,9 +568,26 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
                 img.style.display = 'block';
             });
         });
+        // Reset margin on all experience li elements
+        document.querySelectorAll('#experience_list > ol > li').forEach(function(li) {
+            li.style.paddingLeft = '';
+        });
         // Hide print_info
         document.querySelector('#print_info').classList.add('hidden');
         document.querySelector('#non_print_info').classList.remove('hidden');
+        // Make text 100% size
+        document.querySelector('#all-content').style.fontSize = '';
+        // Reset text size
+        document.querySelector('#all-content').style.fontSize = '';
+        // Reset margin on contact-card
+        document.querySelector('#contact-card').style.margin = '';
+        // Reset experience list left padding and graphical bullet points
+        document.querySelector('#experience_list > ol').style.paddingLeft = '';
+        document.querySelector('#experience_list > ol').style.borderLeft = '';
+        // Show the timeline icons
+        document.querySelectorAll('#experience_list > ol > li > div > .rounded-full').forEach(function(icon) {
+            icon.style.display = 'flex';
+        });
     };
 </script>
 

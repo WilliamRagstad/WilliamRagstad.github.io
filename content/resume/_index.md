@@ -207,6 +207,7 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
 
 </details>
 
+<!--
 <details class="mt-12">
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
@@ -291,6 +292,7 @@ I am interested in many areas including **CTFs**, **Competitive Programming**, *
 </div>
 
 </details>
+-->
 
 ## Projects
 
@@ -302,7 +304,7 @@ View some of my featured projects and contributions below.
   <a href="https://webx.sh/" target="_blank"><img alt="WebX" src="https://github.com/webx-net/webx/raw/main/assets/webx.png" class="nozoom"></a>
   <a href="https://mini-lang.org/" target="_blank"><img alt="mini-lang" src="https://raw.githubusercontent.com/mini-lang/mini-lang/main/assets/logo_small.png" class="nozoom"></a>
   <a href="https://github.com/mkhan45/RustScript2" target="_blank"><img alt="RustScript" src="https://raw.githubusercontent.com/WilliamRagstad/RustScript/main/assets/logo.png" class="nozoom"></a>
-  <a href="https://quansycms.wordpress.com/" target="_blank"><img alt="Quansy" src="https://quansycms.wordpress.com/wp-content/uploads/2019/06/cropped-logo-1.png" class="nozoom"></a>
+  <a href="https://quansycms.wordpress.com/home/" target="_blank"><img alt="Quansy" src="https://quansycms.wordpress.com/wp-content/uploads/2019/06/cropped-logo-1.png" class="nozoom"></a>
   <a href="https://github.com/WilliamRagstad/Font-Manager" target="_blank"><img alt="Font Manager" src="https://raw.githubusercontent.com/WilliamRagstad/WilliamRagstad/main/img/font_manager.png" class="nozoom"></a>
   <!-- <a href="https://pace-kit.com/" target="_blank"><img alt="PACE" src="https://pace-kit.com/images/logo_hu3131d8fe39f92e2fc8fb03ff52ab8ed4_284270_320x0_resize_q80_h2_lanczos_3.webp" class="nozoom"></a> -->
   <!-- <a href="https://github.com/APClib" target="_blank"><img alt="APC Lib" src="https://avatars.githubusercontent.com/u/69253022?s=200&v=4" class="nozoom w-1/2"></a> -->

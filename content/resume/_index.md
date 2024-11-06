@@ -363,7 +363,7 @@ IT specialist at a Swedish cyber defense government agency and expert authority 
 <img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="Software Consultant" badge="2021" subheader="Founder of Willsoft" >}}
+{{< timelineItem icon="code" header="Software Consultant" badge="2021" subheader="Willsoft" >}}
 I started my own consulting company, <a href="https://www.linkedin.com/company/willsoft-it" target="_blank">Willsoft</a>, providing varying IT and software development services to small and medium-sized businesses.
 
 <!-- <ul>

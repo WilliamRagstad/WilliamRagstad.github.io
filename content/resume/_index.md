@@ -108,10 +108,10 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
         <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
     </li>
     <li>
-        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 23, 24, 25</b>: Technical project manager responsible for the official website, competition infrastructure, and some challenges.
+        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 23, 24, 25</b>: Technical project manager for the website, infrastructure, and challenges.
     </li>
     <li>
-        <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> CTF Team</b>: Advanced problem-solving in reverse engineering, web, network, binary exploitation, cryptography, and more.
+        <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> Team</b>: Expertise in reverse engineering, web, network, binary exploitation, cryptography, and more.
     </li>
     <li>
         <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
@@ -123,7 +123,7 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
         <b><em>Member</em>, <a href="https://www.sigplan.org/" target="_blank">ACM SIGPLAN</a></b>: Association for Computing Machinery's Special Interest Group on Programming Languages.
     </li>
     <li>
-        <b><em>Board member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Participated in weekly meetups and held presentations on various programming topics.
+        <b><em>Board member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Attended weekly meetups and presented on programming topics.
     </li>
 </ul>
 </details>

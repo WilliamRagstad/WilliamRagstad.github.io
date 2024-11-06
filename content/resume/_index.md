@@ -92,7 +92,7 @@ Currently I'm deep diving into **Programming Language Design**, **Type Theory**,
 I am a **creative** **problem solver** enjoying new **challenges** and **learning** opportunities.
 trying to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and generally **open-minded**.
 
-<details class="mt-12" open>
+<details open>
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
     Highlights
@@ -129,7 +129,7 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
 </ul>
 </details>
 
-<details class="mt-12" open>
+<details open>
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
     Skills
@@ -153,7 +153,7 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="logo"/> C <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="logo"/> Python <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="logo"/> Java <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div><img class="lang-logo" src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg" alt="logo"/>  x86/x64 Assembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div><img class="lang-logo" src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg" alt="logo"/> Assembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" style="padding: 3px" alt="logo"/> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="padding: 3px" alt="logo"/> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML / CSS <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
@@ -216,7 +216,7 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
 </details>
 
 <!--
-<details class="mt-12">
+<details>
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
     Technologies
@@ -257,7 +257,7 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
 
 </details>
 
-<details class="mt-12">
+<details>
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">
     Specializations
@@ -493,14 +493,13 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 </div>
 
 <script>
-    let openDetails = [];
-    let dark_mode;
-    let contact_card_classes = document.querySelector('#contact-card').className;
-    let experience_card_classes = document.querySelector('#experience_list > ol > li > div > .block').className;
-    // Remove ".max-w-prose" from #all-content parent element
     document.querySelector('#all-content').parentElement.classList.remove('max-w-prose');
+
+let openDetails = [];
+    let dark_mode;
     // When the user prints the page, open all details elements
     window.onbeforeprint = function() {
+        document.querySelector('html').classList.add('print');
         dark_mode = document.querySelector('html').classList.contains('dark');
         document.querySelector('html').classList.remove('dark'); // Ensure light mode for print
         openDetails = [];
@@ -508,85 +507,13 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
             if (detail.hasAttribute('open')) openDetails.push(detail);
             detail.setAttribute('open', '');
         });
-        // Hide unnecessary elements
-        document.querySelector('.main-menu').style.display = 'none';
-        document.querySelector('#top-scroller').style.display = 'none';
-        document.querySelectorAll('p.py-8.border-t').forEach(function(p) {
-            p.style.display = 'none';
-        });
-        document.querySelector('#contact-card').className = 'mx-auto max-w-xl';
-        // For each experience card, remove the border and padding
-        document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
-            block.className = 'block';
-            // Hide any image in > p > img
-            block.querySelectorAll('p > img').forEach(function(img) {
-                img.style.display = 'none';
-            });
-
-            // Remove bottom margin from h2 elements
-            block.querySelectorAll('h2.mt-0').forEach(function(h2) {
-                h2.style.marginBottom = '0';
-            });
-        });
-        // Add a negative margin to all experience li elements
-        document.querySelectorAll('#experience_list > ol > li').forEach(function(li) {
-            li.style.paddingLeft = '0';
-        });
-        // Show print_info
-        document.querySelector('#print_info').classList.remove('hidden');
-        document.querySelector('#non_print_info').classList.add('hidden');
-        // Make text 80% size
-        document.querySelector('#all-content').style.fontSize = '80%';
-        // Add negative margin to contact-card
-        document.querySelector('#contact-card').style.margin = '-1.5rem 0';
-        // Remove experience list left padding and graphical bullet points
-        document.querySelector('#experience_list > ol').style.paddingLeft = '0';
-        document.querySelector('#experience_list > ol').style.borderLeft = 'none';
-        // Hide the timeline icons
-        document.querySelectorAll('#experience_list > ol > li > div > .rounded-full').forEach(function(icon) {
-            icon.style.display = 'none';
-        });
     };
     // When the user exits print preview, close all details elements
     window.onafterprint = function() {
+        document.querySelector('html').classList.remove('print');
         document.querySelector('html').classList.toggle('dark', dark_mode); // Restore dark mode
         document.querySelectorAll('details').forEach(function(detail) {
             if (!openDetails.includes(detail)) detail.removeAttribute('open');
-        });
-        // Show elements again
-        document.querySelector('.main-menu').style.display = 'flex';
-        document.querySelector('#top-scroller').style.display = 'block';
-        document.querySelectorAll('p.py-8.border-t').forEach(function(p) {
-            p.style.display = 'block';
-        });
-        document.querySelector('#contact-card').className = contact_card_classes;
-        // For each experience card, reset the classes
-        document.querySelectorAll('#experience_list > ol > li > div > .block').forEach(function(block) {
-            block.className = experience_card_classes;
-            // Show any image in > p > img
-            block.querySelectorAll('p > img').forEach(function(img) {
-                img.style.display = 'block';
-            });
-        });
-        // Reset margin on all experience li elements
-        document.querySelectorAll('#experience_list > ol > li').forEach(function(li) {
-            li.style.paddingLeft = '';
-        });
-        // Hide print_info
-        document.querySelector('#print_info').classList.add('hidden');
-        document.querySelector('#non_print_info').classList.remove('hidden');
-        // Make text 100% size
-        document.querySelector('#all-content').style.fontSize = '';
-        // Reset text size
-        document.querySelector('#all-content').style.fontSize = '';
-        // Reset margin on contact-card
-        document.querySelector('#contact-card').style.margin = '';
-        // Reset experience list left padding and graphical bullet points
-        document.querySelector('#experience_list > ol').style.paddingLeft = '';
-        document.querySelector('#experience_list > ol').style.borderLeft = '';
-        // Show the timeline icons
-        document.querySelectorAll('#experience_list > ol > li > div > .rounded-full').forEach(function(icon) {
-            icon.style.display = 'flex';
         });
     };
 </script>
@@ -646,11 +573,12 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
   .highlights_list > * {
     /* margin: 0.5rem; */
     margin-left: 1.625rem;
+    margin-bottom: 0;
   }
 
   .skill_list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 0.5rem 1rem;
   }
 
@@ -709,7 +637,7 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
     filter: saturate(1.5) brightness(0.95) contrast(0.9);
   }
 
-  .dark .lang-logo:not(.color) {
+  .dark:not(.print) .lang-logo:not(.color) {
     filter: invert(1);
   }
 
@@ -717,5 +645,107 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
   div:has(> .block.icon) {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+
+  /* ==== Print styles ==== */
+
+  .print .main-menu {
+    display: none;
+  }
+
+  .print #top-scroller {
+    display: none;
+  }
+
+  .print section > p.py-8.border-t {
+    display: none;
+  }
+
+  .print footer {
+    display: none;
+  }
+
+  .print #contact-card {
+    /* Cancel out: border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative mx-auto max-w-xl */
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    margin: -1.75rem auto;
+  }
+
+  .print section > div > .lead {
+    margin-top: 0.5rem;
+  }
+
+  .print #all-content {
+    padding: 0;
+    font-size: 80%;
+  }
+
+  html:not(.print) #all-content details {
+    margin-top: 2em;
+  }
+
+  .print #all-content details {
+    margin-top: 1em;
+  }
+
+  .print #all-content h2.group {
+    margin-top: 1.25em;
+    margin-bottom: 0.5rem;
+  }
+
+  .print #all-content h3.group {
+    margin-top: 1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .print #experience_list > ol {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .print #experience_list h2 {
+    font-size: 1rem;
+  }
+
+  .print #experience_list li {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .print #experience_list li > div > .rounded-full {
+    display: none;
+  }
+
+  .print #experience_list li .block > .flex {
+    margin-bottom: -0.5rem;
+  }
+
+  .print #experience_list li .block {
+    /* Revert: p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words */
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    min-width: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+    word-break: break-word;
+    margin-bottom: 1.5rem;
+
+  }
+
+  .print #experience_list li .block > p > img {
+    display: none;
+  }
+
+  .print #print_info {
+    display: block;
+  }
+
+  .print #non_print_info {
+    display: none;
   }
 </style>

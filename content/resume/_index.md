@@ -79,10 +79,9 @@ My first experience with programming was at the age of **11**, and I have been h
 I then got my first job at **16** as a *Junior Backend Developer*.
 
 {{< badge >}} Education {{< /badge >}}
-During my last years at high school, I had the chance to start my university studies **early** at [Örebro University](https://www.oru.se/utbildning/program/civilingenjor-datateknik/).
-When I studied **Computer Science** at [KTH Royal Institute of Technology](https://www.kth.se/en) in Stockholm, I met many like-minded individuals and professors.
-I worked both as a **Teaching Assistant** in various courses and a **Research Assistant** along with doctoral students and professors, while I was still an **undergraduate** student.
-Even **taught my fellow student colleagues** working as a TA, *while taking the courses myself at the same time*.
+During my final high school years, I studied at [university](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) early.
+When at [KTH](https://www.kth.se/en), I worked as a **Teaching Assistant** and **Research Assistant** while still an **undergraduate** student.
+Even **teaching my student peers** as a TA, *while also taking the same classes myself*.
 
 {{< badge >}} Hobbies {{< /badge >}}
 I like to spend time with **family and friends**, play **online games**, work out at the **gym**, **track and field** athletics, **play the cello**, and reading **books** and **research papers**.\
@@ -103,13 +102,13 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
 
 <ul class="highlights_list">
     <li>
-        <b><em>Creator</em>, Programming Languages</b>: Designed and implemented interpreters and compilers for my programming languages <a href="https://lento-lang.org/" target="_blank">Lento</a>, <a href="https://webx.sh/" target="_blank">Web X</a>, and <a href="https://www.mini-lang.org/" target="_blank">mini</a>, among others.
+        <b><em>Creator</em>, Programming Languages</b>: Designed and implemented interpreters and compilers for <a href="https://lento-lang.org/" target="_blank">Lento</a>, <a href="https://webx.sh/" target="_blank">Web X</a>, and <a href="https://www.mini-lang.org/" target="_blank">mini</a>, among others.
     </li>
     <li>
-        <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Showcasing technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">Open-Source Software</a> development. Some have gained over <b>200,000+ users</b> worldwide.
+        <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
     </li>
     <li>
-        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning</a> CTF 23, 24, 25</b>: Technical project manager responsible for the official website, competition infrastructure and some challenges.
+        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 23, 24, 25</b>: Technical project manager responsible for the official website, competition infrastructure and some challenges.
     </li>
     <li>
         <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> CTF Team</b>: Advanced problem-solving in reverse engineering, web, network, binary exploitation, cryptography, and more.

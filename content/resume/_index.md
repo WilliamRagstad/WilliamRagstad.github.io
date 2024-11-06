@@ -462,9 +462,13 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 
 <div id="non_print_info">
 
+{{< button href="/resume/williamr.pdf" >}}
+{{<icon "download" >}}&nbsp;Download PDF&nbsp;
+{{< /button >}}
+&nbsp;
 <span onclick="window.print();return false;">
 {{< button href="#">}}
-{{<icon "download" >}}&nbsp;Download or Print Resume&nbsp;
+{{<icon "download" >}}&nbsp;Print Resume&nbsp;
 {{< /button >}}
 </span>
 

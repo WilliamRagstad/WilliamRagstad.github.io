@@ -691,7 +691,7 @@ let openDetails = [];
   }
 
   .print #all-content details {
-    margin-top: 1em;
+    margin-top: 1.5em;
   }
 
   .print #all-content details > summary::marker {
@@ -699,7 +699,7 @@ let openDetails = [];
   }
 
   .print #all-content h2.group {
-    margin-top: 1.25em;
+    margin-top: 1.5em;
     margin-bottom: 0.5rem;
   }
 

@@ -75,8 +75,7 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 ## About Me
 
 {{< badge >}} Early experience {{< /badge >}}
-My first experience with programming was at the age of **11**, and I have been hooked ever since.
-I then got my first job at **16** as a *Junior Backend Developer*.
+I began programming at the age of **11** and have been hooked ever since. I got my first job at **16**.
 
 {{< badge >}} Education {{< /badge >}}
 During my final high school years, I studied at [university](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) early.
@@ -84,12 +83,12 @@ When at [KTH](https://www.kth.se/en), I worked as a **Teaching Assistant** and *
 Even **teaching my student peers** as a TA, *while also taking the same classes myself*.
 
 {{< badge >}} Hobbies {{< /badge >}}
-I like to spend time with **family and friends**, play **online games**, work out at the **gym**, **track and field** athletics, **play the cello**, and reading **books** and **research papers**.\
-Currently I'm deep diving into **Programming Language Design**, **Type Theory**, and **Compiler Design**.
+I like to spend time with **family and friends**, play **online games**, work out at the **gym**, participate in **track and field** athletics, **play the cello**, and read **books** and **research papers**.\
+I'm deep-diving into **Programming Language Design**, **Type Theory**, and **Compiler Design**.
 
 {{< badge >}} Personality {{< /badge >}}
-I am a **creative** **problem solver** enjoying new **challenges** and **learning** opportunities.
-trying to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and generally **open-minded**.
+I am a **creative** **problem solver**  who enjoys new **challenges** and **learning** opportunities.
+I try to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and generally **open-minded**.
 
 <details open>
 <summary style="margin-left: -1.25rem;">
@@ -98,7 +97,8 @@ trying to be **considerate**, **kind**, **attentive**, **thorough**, **curious**
   </h2>
 </summary>
 
-I have participated in many **Competitive Programming** contests, **CTF** competitions, **Hackathons**, and **Startups**. I have also been a part of the **Swedish National Hacking Team** and the **RoyalRoppers** CTF team.
+I have participated in various **competitive programming** contests, **hackathons**, **startups**, and **CTF** competitions
+playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF teams.
 
 <ul class="highlights_list">
     <li>
@@ -108,7 +108,7 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
         <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
     </li>
     <li>
-        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 23, 24, 25</b>: Technical project manager responsible for the official website, competition infrastructure and some challenges.
+        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 23, 24, 25</b>: Technical project manager responsible for the official website, competition infrastructure, and some challenges.
     </li>
     <li>
         <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> CTF Team</b>: Advanced problem-solving in reverse engineering, web, network, binary exploitation, cryptography, and more.
@@ -117,13 +117,13 @@ I have participated in many **Competitive Programming** contests, **CTF** compet
         <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
     </li>
     <li>
-        <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> together with <a href="https://ctftime.org/team/114856" target="_blank">kalmarunionen</a> in <b>Denmark</b>.
+        <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> and <a href="https://ctftime.org/team/114856" target="_blank">Kalmarunionen</a> in <b>Denmark</b>.
     </li>
     <li>
         <b><em>Member</em>, <a href="https://www.sigplan.org/" target="_blank">ACM SIGPLAN</a></b>: Association for Computing Machinery's Special Interest Group on Programming Languages.
     </li>
     <li>
-        <b><em>Board member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Participated in weekly meetups and held presentations on various topics in programming.
+        <b><em>Board member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Participated in weekly meetups and held presentations on various programming topics.
     </li>
 </ul>
 </details>

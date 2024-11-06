@@ -84,6 +84,14 @@ When I studied **Computer Science** at [KTH Royal Institute of Technology](https
 I worked both as a **Teaching Assistant** in various courses and a **Research Assistant** along with doctoral students and professors, while I was still an **undergraduate** student.
 Even **taught my fellow student colleagues** working as a TA, *while taking the courses myself at the same time*.
 
+{{< badge >}} Hobbies {{< /badge >}}
+I like to spend time with **family and friends**, play **online games**, work out at the **gym**, **track and field** athletics, **play the cello**, and reading **books** and **research papers**.\
+Currently I'm deep diving into **Programming Language Design**, **Type Theory**, and **Compiler Design**.
+
+{{< badge >}} Personality {{< /badge >}}
+I am a **creative** **problem solver** enjoying new **challenges** and **learning** opportunities.
+trying to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and generally **open-minded**.
+
 <details class="mt-12" open>
 <summary style="margin-left: -1.25rem;">
   <h2 class="inline" style="margin-left: 0.33rem;">

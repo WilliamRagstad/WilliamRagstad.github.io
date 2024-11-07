@@ -193,6 +193,7 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/743164?s=160&v=4" style="padding: 3px" alt="logo"/> Julia</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" style="padding: 3px" alt="logo"/> Ruby</div>
   <div><img class="lang-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Ada_Mascot_with_slogan.png" style="padding: 1px" alt="logo"/> Ada</div>
+  <div><img class="lang-logo color" src="https://c3-lang.org/logo.svg" style="padding: 4px 0" alt="logo"/> C3</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/V_Logo_SVG.svg" alt="logo"/> V</div>
   <div><img class="lang-logo" src="https://harelang.org/mascot.png" alt="logo"/> Hare</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1200px-R_logo.svg.png" style="padding: 3px 0" alt="logo"/> R</div>

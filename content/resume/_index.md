@@ -105,19 +105,7 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
         <b><em>Creator</em>, Programming Languages</b>: Designed and implemented interpreters and compilers for <a href="https://lento-lang.org/" target="_blank">Lento</a>, <a href="https://webx.sh/" target="_blank">Web X</a>, and <a href="https://www.mini-lang.org/" target="_blank">mini</a>, among others.
     </li>
     <li>
-        <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
-    </li>
-    <li>
-        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 23, 24, 25</b>: Technical project manager for the website, infrastructure, and challenges.
-    </li>
-    <li>
-        <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> Team</b>: Expertise in reverse engineering, web, network, binary exploitation, cryptography, and more.
-    </li>
-    <li>
-        <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
-    </li>
-    <li>
-        <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> and <a href="https://ctftime.org/team/114856" target="_blank">Kalmarunionen</a> in <b>Denmark</b>.
+        <b><em>Compiler Team</em>, <a href="https://miking.org/" target="_blank">Miking</a></b>: A framework for constructing efficient domain-specific languages.
     </li>
     <li>
         <b><em>Member</em>, <a href="https://www.sigplan.org/" target="_blank">ACM SIGPLAN</a></b>: Association for Computing Machinery's Special Interest Group on Programming Languages.
@@ -125,6 +113,22 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
     <li>
         <b><em>Board member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Attended weekly meetups and presented on programming topics.
     </li>
+    <li>
+        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 23, 24, 25</b>: Technical project manager for the website, infrastructure, and challenges.
+    </li>
+    <li>
+        <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> Team</b>: Expertise in reverse engineering, web, network, binary exploitation, cryptography, and more.
+    </li>
+    <!--
+    <li>
+        <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
+    </li>
+	<li>
+        <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
+    </li>
+    <li>
+        <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> and <a href="https://ctftime.org/team/114856" target="_blank">Kalmarunionen</a> in <b>Denmark</b>.
+    </li> -->
 </ul>
 </details>
 

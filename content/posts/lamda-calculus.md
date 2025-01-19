@@ -1,0 +1,154 @@
++++
+title = 'Lambda Calculus'
+date = 2024-11-26T20:36:18+01:00
+draft = false
++++
+
+{{< katex >}}
+
+## Introduction
+
+When leaning about **computer science**, you will at some point come across the term **lambda calculus**[^LC].
+I remember my first time hearing about it and being utterly confused by what it is and why it works.
+So today I'm going to describe exactly what lambda calculus is and its importance in CS.
+Without further ado, let's get into the nitty-gritty of lambda calculus.
+
+## Background
+
+Lambda calculus was introduced by the mathematician **Alonzo Church**[^AC] in the 1930s as part of his research into the foundations of mathematics.
+He created a universal model and formal system in mathematical logic for expressing **computation**.
+Later Alonzo proved that it simulate any **Turing machine**[^TM], invented by his doctoral student **Alan Turing**[^AT].
+Alonzo is known to be one of the pioneers of theoretical computer science due to his work having such a significant impact on the field in general.
+
+Lots of different historical functional programming languages like **Lisp**, **Scheme**, and **Haskell** are heavily influenced by lambda calculus.
+This is recognized by the purely expressive nature allowing for complex logical building blocks to be created and reasoned about.
+Lambda calculus is therefore used in the design and analysis of programming languages, type theory, and formal verification.
+
+## Notation
+
+Lambda calculus is a formal system that uses a specific notation to represent **functions** and **function application**.
+
+The fundamental *syntactical* building block of lambda calculus is the **lambda term** $T$, or when composed of multiple terms we call it a **lambda expression**.
+
+$$
+\begin{align*}
+& T ::= v & \text{variable} \newline
+& \hspace{6mm} \mid \lambda v. \ T & \text{abstraction} \newline
+& \hspace{6mm} \mid T \ T & \text{application}
+\end{align*}
+$$
+
+In the above definition, $v$ represents a **variable** which can be any alphanumeric character or symbol, often denoted by $x$, $x_i$, $x'$, $y$, $z$, $a$, $b$, $c$, etc.
+Sometimes in examples of extended variations of lambda calculus, you might see values (in the place of variables) like $1$, $2$, $3$, etc.
+Optionally **parentheses** are used to group terms when otherwise ambiguous.
+These terms can in turn be combined via application to create large complex expressions.
+
+### Example: Identity Function
+
+The **identity function** $\lambda x. x$, immediately returns the value of its argument $x$.
+
+### Example: Recursion
+
+The **self-application** function $\lambda x. x \ x$ applies its argument to *itself*:
+
+$$
+(\lambda x.\ x \ x) \ (\lambda x. \ x \ x) \implies \newline
+(\cancel{\lambda x.}\ (\lambda x. \ x \ x) \ (\lambda x. \ x \ x)) \implies \newline
+(\cancel{\lambda x.}\ (\cancel{\lambda x.}\ (\lambda x. x \ x) \ (\lambda x. x \ x))) \implies \newline
+\ldots
+$$
+
+I've kept the otherwise removed lambda symbols ( $\cancel{\lambda x}$ ) to show the recursive nature of the function.
+In each step of the evaluation, we perform the rule for application, which essentially breaks down to two implicit operations:
+
+1. **Substitution**: Replace the argument "$x$" with "$(\lambda x. x \ x)$" in the leftmost term $(\lambda x. x \ x)$
+    which expands into $\lambda x. \ (\lambda x. x \ x) \ x$ then finally $\lambda x. \ (\lambda x. x \ x) \ (\lambda x. x \ x)$.
+2. **Argument Removal**: Remove the argument "$\lambda x.$" from the previous substituted term,
+   leaving us with $(\lambda x. x \ x) \ (\lambda x. x \ x)$, which is the exact same expression we started with.
+
+As you can see, **non-terminating** expressions can be represented in lambda calculus.
+This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**[^TC],
+meaning it can compute any computable function.
+
+## Reduction
+
+Evaluation in lambda calculus is based on a **rewriting system** of expressions using a set of **reduction rules**.
+If an expression can be reduced to a simpler form, it is called a **redex** (reducible expression).
+If you are interested in learning more about the rewriting systems, I have a post on that topic:
+
+{{< article link="/posts/rw-systems/" >}}
+
+In the process of simplifying lambda expressions, we match the redex with one of these rules and produce a new expression:
+
+1. **$\beta$-reduction**: This is the most common reduction rule in lambda calculus.
+   It is used to apply a function to an argument (**function application**) by replacing the formal parameter with the actual argument,
+   essentially **removing one layer of abstraction**.
+   The rule is defined as follows:
+
+   $$
+   (\lambda x. \ T) \ U \implies T[x := U]
+   $$
+
+   Where $T[x := U]$ denotes the **substitution** of all free occurrences of $x$ in $T$ with $U$.
+
+2. **$\alpha$-conversion**: This rule is used to **rename bound variables** to avoid **variable capture**.
+   It is defined as follows:
+
+   $$
+   \lambda x. \ T \implies \lambda y. \ T[x := y]
+   $$
+
+   Where $y$ is a fresh variable that does not appear in $T$.
+
+3. **$\eta$-conversion**: This rule is used to simplify expressions by removing redundant abstractions.
+   It is defined as follows:
+
+   $$
+   \lambda x. \ (T \ x) \implies T
+   $$
+
+   Where $x$ is not a free variable in $T$. This rule is also known as **function extensionality**.
+   In simple terms, if $f \ x = g \ x$ for all $x$, then $f = g$. Allowing us to simplify e.g $\lambda x. (f \ x)$ to $f$.
+
+<!-- 4. **$\delta$-reduction**: This rule is used to simplify expressions by evaluating built-in functions. -->
+
+In my opinion, $\eta$-conversion is mostly an optimization rule and not strictly necessary for lambda calculus to be useful.
+
+### Example: Recursion
+
+Let's suppose we reduce the following lambda expression:
+
+$$
+\begin{align*}
+& (\lambda x. \ x \ x) \ (\lambda x. \ x \ x) \newline
+& \implies (x \ x)[x := (\lambda x. \ x \ x)] \hspace{6mm} \text{∵ $\beta$} \newline
+& \implies (\lambda x. \ x \ x) \ (\lambda x. \ x \ x)
+\end{align*}
+$$
+
+> $∵$ means "because" in mathematical notation.
+
+### Example: Complex Expression
+
+Now let's reduce a more complex expression:
+
+$$
+\begin{align*}
+& (\lambda y. \ \lambda x. \ y) \ (\lambda z. \ \lambda x. \ z \ x) \newline
+& \implies \lambda x. \ y[y := (\lambda z. \ \lambda x. \ z \ x)] & \text{∵ $\beta$} \newline
+& \implies \lambda x_1. \ (\lambda z. \ \lambda x_2. \ z \ x_2) & \text{∵ $\alpha$} \newline
+& \implies \lambda x_1. \ (\lambda z. \ z) & \text{∵ $\eta$} \newline
+& \implies \lambda x. \ \lambda z. \ z & \text{∵ $\alpha$}
+\end{align*}
+$$
+
+---
+{{< support >}}
+
+<!----------------------------------------------------------------->
+
+[^LC]: The [Lambda Calculus](https://en.wikipedia.org/wiki/Lambda_calculus) is a formal system in mathematical logic for expressing computation based on function abstraction and application using lambda terms.
+[^AC]: [Alonzo Church](https://en.wikipedia.org/wiki/Alonzo_Church) was an American mathematician and logician who made significant contributions to mathematical logic and theoretical computer science.
+[^AT]: [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) was a British mathematician and computer scientist who formalized the concepts of algorithm and computation with the Turing machine.
+[^TM]: [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine) is a mathematical model of computation that defines an abstract machine that manipulates symbols on a strip of tape according to a table of rules.
+[^TC]: [Turing Completeness](https://en.wikipedia.org/wiki/Turing_completeness) is a property of a system of rules that can simulate a Turing machine.

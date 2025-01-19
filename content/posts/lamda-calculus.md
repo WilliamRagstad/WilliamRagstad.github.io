@@ -35,7 +35,10 @@ The fundamental *syntactical* building block of lambda calculus is the **lambda 
   Sometimes in examples of extended variations of lambda calculus, you might see values (in the place of variables) like $1$, $2$, $3$, etc.
 
 - **Abstraction**: An abstraction $\lambda v. \ T$ represents a function that takes an argument $v$ and returns a term $T$.
+  In some other programming language this would be a regular function such as `f(x) = x + 1`.
+
 - **Application**: An application $M \ N$ represents the application of a function $M$ to an argument $N$. Both $M$ and $N$ can be any lambda term $T$.
+  Similar to function calls in other languages like `f(42)`.
 
 Optionally **parentheses** are used to group terms when otherwise ambiguous.
 These terms can in turn be combined via application to create large complex **lambda expressions**.

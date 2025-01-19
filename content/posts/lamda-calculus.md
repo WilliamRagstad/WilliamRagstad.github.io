@@ -8,16 +8,16 @@ draft = false
 
 ## Introduction
 
-When learning **computer science**, you will at some point come across the term **lambda calculus**[^LC].
+When learning **computer science**, you will at some point come across the term **lambda calculus**.[^LC]
 I remember my first time hearing about it and being utterly confused by what it is and why it works.
 So today I'm going to describe exactly what lambda calculus is and its importance in CS.
 Without further ado, let's get into the nitty-gritty of lambda calculus.
 
 ## Background
 
-Lambda calculus was introduced by the mathematician **Alonzo Church**[^AC] in the 1930s as part of his research into the foundations of mathematics.
+Lambda calculus was introduced by the mathematician **Alonzo Church** in the 1930s as part of his research into the foundations of mathematics.[^AC]
 He created a universal model and formal system in mathematical logic for expressing **computation**.
-Later Alonzo proved that it simulate any **Turing machine**[^TM], invented by his doctoral student **Alan Turing**[^AT].
+Later Alonzo proved that it simulate any **Turing machine**, invented by his doctoral student **Alan Turing**.[^TM][^AT]
 Alonzo is known to be one of the pioneers of theoretical computer science due to his work having such a significant impact on the field in general.
 
 Lots of different historical functional programming languages like **Lisp**, **Scheme**, and **Haskell** are heavily influenced by lambda calculus.
@@ -105,7 +105,7 @@ $$
 
 I've kept the otherwise removed lambda symbols ( $\cancel{\lambda x}$ ) to show the recursive nature of the function.
 As you can see, the expression does **not** reduce to a simpler form, and it is **non-terminating**.
-This is not useful for anything particularly interesting, but other combinators based on recursion have more practical applications.
+This is not useful for anything particularly interesting, but other combinators based on recursion have more practical applications.[^CL]
 
 Let's try to break down each implicit "sub-step" when performing $\beta$-reduction:
 
@@ -114,8 +114,8 @@ Let's try to break down each implicit "sub-step" when performing $\beta$-reducti
 2. **Argument Removal**: Remove the argument "$\lambda x.$" from the previous substituted term,
    leaving us with $(\lambda x. x \ x) \ (\lambda x. x \ x)$, which is the exact same expression we started with.
 
-This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**[^TC],
-meaning it can compute any computable function.
+This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**,
+meaning it can compute any computable function.[^TC]
 
 ### Example: Complex Expression
 
@@ -135,7 +135,7 @@ $$
 
 ## Combinators
 
-A **combinator** is a lambda function with no free variables.
+A **combinator** is a lambda function with no free variables.[^CL]
 
 ---
 {{< support >}}
@@ -147,3 +147,4 @@ A **combinator** is a lambda function with no free variables.
 [^AT]: [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) was a British mathematician and computer scientist who formalized the concepts of algorithm and computation with the Turing machine.
 [^TM]: [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine) is a mathematical model of computation that defines an abstract machine that manipulates symbols on a strip of tape according to a table of rules.
 [^TC]: [Turing Completeness](https://en.wikipedia.org/wiki/Turing_completeness) is a property of a system of rules that can simulate a Turing machine.
+[^CL]: [Combinatory Logic](https://en.wikipedia.org/wiki/Combinatory_logic) is a notation to eliminate the need for variables in mathematical logic and lambda calculus.

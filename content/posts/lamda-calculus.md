@@ -43,33 +43,6 @@ The fundamental *syntactical* building block of lambda calculus is the **lambda 
 Optionally **parentheses** are used to group terms when otherwise ambiguous.
 These terms can in turn be combined via application to create large complex **lambda expressions**.
 
-### Example: Identity Function
-
-The **identity function** $\lambda x. x$, immediately returns the value of its argument $x$.
-
-### Example: Recursion
-
-The **self-application** function $\lambda x. x \ x$ applies its argument to *itself*:
-
-$$
-(\lambda x.\ x \ x) \ (\lambda x. \ x \ x) \implies \newline
-(\cancel{\lambda x.}\ (\lambda x. \ x \ x) \ (\lambda x. \ x \ x)) \implies \newline
-(\cancel{\lambda x.}\ (\cancel{\lambda x.}\ (\lambda x. x \ x) \ (\lambda x. x \ x))) \implies \newline
-\ldots
-$$
-
-I've kept the otherwise removed lambda symbols ( $\cancel{\lambda x}$ ) to show the recursive nature of the function.
-In each step of the evaluation, we perform the rule for application, which essentially breaks down to two implicit operations:
-
-1. **Substitution**: Replace the argument "$x$" with "$(\lambda x. x \ x)$" in the leftmost term $(\lambda x. x \ x)$
-    which expands into $\lambda x. \ (\lambda x. x \ x) \ x$ then finally $\lambda x. \ (\lambda x. x \ x) \ (\lambda x. x \ x)$.
-2. **Argument Removal**: Remove the argument "$\lambda x.$" from the previous substituted term,
-   leaving us with $(\lambda x. x \ x) \ (\lambda x. x \ x)$, which is the exact same expression we started with.
-
-As you can see, **non-terminating** expressions can be represented in lambda calculus.
-This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**[^TC],
-meaning it can compute any computable function.
-
 ## Reduction
 
 Evaluation in lambda calculus is based on a **rewriting system** of expressions using a set of **reduction rules**.
@@ -114,22 +87,35 @@ In the process of simplifying lambda expressions, we match the redex with one of
 
 In my opinion, $\eta$-conversion is mostly an optimization rule and not strictly necessary for lambda calculus to be useful.
 
+---
+
 ### Example: Recursion
 
-Let's suppose we reduce the following lambda expression:
+Let's suppose we reduce the **self-application** function $\lambda x. \ (x \ x)$ applied to *itself*:
 
 $$
 \begin{align*}
-& (\lambda x. \ x \ x) \ (\lambda x. \ x \ x) \newline
-& \implies (x \ x)[x := (\lambda x. \ x \ x)] \hspace{6mm} \text{∵ $\beta$} \newline
-& \implies (\lambda x. \ x \ x) \ (\lambda x. \ x \ x)
+& (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) \newline
+& \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) \hspace{6mm} \text{∵ $\beta$} \newline
+& \implies (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) \newline
+& \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) \hspace{6mm} \text{∵ $\beta$} \newline
+& \implies \dots
 \end{align*}
 $$
 
+I've kept the otherwise removed lambda symbols ( $\cancel{\lambda x}$ ) to show the recursive nature of the function.
 As you can see, the expression does **not** reduce to a simpler form, and it is **non-terminating**.
 This is not useful for anything particularly interesting, but other combinators based on recursion have more practical applications.
 
-> $∵$ means "because" in mathematical notation.
+Let's try to break down each implicit "sub-step" when performing $\beta$-reduction:
+
+1. **Substitution**: Replace the argument "$x$" with "$(\lambda x. x \ x)$" in the leftmost term $(\lambda x. x \ x)$
+    which expands into $\lambda x. \ (\lambda x. x \ x) \ x$ then finally $\lambda x. \ (\lambda x. x \ x) \ (\lambda x. x \ x)$.
+2. **Argument Removal**: Remove the argument "$\lambda x.$" from the previous substituted term,
+   leaving us with $(\lambda x. x \ x) \ (\lambda x. x \ x)$, which is the exact same expression we started with.
+
+This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**[^TC],
+meaning it can compute any computable function.
 
 ### Example: Complex Expression
 
@@ -144,6 +130,8 @@ $$
 & \implies \lambda x. \ \lambda z. \ z & \text{∵ $\alpha$}
 \end{align*}
 $$
+
+---
 
 ## Combinators
 

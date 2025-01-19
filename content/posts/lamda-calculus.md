@@ -28,20 +28,17 @@ Lambda calculus is therefore used in the design and analysis of programming lang
 
 Lambda calculus is a formal system that uses a specific notation to represent **functions** and **function application**.
 
-The fundamental *syntactical* building block of lambda calculus is the **lambda term** $T$, or when composed of multiple terms we call it a **lambda expression**.
+The fundamental *syntactical* building block of lambda calculus is the **lambda term** defined as $T ::= v \mid \lambda v. \ T \mid T \ T$.
 
-$$
-\begin{align*}
-& T ::= v & \text{variable} \newline
-& \hspace{6mm} \mid \lambda v. \ T & \text{abstraction} \newline
-& \hspace{6mm} \mid T \ T & \text{application}
-\end{align*}
-$$
+- **Variable**: A variable $v$ represents a smallest unit of data in lambda calculus, used as arguments to functions and bound by abstractions.
+  Commonly denoted by alphanumeric characters or symbols like $x$, $x_i$, $x'$, $y$, $z$, $a$, $b$, $c$, etc.
+  Sometimes in examples of extended variations of lambda calculus, you might see values (in the place of variables) like $1$, $2$, $3$, etc.
 
-In the above definition, $v$ represents a **variable** which can be any alphanumeric character or symbol, often denoted by $x$, $x_i$, $x'$, $y$, $z$, $a$, $b$, $c$, etc.
-Sometimes in examples of extended variations of lambda calculus, you might see values (in the place of variables) like $1$, $2$, $3$, etc.
+- **Abstraction**: An abstraction $\lambda v. \ T$ represents a function that takes an argument $v$ and returns a term $T$.
+- **Application**: An application $M \ N$ represents the application of a function $M$ to an argument $N$. Both $M$ and $N$ can be any lambda term $T$.
+
 Optionally **parentheses** are used to group terms when otherwise ambiguous.
-These terms can in turn be combined via application to create large complex expressions.
+These terms can in turn be combined via application to create large complex **lambda expressions**.
 
 ### Example: Identity Function
 
@@ -126,6 +123,9 @@ $$
 \end{align*}
 $$
 
+As you can see, the expression does **not** reduce to a simpler form, and it is **non-terminating**.
+This is not useful for anything particularly interesting, but other combinators based on recursion have more practical applications.
+
 > $∵$ means "because" in mathematical notation.
 
 ### Example: Complex Expression
@@ -141,6 +141,10 @@ $$
 & \implies \lambda x. \ \lambda z. \ z & \text{∵ $\alpha$}
 \end{align*}
 $$
+
+## Combinators
+
+A **combinator** is a lambda function with no free variables.
 
 ---
 {{< support >}}

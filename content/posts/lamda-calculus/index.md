@@ -1,7 +1,11 @@
 +++
 title = 'Lambda Calculus'
 date = 2024-11-26T20:36:18+01:00
-draft = false
+series = ['Computational Theory']
+series_order = 1
+tags = ['lambda calculus', 'theoretical computer science']
+categories = ['computer science', 'mathematics', 'computation']
+showHero = true
 +++
 
 {{< katex >}}

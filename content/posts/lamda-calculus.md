@@ -8,7 +8,7 @@ draft = false
 
 ## Introduction
 
-When leaning about **computer science**, you will at some point come across the term **lambda calculus**[^LC].
+When learning **computer science**, you will at some point come across the term **lambda calculus**[^LC].
 I remember my first time hearing about it and being utterly confused by what it is and why it works.
 So today I'm going to describe exactly what lambda calculus is and its importance in CS.
 Without further ado, let's get into the nitty-gritty of lambda calculus.

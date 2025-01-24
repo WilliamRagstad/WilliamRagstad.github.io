@@ -276,6 +276,33 @@ In combinatory logic, there are no lambdas arguments. Therefore, instead of usin
 > We applied the constant combinator $K$ to the value $1$ and returned $1$.
 > Because we used the $K$ combinator, the expression $K \ 1 \ (K \ 1)$ is equivalent to $1$, as the second argument is discarded as shown previously.
 
+### Fixed-Point Combinators
+
+A **fixed-point combinator** is a combinator that when applied to a function, returns a fixed point of that function (the same function again).
+This is useful for creating recursive functions in lambda calculus, as it allows for self-application of functions.
+
+#### 1. Y Combinator
+
+This is the most famous fixed-point combinator, and is used to create recursive functions:
+
+$$
+Y = \lambda f. \ (\lambda x. \ f \ (x \ x)) \ (\lambda x. \ f \ (x \ x))
+$$
+
+> **Example**
+> $$
+> \begin{align*}
+> & Y \ (\lambda f. \ \lambda n. \ \text{if} \ n = 0 \ \text{then} \ 1 \ \text{else} \ n \times f \ (n - 1)) \ 5 \newline
+> & \implies (\lambda x. \ f \ (x \ x)) \ (\lambda x. \ f \ (x \ x)) \ (\lambda n. \ \text{if} \ n = 0 \ \text{then} \ 1 \ \text{else} \ n \times f \ (n - 1)) \ 5 \newline
+> & \implies f \ ((\lambda x. \ f \ (x \ x)) \ (\lambda x. \ f \ (x \ x))) \ 5 \newline
+> & \implies f \ (Y \ f) \ 5 \newline
+> & \implies f \ (Y \ f) \ 5 \newline
+> & \implies \dots
+> \end{align*}
+> $$
+>
+> This combinator is used to create recursive functions in lambda calculus, as it allows for self-application of functions.
+
 ---
 {{< support >}}
 

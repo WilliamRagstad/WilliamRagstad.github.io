@@ -216,7 +216,7 @@ Look how perfect it is, it just returns its argument completely *unchanged*.
 It doesn't get any simpler than that.
 However, doing essentially nothing is surprisingly useful in some cases.
 
-> **Example** \
+> **Example**
 > $$
 > I \ I \ I \ 42 \implies I \ I \ 42 \implies I \ 42 \implies 42
 > $$
@@ -232,7 +232,7 @@ $$
 This combinator takes two arguments and returns the first one, or simply eliminating the second one.
 It's not that different from the identity combinator as it doesn't modify any values.
 
-> **Example** \
+> **Example**
 > $$
 > \begin{align*}
 > & K \ 1 \ 2 \newline
@@ -253,7 +253,7 @@ $$
 This combinator is a bit more complex, but it's used to apply one function to another via substitution.[^SKI]
 In combinatory logic, there are no lambdas arguments. Therefore, instead of using $\lambda$-abstraction, we require a combinator that can perform a similar substitution operation on its arguments.[^S_expl]
 
-> **Example** \
+> **Example**
 > $$
 > \begin{align*}
 > & S \ K \ K \ 1 \newline

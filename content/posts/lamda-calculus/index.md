@@ -163,13 +163,6 @@ I've kept the otherwise removed lambda symbols ( $\cancel{\lambda x}$ ) to show 
 As you can see, the expression does **not** reduce to a simpler form, and it is **non-terminating**.
 This is not useful for anything particularly interesting, but other combinators based on recursion have more practical applications.[^CL]
 
-Let's try to break down each implicit "sub-step" when performing $\beta$-reduction:
-
-1. **Substitution**: Replace the argument "$x$" with "$(\lambda x. x \ x)$" in the leftmost term $(\lambda x. x \ x)$
-    which expands into $\lambda x. \ (\lambda x. x \ x) \ x$ then finally $\lambda x. \ (\lambda x. x \ x) \ (\lambda x. x \ x)$.
-2. **Argument Removal**: Remove the argument "$\lambda x.$" from the previous substituted term,
-   leaving us with $(\lambda x. x \ x) \ (\lambda x. x \ x)$, which is the exact same expression we started with.
-
 This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**,
 meaning it can compute any computable function.[^TC]
 

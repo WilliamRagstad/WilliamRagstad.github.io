@@ -61,6 +61,10 @@ These terms can in turn be combined via application to create large complex **la
 
 - **Termination**: A lambda expression is said to **terminate** if it can be reduced to a normal form in a finite number of steps.
 
+- **Fixed Point**: A value $x$ is said to be a **fixed point** of a function $f$ if $f(x) = x$.
+
+- **$\alpha$-equivalence**: Two lambda terms $T$ and $U$ are said to be **$\alpha$-equivalent** if they are the same up to renaming of bound variables.
+
 > **Example** \
 > In the lambda term $\lambda x. \ x \ y$, we say that $x$ is a <u>bound variable</u> and $y$ is a <u>free variable</u>.
 > It is also in <u>normal form</u> as no further reduction rule can be applied.
@@ -193,8 +197,6 @@ In simple terms, if $\forall x, f \ x = g \ x$, then $f = g$. Allowing us to sim
 > \end{align*}
 > $$
 
-Then there are multiple explicit rules for otherwise implicit operations like **$\xi$-reduction**, **$\mu$-reduction** and **$\nu$-reduction** that define the exact behavioral rules of lambda calculus more precisely.[^RS]
-
 ---
 
 ## Combinators
@@ -218,6 +220,7 @@ $$
 Look how perfect it is, it just returns its argument completely *unchanged*.
 It doesn't get any simpler than that.
 However, doing essentially nothing is surprisingly useful in some cases.
+One could also say that the identity combinator is a **fixed-point combinator**.
 
 > **Example**
 > $$

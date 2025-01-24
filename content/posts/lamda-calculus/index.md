@@ -287,3 +287,4 @@ In combinatory logic, there are no lambdas arguments. Therefore, instead of usin
 [^MS]: [Moses Schönfinkel](https://en.wikipedia.org/wiki/Moses_Sch%C3%B6nfinkel) was a Russian mathematician and logician who introduced combinatory logic in 1920.
 [^SKI]: The [SKI combinator calculus](https://en.wikipedia.org/wiki/SKI_combinator_calculus) is a combinatory logic system of functions that can be composed to form any computable function.
 [^S_expl]: https://math.stackexchange.com/questions/889608/in-what-sense-is-the-s-combinator-substitution
+[^RS]: [Reduction Strategies for Lambda Calculus](https://www.cs.tufts.edu/comp/105-2019f/reduction.pdf) by Norman Ramsey.

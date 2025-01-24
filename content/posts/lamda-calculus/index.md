@@ -163,21 +163,22 @@ This is called **capture-avoiding substitution**.[^LC]
 > **Example** \
 > A substitution that ignores the freshness condition could lead to errors: $(\lambda x.y)[y:=x]=\lambda x.(y[y:=x])=\lambda x.x$. This erroneous substitution would turn the constant function $\lambda x.y$ into the identity $\lambda x.x$.
 
-### $\eta$-conversion
+### Other
 
-This rule is used to simplify expressions by removing redundant abstractions.
+So we've covered the essential reduction rules, but there are a few more that are not strictly necessary or might otherwise be implicitly used in lambda calculus or extended versions of it.
+
+#### $\eta$-reduction
+
+The eta reduction rule is used to simplify expressions by removing redundant abstractions.
+But mostly it is an optimization rule and not strictly necessary.
 It is defined as follows:
 
 $$
-\lambda x. \ (T \ x) \implies T
+\lambda x. \ T \ x \implies T \quad \text{if} \ x \notin FV(T)
 $$
 
 Where $x$ is not a free variable in $T$. This rule is also known as **function extensionality**.
-In simple terms, if $f \ x = g \ x$ for all $x$, then $f = g$. Allowing us to simplify e.g $\lambda x. (f \ x)$ to $f$.
-
-<!-- 4. **$\delta$-reduction**: This rule is used to simplify expressions by evaluating built-in functions. -->
-
-In my opinion, $\eta$-conversion is mostly an optimization rule and not strictly necessary for lambda calculus to be useful.
+In simple terms, if $\forall x, f \ x = g \ x$, then $f = g$. Allowing us to simplify e.g $\lambda x. (f \ x)$ to $f$.[^LC]
 
 > **Example** \
 > Now let's reduce a more complex expression:
@@ -191,6 +192,8 @@ In my opinion, $\eta$-conversion is mostly an optimization rule and not strictly
 > & \implies \lambda x. \ \lambda z. \ z & \text{∵ $\alpha$}
 > \end{align*}
 > $$
+
+Then there are multiple explicit rules for otherwise implicit operations like **$\xi$-reduction**, **$\mu$-reduction** and **$\nu$-reduction** that define the exact behavioral rules of lambda calculus more precisely.[^RS]
 
 ---
 

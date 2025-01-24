@@ -47,6 +47,24 @@ The fundamental *syntactical* building block of lambda calculus is the **lambda 
 Optionally **parentheses** are used to group terms when otherwise ambiguous.
 These terms can in turn be combined via application to create large complex **lambda expressions**.
 
+## Terminology
+
+- **Bound Variable**: A variable $v$ is said to be **bound** in a term $T$ if it is ***bound by an abstraction*** $\lambda v. \ T$, aka a parameter of the function.
+
+- **Free Variable**: A variable $v$ is said to be **free** in a term $T$ if it is ***not bound by an abstraction*** $\lambda v. \ T$, that is, **not a parameter** of the function.
+
+- **Evaluation**: The process of simplifying lambda expressions by applying reduction rules to produce a normal form.
+
+- **Redex**: A **redex** is a reducible expression in lambda calculus **that can be simplified** by applying a reduction rule.
+
+- **Normal Form**: A term $T$ is said to be in **normal form** if it cannot be reduced further by any reduction rule.
+
+- **Termination**: A lambda expression is said to **terminate** if it can be reduced to a normal form in a finite number of steps.
+
+> **Example** \
+> In the lambda term $\lambda x. \ x \ y$, we say that $x$ is a <u>bound variable</u> and $y$ is a <u>free variable</u>.
+> It is also in <u>normal form</u> as no further reduction rule can be applied.
+
 ## Substitution
 
 In lambda calculus, **substitution** is the process of replacing all free occurrences of a variable in a lambda term $T$ with another term $U$.

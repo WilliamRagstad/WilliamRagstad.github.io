@@ -93,43 +93,51 @@ This definition is recursive and applies to all subterms of $T$.
 
 ## Reduction
 
-Evaluation in lambda calculus is based on a **rewriting system** of expressions using a set of **reduction rules**.
+**Evaluation** in lambda calculus is based on a **rewriting system** of expressions using a set of **reduction rules**.
 If an expression can be reduced to a simpler form, it is called a **redex** (reducible expression).
 If you are interested in learning more about the rewriting systems, I have a post on that topic:
 
 {{< article link="/posts/rw-systems/" >}}
 
-In the process of simplifying lambda expressions, we match the redex with one of these rules and produce a new expression:
+In the process of simplifying lambda expressions, we match the redex with one of these rules and produce a new expression.
+This chapter will cover the most common reduction rules used in lambda calculus, and also a few more advanced ones used in extended versions.
 
-1. **$\beta$-reduction**: This is the most common reduction rule in lambda calculus.
-   It is used to apply a function to an argument (**function application**) by replacing the formal parameter with the actual argument,
-   essentially **removing one layer of abstraction**.
-   The rule is defined as follows:
+### $\beta$-reduction
 
-   $$
-   (\lambda x. \ T) \ U \implies T[x := U]
-   $$
+This is the most common reduction rule in lambda calculus.
+It is used to apply a function to an argument (**function application**) by replacing the formal parameter with the actual argument,
+essentially **removing one layer of abstraction**.
+The rule is defined as follows:
 
-   Where $T[x := U]$ denotes the **substitution** of all free occurrences of $x$ in $T$ with $U$.
+$$
+(\lambda x. \ T) \ U \implies T[x := U]
+$$
 
-2. **$\alpha$-conversion**: This rule is used to **rename bound variables** to avoid **variable capture**.
-   It is defined as follows:
+Where $T[x := U]$ denotes the **substitution** of all free occurrences of $x$ in $T$ with $U$.
+So, in words, we replace all occurrences of the formal parameter $x$ in the body $T$ of the function with the argument $U$, and then remove the lambda abstraction $\lambda x$.
 
-   $$
-   \lambda x. \ T \implies \lambda y. \ T[x := y]
-   $$
+### $\alpha$-conversion
 
-   Where $y$ is a fresh variable that does not appear in $T$.
+This rule is used to **rename bound variables** to avoid **variable capture**.
+It is defined as follows:
 
-3. **$\eta$-conversion**: This rule is used to simplify expressions by removing redundant abstractions.
-   It is defined as follows:
+$$
+\lambda x. \ T \implies \lambda y. \ T[x := y]
+$$
 
-   $$
-   \lambda x. \ (T \ x) \implies T
-   $$
+Where $y$ is a fresh variable that does not appear in $T$.
 
-   Where $x$ is not a free variable in $T$. This rule is also known as **function extensionality**.
-   In simple terms, if $f \ x = g \ x$ for all $x$, then $f = g$. Allowing us to simplify e.g $\lambda x. (f \ x)$ to $f$.
+### $\eta$-conversion
+
+This rule is used to simplify expressions by removing redundant abstractions.
+It is defined as follows:
+
+$$
+\lambda x. \ (T \ x) \implies T
+$$
+
+Where $x$ is not a free variable in $T$. This rule is also known as **function extensionality**.
+In simple terms, if $f \ x = g \ x$ for all $x$, then $f = g$. Allowing us to simplify e.g $\lambda x. (f \ x)$ to $f$.
 
 <!-- 4. **$\delta$-reduction**: This rule is used to simplify expressions by evaluating built-in functions. -->
 

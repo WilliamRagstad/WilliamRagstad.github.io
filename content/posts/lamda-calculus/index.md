@@ -47,6 +47,50 @@ The fundamental *syntactical* building block of lambda calculus is the **lambda 
 Optionally **parentheses** are used to group terms when otherwise ambiguous.
 These terms can in turn be combined via application to create large complex **lambda expressions**.
 
+## Substitution
+
+In lambda calculus, **substitution** is the process of replacing all free occurrences of a variable in a lambda term $T$ with another term $U$.
+It is defined formally as follows.[^LC]
+
+<!-- $$
+T[x := U] = \begin{cases}
+U & \text{if } T = x \newline
+T & \text{if } T = v \text{ and } v \neq x \newline
+\lambda v. \ T' & \text{if } T = \lambda v. \ T' \text{ and } v \neq x \text{ and } v \notin FV(U) \newline
+T_1[x := U] \ T_2[x := U] & \text{if } T = T_1 \ T_2
+\end{cases}
+$$ -->
+
+$$
+T[x := U] = \begin{cases}
+\underline{\hspace{3mm} T \hspace{3mm}} \newline
+x & \implies U \newline
+v & \implies v \newline
+\lambda x. \ M & \implies \lambda x. \ M \newline
+\lambda v. \ M & \implies \lambda v. \ M[x := U] \text{ if } v \notin FV(U) \newline
+M \ N & \implies M[x := U] \ \ N[x := U]
+\end{cases}
+$$
+
+Where $FV(U)$ denotes the set of free variables in $U$.
+This definition is recursive and applies to all subterms of $T$.
+
+> **Example** \
+> Let's say we want to replace all occurrences of $x$ in the term below with $z$:
+>
+> $$
+> \begin{align*}
+> & ((\lambda y. \ \lambda x. \ y \ x) \ (\lambda y. \ x \ y))[x := z] \newline
+> & \implies (\lambda y. \ \lambda x. \ y \ x)[x := z] \ \ (\lambda y. \ x \ y)[x := z] \newline
+> & \implies (\lambda y. \ (\lambda x. \ y \ x)[x := z]) \ \ (\lambda y. \ (x \ y)[x := z]) \newline
+> & \implies (\lambda y. \ \lambda x. \ y \ x) \ \ (\lambda y. \ z \ y) \newline
+> \end{align*}
+> $$
+>
+> **Note** \
+> The only occurrence of $x$ that got replaced was in the second term.
+> This is because the $\lambda x. \ y \ x$ "shadows" a new $x$ variable local to that abstraction, and thus substitution cannot occur without ruining that abstraction that so happens to use the same variable name $x$.
+
 ## Reduction
 
 Evaluation in lambda calculus is based on a **rewriting system** of expressions using a set of **reduction rules**.

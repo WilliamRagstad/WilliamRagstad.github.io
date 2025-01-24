@@ -123,8 +123,28 @@ $$
 (\lambda x. \ T) \ U \implies T[x := U]
 $$
 
-Where $T[x := U]$ denotes the **substitution** of all free occurrences of $x$ in $T$ with $U$.
-So, in words, we replace all occurrences of the formal parameter $x$ in the body $T$ of the function with the argument $U$, and then remove the lambda abstraction $\lambda x$.
+In the case of a valid abstraction application, we take the right-hand side term $U$ and substitute it for the formal parameter $x$ in the abstraction body $T$.
+Thus removing one layer of abstraction and an application, simplifying the expression towards a **normal form**.
+
+> **Example** \
+> Let's suppose we reduce the **self-application** function $\lambda x. \ (x \ x)$ applied to *itself*:
+>
+> $$
+> \begin{align*}
+> & (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) \newline
+> & \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) \hspace{6mm} \text{∵ $\beta$} \newline
+> & \implies (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) \newline
+> & \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) \hspace{6mm} \text{∵ $\beta$} \newline
+> & \implies \dots
+> \end{align*}
+> $$
+>
+> I've kept the otherwise removed lambda symbols ( $\cancel{\lambda x}$ ) to show the recursive nature of the function.
+> As you can see, the expression does **not** reduce to a simpler form, and it is **non-terminating**.
+> This is not useful for anything particularly interesting, but other combinators based on recursion have more practical applications.[^CL]
+>
+> This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**,
+> meaning it can compute any computable function.[^TC]
 
 ### $\alpha$-conversion
 
@@ -136,6 +156,12 @@ $$
 $$
 
 Where $y$ is a fresh variable that does not appear in $T$.
+This way we can rename any variable in an expression.
+$\alpha$-conversion is used to avoid **variable capture** which is when a free variable becomes bound after substitution during $\beta$-reduction.
+This is called **capture-avoiding substitution**.[^LC]
+
+> **Example** \
+> A substitution that ignores the freshness condition could lead to errors: $(\lambda x.y)[y:=x]=\lambda x.(y[y:=x])=\lambda x.x$. This erroneous substitution would turn the constant function $\lambda x.y$ into the identity $\lambda x.x$.
 
 ### $\eta$-conversion
 
@@ -153,42 +179,18 @@ In simple terms, if $f \ x = g \ x$ for all $x$, then $f = g$. Allowing us to si
 
 In my opinion, $\eta$-conversion is mostly an optimization rule and not strictly necessary for lambda calculus to be useful.
 
----
-
-### Example: Recursion
-
-Let's suppose we reduce the **self-application** function $\lambda x. \ (x \ x)$ applied to *itself*:
-
-$$
-\begin{align*}
-& (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) \newline
-& \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) \hspace{6mm} \text{∵ $\beta$} \newline
-& \implies (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) \newline
-& \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) \hspace{6mm} \text{∵ $\beta$} \newline
-& \implies \dots
-\end{align*}
-$$
-
-I've kept the otherwise removed lambda symbols ( $\cancel{\lambda x}$ ) to show the recursive nature of the function.
-As you can see, the expression does **not** reduce to a simpler form, and it is **non-terminating**.
-This is not useful for anything particularly interesting, but other combinators based on recursion have more practical applications.[^CL]
-
-This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**,
-meaning it can compute any computable function.[^TC]
-
-### Example: Complex Expression
-
-Now let's reduce a more complex expression:
-
-$$
-\begin{align*}
-& (\lambda y. \ \lambda x. \ y) \ (\lambda z. \ \lambda x. \ z \ x) \newline
-& \implies \lambda x. \ y[y := (\lambda z. \ \lambda x. \ z \ x)] & \text{∵ $\beta$} \newline
-& \implies \lambda x_1. \ (\lambda z. \ \lambda x_2. \ z \ x_2) & \text{∵ $\alpha$} \newline
-& \implies \lambda x_1. \ (\lambda z. \ z) & \text{∵ $\eta$} \newline
-& \implies \lambda x. \ \lambda z. \ z & \text{∵ $\alpha$}
-\end{align*}
-$$
+> **Example** \
+> Now let's reduce a more complex expression:
+>
+> $$
+> \begin{align*}
+> & (\lambda y. \ \lambda x. \ y) \ (\lambda z. \ \lambda x. \ z \ x) \newline
+> & \implies \lambda x. \ y[y := (\lambda z. \ \lambda x. \ z \ x)] & \text{∵ $\beta$} \newline
+> & \implies \lambda x_1. \ (\lambda z. \ \lambda x_2. \ z \ x_2) & \text{∵ $\alpha$} \newline
+> & \implies \lambda x_1. \ (\lambda z. \ z) & \text{∵ $\eta$} \newline
+> & \implies \lambda x. \ \lambda z. \ z & \text{∵ $\alpha$}
+> \end{align*}
+> $$
 
 ---
 
@@ -214,8 +216,7 @@ Look how perfect it is, it just returns its argument completely *unchanged*.
 It doesn't get any simpler than that.
 However, doing essentially nothing is surprisingly useful in some cases.
 
-> **Example**
->
+> **Example** \
 > $$
 > I \ I \ I \ 42 \implies I \ I \ 42 \implies I \ 42 \implies 42
 > $$
@@ -231,8 +232,7 @@ $$
 This combinator takes two arguments and returns the first one, or simply eliminating the second one.
 It's not that different from the identity combinator as it doesn't modify any values.
 
-> **Example**
->
+> **Example** \
 > $$
 > \begin{align*}
 > & K \ 1 \ 2 \newline
@@ -253,8 +253,7 @@ $$
 This combinator is a bit more complex, but it's used to apply one function to another via substitution.[^SKI]
 In combinatory logic, there are no lambdas arguments. Therefore, instead of using $\lambda$-abstraction, we require a combinator that can perform a similar substitution operation on its arguments.[^S_expl]
 
-> **Example**
->
+> **Example** \
 > $$
 > \begin{align*}
 > & S \ K \ K \ 1 \newline

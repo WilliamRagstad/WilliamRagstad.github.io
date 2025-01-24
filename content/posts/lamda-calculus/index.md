@@ -209,7 +209,7 @@ Let's begin with the simplest combinator of them all.
 #### 1. Identity
 
 $$
-I \equiv \lambda x. \ x
+I = \lambda x. \ x
 $$
 
 Look how perfect it is, it just returns its argument completely *unchanged*.
@@ -226,7 +226,7 @@ However, doing essentially nothing is surprisingly useful in some cases.
 #### 2. Constant
 
 $$
-K \equiv \lambda x. \ \lambda y. \ x
+K = \lambda x. \ \lambda y. \ x
 $$
 
 This combinator takes two arguments and returns the first one, or simply eliminating the second one.
@@ -247,7 +247,7 @@ It's not that different from the identity combinator as it doesn't modify any va
 #### 3. Application
 
 $$
-S \equiv \lambda x. \ \lambda y. \ \lambda z. \ x \ z \ (y \ z)
+S = \lambda x. \ \lambda y. \ \lambda z. \ x \ z \ (y \ z)
 $$
 
 This combinator is a bit more complex, but it's used to apply one function to another via substitution.[^SKI]

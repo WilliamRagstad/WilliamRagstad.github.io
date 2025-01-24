@@ -165,7 +165,7 @@ This is called **capture-avoiding substitution**.[^LC]
 
 ### Other
 
-So we've covered the essential reduction rules, but there are a few more that are not strictly necessary or might otherwise be implicitly used in lambda calculus or extended versions of it.
+So we've covered the essential reduction rules, but there are a few more that are not strictly necessary, only used in extended versions of lambda calculus, or explicit rules for otherwise implicit operations like **$\xi$-reduction**, **$\mu$-reduction** and **$\nu$-reduction** that define the exact reduction rules more precisely.[^RS]
 
 #### $\eta$-reduction
 

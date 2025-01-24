@@ -81,6 +81,7 @@ M \ N & \implies M[x := U] \ \ N[x := U]
 \end{cases}
 $$
 
+$T[x := U]$ denotes the **substitution** of all free occurrences of $x$ in $T$ with $U$.
 Where $FV(U)$ denotes the set of free variables in $U$.
 This definition is recursive and applies to all subterms of $T$.
 

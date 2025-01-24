@@ -52,15 +52,6 @@ These terms can in turn be combined via application to create large complex **la
 In lambda calculus, **substitution** is the process of replacing all free occurrences of a variable in a lambda term $T$ with another term $U$.
 It is defined formally as follows.[^LC]
 
-<!-- $$
-T[x := U] = \begin{cases}
-U & \text{if } T = x \newline
-T & \text{if } T = v \text{ and } v \neq x \newline
-\lambda v. \ T' & \text{if } T = \lambda v. \ T' \text{ and } v \neq x \text{ and } v \notin FV(U) \newline
-T_1[x := U] \ T_2[x := U] & \text{if } T = T_1 \ T_2
-\end{cases}
-$$ -->
-
 $$
 T[x := U] = \begin{cases}
 \underline{\hspace{3mm} T \hspace{3mm}} \newline

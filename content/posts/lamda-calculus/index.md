@@ -184,7 +184,82 @@ $$
 
 ## Combinators
 
-A **combinator** is a lambda function with no free variables.[^CL]
+A **combinator** is a lambda function with no free variables, and is said to be "closed".[^LC]
+They are equivalent to the terms in **combinatory logic** which is a notation to eliminate the need for variables in mathematical logic and lambda calculus introduced by **Moses Schönfinkel** in 1920.[^CL][^MS]
+That is, an abstraction which only depends on its own arguments.
+They can be used to build more complex functions, and are the foundational practical tools of the lambda calculus. Let's discuss the most popular sets of combinators from both the SKI basis and fixed-point combinators.
+
+### SKI Basis
+
+The **SKI basis** is a calculus of **three combinators** $S$, $K$, and $I$, that can be used to represent any computable function in lambda calculus.[^SKI]
+Let's begin with the simplest combinator of them all.
+
+#### 1. Identity
+
+$$
+I \equiv \lambda x. \ x
+$$
+
+Look how perfect it is, it just returns its argument completely *unchanged*.
+It doesn't get any simpler than that.
+However, doing essentially nothing is surprisingly useful in some cases.
+
+> **Example**
+>
+> $$
+> I \ I \ I \ 42 \implies I \ I \ 42 \implies I \ 42 \implies 42
+> $$
+>
+> As you can see, not that much happened really.
+
+#### 2. Constant
+
+$$
+K \equiv \lambda x. \ \lambda y. \ x
+$$
+
+This combinator takes two arguments and returns the first one, or simply eliminating the second one.
+It's not that different from the identity combinator as it doesn't modify any values.
+
+> **Example**
+>
+> $$
+> \begin{align*}
+> & K \ 1 \ 2 \newline
+> & \implies (\lambda x. \ \lambda y. \ x) \ 1 \ 2 \newline
+> & \implies (\lambda y. \ 1) \ 2 & \text{∵ $\beta$} \newline
+> & \implies 1 & \text{∵ $\beta$}
+> \end{align*}
+> $$
+>
+> We discarded the value $2$ and returned $1$.
+
+#### 3. Application
+
+$$
+S \equiv \lambda x. \ \lambda y. \ \lambda z. \ x \ z \ (y \ z)
+$$
+
+This combinator is a bit more complex, but it's used to apply one function to another via substitution.[^SKI]
+In combinatory logic, there are no lambdas arguments. Therefore, instead of using $\lambda$-abstraction, we require a combinator that can perform a similar substitution operation on its arguments.[^S_expl]
+
+> **Example**
+>
+> $$
+> \begin{align*}
+> & S \ K \ K \ 1 \newline
+> & \implies (\lambda x. \ \lambda y. \ \lambda z. \ x \ z \ (y \ z)) \ K \ K \ 1 \newline
+> & \implies (\lambda y. \ \lambda z. \ K \ z \ (y \ z)) \ K \ 1 & \text{∵ $\beta$} \newline
+> & \implies \lambda z. \ K \ z \ (K \ z) \ 1 & \text{∵ $\beta$} \newline
+> & \implies K \ 1 \ (K \ 1) & \text{∵ $\beta$} \newline
+> & \implies (\lambda x. \ \lambda y. \ x) \ 1 \ (K \ 1) \newline
+> & \implies (\lambda y. \ 1) \ (K \ 1) & \text{∵ $\beta$} \newline
+> & \implies 1 & \text{∵ $\beta$}
+> \end{align*}
+> $$
+>
+> We applied the constant combinator $K$ to the value $1$ and returned $1$.
+> Because we used the $K$ combinator, the expression $K \ 1 \ (K \ 1)$ is equivalent to $1$, as the second argument is discarded as shown previously.
 
 ---
 {{< support >}}
@@ -197,3 +272,6 @@ A **combinator** is a lambda function with no free variables.[^CL]
 [^TM]: [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine) is a mathematical model of computation that defines an abstract machine that manipulates symbols on a strip of tape according to a table of rules.
 [^TC]: [Turing Completeness](https://en.wikipedia.org/wiki/Turing_completeness) is a property of a system of rules that can simulate a Turing machine.
 [^CL]: [Combinatory Logic](https://en.wikipedia.org/wiki/Combinatory_logic) is a notation to eliminate the need for variables in mathematical logic and lambda calculus.
+[^MS]: [Moses Schönfinkel](https://en.wikipedia.org/wiki/Moses_Sch%C3%B6nfinkel) was a Russian mathematician and logician who introduced combinatory logic in 1920.
+[^SKI]: The [SKI combinator calculus](https://en.wikipedia.org/wiki/SKI_combinator_calculus) is a combinatory logic system of functions that can be composed to form any computable function.
+[^S_expl]: https://math.stackexchange.com/questions/889608/in-what-sense-is-the-s-combinator-substitution

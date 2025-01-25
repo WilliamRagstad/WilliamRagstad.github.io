@@ -259,8 +259,8 @@ The **domain** of $\Gamma$ is denoted by $\text{dom}(\Gamma)$ and means the set 
 > $$
 > \begin{align*}
 > & \\{ 1 \mapsto \cdots, 2 \mapsto \cdots, + \mapsto \cdots \\}, \newline
-> & \text{let} \ x = 1 \ \text{in} \ \lambda y. \ + \ x \ y \newline
-> & \implies \lambda y. \ + \ 1 \ y & \text{∵ $\Gamma$} \newline
+> & \text{let} \ x = 1 \ \text{in} \ \lambda y. + x \ y \newline
+> & \implies \lambda y. + 1 \ y & \text{∵ $\Gamma$} \newline
 > & \implies + \ 1 \ 2 & \text{∵ $\beta$} \newline
 > & \implies 3 & \text{∵ $\delta$}
 > \end{align*}

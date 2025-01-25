@@ -251,14 +251,14 @@ $$
 T[\Gamma] = \forall v_i \in \text{dom}(\Gamma) \cap FV(T) \ : \ T[v_i := \Gamma(v_i)]
 $$
 
-The **domain** of $\Gamma$ is denoted by $\text{dom}(\Gamma)$ and means the set of all keys $\{k_1, k_2, \dots\}$ in the environment $\Gamma = \{k_1 \mapsto v_1, k_2 \mapsto v_2, \dots\}$.
+The **domain** of $\Gamma$ is denoted by $\text{dom}(\Gamma)$ and means the set of all keys $\{k_1, k_2, \dots\}$ in the environment $\Gamma = \\{k_1 \mapsto v_1, k_2 \mapsto v_2, \dots\\}$.
 
 > **Example** \
 > Let's say we have the following expression:
 >
 > $$
 > \begin{align*}
-> & \{ 1 \mapsto \cdots, 2 \mapsto \cdots, + \mapsto \cdots \}, \newline
+> & \\{ 1 \mapsto \cdots, 2 \mapsto \cdots, + \mapsto \cdots \\}, \newline
 > & \text{let} \ x = 1 \ \text{in} \ \lambda y. \ + \ x \ y \newline
 > & \implies \lambda y. \ + \ 1 \ y & \text{∵ $\Gamma$} \newline
 > & \implies + \ 1 \ 2 & \text{∵ $\beta$} \newline

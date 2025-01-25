@@ -379,6 +379,18 @@ $$
 >
 > This combinator is used to create recursive functions in lambda calculus, as it allows for self-application of functions.
 
+## Encoding
+
+Lambda calculus is a **universal model of computation**, meaning it can simulate any Turing machine.
+However, it is not very practical for real-world computation due to its simplicity and lack of built-in data types.
+Up till now, we have only discussed the **pure** lambda calculus which isn't very useful for practical computation.
+But by **encoding** data types and operations we obtain similar expressive power seen in regular programming languages!
+
+### Booleans
+
+We can encode **boolean values** in lambda calculus using **Church encoding**.
+This encoding represents `true` as a function that takes two arguments and returns the first one, and `false` as a function that takes two arguments and returns the second one.[^CE]
+
 ---
 {{< support >}}
 
@@ -394,3 +406,4 @@ $$
 [^SKI]: The [SKI combinator calculus](https://en.wikipedia.org/wiki/SKI_combinator_calculus) is a combinatory logic system of functions that can be composed to form any computable function.
 [^S_expl]: https://math.stackexchange.com/questions/889608/in-what-sense-is-the-s-combinator-substitution
 [^RS]: [Reduction Strategies for Lambda Calculus](https://www.cs.tufts.edu/comp/105-2019f/reduction.pdf) by Norman Ramsey.
+[^CE]: [Church encoding](https://en.wikipedia.org/wiki/Church_encoding) is a way to represent data and operators in lambda calculus using only functions.

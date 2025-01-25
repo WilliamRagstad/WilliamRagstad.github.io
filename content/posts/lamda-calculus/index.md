@@ -51,11 +51,11 @@ These terms can in turn be combined via application to create large complex **la
 
 - **Bound Variable**: A variable $v$ is said to be **bound** in a term $T$ if it is ***bound by an abstraction*** $\lambda v. \ T$, aka a parameter of the function.
 
-- **Free Variable**: A variable $v$ is said to be **free** in a term $T$ if it is ***not bound by an abstraction*** $\lambda v. \ T$, that is, **not a parameter** of the function.
+- **Free Variable**: A variable $v$ is said to be **free** in a term $T$ if it is ***not bound by an abstraction*** $\lambda v. \ T$, that is, **not a parameter** of the function. Denoted by $FV(T)$.
 
 - **Evaluation**: The process of simplifying lambda expressions by applying reduction rules to produce a normal form.
 
-- **Redex**: A **redex** is a reducible expression in lambda calculus **that can be simplified** by applying a reduction rule.
+- **Redex**: A **redex** *(redexes)* is a reducible expression in lambda calculus **that can be simplified** by applying a reduction rule.
 
 - **Normal Form**: A term $T$ is said to be in **normal form** if it cannot be reduced further by any reduction rule.
 
@@ -134,7 +134,7 @@ This chapter will cover the most common reduction rules used in lambda calculus,
 
 ### $\beta$-reduction
 
-This is the most common reduction rule in lambda calculus.
+This is the most fundamental reduction rule, driving the core evaluation logic in lambda calculus.
 It is used to apply a function to an argument (**function application**) by replacing the formal parameter with the actual argument,
 essentially **removing one layer of abstraction**.
 
@@ -151,10 +151,10 @@ Thus removing one layer of abstraction and an application, simplifying the expre
 > $$
 > \begin{align*}
 > & (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) \newline
-> & \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) \hspace{6mm} \text{∵ $\beta$} \newline
-> & \implies (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) \newline
-> & \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) \hspace{6mm} \text{∵ $\beta$} \newline
-> & \implies \dots
+> & \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) & \text{∵ $\beta_1$} \newline
+> & \implies (\lambda x. \ (x \ x)) \ (\lambda x. \ (x \ x)) & \text{∵ $\beta_2$} \newline
+> & \implies (\cancel{\lambda x.}\ (x \ x)[x := (\lambda x. \ (x \ x))]) & \text{∵ $\beta_1$} \newline
+> & \implies \dots & \text{∵ $\beta_2$}
 > \end{align*}
 > $$
 >
@@ -167,7 +167,7 @@ Thus removing one layer of abstraction and an application, simplifying the expre
 
 ### Other
 
-So we've covered the essential reduction rules, but there are a few more that are not strictly necessary, only used in extended versions of lambda calculus, or explicit rules for otherwise implicit operations like **$\xi$-reduction**, **$\mu$-reduction** and **$\nu$-reduction** that define the exact reduction rules more precisely.[^RS]
+So we've covered the essential reduction rules, but there are a few more that are not strictly necessary, only used in extended versions of lambda calculus, or explicit rules for otherwise implicit reduction operations like **$\xi$-reduction** (abstraction body), **$\nu$-reduction** (application function) and **$\mu$-reduction** (application argument) that define the exact reduction rules more precisely.[^RS]
 
 #### $\eta$-reduction
 
@@ -193,6 +193,85 @@ In simple terms, if $\forall x, f \ x = g \ x$, then $f = g$. Allowing us to sim
 > & \implies \lambda x. \ \lambda z. \ z & \text{∵ $\alpha$}
 > \end{align*}
 > $$
+>
+> The step "∵ $\eta$" could have been skipped and the expression would still be correct. But I really wanted to show that **expressions with no redexes can sometimes still be simplified**!
+
+#### $\delta$-reduction
+
+The delta rule allows for **builtin functions** to be **evaluated** to their **values** in extended versions of lambda calculus.
+These functions are predefined as external rules collected under the $\delta$-rule.
+
+$$
+\delta = \begin{cases}
++ \ x \ y & \implies \text{eval\_add}(x, y) \newline
+- \ x \ y & \implies \text{eval\_sub}(x, y) \newline
+\times \ x \ y & \implies \text{eval\_mul}(x, y) \newline
+\div \ x \ y & \implies \text{eval\_div}(x, y) \newline
+\end{cases}
+$$
+
+These example rules are used to **evaluate** the **arithmetic operations** to their **numeric values**. The `eval_` functions are **external**, running in the **host environment**, meaning we leave the lambda calculus to perform these operations for a moment.
+
+> **Example** \
+> Let's say we have a lambda term that uses the $\delta$-rule:
+>
+> $$
+> \begin{align*}
+> & (\lambda x. \ \lambda y. \ + \ x \ y) \ 1 \ 2 \newline
+> & \implies (\lambda y. \ + \ 1 \ y) \ 2 & \text{∵ $\beta$} \newline
+> & \implies + \ 1 \ 2 & \text{∵ $\beta$} \newline
+> & \implies 3 & \text{∵ $\delta$}
+> \end{align*}
+> $$
+>
+> The expression $+ \ 1 \ 2$ is evaluated to $3$ using the $\delta$-rule.
+
+#### $\Gamma$-reduction
+
+I wasn't sure if this rule already had a name or an existing definition, but I wanted to include it.
+Hence, I chose to call it the $\Gamma$-reduction rule in this post, as soon it will be clear why.
+I use it in my own lambda calculus implementations and **many** other programming languages build on top of this concept.
+
+In this extended variant of lambda calculus, we introduce **bindings** to **name** intermediate results.
+This allow us to **store** and **reuse** expressions in an **environment** called $\Gamma$.
+Reduction is then performed by **substituting** the **free variables** in the **expression** $T$ with the **values** in the **environment** $\Gamma$ by rule $2$.
+But first we need to **extend** the environment with new **let-bindings** via rule $1$. Assuming an extended [notational grammar](#notation) of $T ::= \dots \mid \text{let} \ v = T \ \text{in} \ T$.
+
+$$
+\begin{align*}
+& 1. & \Gamma, \ \text{let} \ v = M \ \text{in} \ T \implies \Gamma \cup \{ v \mapsto M \}, \ T \newline
+& 2. & \Gamma, \ T
+\implies T[\Gamma] \quad \text{if} \ T \ \text{is not a let-binding}
+\end{align*}
+$$
+
+Where $T[\Gamma]$ denotes the **substitution** of all free variables in $T$ with their corresponding values in the environment $\Gamma$ if any.
+
+$$
+T[\Gamma] = \forall v_i \in \text{dom}(\Gamma) \cap FV(T) \ : \ T[v_i := \Gamma(v_i)]
+$$
+
+The **domain** of $\Gamma$ is denoted by $\text{dom}(\Gamma)$ and means the set of all keys $\{k_1, k_2, \dots\}$ in the environment $\Gamma = \{k_1 \mapsto v_1, k_2 \mapsto v_2, \dots\}$.
+
+> **Example** \
+> Let's say we have the following expression:
+>
+> $$
+> \begin{align*}
+> & \{ 1 \mapsto \cdots, 2 \mapsto \cdots, + \mapsto \cdots \}, \newline
+> & \text{let} \ x = 1 \ \text{in} \ \lambda y. \ + \ x \ y \newline
+> & \implies \lambda y. \ + \ 1 \ y & \text{∵ $\Gamma$} \newline
+> & \implies + \ 1 \ 2 & \text{∵ $\beta$} \newline
+> & \implies 3 & \text{∵ $\delta$}
+> \end{align*}
+> $$
+>
+> The environment $\Gamma$ is omitted in the reduction steps as it is easy to infer from the context.
+
+Environments are ubiquitous in programming languages, and this rule is used in many programming languages to **store** variables in scopes and reference them later.
+
+> **Note** \
+> In contrast to [$\delta$-reduction](#delta-reduction), the $\Gamma$-reduction rule is **purely** **functional** and **does not** rely on **external** **functions** to **evaluate** **expressions**.
 
 ---
 

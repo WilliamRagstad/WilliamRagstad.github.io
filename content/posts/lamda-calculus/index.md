@@ -63,7 +63,7 @@ These terms can in turn be combined via application to create large complex **la
 
 - **Fixed Point**: A value $x$ is said to be a **fixed point** of a function $f$ if $f(x) = x$.
 
-- **$\alpha$-equivalence**: Two lambda terms $T$ and $U$ are said to be **$\alpha$-equivalent** if they are the same up to renaming of bound variables.
+- **$\alpha$-equivalence**: Two lambda terms $T$ and $U$ are said to be **$\alpha$-equivalent** if they can be transformed into each other by renaming bound variables using **$\alpha$-conversion**.
 
 > **Example** \
 > In the lambda term $\lambda x. \ x \ y$, we say that $x$ is a <u>bound variable</u> and $y$ is a <u>free variable</u>.
@@ -105,6 +105,22 @@ This definition is recursive and applies to all subterms of $T$.
 > The only occurrence of $x$ that got replaced was in the second term.
 > This is because the $\lambda x. \ y \ x$ "shadows" a new $x$ variable local to that abstraction, and thus substitution cannot occur without ruining that abstraction that so happens to use the same variable name $x$.
 
+### $\alpha$-conversion
+
+This *non-reduction* rule defines **renaming** of **bound variables** to avoid accidental **variable captures** during $\beta$-reduction *(mainly)*.
+This is called **capture-avoiding substitution**.[^LC]
+Remember, $\alpha$-conversion does not change the structure or meaning of any lambda term. It's defined as:
+
+$$
+\lambda x. \ T \implies \lambda y. \ T[x := y]
+$$
+
+Where $y$ is a new *fresh variable* that does not appear in $T$.
+This way we can ensure expressions have unique variables that will remain free even after substitution via $\beta$-reduction.
+
+> **Example** \
+> A substitution that ignores the freshness condition could lead to errors: $(\lambda x.y)[y:=x]=\lambda x.(y[y:=x])=\lambda x.x$. This erroneous substitution would turn the constant function $\lambda x.y$ into the identity $\lambda x.x$.
+
 ## Reduction
 
 **Evaluation** in lambda calculus is based on a **rewriting system** of expressions using a set of **reduction rules**.
@@ -121,7 +137,6 @@ This chapter will cover the most common reduction rules used in lambda calculus,
 This is the most common reduction rule in lambda calculus.
 It is used to apply a function to an argument (**function application**) by replacing the formal parameter with the actual argument,
 essentially **removing one layer of abstraction**.
-The rule is defined as follows:
 
 $$
 (\lambda x. \ T) \ U \implies T[x := U]
@@ -150,32 +165,14 @@ Thus removing one layer of abstraction and an application, simplifying the expre
 > This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**,
 > meaning it can compute any computable function.[^TC]
 
-### $\alpha$-conversion
-
-This rule is used to **rename bound variables** to avoid **variable capture**.
-It is defined as follows:
-
-$$
-\lambda x. \ T \implies \lambda y. \ T[x := y]
-$$
-
-Where $y$ is a fresh variable that does not appear in $T$.
-This way we can rename any variable in an expression.
-$\alpha$-conversion is used to avoid **variable capture** which is when a free variable becomes bound after substitution during $\beta$-reduction.
-This is called **capture-avoiding substitution**.[^LC]
-
-> **Example** \
-> A substitution that ignores the freshness condition could lead to errors: $(\lambda x.y)[y:=x]=\lambda x.(y[y:=x])=\lambda x.x$. This erroneous substitution would turn the constant function $\lambda x.y$ into the identity $\lambda x.x$.
-
 ### Other
 
 So we've covered the essential reduction rules, but there are a few more that are not strictly necessary, only used in extended versions of lambda calculus, or explicit rules for otherwise implicit operations like **$\xi$-reduction**, **$\mu$-reduction** and **$\nu$-reduction** that define the exact reduction rules more precisely.[^RS]
 
 #### $\eta$-reduction
 
-The eta reduction rule is used to simplify expressions by removing redundant abstractions.
+The eta reduction rule is used to simplify expressions by removing **redundant** abstractions.
 But mostly it is an optimization rule and not strictly necessary.
-It is defined as follows:
 
 $$
 \lambda x. \ T \ x \implies T \quad \text{if} \ x \notin FV(T)

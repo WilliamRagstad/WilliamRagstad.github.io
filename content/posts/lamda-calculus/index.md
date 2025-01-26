@@ -214,7 +214,7 @@ $$
 This example rules **evaluate** the **arithmetic operations** to their **numeric values**. The `eval_` functions are **external** and run in the **host environment**, meaning we temporarily leave the lambda calculus to perform these operations.
 
 > **Example** \
-> Let's say we have a lambda term that uses the $\delta$-rules:
+> Let's say we have a lambda term that uses the $\delta$-rules defined in the previous example:
 >
 > $$
 > \begin{align*}
@@ -245,13 +245,13 @@ $$
 \end{align*}
 $$
 
-Where $T[\Gamma]$ denotes the **substitution** of all free variables in $T$ with their corresponding values in the environment $\Gamma$ if any.
+Where $T[\Gamma]$ denotes the **substitution** of all free variables in $T$ with their corresponding values in the environment $\Gamma$ (if any).
 
 $$
 T[\Gamma] = \forall v_i \in \text{dom}(\Gamma) \cap FV(T) \ : \ T[v_i := \Gamma(v_i)]
 $$
 
-The **domain** of $\Gamma$ is denoted by $\text{dom}(\Gamma)$ and means the set of all keys $\{k_1, k_2, \dots\}$ in the environment $\Gamma = \\{k_1 \mapsto v_1, k_2 \mapsto v_2, \dots\\}$.
+The **domain** of $\Gamma$, $\text{dom}(\Gamma)=\\{k_1, k_2, \dots\\}$ where $\Gamma = \\{k_1 \mapsto v_1, k_2 \mapsto v_2, \dots\\}$.
 
 > **Example** \
 > Let's say we have the following expression:

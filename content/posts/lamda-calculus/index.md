@@ -172,7 +172,7 @@ Thus simplifying the expression towards a **normal form** by removing one layer 
 
 ### Other
 
-So we've covered the essential reduction rules, but there are a few more that are not strictly necessary, only used in extended versions of lambda calculus, or explicit rules for otherwise implicit reduction operations like **$\xi$-reduction** (abstraction body), **$\nu$-reduction** (application function) and **$\mu$-reduction** (application argument) that define the exact reduction rules more precisely.[^RS]
+So we've covered the essential $\beta$-reduction rule, but there are a few more that are interesting but not strictly necessary, some only used in extended lambda calculi, or explicit rules for otherwise implicit operations like **$\xi$-reduction** (abstraction body), **$\nu$-reduction** (application function) and **$\mu$-reduction** (application argument) that define the exact rules more precisely.[^RS]
 
 ### $\eta$-reduction
 

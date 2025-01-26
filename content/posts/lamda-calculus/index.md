@@ -33,38 +33,38 @@ Lambda calculus comes in handy in designing and analyzing programming languages,
 
 Lambda calculus is a formal system that uses a specific notation to represent **functions** and **function application**.
 
-The fundamental *syntactical* building block of lambda calculus is the **lambda term** defined as $T ::= v \mid \lambda v. \ T \mid T \ T$.
+The fundamental *syntactical* building block of lambda calculus is the **lambda term** ($\lambda$-term) defined as $T ::= v \mid \lambda v. \ T \mid T \ T$.
 
 - **Variable**: A variable $v$ represents the smallest data unit in lambda calculus, used as an argument to functions and bound by abstractions.
   Commonly denoted by alphanumeric characters or symbols like $x$, $x_i$, $x'$, $y$, $z$, $a$, $b$, $c$, etc.
   Sometimes, in examples of extended lambda calculi, values such as $1$, $2$, $3$, etc, are used in place of variables.
 
-- **Abstraction**: An abstraction $\lambda v. \ T$ represents a function that takes an argument $v$ and returns a term $T$.
+- **Abstraction**: An abstraction $\lambda v. \ T$ represents a function that takes an argument $v$ and returns a $\lambda$-term $T$.
   In some other programming languages, this would be a regular function such as `f(x) = x + 1`.
 
-- **Application**: An application $M \ N$ represents the application of a function $M$ to an argument $N$. Both $M$ and $N$ can be any lambda term $T$.
+- **Application**: An application $M \ N$ represents the application of a function $M$ to an argument $N$. Both $M$ and $N$ can be any lambda $\lambda$-term $T$.
   Similar to function calls in other languages like `f(42)`.
 
-Optionally **parentheses** are used to group terms when otherwise ambiguous.
-These terms can be combined via application to create complex **lambda expressions**.
+Optionally **parentheses** are used to group $\lambda$-terms when otherwise ambiguous.
+These $\lambda$-terms can be combined via application to create complex **lambda expressions**.
 
 ## Terminology
 
-- **Bound Variable**: A variable $v$ is said to be **bound** in a term $T$ if it is ***bound by an abstraction*** $\lambda v. \ T$, aka a parameter of the function.
+- **Bound Variable**: A variable $v$ is said to be **bound** in a $\lambda$-term $T$ if it is ***bound by an abstraction*** $\lambda v. \ T$, aka a parameter of the function.
 
-- **Free Variable**: A variable $v$ is said to be **free** in a term $T$ if it is ***not bound by an abstraction*** $\lambda v. \ T$, that is, **not a parameter** of the function. Denoted by $FV(T)$.
+- **Free Variable**: A variable $v$ is said to be **free** in a $\lambda$-term $T$ if it is ***not bound by an abstraction*** $\lambda v. \ T$, that is, **not a parameter** of the function. Denoted by $FV(T)$.
 
 - **Evaluation**: Simplifying lambda expressions by applying reduction rules to produce a normal form.
 
 - **Redex**: A **redex** *(redexes)* is a reducible expression in lambda calculus **that can be simplified** by applying a reduction rule.
 
-- **Normal Form**: A term $T$ is said to be in **normal form** if it cannot be reduced further by any reduction rule.
+- **Normal Form**: A $\lambda$-term $T$ is said to be in **normal form** if it cannot be reduced further by any reduction rule.
 
 - **Termination**: A lambda expression is said to **terminate** if it can be reduced to a normal form in a finite number of steps.
 
 - **Fixed Point**: A value $x$ is said to be a **fixed point** of a function $f$ if $f(x) = x$.
 
-- **$\alpha$-equivalence**: Two lambda terms $T$ and $U$ are said to be **$\alpha$-equivalent** if they can be transformed into each other by renaming bound variables using **$\alpha$-conversion**.
+- **$\alpha$-equivalence**: Two $\lambda$-terms $T$ and $U$ are said to be **$\alpha$-equivalent** if they can be transformed into each other by renaming bound variables using **$\alpha$-conversion**.
 
 > **Example** \
 > In the lambda term $\lambda x. \ x \ y$, we say that $x$ is a <u>bound variable</u> and $y$ is a <u>free variable</u>.
@@ -93,7 +93,7 @@ $FV(U)$ denotes the set of free variables in $U$.
 This definition is recursive and applies to all subterms of $T$.
 
 > **Example** \
-> Let's say we want to replace all occurrences of $x$ in the term below with $z$:
+> Let's say we want to replace all occurrences of $x$ in the $\lambda$-term below with $z$:
 >
 > $$
 > \begin{align*}
@@ -105,7 +105,7 @@ This definition is recursive and applies to all subterms of $T$.
 > $$
 >
 > **Note** \
-> The only occurrence of $x$ that got replaced was in the second term.
+> The only occurrence of $x$ that got replaced was in the second $\lambda$-term.
 > This is because the $\lambda x. \ y \ x$ "shadows" a new $x$ variable local to that abstraction, and thus, substitution cannot occur without ruining that abstraction that so happens to use the same variable name $x$.
 
 ### $\alpha$-conversion
@@ -147,7 +147,7 @@ $$
 (\lambda x. \ T) \ U \implies T[x := U]
 $$
 
-In the case of a valid abstraction application, we take the right-hand side term $U$ and substitute it for the formal parameter $x$ in the abstraction body $T$.
+In the case of a valid abstraction application, we take the right-hand side $\lambda$-term $U$ and substitute it for the formal parameter $x$ in the abstraction body $T$.
 Thus simplifying the expression towards a **normal form** by removing one layer of abstraction and application.
 
 > **Example** \

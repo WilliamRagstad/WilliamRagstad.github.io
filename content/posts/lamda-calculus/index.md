@@ -202,18 +202,18 @@ The delta rule allows evaluating **built-in functions** and their **values** in 
 These predefined functions are external rules collected under the $\delta$-rule.
 
 $$
-\delta = \begin{cases}
-+ \ x \ y & \implies \text{eval\_add}(x, y) \newline
-- \ x \ y & \implies \text{eval\_sub}(x, y) \newline
-\times \ x \ y & \implies \text{eval\_mul}(x, y) \newline
-\div \ x \ y & \implies \text{eval\_div}(x, y) \newline
+\delta \begin{cases}
+\+ \ x \ y & \implies \text{eval\\_add}(x, y) \newline
+\- \ x \ y & \implies \text{eval\\_sub}(x, y) \newline
+\times \ x \ y & \implies \text{eval\\_mul}(x, y) \newline
+\div \ x \ y & \implies \text{eval\\_div}(x, y) \newline
 \end{cases}
 $$
 
 This example rules **evaluate** the **arithmetic operations** to their **numeric values**. The `eval_` functions are **external** and run in the **host environment**, meaning we temporarily leave the lambda calculus to perform these operations.
 
 > **Example** \
-> Let's say we have a lambda term that uses the $\delta$-rule:
+> Let's say we have a lambda term that uses the $\delta$-rules:
 >
 > $$
 > \begin{align*}

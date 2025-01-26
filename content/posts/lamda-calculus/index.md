@@ -70,6 +70,8 @@ These terms can be combined via application to create complex **lambda expressio
 > In the lambda term $\lambda x. \ x \ y$, we say that $x$ is a <u>bound variable</u> and $y$ is a <u>free variable</u>.
 > It is also in <u>normal form</u> as no further reduction rule can be applied.
 
+---
+
 ## Substitution
 
 In lambda calculus, **substitution** replaces all free occurrences of a variable in a lambda term $T$ with another term $U$.
@@ -122,6 +124,8 @@ This way, we can ensure expressions have unique variables that will remain free 
 > **Example** \
 > A substitution that ignores the freshness condition could lead to errors: $(\lambda x.y)[y:=x]=\lambda x.(y[y:=x])=\lambda x.x$. This erroneous substitution would turn the constant function $\lambda x.y$ into the identity $\lambda x.x$.
 
+---
+
 ## Reduction
 
 **Evaluation** in lambda calculus is based on a **rewriting system** of expressions using a set of **reduction rules**.
@@ -170,7 +174,7 @@ Thus simplifying the expression towards a **normal form** by removing one layer 
 
 So we've covered the essential reduction rules, but there are a few more that are not strictly necessary, only used in extended versions of lambda calculus, or explicit rules for otherwise implicit reduction operations like **$\xi$-reduction** (abstraction body), **$\nu$-reduction** (application function) and **$\mu$-reduction** (application argument) that define the exact reduction rules more precisely.[^RS]
 
-#### $\eta$-reduction
+### $\eta$-reduction
 
 The eta reduction rule simplifies expressions by removing **redundant** abstractions.
 But mostly, it is an optimization rule and is not strictly necessary.
@@ -197,7 +201,7 @@ In simple terms, if $\forall x, f \ x = g \ x$, then $f = g$. Allowing us to sim
 >
 > The step "∵ $\eta$" could have been skipped, and the expression would still be correct. But I wanted to show that **expressions with no redexes can sometimes still be simplified**!
 
-#### $\delta$-reduction
+### $\delta$-reduction
 
 The delta rule allows evaluating **built-in functions** and their **values** in extended versions of lambda calculus.
 These predefined functions are external rules collected under the $\delta$-rule.
@@ -227,7 +231,7 @@ This example rules **evaluate** the **arithmetic operations** to their **numeric
 >
 > The expression $+ \ 1 \ 2$ is evaluated to $3$ using the $\delta$-rule.
 
-#### $\Gamma$-reduction
+### $\Gamma$-reduction
 
 I wondered if this rule had a name or an existing definition, but I wanted to include it.
 Hence, I chose to call it the $\Gamma$-reduction rule in this post as soon it will be clear why.
@@ -379,6 +383,8 @@ $$
 > $$
 >
 > This combinator is used to create recursive functions in lambda calculus, as it allows for self-application of functions.
+
+---
 
 ## Encoding
 

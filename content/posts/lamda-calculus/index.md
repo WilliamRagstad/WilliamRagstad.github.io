@@ -9,6 +9,7 @@ showHero = true
 +++
 
 {{< katex >}}
+<command- for-all="span.katex-mathml" remove-element defer>
 
 ## Introduction
 

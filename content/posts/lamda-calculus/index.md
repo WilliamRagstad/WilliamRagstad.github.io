@@ -199,7 +199,25 @@ In simple terms, if $\forall x, f \ x = g \ x$, then $f = g$. Allowing us to sim
 > \end{align*}
 > $$
 >
-> The step "∵ $\eta$" could have been skipped, and the expression would still be correct. But I wanted to show that **expressions with no redexes can sometimes still be simplified**!
+> The step "∵ $\eta$" could have been skipped, and the expression would still be correct. But I wanted to show that **expressions with no apparent redexes may still be simplified**!
+
+### Optimizing
+
+As mentioned earlier, the $\eta$-reduction rule is an **optimization** rule removing redundant abstractions, but there are more explicit optimizing rules![^RS]
+
+| Name | Target | Rule | Condition |
+| --- | --- | --- | --- | --- |
+| $\eta$-reduction $\text{(Eta)}$ | Redundant abstractions | $$\lambda x. \ T \ x \implies T$$ | $x \notin FV(T)$ |
+| $\xi$-reduction $\text{(Xi)}$ | Abstraction bodies | $$\lambda x. M \implies \lambda x. M'$$ | $M \rarr M'$ |
+| $\nu$-reduction $\text{(Nu)}$ | Application functions | $$M \ N \implies M' \ N$$ | $M \rarr M'$ |
+| $\mu$-reduction $\text{(Mu)}$ | Application arguments | $$M \ N \implies M \ N'$$ | $N \rarr N'$ |
+
+## $let$-Bindings
+
+So up till this point, we have talked about the **pure** lambda calculus in its most basic form and covered the essential $\beta$-reduction rule.
+However, I feel like we must briefly talk about other extensions to lambda calculus that make it more practical and useful in real-world computation before moving on.
+So, in this extra chapter on bindings, I will cover a few interesting and advanced reduction extensions of lambda calculi.
+There are multiple variants of this such as [$\delta$-reduction](#delta-reduction), $\text{let}$-reduction, [$\zeta$-reduction](#zeta-reduction)[^CCR] and [$\Gamma$-reduction](#gamma-reduction) with slight semantic differences.[^DR]
 
 ### $\delta$-reduction
 

@@ -297,6 +297,7 @@ Look how perfect it is, it just returns its argument completely *unchanged*.
 It doesn't get any simpler than that.
 However, doing essentially nothing is surprisingly useful in some cases.
 One could also say that the identity combinator is a **fixed-point combinator**.
+Some use the definition notation with $\equiv$ instead of $=$, but I prefer the latter.
 
 > **Example**
 > $$

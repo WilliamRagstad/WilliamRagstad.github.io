@@ -88,64 +88,23 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 
 ## About Me
 
-{{< badge >}} Early experience {{< /badge >}}
+<!-- {{< badge >}} Early experience {{< /badge >}} -->
 Started programming at **11** and have been passionate about it ever since.
 Got my first job when I was just **16** years old.
 
-{{< badge >}} Education {{< /badge >}}
+<!-- {{< badge >}} Education {{< /badge >}} -->
 Early university studies at [ORU](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) during high school.
 At [KTH](https://www.kth.se/en), I worked as a **teaching assistant** and **research assistant** while still an **undergraduate** student.
 Even **taught my student peers** *while* taking the same classes myself.
 
-{{< badge >}} Hobbies {{< /badge >}}
+<!-- {{< badge >}} Hobbies {{< /badge >}} -->
 Enjoy spending time with **family and friends**, working out at the gym, doing track and field athletics, playing **cello**, playing **online games**, and reading **books** and **research papers**.\
 Currently deep-diving into **Programming Language Design**, **Type Theory**, and **Compiler Design**.
 
-{{< badge >}} Personality {{< /badge >}}
+<!-- {{< badge >}} Personality {{< /badge >}} -->
 I am excellent at **creative** **problem-solving** and enjoy **challenges** with **learning** opportunities.
 I aim to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and **open-minded**.
 
-<details open>
-<summary style="margin-left: -1.25rem;">
-  <h2 class="inline" style="margin-left: 0.33rem;">
-    Highlights
-  </h2>
-</summary>
-
-I have participated in various **competitive programming** contests, **hackathons**, **startups**, and **CTF** competitions
-playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF teams.
-
-<ul class="highlights_list">
-    <li>
-        <b><em>Creator</em>, Programming Languages</b>: Designed and implemented interpreters and compilers for <a href="https://lento-lang.org/" target="_blank">Lento</a>, <a href="https://webx.sh/" target="_blank">Web X</a>, and <a href="https://www.mini-lang.org/" target="_blank">mini</a>, among others.
-    </li>
-    <li>
-        <b><em>Compiler Team</em>, <a href="https://miking.org/" target="_blank">Miking</a></b>: A framework for constructing efficient domain-specific languages.
-    </li>
-    <li>
-        <b><em>Member</em>, <a href="https://www.sigplan.org/" target="_blank">ACM SIGPLAN</a></b>: Association for Computing Machinery's Special Interest Group on Programming Languages.
-    </li>
-    <li>
-        <b><em>Board Member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Attended weekly meetups and presented on programming topics.
-    </li>
-    <li>
-        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 2023, 24, 25</b>: Technical project manager for the website, infrastructure, and challenges.
-    </li>
-    <li>
-        <b><em>CTF Team Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a></b>: Expertise in reverse engineering, web, network, binary exploitation, cryptography, and more.
-    </li>
-    <!--
-    <li>
-        <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
-    </li>
-    <li>
-        <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
-    </li>
-    <li>
-        <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> and <a href="https://ctftime.org/team/114856" target="_blank">Kalmarunionen</a> in <b>Denmark</b>.
-    </li> -->
-</ul>
-</details>
 </div>
 
 <div id="job-content">
@@ -478,6 +437,48 @@ If you are interested to see all of my projects, check them out here:
 
 </div>
 
+<details open>
+<summary style="margin-left: -1.25rem;">
+  <h2 class="inline" style="margin-left: 0.33rem;">
+    Highlights
+  </h2>
+</summary>
+
+I have participated in various **competitive programming** contests, **hackathons**, **startups**, and **CTF** competitions
+playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF teams.
+
+<ul class="highlights_list">
+    <li>
+        <b><em>Creator</em>, Programming Languages</b>: Designed and implemented interpreters and compilers for <a href="https://lento-lang.org/" target="_blank">Lento</a>, <a href="https://webx.sh/" target="_blank">Web X</a>, and <a href="https://www.mini-lang.org/" target="_blank">mini</a>, among others.
+    </li>
+    <li>
+        <b><em>Compiler Team</em>, <a href="https://miking.org/" target="_blank">Miking</a></b>: A framework for constructing efficient domain-specific languages.
+    </li>
+    <li>
+        <b><em>Member</em>, <a href="https://www.sigplan.org/" target="_blank">ACM SIGPLAN</a></b>: Association for Computing Machinery's Special Interest Group on Programming Languages.
+    </li>
+    <li>
+        <b><em>Board Member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Attended weekly meetups and presented on programming topics.
+    </li>
+    <li>
+        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 2023, 24, 25</b>: Technical project manager for the website, infrastructure, and challenges.
+    </li>
+    <li>
+        <b><em>CTF Team Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a></b>: Expertise in reverse engineering, web, network, binary exploitation, cryptography, and more.
+    </li>
+    <!--
+    <li>
+        <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
+    </li>
+    <li>
+        <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
+    </li>
+    <li>
+        <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> and <a href="https://ctftime.org/team/114856" target="_blank">Kalmarunionen</a> in <b>Denmark</b>.
+    </li> -->
+</ul>
+</details>
+
 </div>
 </div>
 
@@ -678,12 +679,18 @@ let openDetails = [];
     /* ==== Print styles ==== */
 
     .print body {
-        padding: 0;
+        padding: 1.5rem;
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
     }
 
     .print #all-content {
         padding: 0;
         font-size: 80%;
+    }
+
+    .print #the-top {
+        display: none;
     }
 
     .print .main-menu {

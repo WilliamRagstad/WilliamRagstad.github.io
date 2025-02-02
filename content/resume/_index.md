@@ -3,6 +3,9 @@ title = "William Rågstad"
 date = 2024-01-07
 +++
 
+<command- for="section.prose > div.max-w-prose" remove-class="max-w-prose" defer ></command->
+<command- for-all=".lead" style="margin-top: 0;"></command->
+
 {{< lead >}}
 Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security Specialist
 {{< /lead >}}
@@ -16,9 +19,6 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
     <div class="flex flex-col items-center mx-auto px-2">
       <img class="mt-0 mb-0 border rounded-full medium-zoom-image" width="130" alt="William Rågstad" src="picture.jpg">
       <span class="mt-2">William Rågstad</span>
-      <span class="-mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-        Stockholm, Sweden
-      </span>
     </div>
     <div class="mx-auto px-2">
       <div
@@ -32,7 +32,7 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
           </span>
         </div>
       </div>
-      <table class="contact mt-4 mb-0">
+      <table class="contact mt-1 mb-0">
         <tbody>
           <tr>
             <td>
@@ -61,16 +61,30 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
                 +46 70-667 97 06</a>
             </td>
           </tr>
+          <tr>
+            <td>
+              Location
+            </td>
+            <td>
+                <span class="text-neutral-500 dark:text-neutral-400">
+                    Stockholm, Sweden
+                </span>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+<div class="print-hide">
+
 {{< lead >}}
 > "As a skilled programmer,
 > I aim to bring **value** and **impact** through consistent **quality** and **innovation**."
 {{< /lead >}}
+
+</div>
 
 ## About Me
 
@@ -111,19 +125,19 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
         <b><em>Member</em>, <a href="https://www.sigplan.org/" target="_blank">ACM SIGPLAN</a></b>: Association for Computing Machinery's Special Interest Group on Programming Languages.
     </li>
     <li>
-        <b><em>Board member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Attended weekly meetups and presented on programming topics.
+        <b><em>Board Member</em>, <a href="https://www.stacken.kth.se/en" target="_blank">KTH Stacken</a> Computer Club</b>: Attended weekly meetups and presented on programming topics.
     </li>
     <li>
-        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 23, 24, 25</b>: Technical project manager for the website, infrastructure, and challenges.
+        <b><em>Organizer</em>, <a href="https://undutmaning.se/" target="_blank">Undutmaning CTF</a> 2023, 24, 25</b>: Technical project manager for the website, infrastructure, and challenges.
     </li>
     <li>
-        <b><em>Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> Team</b>: Expertise in reverse engineering, web, network, binary exploitation, cryptography, and more.
+        <b><em>CTF Team Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a></b>: Expertise in reverse engineering, web, network, binary exploitation, cryptography, and more.
     </li>
     <!--
     <li>
         <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
     </li>
-	<li>
+    <li>
         <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
     </li>
     <li>
@@ -459,13 +473,13 @@ As well as other software systems engineering-related work.
 </div>
 </div>
 
-<div id="print_info" class="hidden">
+<div class="print-show">
 
 View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 
 </div>
 
-<div id="non_print_info">
+<div class="print-hide">
 
 {{< button href="/resume/williamr.pdf" >}}
 {{<icon "download" >}}&nbsp;Download PDF&nbsp;
@@ -479,7 +493,7 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 
 </div>
 
-<div class="hidden">
+<div class="hidden h-0">
 {{< keywordList >}}
     {{< keyword >}}resume{{< /keyword >}}
     {{< keyword >}}cv{{< /keyword >}}
@@ -505,8 +519,6 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 </div>
 
 <script>
-    document.querySelector('#all-content').parentElement.classList.remove('max-w-prose');
-
 let openDetails = [];
     let dark_mode;
     // When the user prints the page, open all details elements
@@ -574,6 +586,7 @@ let openDetails = [];
   li > div > .block.rounded-lg {
     border-width: 1px;
     border-color: rgba(var(--color-neutral-700), var(--tw-border-opacity));
+	margin-bottom: 1rem;
   }
 
   .highlights_list {
@@ -664,12 +677,28 @@ let openDetails = [];
     display: none;
   }
 
+  .print .print-hide {
+    display: none;
+  }
+
+  .print .print-show {
+    display: block !important;
+  }
+
+  :not(.print) .print-show {
+	display: none;
+  }
+
   .print #top-scroller {
     display: none;
   }
 
   .print section > p.py-8.border-t {
     display: none;
+  }
+
+  .print section {
+	margin-top: 0;
   }
 
   .print footer {
@@ -759,10 +788,8 @@ let openDetails = [];
     box-shadow: none;
     min-width: auto;
     margin-left: 0;
-    margin-bottom: 0;
     word-break: break-word;
-    margin-bottom: 1.5rem;
-
+    margin-bottom: 1.25rem;
   }
 
   .print #experience_list li .block > p > img {

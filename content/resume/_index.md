@@ -220,7 +220,7 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://i.namu.wiki/i/rX-yeAZoCsW-MdyXCeOfv0xx3jrLlWfY0h6_iG4GbYrf9dL7CAPH-tDgkS2cmNS7oS75ARd5sVdWa-MZ45cFHA.webp" style="padding: 3px" alt="logo"/> Elm</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/63474338?s=200&v=4" alt="logo"/> Roc</div>
   <div><img class="lang-logo color" src="https://raw.githubusercontent.com/grain-lang/grain/main/grain_shorthand_color.png" style="padding: 2px" alt="logo"/> Grain</div>
-  <div><img class="lang-logo" src="https://global.discourse-cdn.com/flex036/uploads/crystal_lang/original/1X/be927834732d93e8adea17886cd028dad84dee81.png" style="padding: 1px" alt="logo"/> Crystal</div>
+  <div><img class="lang-logo" src="https://crystal-lang.org/favicon.png" style="padding: 1px" alt="logo"/> Crystal</div>
   <div><img class="lang-logo color" src="https://yal.cc/wp-content/uploads/2013/03/haxe.png" style="padding: 3px" alt="logo"/> Haxe</div>
   <div><img class="lang-logo color" src="https://pbs.twimg.com/profile_images/1004185780313395200/ImZxrDWf_400x400.jpg" style="padding: 2px" alt="logo"/> Reason</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/29257325?s=200&v=4" style="padding: 2px" alt="logo"/> ReScript</div>

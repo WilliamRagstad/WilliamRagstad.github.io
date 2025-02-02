@@ -72,9 +72,23 @@ class CommandElement extends HTMLElement {
 			console.error('No target specified for command:', this, 'Use the "for" or "for-all" attribute');
 		}
 		console.log('Customization applied');
-		// Remove the element after applying the command
-		// this.remove();
-		console.log(this)
+		this.cleanup();
+	}
+
+	cleanup() {
+		// Check if the element has any children, then error!
+		if (this.children.length > 0)
+			console.error('Command element should not have any children:', this);
+		// Recursively cleanup the parent elements
+		let parent = this.parentElement;
+		let current = this;
+		while (parent) {
+			current.remove();
+			if (parent.children.length > 0)
+				break;
+			current = parent;
+			parent = parent.parentElement;
+		}
 	}
 
 	applyCommand(target) {

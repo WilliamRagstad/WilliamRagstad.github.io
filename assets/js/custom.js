@@ -72,6 +72,9 @@ class CommandElement extends HTMLElement {
 			console.error('No target specified for command:', this, 'Use the "for" or "for-all" attribute');
 		}
 		console.log('Customization applied');
+		// Remove the element after applying the command
+		// this.remove();
+		console.log(this)
 	}
 
 	applyCommand(target) {
@@ -98,8 +101,14 @@ class CommandElement extends HTMLElement {
 				case 'class':
 					target.classList.add(attribute.value);
 					break;
+				case 'remove-class':
+					target.classList.remove(attribute.value);
+					break;
 				case 'style':
 					target.style.cssText += attribute.value;
+					break;
+				case 'remove-style':
+					target.style.cssText = '';
 					break;
 				case 'remove-element':
 					target.remove();

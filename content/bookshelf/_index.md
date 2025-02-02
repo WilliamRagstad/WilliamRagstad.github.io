@@ -3,6 +3,8 @@ title = 'My Bookshelf'
 date = 2024-01-07T18:16:29+01:00
 +++
 
+<command- for="section.prose > div.max-w-prose" remove-class="max-w-prose" defer ></command->
+
 Here is a list of *some notable books* I **have read**, **currently reading** or have **on my to-read list** in my library.
 Read books are marked with a <span style="display: inline-block;"> {{< badge >}} read 📚 {{< /badge >}} </span> badge, a rating and my thoughts on it.
 Books I'm currently reading with <span style="display: inline-block;"> {{< badge >}} reading 📖 {{< /badge >}} </span>.
@@ -1328,6 +1330,17 @@ I hope you found inspiration for your next read!
 </div>
 
 <style>
+
+.bookshelf {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1150px) {
+    .bookshelf {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 .bookshelf .book {
     /* display: inline-block;

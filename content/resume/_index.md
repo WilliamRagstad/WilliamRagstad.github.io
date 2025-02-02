@@ -109,9 +109,30 @@ I aim to be **considerate**, **kind**, **attentive**, **thorough**, **curious**,
 
 <div id="job-content">
 
+## Education
+
+<div id="education_list" class="timeline_list">
+{{< timeline >}}
+
+{{< timelineItem icon="graduation-cap" header="Bachelor of Science" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
+Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at the Department of the School of Electrical Engineering and Computer Science (EECS).
+
+<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Part-time" badge="2017 - 2019" subheader="Örebro University (ORU)" >}}
+<b>Studied on masters level</b> in Computer Science at <a href="https://www.oru.se/utbildning/program/civilingenjor-datateknik/" target="_blank">Örebro University</a> <b>in parallel with High School</b>.
+Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering</b>, <b>Operating Systems</b>, <b>Computer Networks</b>, and <b>Mathematics</b>.
+
+<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< /timeline >}}
+</div>
+
 ## Experience
 
-<div id="experience_list">
+<div id="experience_list" class="timeline_list">
 {{< timeline >}}
 
 {{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
@@ -178,25 +199,12 @@ Experience with <b>UI/UX design</b>, <b>SEO optimization</b> and <b>Google Analy
 <img src="experience/connected-minds.png" alt="Connected Minds" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation-cap" header="University" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
-Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at the Department of the School of Electrical Engineering and Computer Science (EECS).
-
-<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
 {{< timelineItem icon="code" header="Systems Engineer" badge="2017" subheader="Fairyscope" >}}
 
 Consultant at <a href="https://www.youtube.com/watch?v=ezsheNColAk" target="_blank">Fairyscope</a>, a Swedish startup that developed a mobile app and cloud service for sharing information at exhibitions and trade fairs.
 I developed <b>backend</b> systems and <b>APIs</b> for generating custom stylized QR codes and managing user data.
 
 <img src="experience/fairyscope.png" alt="Fairyscope" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 10px" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="graduation-cap" header="University" badge="2017 - 2019" subheader="Örebro University" >}}
-<b>Studied on masters level</b> in Computer Science at <a href="https://www.oru.se/utbildning/program/civilingenjor-datateknik/" target="_blank">Örebro University</a> <b>in parallel with High School</b>.
-Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering</b>, <b>Operating Systems</b>, <b>Computer Networks</b>, and <b>Mathematics</b>.
-
-<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Software Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
@@ -765,33 +773,33 @@ let openDetails = [];
         grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     }
 
-    .print #experience_list > ol {
+    .print .timeline_list > ol {
         padding-left: 0;
         border-left: none;
     }
 
-    .print #experience_list h2 {
+    .print .timeline_list h2 {
         font-size: 1rem;
     }
 
-    .print #experience_list li {
+    .print .timeline_list li {
         margin: 0;
         padding-left: 0;
     }
 
-    .print #experience_list li > div > .rounded-full {
+    .print .timeline_list li > div > .rounded-full {
         display: none;
     }
 
-    .print #experience_list li .block > .flex {
+    .print .timeline_list li .block > .flex {
         margin-bottom: -1.75rem;
     }
 
-    .print #experience_list li .block > .mt-0 {
+    .print .timeline_list li .block > .mt-0 {
         text-align: center;
     }
 
-    .print #experience_list li .block {
+    .print .timeline_list li .block {
         /* Revert: p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words */
         padding: 0;
         padding-left: 1rem;
@@ -804,7 +812,7 @@ let openDetails = [];
         word-break: break-word;
     }
 
-    .print #experience_list li .block > p > img {
+    .print .timeline_list li .block > p > img {
         display: none;
     }
 </style>

@@ -88,8 +88,6 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 
 ## About Me
 
-Expert in Compiler Design, IT Security, and Full-Stack Development with extensive academic and practical experience from KTH and Örebro University.
-
 {{< badge >}} Early experience {{< /badge >}}
 Started programming at **11** and have been passionate about it ever since.
 Got my first job when I was just **16** years old.

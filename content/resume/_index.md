@@ -239,29 +239,29 @@ As well as other software systems engineering-related work.
 ### Programming Languages
 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
-  <div><span><img class="lang-logo color" src="https://www.rust-lang.org/logos/rust-logo-256x256.png" alt="logo"/> Rust <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="logo"/> C# <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="logo"/> C <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="logo"/> C++ <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="logo"/> Python <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="logo"/> Java <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" style="padding: 3px" alt="logo"/> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="padding: 3px" alt="logo"/> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML5/CSS3 <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="logo"/> Go <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="logo"/> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></span></div>
+  <div><span><img class="lang-logo color" src="https://www.rust-lang.org/logos/rust-logo-256x256.png" alt="logo"/> Rust </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="logo"/> C# </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="logo"/> C </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="logo"/> C++ </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="logo"/> Python </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="logo"/> Java </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" style="padding: 3px" alt="logo"/> TypeScript </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="padding: 3px" alt="logo"/> JavaScript </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML5/CSS3 </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="logo"/> Go </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="logo"/> PHP </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <!-- <div><img class="lang-logo" src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-27.png" style="padding: 3px" alt="logo"/>  SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div> -->
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/66/F_Sharp_logo.svg" alt="logo"/>  F# <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://blog.jasonkaniekete.fr/content/images/2021/12/elixir.png" alt="logo"/>  Elixir <div class="skill_bar"><div class="skill_bar_fill" style="width: 75%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/1841483?s=280&v=4" style="padding: 2px" alt="logo"/>  OCaml <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg" alt="logo"/>  Haskell <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></span></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/66/F_Sharp_logo.svg" alt="logo"/>  F# </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://blog.jasonkaniekete.fr/content/images/2021/12/elixir.png" alt="logo"/>  Elixir </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 75%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/1841483?s=280&v=4" style="padding: 2px" alt="logo"/>  OCaml </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg" alt="logo"/>  Haskell </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
   <!-- <div><img class="lang-logo color" src="https://media.licdn.com/dms/image/v2/D4E12AQGIjq9VHE7QtA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1678633797841?e=2147483647&v=beta&t=nQw7-J_xS3mpQA_d1beUZPyFVEhKW-_aNoTxE7IbenY" alt="logo"/>  Scala <div class="skill_bar"><div class="skill_bar_fill" style="width: 45%;"></div></div></div> -->
   <!-- <div><img class="lang-logo color" src="https://repository-images.githubusercontent.com/389429650/7105a193-ad96-45cc-a3be-87cdfda75ebe" style="padding: 3px" alt="logo"/>  Kotlin <div class="skill_bar"><div class="skill_bar_fill" style="width: 45%;"></div></div></div> -->
   <!-- <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg" alt="logo"/>  Lua <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div> -->
-  <div><span><img class="lang-logo" src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg" alt="logo"/> Assembly <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></span></div>
+  <div><span><img class="lang-logo" src="https://user-images.githubusercontent.com/103866722/194773833-8571f323-4fa8-4036-a51c-57b9d29c683b.svg" alt="logo"/> Assembly </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <!-- <div><img class="lang-logo" src="https://cdn.fosstodon.org/accounts/avatars/108/182/023/297/307/306/original/fab98078337311c3.png" alt="logo"/>  <a href="https://harelang.org/" target="_blank">Hare</a> <div class="skill_bar"><div class="skill_bar_fill" style="width: 20%;"></div></div></div> -->
-  <div><span><img class="lang-logo color" src="https://i0.wp.com/cachecrew.com/blog/wp-content/uploads/2023/03/kisspng-bash-shell-script-command-line-interface-z-shell-5b3df572212d73.0687702015307871861359.png?fit=528%2C528&ssl=1" alt="logo"/>Bash/Shell <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></span></div>
-  <div><span><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-powershell-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945093.png" style="padding: 3px" alt="logo"/>PowerShell <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></span></div>
+  <div><span><img class="lang-logo color" src="https://i0.wp.com/cachecrew.com/blog/wp-content/uploads/2023/03/kisspng-bash-shell-script-command-line-interface-z-shell-5b3df572212d73.0687702015307871861359.png?fit=528%2C528&ssl=1" alt="logo"/>Bash/Shell </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-powershell-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945093.png" style="padding: 3px" alt="logo"/>PowerShell </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
   <!-- <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Mathematica_Logo.svg" style="padding: 1px" alt="logo"/>Mathematica <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div> -->
   <!-- <div> Ruby <div class="skill_bar"><div class="skill_bar_fill" style="width: 20%;"></div></div></div>
   <div> Dart <div class="skill_bar"><div class="skill_bar_fill" style="width: 20%;"></div></div></div>
@@ -617,7 +617,7 @@ let openDetails = [];
     .skill_list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 0.5rem 1rem;
+        gap: 1rem 1rem;
     }
 
     .skill_list div {
@@ -630,7 +630,7 @@ let openDetails = [];
         background-color: rgba(var(--color-neutral-200), var(--tw-bg-opacity));
         border-radius: 0.25rem;
         height: 0.5rem;
-        margin-top: 0.5rem;
+        margin-top: 0.25rem;
         margin-bottom: 0.5rem;
         overflow: hidden;
         position: relative;
@@ -772,6 +772,10 @@ let openDetails = [];
     .print #all-content h3.group {
         margin-top: 1em;
         margin-bottom: 0.5rem;
+    }
+
+    .print .skill_list {
+        gap: 0 1rem;
     }
 
     .print .projects_list {

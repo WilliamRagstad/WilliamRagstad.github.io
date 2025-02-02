@@ -146,6 +146,113 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
     </li> -->
 </ul>
 </details>
+</div>
+
+<div id="job-content">
+
+## Experience
+
+<div id="experience_list">
+{{< timeline >}}
+
+{{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
+
+IT specialist at a Swedish cyber defense government agency and expert authority under of the <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry Department of Defence</a>.
+
+<img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Software Consultant" badge="2021" subheader="Willsoft" >}}
+I started my own consulting company, <a href="https://www.linkedin.com/company/willsoft-it" target="_blank">Willsoft</a>, providing varying IT and software development services to small and medium-sized businesses.
+
+<!-- <ul>
+  <li>Met with management and appropriate staff to understand their requirements.</li>
+  <li>Worked to find the most suitable solutions for complex problems.</li>
+  <li>Created, communicated and managed project plans.</li>
+  <li>Collaborated to create strategic initiatives to design, code, and test solutions.</li>
+  <li>Provided technical support and training to end-users.</li>
+</ul> -->
+
+<img src="experience/willsoft.jpg" alt="Willsoft" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Software Developer" badge="2021 - 2022" subheader="Alex Therapeutics" >}}
+Worked as a Software Developer at <a href="https://www.alextherapeutics.com/" target="_blank">Alex Therapeutics</a> in the development of a digital KBT therapy platform for mental health.
+I worked with the main full-stack product (<b>React</b> frontend and <b>Java Spring Boot</b>) and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations.
+
+<img src="experience/alex.png" alt="Alex Therapeutics" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Research Assistant" badge="2020 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
+
+Contributed to the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the <b>core compiler backend team</b> led by <a href="https://people.kth.se/~dbro/" target="_blank">David Broman</a> as an <b>undergraduate student</b>.
+I developed the compiler to extend the application domain to include <b>web browser and native JavaScript execution environments</b>.
+
+<img src="experience/miking.jpg" alt="Miking" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Teaching Assistant" badge="2019 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
+Working as a Teaching Assistant (TA) in:
+
+<a href="https://www.stacken.kth.se/en/news/2019/intro/">Introduction to Java</a>,
+<a href="https://www.kth.se/social/course/ID1019/" target="_blank">Programming II</a>,
+<a href="https://www.kth.se/social/course/ID1212/" target="_blank">Network Programming</a>,
+<a href="https://www.kth.se/social/course/ID1206/" target="_blank">Operating Systems</a>,
+<a href="https://www.kth.se/social/course/DH2642/" target="_blank">Interaction programming and dynamic web</a>,
+<a href="https://www.kth.se/social/course/DM1595/" target="_blank">Program Development for Interactive Media</a>,
+
+<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Private Tutor" badge="2019 - 2022" subheader="Superprof" >}}
+Private tutoring in Programming and Mathematics at <a href="https://www.superprof.se/kurser/programmering/sweden/" target="_blank">Superprof</a> for high school and university students in Stockholm.
+
+<img src="experience/superprof.png" alt="Superprof" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+<img src="experience/superprof.svg" alt="Superprof" width="100%" style="height: 50px; object-fit: contain; margin: 0; background: #f2f2f2; padding: 10px;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Full-Stack" badge="2019" subheader="Connected Minds" >}}
+Consulting Full-Stack Developer at <b>Connected Minds</b> a Swedish consulting company.
+I worked on the official website using <b>React</b> and <b>Node.js</b> and integrated a <b>CMS</b> for easy updates.
+Experience with <b>UI/UX design</b>, <b>SEO optimization</b> and <b>Google Analytics</b>.
+
+<img src="experience/connected-minds.png" alt="Connected Minds" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="University" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
+Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at the Department of the School of Electrical Engineering and Computer Science (EECS).
+
+<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Systems Engineer" badge="2017" subheader="Fairyscope" >}}
+
+Consultant at <a href="https://www.youtube.com/watch?v=ezsheNColAk" target="_blank">Fairyscope</a>, a Swedish startup that developed a mobile app and cloud service for sharing information at exhibitions and trade fairs.
+I developed <b>backend</b> systems and <b>APIs</b> for generating custom stylized QR codes and managing user data.
+
+<img src="experience/fairyscope.png" alt="Fairyscope" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 10px" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="University" badge="2017 - 2019" subheader="Örebro University" >}}
+<b>Studied on masters level</b> in Computer Science at <a href="https://www.oru.se/utbildning/program/civilingenjor-datateknik/" target="_blank">Örebro University</a> <b>in parallel with High School</b>.
+Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering</b>, <b>Operating Systems</b>, <b>Computer Networks</b>, and <b>Mathematics</b>.
+
+<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Software Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
+First programming job at <a href="https://www.mjukvarufabriken.se/" target="_blank">Mjukvarufabriken</a> as a Junior Developer.
+I worked on a mobile app in <b>C#</b> and <b>ASP.NET</b> for <a href="https://www.heabent.se/" target="_blank">HEAB</a> to make routine vehicle inspections easier.
+As well as other software systems engineering-related work.
+
+<img src="experience/mjukvarufabriken.png" alt="ÖU" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
+{{< /timelineItem >}}
+
+{{< /timeline >}}
+</div>
+
+</div>
+<div id="skills-content">
 
 <details open>
 <summary style="margin-left: -1.25rem;">
@@ -370,110 +477,6 @@ If you are interested to see all of my projects, check them out here:
 {{< /button >}}
 
 </div>
-</div>
-
-<div id="job-content">
-
-## Experience
-
-<div id="experience_list">
-{{< timeline >}}
-
-{{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
-
-IT specialist at a Swedish cyber defense government agency and expert authority under of the <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry Department of Defence</a>.
-
-<img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="code" header="Software Consultant" badge="2021" subheader="Willsoft" >}}
-I started my own consulting company, <a href="https://www.linkedin.com/company/willsoft-it" target="_blank">Willsoft</a>, providing varying IT and software development services to small and medium-sized businesses.
-
-<!-- <ul>
-  <li>Met with management and appropriate staff to understand their requirements.</li>
-  <li>Worked to find the most suitable solutions for complex problems.</li>
-  <li>Created, communicated and managed project plans.</li>
-  <li>Collaborated to create strategic initiatives to design, code, and test solutions.</li>
-  <li>Provided technical support and training to end-users.</li>
-</ul> -->
-
-<img src="experience/willsoft.jpg" alt="Willsoft" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="code" header="Software Developer" badge="2021 - 2022" subheader="Alex Therapeutics" >}}
-Worked as a Software Developer at <a href="https://www.alextherapeutics.com/" target="_blank">Alex Therapeutics</a> in the development of a digital KBT therapy platform for mental health.
-I worked with the main full-stack product (<b>React</b> frontend and <b>Java Spring Boot</b>) and <b>developed an internal CMS tool</b> aiming to simplify in-app content updates and connect language translations.
-
-<img src="experience/alex.png" alt="Alex Therapeutics" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="graduation-cap" header="Research Assistant" badge="2020 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
-
-Contributed to the <a href="https://miking.org/" target="_blank">Miking</a> research project as part of the <b>core compiler backend team</b> led by <a href="https://people.kth.se/~dbro/" target="_blank">David Broman</a> as an <b>undergraduate student</b>.
-I developed the compiler to extend the application domain to include <b>web browser and native JavaScript execution environments</b>.
-
-<img src="experience/miking.jpg" alt="Miking" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="graduation-cap" header="Teaching Assistant" badge="2019 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
-Working as a Teaching Assistant (TA) in:
-
-<a href="https://www.stacken.kth.se/en/news/2019/intro/">Introduction to Java</a>,
-<a href="https://www.kth.se/social/course/ID1019/" target="_blank">Programming II</a>,
-<a href="https://www.kth.se/social/course/ID1212/" target="_blank">Network Programming</a>,
-<a href="https://www.kth.se/social/course/ID1206/" target="_blank">Operating Systems</a>,
-<a href="https://www.kth.se/social/course/DH2642/" target="_blank">Interaction programming and dynamic web</a>,
-<a href="https://www.kth.se/social/course/DM1595/" target="_blank">Program Development for Interactive Media</a>,
-
-<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="graduation-cap" header="Private Tutor" badge="2019 - 2022" subheader="Superprof" >}}
-Private tutoring in Programming and Mathematics at <a href="https://www.superprof.se/kurser/programmering/sweden/" target="_blank">Superprof</a> for high school and university students in Stockholm.
-
-<img src="experience/superprof.png" alt="Superprof" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-<img src="experience/superprof.svg" alt="Superprof" width="100%" style="height: 50px; object-fit: contain; margin: 0; background: #f2f2f2; padding: 10px;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="code" header="Full-Stack" badge="2019" subheader="Connected Minds" >}}
-Consulting Full-Stack Developer at <b>Connected Minds</b> a Swedish consulting company.
-I worked on the official website using <b>React</b> and <b>Node.js</b> and integrated a <b>CMS</b> for easy updates.
-Experience with <b>UI/UX design</b>, <b>SEO optimization</b> and <b>Google Analytics</b>.
-
-<img src="experience/connected-minds.png" alt="Connected Minds" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="graduation-cap" header="University" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
-Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at the Department of the School of Electrical Engineering and Computer Science (EECS).
-
-<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="code" header="Systems Engineer" badge="2017" subheader="Fairyscope" >}}
-
-Consultant at <a href="https://www.youtube.com/watch?v=ezsheNColAk" target="_blank">Fairyscope</a>, a Swedish startup that developed a mobile app and cloud service for sharing information at exhibitions and trade fairs.
-I developed <b>backend</b> systems and <b>APIs</b> for generating custom stylized QR codes and managing user data.
-
-<img src="experience/fairyscope.png" alt="Fairyscope" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 10px" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="graduation-cap" header="University" badge="2017 - 2019" subheader="Örebro University" >}}
-<b>Studied on masters level</b> in Computer Science at <a href="https://www.oru.se/utbildning/program/civilingenjor-datateknik/" target="_blank">Örebro University</a> <b>in parallel with High School</b>.
-Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering</b>, <b>Operating Systems</b>, <b>Computer Networks</b>, and <b>Mathematics</b>.
-
-<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="code" header="Software Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
-First programming job at <a href="https://www.mjukvarufabriken.se/" target="_blank">Mjukvarufabriken</a> as a Junior Developer.
-I worked on a mobile app in <b>C#</b> and <b>ASP.NET</b> for <a href="https://www.heabent.se/" target="_blank">HEAB</a> to make routine vehicle inspections easier.
-As well as other software systems engineering-related work.
-
-<img src="experience/mjukvarufabriken.png" alt="ÖU" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 20px" />
-{{< /timelineItem >}}
-
-{{< /timeline >}}
-</div>
 
 </div>
 </div>
@@ -548,253 +551,253 @@ let openDetails = [];
 </script>
 
 <style>
-  /* Layout */
+    /* Layout */
 
-  @media (min-width: 800px) {
-    #all-content {
-      display: flex;
-      flex-direction: row;
-      gap: 3rem;
+    @media (min-width: 800px) {
+        #all-content {
+        display: grid;
+        gap: 0 3rem;
+        grid-template-columns: 55% 45%;
+        }
+        #job-content > h2 {
+        margin-top: 0;
+        }
     }
-    #job-content > h2 {
-      margin-top: 0;
+
+    @media (max-width: 799px) {
+        #all-content {
+        padding: 0 5%;
+        }
     }
-  }
 
-  @media (max-width: 799px) {
-    #all-content {
-      padding: 0 5%;
+    #job-content {
+        grid-row: span 3;
     }
-  }
 
-  #about-content {
-    flex: 5;
-  }
+    /* Print styles */
 
-  #job-content {
-    flex: 4;
-  }
+    table.contact {
+        line-height: 0.75rem;
+    }
 
-  /* Print styles */
+    li > div > .block.rounded-lg > div > h2 {
+        margin-bottom: 0;
+    }
+    li > div > .block.rounded-lg > p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    li > div > .block.rounded-lg {
+        border-width: 1px;
+        border-color: rgba(var(--color-neutral-700), var(--tw-border-opacity));
+        margin-bottom: 1rem;
+    }
 
-  table.contact {
-    line-height: 0.75rem;
-  }
+    .highlights_list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding-left: 0;
+    }
 
-  li > div > .block.rounded-lg > div > h2 {
-    margin-bottom: 0;
-  }
-  li > div > .block.rounded-lg > p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  li > div > .block.rounded-lg {
-    border-width: 1px;
-    border-color: rgba(var(--color-neutral-700), var(--tw-border-opacity));
-	margin-bottom: 1rem;
-  }
+    .highlights_list > * {
+        /* margin: 0.5rem; */
+        margin-left: 1.625rem;
+        margin-bottom: 0;
+    }
 
-  .highlights_list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    padding-left: 0;
-  }
+    .skill_list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 0.5rem 1rem;
+    }
 
-  .highlights_list > * {
-    /* margin: 0.5rem; */
-    margin-left: 1.625rem;
-    margin-bottom: 0;
-  }
+    .skill_bar {
+        background-color: rgba(var(--color-neutral-200), var(--tw-bg-opacity));
+        border-radius: 0.25rem;
+        height: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        border: solid 1px;
+    }
 
-  .skill_list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 0.5rem 1rem;
-  }
+    .learn_list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 0.75rem 1rem;
+    }
 
-  .skill_bar {
-    background-color: rgba(var(--color-neutral-200), var(--tw-bg-opacity));
-    border-radius: 0.25rem;
-    height: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-    border: solid 1px;
-  }
+    .projects_list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-rows: masonry;
+        align-items: center;
+    }
 
-  .learn_list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 0.75rem 1rem;
-  }
+    .projects_list > a > img {
+        margin: 0 auto;
+    }
 
-  .projects_list {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-template-rows: masonry;
-    align-items: center;
-  }
+    .dark .skill_bar {
+        border: none;
+    }
 
-  .projects_list > a > img {
-    margin: 0 auto;
-  }
+    .skill_bar_fill {
+        background-color: rgba(var(--color-primary-500), var(--tw-bg-opacity));
+        height: 100%;
+        position: absolute;
+    }
 
-  .dark .skill_bar {
-    border: none;
-  }
+    a > .align-text-bottom.icon {
+        vertical-align: middle;
+        padding-bottom: 4px;
+    }
 
-  .skill_bar_fill {
-    background-color: rgba(var(--color-primary-500), var(--tw-bg-opacity));
-    height: 100%;
-    position: absolute;
-  }
+    .lang-logo {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 0.2rem 0 0;
+    }
 
-  a > .align-text-bottom.icon {
-    vertical-align: middle;
-    padding-bottom: 4px;
-  }
+    .dark:not(.print) .lang-logo:not(.color) {
+        filter: invert(1);
+    }
 
-  .lang-logo {
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0.2rem 0 0;
-  }
+    /* parent of .relative.block.icon */
+    div:has(> .block.icon) {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
 
-  .dark:not(.print) .lang-logo:not(.color) {
-    filter: invert(1);
-  }
+    /* ==== Print styles ==== */
 
-  /* parent of .relative.block.icon */
-  div:has(> .block.icon) {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
+    .print body {
+        padding: 0;
+    }
 
-  /* ==== Print styles ==== */
+    .print #all-content {
+        padding: 0;
+        font-size: 80%;
+    }
 
-  .print .main-menu {
-    display: none;
-  }
+    .print .main-menu {
+        display: none;
+    }
 
-  .print .print-hide {
-    display: none;
-  }
+    .print .print-hide {
+        display: none;
+    }
 
-  .print .print-show {
-    display: block !important;
-  }
+    .print .print-show {
+        display: block !important;
+    }
 
-  :not(.print) .print-show {
-	display: none;
-  }
+    :not(.print) .print-show {
+        display: none;
+    }
 
-  .print #top-scroller {
-    display: none;
-  }
+    .print #top-scroller {
+        display: none;
+    }
 
-  .print section > p.py-8.border-t {
-    display: none;
-  }
+    .print section > p.py-8.border-t {
+        display: none;
+    }
 
-  .print section {
-	margin-top: 0;
-  }
+    .print section {
+        margin-top: 0;
+    }
 
-  .print footer {
-    display: none;
-  }
+    .print footer {
+        display: none;
+    }
 
-  .print #contact-card {
-    /* Cancel out: border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative mx-auto max-w-xl */
-    border: none;
-    border-radius: 0;
-    overflow: visible;
-    box-shadow: none;
-    margin: -1.75rem auto;
-  }
+    .print #contact-card {
+        /* Cancel out: border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative mx-auto max-w-xl */
+        border: none;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: none;
+        margin: -1.75rem auto;
+    }
 
-  .print section > div > .lead {
-    margin-top: 0.5rem;
-  }
+    .print section > div > .lead {
+        margin-top: 0.5rem;
+    }
 
-  .print #all-content {
-    padding: 0;
-    font-size: 80%;
-  }
+    html:not(.print) #all-content details {
+        margin-top: 2em;
+    }
 
-  html:not(.print) #all-content details {
-    margin-top: 2em;
-  }
+    .print #all-content details {
+        margin-top: 1.5em;
+    }
 
-  .print #all-content details {
-    margin-top: 1.5em;
-  }
+    .print #all-content details > summary::marker {
+        color: transparent;
+    }
 
-  .print #all-content details > summary::marker {
-    color: transparent;
-  }
+    .print #all-content h2.group {
+        margin-top: 1.5em;
+        margin-bottom: 0.5rem;
+    }
 
-  .print #all-content h2.group {
-    margin-top: 1.5em;
-    margin-bottom: 0.5rem;
-  }
+    .print #all-content h3.group {
+        margin-top: 1em;
+        margin-bottom: 0.5rem;
+    }
 
-  .print #all-content h3.group {
-    margin-top: 1em;
-    margin-bottom: 0.5rem;
-  }
+    .print .projects_list {
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
 
-  .print .projects_list {
-    gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  }
+    .print #experience_list > ol {
+        padding-left: 0;
+        border-left: none;
+    }
 
-  .print #experience_list > ol {
-    padding-left: 0;
-    border-left: none;
-  }
+    .print #experience_list h2 {
+        font-size: 1rem;
+    }
 
-  .print #experience_list h2 {
-    font-size: 1rem;
-  }
+    .print #experience_list li {
+        margin: 0;
+        padding-left: 0;
+    }
 
-  .print #experience_list li {
-    margin: 0;
-    padding-left: 0;
-  }
+    .print #experience_list li > div > .rounded-full {
+        display: none;
+    }
 
-  .print #experience_list li > div > .rounded-full {
-    display: none;
-  }
+    .print #experience_list li .block > .flex {
+        margin-bottom: -1.75rem;
+    }
 
-  .print #experience_list li .block > .flex {
-    margin-bottom: -1.75rem;
-  }
+    .print #experience_list li .block > .mt-0 {
+        text-align: center;
+    }
 
-  .print #experience_list li .block > .mt-0 {
-    text-align: center;
-  }
+    .print #experience_list li .block {
+        /* Revert: p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words */
+        padding: 0;
+        padding-left: 1rem;
+        border-radius: 0;
+        border: none;
+        border-left: 2px solid;
+        box-shadow: none;
+        min-width: auto;
+        margin-left: 0;
+        word-break: break-word;
+    }
 
-  .print #experience_list li .block {
-    /* Revert: p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words */
-    padding: 0;
-	padding-left: 1rem;
-    border-radius: 0;
-    border: none;
-	border-left: 2px solid;
-    box-shadow: none;
-    min-width: auto;
-    margin-left: 0;
-    word-break: break-word;
-  }
-
-  .print #experience_list li .block > p > img {
-    display: none;
-  }
+    .print #experience_list li .block > p > img {
+        display: none;
+    }
 </style>

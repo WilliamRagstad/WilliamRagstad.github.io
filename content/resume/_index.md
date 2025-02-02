@@ -435,8 +435,8 @@ Private tutoring in Programming and Mathematics at <a href="https://www.superpro
 <img src="experience/superprof.svg" alt="Superprof" width="100%" style="height: 50px; object-fit: contain; margin: 0; background: #f2f2f2; padding: 10px;" />
 {{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="Full-Stack Consultant" badge="2019" subheader="Connected Minds" >}}
-Full-Stack Developer at <b>Connected Minds</b> a Swedish consulting company.
+{{< timelineItem icon="code" header="Full-Stack" badge="2019" subheader="Connected Minds" >}}
+Consulting Full-Stack Developer at <b>Connected Minds</b> a Swedish consulting company.
 I worked on the official website using <b>React</b> and <b>Node.js</b> and integrated a <b>CMS</b> for easy updates.
 Experience with <b>UI/UX design</b>, <b>SEO optimization</b> and <b>Google Analytics</b>.
 
@@ -449,9 +449,9 @@ Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648
 <img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="Systems Engineer Consultant" badge="2017" subheader="Fairyscope" >}}
+{{< timelineItem icon="code" header="Systems Engineer" badge="2017" subheader="Fairyscope" >}}
 
-<a href="https://www.youtube.com/watch?v=ezsheNColAk" target="_blank">Fairyscope</a>, a Swedish startup that developed a mobile app and cloud service for sharing information at exhibitions and trade fairs.
+Consultant at <a href="https://www.youtube.com/watch?v=ezsheNColAk" target="_blank">Fairyscope</a>, a Swedish startup that developed a mobile app and cloud service for sharing information at exhibitions and trade fairs.
 I developed <b>backend</b> systems and <b>APIs</b> for generating custom stylized QR codes and managing user data.
 
 <img src="experience/fairyscope.png" alt="Fairyscope" width="100%" style="height: 80px; object-fit: contain; margin: 1.5rem 0 0 0; background: #f2f2f2; padding: 10px" />
@@ -464,7 +464,7 @@ Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering
 <img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="Junior Backend Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
+{{< timelineItem icon="code" header="Software Developer" badge="2016 - 2019" subheader="Mjukvarufabriken" >}}
 First programming job at <a href="https://www.mjukvarufabriken.se/" target="_blank">Mjukvarufabriken</a> as a Junior Developer.
 I worked on a mobile app in <b>C#</b> and <b>ASP.NET</b> for <a href="https://www.heabent.se/" target="_blank">HEAB</a> to make routine vehicle inspections easier.
 As well as other software systems engineering-related work.

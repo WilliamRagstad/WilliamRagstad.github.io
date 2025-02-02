@@ -205,26 +205,26 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://media.licdn.com/dms/image/v2/D4E12AQGIjq9VHE7QtA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1678633797841?e=2147483647&v=beta&t=nQw7-J_xS3mpQA_d1beUZPyFVEhKW-_aNoTxE7IbenY" alt="logo"/> Scala</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/0/06/Kotlin_Icon.svg" style="padding: 3px" alt="logo"/> Kotlin</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Racket-logo.svg" style="padding: 2px" alt="logo"/> Racket</div>
-  <div><img class="lang-logo color" src="https://seeklogo.com/images/N/nim-programming-language-logo-0E27D54E77-seeklogo.com.png" style="padding: 2px" alt="logo"/> Nim</div>
+  <div><img class="lang-logo color" src="https://raw.githubusercontent.com/nim-lang/assets/master/Art/logo-crown.png" style="padding: 3px 0.5px" alt="logo"/> Nim</div>
   <div><img class="lang-logo color" src="https://ia802906.us.archive.org/5/items/github.com-ziglang-zig_-_2020-03-26_08-52-52/cover.jpg" alt="logo"/> Zig</div>
+  <div><img class="lang-logo color" src="https://c3-lang.org/logo.svg" style="padding: 4px 0" alt="logo"/> C3</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/63474338?s=200&v=4" alt="logo"/> Roc</div>
   <div><img class="lang-logo color" src="https://developer.apple.com/assets/elements/icons/swift/swift-96x96_2x.png" alt="logo"/> Swift</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/1609975?s=280&v=4" style="padding: 2px" alt="logo"/> Dart</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/743164?s=160&v=4" style="padding: 3px" alt="logo"/> Julia</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" style="padding: 3px" alt="logo"/> Ruby</div>
-  <div><img class="lang-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Ada_Mascot_with_slogan.png" style="padding: 1px" alt="logo"/> Ada</div>
-  <div><img class="lang-logo color" src="https://c3-lang.org/logo.svg" style="padding: 4px 0" alt="logo"/> C3</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/V_Logo_SVG.svg" alt="logo"/> V</div>
   <div><img class="lang-logo" src="https://harelang.org/mascot.png" alt="logo"/> Hare</div>
+  <div><img class="lang-logo color" src="https://yal.cc/wp-content/uploads/2013/03/haxe.png" style="padding: 3px" alt="logo"/> Haxe</div>
+  <div><img class="lang-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Ada_Mascot_with_slogan.png" style="padding: 1px" alt="logo"/> Ada</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1200px-R_logo.svg.png" style="padding: 3px 0" alt="logo"/> R</div>
+  <div><img class="lang-logo color" src="https://pbs.twimg.com/profile_images/1004185780313395200/ImZxrDWf_400x400.jpg" style="padding: 2px" alt="logo"/> Reason</div>
+  <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/29257325?s=200&v=4" style="padding: 2px" alt="logo"/> ReScript</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Lisp_logo.svg/1200px-Lisp_logo.svg.png" style="padding: 2px" alt="logo"/> Lisp</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Clojure_logo.svg/640px-Clojure_logo.svg.png" style="padding: 2px" alt="logo"/> Clojure</div>
   <div><img class="lang-logo color" src="https://i.namu.wiki/i/rX-yeAZoCsW-MdyXCeOfv0xx3jrLlWfY0h6_iG4GbYrf9dL7CAPH-tDgkS2cmNS7oS75ARd5sVdWa-MZ45cFHA.webp" style="padding: 3px" alt="logo"/> Elm</div>
   <div><img class="lang-logo color" src="https://raw.githubusercontent.com/grain-lang/grain/main/grain_shorthand_color.png" style="padding: 2px" alt="logo"/> Grain</div>
   <div><img class="lang-logo" src="https://crystal-lang.org/favicon.png" style="padding: 1px" alt="logo"/> Crystal</div>
-  <div><img class="lang-logo color" src="https://yal.cc/wp-content/uploads/2013/03/haxe.png" style="padding: 3px" alt="logo"/> Haxe</div>
-  <div><img class="lang-logo color" src="https://pbs.twimg.com/profile_images/1004185780313395200/ImZxrDWf_400x400.jpg" style="padding: 2px" alt="logo"/> Reason</div>
-  <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/29257325?s=200&v=4" style="padding: 2px" alt="logo"/> ReScript</div>
   <div><img class="lang-logo" src="https://seeklogo.com/images/P/purescript-logo-FFC2726A4B-seeklogo.com.png" style="padding: 2px 0" alt="logo"/> PureScript</div>
   <div><img class="lang-logo" src="https://lean-lang.org/static/lean_logo.svg" alt="logo"/> Lean 4</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/5552910?s=200&v=4" alt="logo"/> Idris</div>

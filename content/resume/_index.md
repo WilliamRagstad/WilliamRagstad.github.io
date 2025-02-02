@@ -174,11 +174,12 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" style="padding: 3px" alt="logo"/> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="padding: 3px" alt="logo"/> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML5 / CSS3 <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="logo"/> Go <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="logo"/> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
-  <div><img class="lang-logo" src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-27.png" style="padding: 3px" alt="logo"/>  SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
+  <!-- <div><img class="lang-logo" src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-27.png" style="padding: 3px" alt="logo"/>  SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div> -->
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/66/F_Sharp_logo.svg" alt="logo"/>  F# <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
-  <div><img class="lang-logo color" src="https://blog.jasonkaniekete.fr/content/images/2021/12/elixir.png" alt="logo"/>  Elixir <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
-  <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/1841483?s=280&v=4" style="padding: 2px" alt="logo"/>  OCaml <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
+  <div><img class="lang-logo color" src="https://blog.jasonkaniekete.fr/content/images/2021/12/elixir.png" alt="logo"/>  Elixir <div class="skill_bar"><div class="skill_bar_fill" style="width: 75%;"></div></div></div>
+  <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/1841483?s=280&v=4" style="padding: 2px" alt="logo"/>  OCaml <div class="skill_bar"><div class="skill_bar_fill" style="width: 60%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg" alt="logo"/>  Haskell <div class="skill_bar"><div class="skill_bar_fill" style="width: 50%;"></div></div></div>
   <!-- <div><img class="lang-logo color" src="https://media.licdn.com/dms/image/v2/D4E12AQGIjq9VHE7QtA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1678633797841?e=2147483647&v=beta&t=nQw7-J_xS3mpQA_d1beUZPyFVEhKW-_aNoTxE7IbenY" alt="logo"/>  Scala <div class="skill_bar"><div class="skill_bar_fill" style="width: 45%;"></div></div></div> -->
   <!-- <div><img class="lang-logo color" src="https://repository-images.githubusercontent.com/389429650/7105a193-ad96-45cc-a3be-87cdfda75ebe" style="padding: 3px" alt="logo"/>  Kotlin <div class="skill_bar"><div class="skill_bar_fill" style="width: 45%;"></div></div></div> -->
@@ -206,8 +207,8 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Racket-logo.svg" style="padding: 2px" alt="logo"/> Racket</div>
   <div><img class="lang-logo color" src="https://seeklogo.com/images/N/nim-programming-language-logo-0E27D54E77-seeklogo.com.png" style="padding: 2px" alt="logo"/> Nim</div>
   <div><img class="lang-logo color" src="https://ia802906.us.archive.org/5/items/github.com-ziglang-zig_-_2020-03-26_08-52-52/cover.jpg" alt="logo"/> Zig</div>
+  <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/63474338?s=200&v=4" alt="logo"/> Roc</div>
   <div><img class="lang-logo color" src="https://developer.apple.com/assets/elements/icons/swift/swift-96x96_2x.png" alt="logo"/> Swift</div>
-  <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="logo"/> Go</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/1609975?s=280&v=4" style="padding: 2px" alt="logo"/> Dart</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/743164?s=160&v=4" style="padding: 3px" alt="logo"/> Julia</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" style="padding: 3px" alt="logo"/> Ruby</div>
@@ -219,9 +220,8 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Lisp_logo.svg/1200px-Lisp_logo.svg.png" style="padding: 2px" alt="logo"/> Lisp</div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Clojure_logo.svg/640px-Clojure_logo.svg.png" style="padding: 2px" alt="logo"/> Clojure</div>
   <div><img class="lang-logo color" src="https://i.namu.wiki/i/rX-yeAZoCsW-MdyXCeOfv0xx3jrLlWfY0h6_iG4GbYrf9dL7CAPH-tDgkS2cmNS7oS75ARd5sVdWa-MZ45cFHA.webp" style="padding: 3px" alt="logo"/> Elm</div>
-  <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/63474338?s=200&v=4" alt="logo"/> Roc</div>
   <div><img class="lang-logo color" src="https://raw.githubusercontent.com/grain-lang/grain/main/grain_shorthand_color.png" style="padding: 2px" alt="logo"/> Grain</div>
-  <div><img class="lang-logo" src="https:                                                           //crystal-lang.org/favicon.png" style="padding: 1px" alt="logo"/> Crystal</div>
+  <div><img class="lang-logo" src="https://crystal-lang.org/favicon.png" style="padding: 1px" alt="logo"/> Crystal</div>
   <div><img class="lang-logo color" src="https://yal.cc/wp-content/uploads/2013/03/haxe.png" style="padding: 3px" alt="logo"/> Haxe</div>
   <div><img class="lang-logo color" src="https://pbs.twimg.com/profile_images/1004185780313395200/ImZxrDWf_400x400.jpg" style="padding: 2px" alt="logo"/> Reason</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/29257325?s=200&v=4" style="padding: 2px" alt="logo"/> ReScript</div>

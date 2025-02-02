@@ -88,21 +88,24 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 
 ## About Me
 
+Expert in Compiler Design, IT Security, and Full-Stack Development with extensive academic and practical experience from KTH and Örebro University.
+
 {{< badge >}} Early experience {{< /badge >}}
-I began programming at the age of **11** and have been hooked ever since. I got my first job at **16**.
+Started programming at **11** and have been passionate about it ever since.
+Got my first job when I was just **16** years old.
 
 {{< badge >}} Education {{< /badge >}}
-During my final high school years, I studied at [university](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) early.
-When at [KTH](https://www.kth.se/en), I worked as a **Teaching Assistant** and **Research Assistant** while still an **undergraduate** student.
-Even **teaching my student peers** as a TA, *while also taking the same classes myself*.
+Early university studies at [ORU](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) during high school.
+At [KTH](https://www.kth.se/en), I worked as a **teaching assistant** and **research assistant** while still an **undergraduate** student.
+Even **taught my student peers** *while* taking the same classes myself.
 
 {{< badge >}} Hobbies {{< /badge >}}
-I like to spend time with **family and friends**, play **online games**, work out at the **gym**, participate in **track and field** athletics, **play the cello**, and read **books** and **research papers**.\
-I'm deep-diving into **Programming Language Design**, **Type Theory**, and **Compiler Design**.
+Enjoy spending time with **family and friends**, working out at the gym, doing track and field athletics, playing **cello**, playing **online games**, and reading **books** and **research papers**.\
+Currently deep-diving into **Programming Language Design**, **Type Theory**, and **Compiler Design**.
 
 {{< badge >}} Personality {{< /badge >}}
-I am a **creative** **problem solver**  who enjoys new **challenges** and **learning** opportunities.
-I try to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and generally **open-minded**.
+I am excellent at **creative** **problem-solving** and enjoy **challenges** with **learning** opportunities.
+I aim to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and **open-minded**.
 
 <details open>
 <summary style="margin-left: -1.25rem;">

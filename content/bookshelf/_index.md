@@ -56,6 +56,24 @@ All books are **broadly categorized by genre** with a short description of the b
             </div>
         </div>
     </div>
+	<!-- The Algorithm Design Manual -->
+    <div class="book">
+        <div class="cover">
+            <span><img src="https://m.media-amazon.com/images/I/6163mph9wCL._SL1092_.jpg" alt="cover"/></span>
+        </div>
+        <div class="about">
+            <b>The Algorithm Design Manual</b><br/>
+            <em>by Steven S. Skiena</em>
+            <p>
+			This book offers an introduction to combinatorial algorithms, emphasizing design rather than analysis. It is divided into two parts: "Practical Algorithm Design," which teaches methods for designing and analyzing algorithms, and "The Hitchhiker's Guide to Algorithms," a reference section with a catalog of algorithmic resources, implementations, and a comprehensive bibliography.
+            </p>
+            <hr/>
+            <div class="status">
+                <span class="rating">★★★★☆</span>
+                <span class="inline-block rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">read 📚</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 ### Computational Theory

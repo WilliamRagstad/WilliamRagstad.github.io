@@ -687,7 +687,7 @@ let openDetails = [];
     /* ==== Print styles ==== */
 
     .print body {
-        padding: 1.5rem;
+        padding: 1.75rem;
         /* padding-left: 2rem;
         padding-right: 2rem; */
     }

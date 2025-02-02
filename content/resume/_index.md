@@ -175,7 +175,7 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="logo"/> Java <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" style="padding: 3px" alt="logo"/> TypeScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="padding: 3px" alt="logo"/> JavaScript <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML / CSS <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML5 / CSS3 <div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="logo"/> PHP <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><img class="lang-logo" src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-27.png" style="padding: 3px" alt="logo"/>  SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/66/F_Sharp_logo.svg" alt="logo"/>  F# <div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
@@ -197,7 +197,7 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><br/> &nbsp; + more </div>
 </div>
 
-<div id="want_to_learn">
+<div id="want_to_learn" class="print-hide">
 
 ### Want to Learn
 
@@ -223,7 +223,7 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
   <div><img class="lang-logo color" src="https://i.namu.wiki/i/rX-yeAZoCsW-MdyXCeOfv0xx3jrLlWfY0h6_iG4GbYrf9dL7CAPH-tDgkS2cmNS7oS75ARd5sVdWa-MZ45cFHA.webp" style="padding: 3px" alt="logo"/> Elm</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/63474338?s=200&v=4" alt="logo"/> Roc</div>
   <div><img class="lang-logo color" src="https://raw.githubusercontent.com/grain-lang/grain/main/grain_shorthand_color.png" style="padding: 2px" alt="logo"/> Grain</div>
-  <div><img class="lang-logo" src="https://crystal-lang.org/favicon.png" style="padding: 1px" alt="logo"/> Crystal</div>
+  <div><img class="lang-logo" src="https:                                                           //crystal-lang.org/favicon.png" style="padding: 1px" alt="logo"/> Crystal</div>
   <div><img class="lang-logo color" src="https://yal.cc/wp-content/uploads/2013/03/haxe.png" style="padding: 3px" alt="logo"/> Haxe</div>
   <div><img class="lang-logo color" src="https://pbs.twimg.com/profile_images/1004185780313395200/ImZxrDWf_400x400.jpg" style="padding: 2px" alt="logo"/> Reason</div>
   <div><img class="lang-logo color" src="https://avatars.githubusercontent.com/u/29257325?s=200&v=4" style="padding: 2px" alt="logo"/> ReScript</div>
@@ -327,6 +327,8 @@ I am interested in many areas including **CTFs**, **Competitive Programming**, *
 </details>
 -->
 
+<div class="print-hide">
+
 ## Projects
 
 I have created many projects, including **Programming Languages**, **Websites**, **Games**, **Tools & Libraries**, **Research**, and **much more**.
@@ -370,6 +372,8 @@ If you are interested to see all of my projects, check them out here:
 {{< /button >}}
 
 </div>
+</div>
+
 <div id="job-content">
 
 ## Experience
@@ -748,10 +752,6 @@ let openDetails = [];
     margin-bottom: 0.5rem;
   }
 
-  .print #want_to_learn {
-    display: none;
-  }
-
   .print .projects_list {
     gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -786,24 +786,17 @@ let openDetails = [];
   .print #experience_list li .block {
     /* Revert: p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words */
     padding: 0;
+	padding-left: 1rem;
     border-radius: 0;
     border: none;
+	border-left: 2px solid;
     box-shadow: none;
     min-width: auto;
     margin-left: 0;
     word-break: break-word;
-    margin-bottom: 1.25rem;
   }
 
   .print #experience_list li .block > p > img {
-    display: none;
-  }
-
-  .print #print_info {
-    display: block;
-  }
-
-  .print #non_print_info {
     display: none;
   }
 </style>

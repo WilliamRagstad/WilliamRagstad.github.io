@@ -3,11 +3,11 @@ title = "William Rågstad"
 date = 2024-01-07
 +++
 
-<command- for="section.prose > div.max-w-prose" remove-class="max-w-prose" defer ></command->
+<command- for="section.prose > div.max-w-prose" remove-class="max-w-prose" defer></command->
 <command- for-all=".lead" style="margin-top: 0;"></command->
 
 {{< lead >}}
-Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security Specialist
+Senior Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security Specialist
 {{< /lead >}}
 
 <div id="all-content">
@@ -61,7 +61,7 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
                 +46 70-667 97 06</a>
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <td>
               Location
             </td>
@@ -70,7 +70,7 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
                     Stockholm, Sweden
                 </span>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>
@@ -89,22 +89,25 @@ Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Security 
 ## About Me
 
 <!-- {{< badge >}} Early experience {{< /badge >}} -->
-Started programming at **11** and have been passionate about it ever since.
-Got my first job when I was just **16** years old.
+Started programming at **10** and have been passionate about it ever since.
+I got my first job when I was just **16** years old.
+Today I possess expert knowledge in **modern systems development**, **compilers**, **theoretical computer science**, **IT** and-**cybersecurity**.
 
 <!-- {{< badge >}} Education {{< /badge >}} -->
-Early university studies at [ORU](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) during high school.
+Early **university studies** at [ORU](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) **during high school**.
 At [KTH](https://www.kth.se/en), I worked as a **teaching assistant** and **research assistant** while still an **undergraduate** student.
 Even **taught my student peers** *while* taking the same classes myself.
+I was recognized as an **honor student** in my class at graduation, receiving **commendations from numerous teachers**.
 
 <!-- {{< badge >}} Hobbies {{< /badge >}} -->
-Enjoy spending time with **family and friends**, working out at the gym, doing track and field athletics, playing **cello**, playing **online games**, and reading **books** and **research papers**.\
-Currently deep-diving into **Programming Language Design**, **Type Theory**, and **Compiler Design**.
+I enjoy spending time with **family and friends**, working out at the **gym**, reading **books** and **research papers**, playing **cello** and **online games**.
+I'm currently deep-diving into **Programming Language Design**.
 
 <!-- {{< badge >}} Personality {{< /badge >}} -->
 I am excellent at **creative** **problem-solving** and enjoy **challenges** with **learning** opportunities.
 I aim to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and **open-minded**.
 
+**I can build anything**, from high-level architectural diagrams to robust, pragmatic, and secure implementation, thanks to the broad skills I have acquired in the industry and academia.
 </div>
 
 <div id="job-content">
@@ -172,14 +175,16 @@ I developed the compiler to extend the application domain to include <b>web brow
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Teaching Assistant" badge="2019 - 2023" subheader="Royal Institute of Technology (KTH)" >}}
-Working as a Teaching Assistant (TA) in:
+Working as a teaching assistant in:
 
-<a href="https://www.stacken.kth.se/en/news/2019/intro/">Introduction to Java</a>,
+<a href="https://www.kth.se/social/course/EN2720/" target="_blank">Ethical Hacking</a>,
+<a href="https://www.kth.se/social/course/DD1361/" target="_blank">Programming Paradigms</a>,
 <a href="https://www.kth.se/social/course/ID1019/" target="_blank">Programming II</a>,
 <a href="https://www.kth.se/social/course/ID1212/" target="_blank">Network Programming</a>,
 <a href="https://www.kth.se/social/course/ID1206/" target="_blank">Operating Systems</a>,
-<a href="https://www.kth.se/social/course/DH2642/" target="_blank">Interaction programming and dynamic web</a>,
-<a href="https://www.kth.se/social/course/DM1595/" target="_blank">Program Development for Interactive Media</a>,
+<a href="https://www.kth.se/social/course/DH2642/" target="_blank">Interaction Programming</a>,
+<!-- <a href="https://www.kth.se/social/course/DM1595/" target="_blank">Program Development for Interactive Media</a>, -->
+<a href="https://www.stacken.kth.se/en/news/2019/intro/" target="_blank">Introduction to Java</a>,
 
 <img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
@@ -221,12 +226,7 @@ As well as other software systems engineering-related work.
 </div>
 <div id="skills-content">
 
-<details open>
-<summary style="margin-left: -1.25rem;">
-  <h2 class="inline" style="margin-left: 0.33rem;">
-    Skills
-  </h2>
-</summary>
+## Skills
 
 ### Natural Languages
 
@@ -310,14 +310,8 @@ As well as other software systems engineering-related work.
 
 </div>
 
-</details>
-
-<!-- <details open>
-<summary style="margin-left: -1.25rem;">
-  <h2 class="inline" style="margin-left: 0.33rem;">
-    Technologies
-  </h2>
-</summary>
+<!--
+## Technologies
 
 ### Web Frameworks
 
@@ -352,17 +346,16 @@ As well as other software systems engineering-related work.
   <div><br/> &nbsp; + more </div>
 </div>
 
-</details> -->
+-->
 
-<details open>
-<summary style="margin-left: -1.25rem;">
-  <h2 class="inline" style="margin-left: 0.33rem;">
-    Specializations
-  </h2>
-</summary>
+<!-- ## Specializations -->
 
-I am interested in many areas including **CTFs**, **Competitive Programming**, **Cybersecurity**, **Programming Languages**, **Type Theory**, and *much more*.
+### Interest Areas
 
+My main focus is on **Programming Languages**, **Software Development** and **Cybersecurity**.
+However, I often explore related areas including **Compiler Construction**, **Interaction Nets**, **Category Theory**, **Type Theory**, **Logic**, **Formal Methods**, **Functional Programming**, **Systems Programming**, **Software Architecture**, **Networking**, **Operating Systems**, **Cybersecurity**, **CTFs**, **Cryptography**, **Web Development**, **Game Development** and *much more*.
+
+<!--
 ### Practical Skills
 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
@@ -376,7 +369,9 @@ I am interested in many areas including **CTFs**, **Competitive Programming**, *
   <div> Game Development <div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><br/> &nbsp; + more </div>
 </div>
+-->
 
+<!--
 ### Computer Science
 
 <div class="skill_list text-sm font-semibold text-neutral-600 dark:text-neutral-400">
@@ -395,9 +390,7 @@ I am interested in many areas including **CTFs**, **Competitive Programming**, *
   <div> Computer Graphics <div class="skill_bar"><div class="skill_bar_fill" style="width: 40%;"></div></div></div>
   <div><br/> &nbsp; + more </div>
 </div>
-
-</details>
-
+-->
 
 <div class="print-hide">
 
@@ -445,15 +438,11 @@ If you are interested to see all of my projects, check them out here:
 
 </div>
 
-<details open>
-<summary style="margin-left: -1.25rem;">
-  <h2 class="inline" style="margin-left: 0.33rem;">
-    Highlights
-  </h2>
-</summary>
+## Highlights
 
 I have participated in various **competitive programming** contests, **hackathons**, **startups**, and **CTF** competitions
-playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF teams.
+playing with the **Swedish National Hacking Team** and **RoyalRoppers**, the Swedish elite team.
+Got into IT-Security at high school, played CTF competitions in the [**national team**](https://swedish-national-hacking-team.confetti.events/) and with RoyalRoppers
 
 <ul class="highlights_list">
     <li>
@@ -474,18 +463,18 @@ playing in the **Swedish National Hacking Team** and the **RoyalRoppers** CTF te
     <li>
         <b><em>CTF Team Member</em>, <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a></b>: Expertise in reverse engineering, web, network, binary exploitation, cryptography, and more.
     </li>
+    <li>
+        <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a></b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
+    </li>
+    <li>
+        <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> and <a href="https://ctftime.org/team/114856" target="_blank">Kalmarunionen</a> in <b>Denmark</b>.
+    </li>
     <!--
     <li>
         <b><em>Developer</em>, <a href="https://github.com/WilliamRagstad" target="_blank">100+ GitHub Projects</a></b>: Strong technical expertise in <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">OSS</a>-dev. Some with over <b>200,000+ users</b> worldwide.
     </li>
-    <li>
-        <b><em>Participant</em>, <a href="https://snht.se/" target="_blank">Swedish National Hacking Team</a> Bootcamp</b>: Preparation for <a href="https://ecsc.eu/" target="_blank">ECSC</a> competition against 20+ countries.
-    </li>
-    <li>
-        <b><em>Competitor</em>, <a href="https://ctftime.org/event/2229" target="_blank">DEFCON CTF Qualifier</a> 2024</b>: In the <a href="https://norsecode.team/" target="_blank">NorseCode</a> team via <a href="https://royalroppers.team/" target="_blank">RoyalRoppers</a> and <a href="https://ctftime.org/team/114856" target="_blank">Kalmarunionen</a> in <b>Denmark</b>.
-    </li> -->
+     -->
 </ul>
-</details>
 
 </div>
 </div>
@@ -536,26 +525,26 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 </div>
 
 <script>
-let openDetails = [];
+    // let openDetails = [];
     let dark_mode;
     // When the user prints the page, open all details elements
     window.onbeforeprint = function() {
         document.querySelector('html').classList.add('print');
         dark_mode = document.querySelector('html').classList.contains('dark');
         document.querySelector('html').classList.remove('dark'); // Ensure light mode for print
-        openDetails = [];
-        document.querySelectorAll('details').forEach(function(detail) {
-            if (detail.hasAttribute('open')) openDetails.push(detail);
-            detail.setAttribute('open', '');
-        });
+        // openDetails = [];
+        // document.querySelectorAll('details').forEach(function(detail) {
+        //     if (detail.hasAttribute('open')) openDetails.push(detail);
+        //     detail.setAttribute('open', '');
+        // });
     };
     // When the user exits print preview, close all details elements
     window.onafterprint = function() {
         document.querySelector('html').classList.remove('print');
         document.querySelector('html').classList.toggle('dark', dark_mode); // Restore dark mode
-        document.querySelectorAll('details').forEach(function(detail) {
-            if (!openDetails.includes(detail)) detail.removeAttribute('open');
-        });
+        // document.querySelectorAll('details').forEach(function(detail) {
+        //     if (!openDetails.includes(detail)) detail.removeAttribute('open');
+        // });
     };
 </script>
 

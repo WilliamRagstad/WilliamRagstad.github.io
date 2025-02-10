@@ -459,11 +459,10 @@ Check out **all of my projects** at [github.com/WilliamRagstad](https://github.c
 
 <div class="print-hide">
 
-## Highlights
+## Accomplishments
 
 I have participated in various **competitive programming** contests, **hackathons**, **startups**, and **CTF** competitions
 playing with the **Swedish National Hacking Team** and **RoyalRoppers**, the Swedish elite team.
-Got into IT-Security at high school, played CTF competitions in the [**national team**](https://swedish-national-hacking-team.confetti.events/) and with RoyalRoppers
 
 <ul class="highlights_list">
     <li>

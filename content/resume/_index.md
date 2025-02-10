@@ -768,6 +768,10 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
         margin: -1.75rem auto;
     }
 
+    .print #contact-card img {
+        border-radius: 32px;
+    }
+
     .print section > div > .lead {
         margin-top: 0.5rem;
     }

@@ -40,7 +40,7 @@ Senior Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Se
             </td>
             <td>
               <a href="https://www.linkedin.com/in/william-ragstad/" target="_blank">
-                William Rågstad</a>
+                linkedin.com/in/william-ragstad</a>
             </td>
           </tr>
           <tr>

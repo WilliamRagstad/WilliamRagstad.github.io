@@ -116,27 +116,6 @@ I aim to be **considerate**, **kind**, **attentive**, **thorough**, **curious**,
 
 <div id="job-content">
 
-## Education
-
-<div id="education_list" class="timeline_list">
-{{< timeline >}}
-
-{{< timelineItem icon="graduation-cap" header="Bachelor of Science" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
-Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at the Department of the School of Electrical Engineering and Computer Science (EECS).
-
-<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< timelineItem icon="graduation-cap" header="Part-time" badge="2017 - 2019" subheader="Örebro University (ORU)" >}}
-<b>Studied on masters level</b> in Computer Science at <a href="https://www.oru.se/utbildning/program/civilingenjor-datateknik/" target="_blank">Örebro University</a> <b>in parallel with High School</b>.
-Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering</b>, <b>Operating Systems</b>, <b>Computer Networks</b>, and <b>Mathematics</b>.
-
-<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
-{{< /timelineItem >}}
-
-{{< /timeline >}}
-</div>
-
 ## Experience
 
 <div id="experience_list" class="timeline_list">
@@ -227,6 +206,31 @@ As well as other software systems engineering-related work.
 {{< /timelineItem >}}
 
 {{< /timeline >}}
+
+<div class="print-show">
+
+## Education
+
+<div id="education_list" class="timeline_list">
+{{< timeline >}}
+
+{{< timelineItem icon="graduation-cap" header="Bachelor of Science" badge="2019 - 2024" subheader="Royal Institute of Technology (KTH)" >}}
+Studying <a href="https://www.kth.se/cs/department-of-computer-science-1.1027648" target="_blank">Computer Science</a> and Engineering at the Department of the School of Electrical Engineering and Computer Science (EECS).
+
+<img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Part-time" badge="2017 - 2019" subheader="Örebro University (ORU)" >}}
+<b>Studied on masters level</b> in Computer Science at <a href="https://www.oru.se/utbildning/program/civilingenjor-datateknik/" target="_blank">Örebro University</a> <b>in parallel with High School</b>.
+Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering</b>, <b>Operating Systems</b>, <b>Computer Networks</b>, and <b>Mathematics</b>.
+
+<img src="experience/orebro.jpg" alt="ÖU" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
+{{< /timelineItem >}}
+
+{{< /timeline >}}
+
+</div>
+</div>
 </div>
 
 </div>

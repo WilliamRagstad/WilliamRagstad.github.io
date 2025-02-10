@@ -86,6 +86,8 @@ Senior Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Se
 
 </div>
 
+<div class="print-hide">
+
 ## About Me
 
 <!-- {{< badge >}} Early experience {{< /badge >}} -->
@@ -108,6 +110,8 @@ I am excellent at **creative** **problem-solving** and enjoy **challenges** with
 I aim to be **considerate**, **kind**, **attentive**, **thorough**, **curious**, and **open-minded**.
 
 **I can build anything**, from high-level architectural diagrams to robust, pragmatic, and secure implementation, thanks to the broad skills I have acquired in the industry and academia.
+
+</div>
 </div>
 
 <div id="job-content">
@@ -140,7 +144,7 @@ Courses included: <b>Algorithms and Data Structures</b>, <b>Software Engineering
 
 {{< timelineItem icon="eye" header="IT-Specialist" badge="2022 - present" subheader="Swedish Defence Agency" >}}
 
-IT specialist at a Swedish cyber defense government agency and expert authority under of the <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Ministry Department of Defence</a>.
+Working as an IT specialist and analyst at The Department for Internet Operations of a Swedish cyber defense government agency and expert authority under the <a href="https://www.government.se/government-of-sweden/ministry-of-defence/" target="_blank">Swedish Ministry of Defence</a>.
 
 <img src="experience/defence.jpg" alt="Swedish Defence" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
@@ -189,12 +193,14 @@ Working as a teaching assistant in:
 <img src="experience/kth.jpg" alt="KTH" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 {{< /timelineItem >}}
 
+<div class="print-hide">
 {{< timelineItem icon="graduation-cap" header="Private Tutor" badge="2019 - 2022" subheader="Superprof" >}}
 Private tutoring in Programming and Mathematics at <a href="https://www.superprof.se/kurser/programmering/sweden/" target="_blank">Superprof</a> for high school and university students in Stockholm.
 
 <img src="experience/superprof.png" alt="Superprof" width="100%" style="height: 80px; object-fit: cover; margin: 1.5rem 0 0 0;" />
 <img src="experience/superprof.svg" alt="Superprof" width="100%" style="height: 50px; object-fit: contain; margin: 0; background: #f2f2f2; padding: 10px;" />
 {{< /timelineItem >}}
+</div>
 
 {{< timelineItem icon="code" header="Full-Stack" badge="2019" subheader="Connected Minds" >}}
 Consulting Full-Stack Developer at <b>Connected Minds</b> a Swedish consulting company.
@@ -245,10 +251,10 @@ As well as other software systems engineering-related work.
   <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="logo"/> C++ </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div>
   <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="logo"/> Python </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="logo"/> Java </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
+  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="logo"/> Go </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" style="padding: 3px" alt="logo"/> TypeScript </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="padding: 3px" alt="logo"/> JavaScript </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
   <div><span><img class="lang-logo color" src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" style="padding: 2px" alt="logo"/> HTML5/CSS3 </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 100%;"></div></div></div>
-  <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="logo"/> Go </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="logo"/> PHP </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 70%;"></div></div></div>
   <!-- <div><img class="lang-logo" src="https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-27.png" style="padding: 3px" alt="logo"/>  SQL <div class="skill_bar"><div class="skill_bar_fill" style="width: 80%;"></div></div></div> -->
   <div><span><img class="lang-logo color" src="https://upload.wikimedia.org/wikipedia/commons/6/66/F_Sharp_logo.svg" alt="logo"/>  F# </span><div class="skill_bar"><div class="skill_bar_fill" style="width: 90%;"></div></div></div>
@@ -350,10 +356,14 @@ As well as other software systems engineering-related work.
 
 <!-- ## Specializations -->
 
+<div class="print-hide">
+
 ### Interest Areas
 
-My main focus is on **Programming Languages**, **Software Development** and **Cybersecurity**.
-However, I often explore related areas including **Compiler Construction**, **Interaction Nets**, **Category Theory**, **Type Theory**, **Logic**, **Formal Methods**, **Functional Programming**, **Systems Programming**, **Software Architecture**, **Networking**, **Operating Systems**, **Cybersecurity**, **CTFs**, **Cryptography**, **Web Development**, **Game Development** and *much more*.
+I am primarily interested in **Programming Languages**, **Software Development** and **Cybersecurity**.
+But often explore related areas including **Compiler Construction**, **Interaction Nets**, **Category Theory**, **Type Theory**, **Logic**, **Formal Methods**, **Functional Programming**, **Software Architecture**, **Networking**, **Operating Systems**, **Cybersecurity**, **Cryptography**, **Web Development**, **Game Development** and *much more*.
+
+</div>
 
 <!--
 ### Practical Skills
@@ -392,8 +402,6 @@ However, I often explore related areas including **Compiler Construction**, **In
 </div>
 -->
 
-<div class="print-hide">
-
 ## Projects
 
 I have created many projects, including **Programming Languages**, **Websites**, **Games**, **Tools & Libraries**, **Research**, and **much more**.
@@ -422,7 +430,11 @@ View some of my featured projects and contributions below.
   <a href="https://github.com/WilliamRagstad/NeatMathCore" target="_blank"><img alt="NeatMathCore" src="https://github.com/WilliamRagstad/NeatMathCore/raw/master/assets/logo.png" class="nozoom"></a> -->
 </div>
 
-If you are interested to see all of my projects, check them out here:
+<div class="print-hide">
+
+Check out **all of my projects** at:
+
+<div class="whitespace-nowrap">
 
 {{< button href="/projects/" target="_blank" >}}
 {{<icon "code" >}}&nbsp;&nbsp;Featured Projects
@@ -431,12 +443,17 @@ If you are interested to see all of my projects, check them out here:
 {{< button href="https://github.com/WilliamRagstad" target="_blank" >}}
 {{<icon "github" >}}&nbsp;&nbsp;Github Profile
 {{< /button >}}
-&nbsp;&nbsp;
-{{< button href="/posts/" target="_blank" >}}
-{{<icon "comment" >}}&nbsp;&nbsp;Blog Posts
-{{< /button >}}
 
 </div>
+</div>
+
+<div class="print-show">
+
+Check out **all of my projects** at [github.com/WilliamRagstad](https://github.com/WilliamRagstad) and [williamr.dev/projects](https://williamr.dev/projects).
+
+</div>
+
+<div class="print-hide">
 
 ## Highlights
 
@@ -478,6 +495,7 @@ Got into IT-Security at high school, played CTF competitions in the [**national 
 
 </div>
 </div>
+</div>
 
 <div class="print-show">
 
@@ -485,7 +503,7 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 
 </div>
 
-<div class="print-hide">
+<div class="print-hide whitespace-nowrap">
 
 {{< button href="/resume/williamr.pdf" >}}
 {{<icon "download" >}}&nbsp;Download PDF&nbsp;
@@ -682,15 +700,28 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
     /* ==== Print styles ==== */
 
     .print body {
-        padding: 1.75rem;
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
         /* padding-left: 2rem;
         padding-right: 2rem; */
+    }
+
+    .print main header > h1 {
+        margin-top: 0;
     }
 
     .print #all-content {
         padding: 0;
         font-size: 80%;
     }
+
+    /* .print #all-content #job-content > h2 {
+        margin-top: 4em;
+    } */
+
+    /* .print #all-content #job-content {
+        margin-bottom: 8em;
+    } */
 
     .print #the-top {
         display: none;
@@ -754,8 +785,8 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
     }
 
     .print #all-content h2.group {
-        margin-top: 1.5em;
-        margin-bottom: 0.5rem;
+        margin-top: 1em;
+        margin-bottom: 0rem;
     }
 
     .print #all-content h3.group {
@@ -769,7 +800,7 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 
     .print .projects_list {
         gap: 10px;
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
     }
 
     .print .timeline_list > ol {

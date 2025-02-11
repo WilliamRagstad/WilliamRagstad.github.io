@@ -36,11 +36,11 @@ Senior Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Se
         <tbody>
           <tr>
             <td>
-              LinkedIn
+              Phone
             </td>
             <td>
-              <a href="https://www.linkedin.com/in/william-ragstad/" target="_blank">
-                linkedin.com/in/william-ragstad</a>
+              <a href="tel:+46706679706">
+                +46 70-667 97 06</a>
             </td>
           </tr>
           <tr>
@@ -54,11 +54,20 @@ Senior Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Se
           </tr>
           <tr>
             <td>
-              Phone
+              LinkedIn
             </td>
             <td>
-              <a href="tel:+46706679706">
-                +46 70-667 97 06</a>
+              <a href="https://www.linkedin.com/in/william-ragstad/" target="_blank">
+                linkedin.com/in/william-ragstad</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Website
+            </td>
+            <td>
+              <a href="https://williamr.dev" target="_blank">
+                williamr.dev</a>
             </td>
           </tr>
           <!-- <tr>

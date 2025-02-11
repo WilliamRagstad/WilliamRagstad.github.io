@@ -91,15 +91,15 @@ Senior Systems Engineer &nbsp;*/*&nbsp; Software Developer &nbsp;*/*&nbsp; IT-Se
 ## About Me
 
 <!-- {{< badge >}} Early experience {{< /badge >}} -->
-Started programming at **10** and have been passionate about it ever since.
+I started programming at **10** and have been passionate about it ever since.
 I got my first job when I was just **16** years old.
-Today I possess expert knowledge in **modern systems development**, **compilers**, **theoretical computer science**, **IT** and-**cybersecurity**.
+I possess expert knowledge in **modern systems development**, **compilers**, **theoretical computer science**, **IT** and-**cybersecurity**.
 
 <!-- {{< badge >}} Education {{< /badge >}} -->
 Early **university studies** at [ORU](https://www.oru.se/utbildning/program/civilingenjor-datateknik/) **during high school**.
 At [KTH](https://www.kth.se/en), I worked as a **teaching assistant** and **research assistant** while still an **undergraduate** student.
-Even **taught my student peers** *while* taking the same classes myself.
-I was recognized as an **honor student** in my class at graduation, receiving **commendations from numerous teachers**.
+I even **taught my student peers** *while* taking the same classes myself.
+At graduation, I was recognized as an **honor student** in my class, receiving **commendations from numerous teachers**.
 
 <!-- {{< badge >}} Hobbies {{< /badge >}} -->
 I enjoy spending time with **family and friends**, working out at the **gym**, reading **books** and **research papers**, playing **cello** and **online games**.
@@ -715,7 +715,7 @@ View my full resume at: [williamr.dev/resume](https://williamr.dev/resume).
 
     .print #all-content {
         padding: 0;
-        font-size: 80%;
+        font-size: 75%;
     }
 
     /* .print #all-content #job-content > h2 {

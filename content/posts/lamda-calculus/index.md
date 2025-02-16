@@ -170,10 +170,6 @@ Thus simplifying the expression towards a **normal form** by removing one layer 
 > This fact is crucial for understanding its **computational power** via **recursion** which is necessary for **Turing completeness**,
 > meaning it can compute any computable function.[^TC]
 
-### Other
-
-So we've covered the essential $\beta$-reduction rule, but there are a few more that are interesting but not strictly necessary, some only used in extended lambda calculi, or explicit rules for otherwise implicit operations like **$\xi$-reduction** (abstraction body), **$\nu$-reduction** (application function) and **$\mu$-reduction** (application argument) that define the exact rules more precisely.[^RS]
-
 ### $\eta$-reduction
 
 The eta reduction rule simplifies expressions by removing **redundant** abstractions.
@@ -240,8 +236,7 @@ This example rules **evaluate** the **arithmetic operations** to their **numeric
 >
 > $$
 > \begin{align*}
-> & (\lambda x. \ \lambda y. \ + \ x \ y) \ 1 \ 2 \newline
-> & \implies (\lambda y. \ + \ 1 \ y) \ 2 & \text{∵ $\beta$} \newline
+> & (\lambda y. \ + \ 1 \ y) \ 2 \newline
 > & \implies + \ 1 \ 2 & \text{∵ $\beta$} \newline
 > & \implies 3 & \text{∵ $\delta$}
 > \end{align*}
@@ -257,13 +252,16 @@ I use it in my lambda calculus implementations, and **many** other programming l
 
 In this extended variant of lambda calculus, we introduce **bindings** to **name** intermediate results, **storing** and **reusing** expressions in an **environment** called $\Gamma$.
 Reduction is then performed by **substituting** the **free variables** in the **expression** $T$ with the **values** in the **environment** $\Gamma$ by rule $2$.
-But first, we need to **extend** the environment with new **let-bindings** via rule $1$. Assuming an extended [notational grammar](#notation) of $T ::= \dots \mid \text{let} \ v = T \ \text{in} \ T$.
+But first, we need to **extend** the environment with new **let-bindings** via rule $1$.
+Rule $3$ looks for lambda terms in $\Gamma$
+Assuming an extended [notational grammar](#notation) of $T ::= \dots \mid \text{let} \ v = T \ \text{in} \ T$.
 
 $$
 \begin{align*}
-& 1. & \Gamma, \ \text{let} \ v = M \ \text{in} \ T \implies \Gamma \cup \{ v \mapsto M \}, \ T \newline
+& 1. & \Gamma, \ \text{let} \ v = M \ \text{in} \ T \implies \Gamma \cup \\{ v \mapsto M \\}, \ T \newline
 & 2. & \Gamma, \ T
-\implies T[\Gamma] \quad \text{if} \ T \ \text{is not a let-binding}
+\implies T[\Gamma] \quad \text{if} \ T \ \text{is not a let-binding} \newline
+& 3. & \Gamma, T \implies T[\Gamma^{-1}] \quad \text{if} \ T \ \text{is in normal form} \newline
 \end{align*}
 $$
 
@@ -273,27 +271,59 @@ $$
 T[\Gamma] = \forall v_i \in \text{dom}(\Gamma) \cap FV(T) \ : \ T[v_i := \Gamma(v_i)]
 $$
 
-The **domain** of $\Gamma$, $\text{dom}(\Gamma)=\\{k_1, k_2, \dots\\}$ where $\Gamma = \\{k_1 \mapsto v_1, k_2 \mapsto v_2, \dots\\}$.
+> **Domain and Equality** \
+> The **domain** of $\Gamma$, $\text{dom}(\Gamma)=\\{k_1, k_2, \dots\\}$ where $\Gamma = \\{k_1 \mapsto v_1, k_2 \mapsto v_2, \dots\\}$.
+> The **inverse** $\Gamma^{-1} = \\{v_1 \mapsto k_1, v_2 \mapsto k_2, \dots\\}$ by rule $1$, overwriting existing bindings.
+> Then we get $\text{dom}(\Gamma^{-1}) = \\{v_1, v_2, \dots\\} = \text{co-dom}(\Gamma)$.
+> Structural $\alpha$-equality is thus enforced, meaning:
+> $$
+> a, b \in \text{dom}(\Gamma) \implies \Gamma(a) = \Gamma(b) \implies a = b
+> $$
+> Therefore $\Gamma$ is a **bijective** mapping *(function)* between **variables** and **values**.
+> Making rule $3$ sound, reversing the substitution process.
+
+In a **non dependently typed** lambda calculi, $\Gamma$ is no longer needed and the reduction rule $1.$ can be changed into the simpler definition:[^DR]
+
+$$
+\text{let} \ v = M \ \text{in} \ T \implies (\lambda v. \ T) \ M
+$$
+
+This way $v$ is bound to $M$ in $T$ and can be substituted via $\beta$-reduction.
 
 > **Example** \
 > Let's say we have the following expression:
 >
 > $$
 > \begin{align*}
-> & \\{ 1 \mapsto \cdots, 2 \mapsto \cdots, + \mapsto \cdots \\}, \newline
-> & \text{let} \ x = 1 \ \text{in} \ \lambda y. + x \ y \newline
-> & \implies \lambda y. + 1 \ y & \text{∵ $\Gamma$} \newline
-> & \implies + \ 1 \ 2 & \text{∵ $\beta$} \newline
-> & \implies 3 & \text{∵ $\delta$}
+> & \Gamma = \\{ 1 \mapsto \cdots, 2 \mapsto \cdots, + \mapsto \cdots \\}, \ \text{let} \ x = 1 \ \text{in} \ \lambda y. + x \ y \newline
+> & \implies \Gamma \cup \\{  x \mapsto 1 \\}, \lambda y. + x \ y & \text{∵ $\Gamma_1$} \newline
+> & \implies \Gamma, \ \lambda y. + 1 \ y & \text{∵ $\Gamma_2$} \newline
+> & \implies \Gamma, \ + \ 1 \ 2 & \text{∵ $\beta$} \newline
+> & \cdots \newline
+> & \implies \Gamma, \ 3 & \text{∵ $\beta$}
 > \end{align*}
 > $$
 >
-> The environment $\Gamma$ is omitted in the reduction steps as it is easy to infer from the context.
+> Sadly we have not yet covered [numeral encoding](#encoding) or the arithmetic operations, so all that is redacted via "$\cdots$".
+> But you get the idea.
 
 Environments are ubiquitous in programming languages, and this rule is used in many programming languages to **store** variables in scopes and reference them later.
 
 > **Note** \
 > In contrast to [$\delta$-reduction](#delta-reduction), the $\Gamma$-reduction rule is **purely** **functional** and **does not** rely on **external** **functions** to **evaluate** **expressions**.
+
+### $\zeta$-reduction
+
+The zeta rule is formalized by the Coq conversion rules[^CCR] and extends the **non dependently typed** lambda calculi with support for **let-bindings** via pure **substitution** similar to $\text{let}$-reduction and [$\Gamma$-reduction](#gamma-reduction).
+In contrast to $\Gamma$-reduction, $\zeta$-reduction does not require an environment to store intermediate results.
+This has both benefits and limitations.
+
+$$
+\text{let} \ v = M \ \text{in} \ T \implies T[v := M]
+$$
+
+The $\zeta$-reduction rule is a **pure** **substitution** rule that **replaces** all **free occurrences** of a **variable** $v$ in a **term** $T$ with the **value** $M$.
+This differs from [δ-reduction](#delta-reduction) as the **declaration is removed** from the term entirely.[^CCR]
 
 ---
 
@@ -411,10 +441,67 @@ However, its simplicity and lack of built-in data types make it impractical for 
 Until now, we have only discussed **pure** lambda calculus, which is not helpful for practical computation.
 But by **encoding** data types and operations, we obtain the expressive power seen in regular programming languages!
 
+> **Notation** \
+> For all encoding definitions, I'll be using an extension with **let-bindings** and **substitution** via the [$\Gamma$-reduction](#gamma-reduction) rule and an implicit $\Gamma$ environment and **no** $\text{let}$ keyword, on the form $x = M \implies \Gamma \cup \\{  x \mapsto M \\}$.
+
 ### Booleans
 
 We can encode **boolean values** in lambda calculus using **Church encoding**.
-This encoding represents `true` as a function that takes two arguments and returns the first one and `false` as a function that takes two and returns the second.[^CE]
+This encoding represents `true` as a function that takes two arguments and returns the first one and `false` as a function that takes two and returns the second.[^CE][^LCT][^LCS]
+
+$$
+\begin{align*}
+\text{true} & = \lambda x. \ \lambda y. \ x \newline
+\text{false} & = \lambda x. \ \lambda y. \ y
+\end{align*}
+$$
+
+Currently this is just a notation, but we can use these functions later to easier perform logical operations based on decision trees.
+
+### Numerals
+
+We also encode **natural numbers** in lambda calculus using **Church encoding**.
+However this is based on **recursion** and **successor functions**, much like the **Peano axioms**.
+The **numeral** $n$ is represented as a function that takes two arguments and applies the first argument $n$ times to the second argument.[^LCT][^LCS]
+
+$$
+\begin{align*}
+0 & = \lambda f. \ \lambda x. \ x \newline
+1 & = \lambda f. \ \lambda x. \ f \ x \newline
+2 & = \lambda f. \ \lambda x. \ f \ (f \ x) \newline
+3 & = \lambda f. \ \lambda x. \ f \ (f \ (f \ x)) \newline
+\end{align*}
+$$
+
+Here I think about $f$ as the `1+` function, and $x$ as the starting value `0`.
+So `2 = 1+ 1+ 0` for example.
+
+### Arithmetic
+
+We can define **arithmetic operations** on these numerals using **lambda functions**.
+For example, **addition** can be defined as a function that takes two numerals and a function $f$ and applies $f$ to the second numeral $n$ times to the first numeral $m$.[^LCT][^LCS]
+
+$$
+\text{+} = \lambda m. \ \lambda n. \ \lambda f. \ \lambda x. \ m \ f \ (n \ f \ x)
+$$
+
+Here we utilize the notation for numbers, taking advantage of the **successor** function $f$ to **increment** the numbers.
+
+> **Example**
+> $$
+> \begin{align*}
+> & \text{+} \ 2 \ 3 \newline
+> & \implies (\lambda m. \ \lambda n. \ \lambda f. \ \lambda x. \ m \ f \ (n \ f \ x)) \ 2 \ 3 & \text{∵ $\Gamma_+$} \newline
+> & \implies \lambda f. \ \lambda x. \ 2 \ f \ (3 \ f \ x) & \text{∵ $\beta$} \newline
+> & \implies \lambda f. \ \lambda x. \ (\lambda f. \ \lambda x. \ f \ (f \ x)) \ f \ (3 \ f \ x) & \text{∵ $\Gamma_2$} \newline
+> & \implies \lambda f. \ \lambda x. \ f \ (f \ (3 \ f \ x)) & \text{∵ $\beta$} \newline
+> & \implies \lambda f. \ \lambda x. \ f \ (f \ ((\lambda f. \ \lambda x. \ f \ (f \ (f \ x))) \ f \ x)) & \text{∵ $\Gamma_3$} \newline
+> & \implies \lambda f. \ \lambda x. \ f \ (f \ (f \ (f \ x))) & \text{∵ $\beta$} \newline
+> & \implies 5 & \text{∵ $\Gamma^{-1}$}
+> \end{align*}
+> $$
+
+This is a simple definition of addition, but it can be extended to **multiplication**, **exponentiation**, and other operations.
 
 ---
 {{< support >}}
@@ -430,5 +517,9 @@ This encoding represents `true` as a function that takes two arguments and retur
 [^MS]: [Moses Schönfinkel](https://en.wikipedia.org/wiki/Moses_Sch%C3%B6nfinkel) was a Russian mathematician and logician who introduced combinatory logic in 1920.
 [^SKI]: The [SKI combinator calculus](https://en.wikipedia.org/wiki/SKI_combinator_calculus) is a combinatory logic system of functions that can be composed to form any computable function.
 [^S_expl]: https://math.stackexchange.com/questions/889608/in-what-sense-is-the-s-combinator-substitution
-[^RS]: [Reduction Strategies for Lambda Calculus](https://www.cs.tufts.edu/comp/105-2019f/reduction.pdf) by Norman Ramsey.
+[^RS]: [Reduction Strategies for Lambda Calculus](https://www.cs.tufts.edu/comp/105-2019f/reduction.pdf) by Norman Ramsey, and [Notes on the Lambda-Calculus COMP 598 Winter 2015](https://www.cs.tufts.edu/comp/105-2019f/prakash.pdf) by Prakash Panangaden.
 [^CE]: [Church encoding](https://en.wikipedia.org/wiki/Church_encoding) is a way to represent data and operators in lambda calculus using only functions.
+[^LCT]: [A Tutorial Introduction to the Lambda Calculus](https://www.inf.fu-berlin.de/lehre/WS03/alpi/lambda.pdf) by Raúl Rojas.
+[^LCS]: Slides on [Lambda Calculus](https://www.cs.tufts.edu/comp/105-2019s/slide-cache/slides-707fb5cfff5de434b95e8adbf2646986.pdf).
+[^DR]: [What exactly is delta reduction?](https://cs.stackexchange.com/a/161742) answered by [cody](https://cs.stackexchange.com/users/988/cody).
+[^CCR]: [Coq Conversion Rules](https://coq.inria.fr/doc/V8.17.0/refman/language/core/conversion.html#id7) and [Reference Manual](https://www.cs.yale.edu/flint/cs428/coq/doc/Reference-Manual006.html).

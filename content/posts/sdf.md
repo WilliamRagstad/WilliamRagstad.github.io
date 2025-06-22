@@ -3,8 +3,8 @@ title = 'Signed Distance Functions'
 date = 2024-04-20T22:06:23+02:00
 series = ['Understanding']
 series_order = 7
-tags = ["signed distance functions", "distance fields", "level sets", "3D graphics", "ray marching", "GLSL shaders"]
-categories = ["mathematics", "geometry", "computer graphics"]
+tags = ["signed distance functions", "distance fields", "level sets", "shaders", "graphics", "ray marching"]
+categories = ["mathematics", "geometry"]
 draft = true
 +++
 {{< katex >}}

@@ -204,3 +204,17 @@ fn vertex(in: Vertex) -> VertexOutput {
     return out;
 }
 ```
+
+Now here's the meat of this post: the vertex shader itself.
+Let's break it down step by step:
+
+1. Import some Bevy PBR helper functions useful for transforming positions from model space to world space and then to clip space.
+2. Define the `WobbleParams` struct that matches `WobbleParams` in our Rust code. This struct will be used to pass parameters to the shader.
+3. Use the `@group(2) @binding(100)` attributes to bind the `params` uniform to binding group 2 at offset 100, which is where our `FishWobbleExt` material expects it.
+4. The `vertex` function is the **entry point** for the vertex shader and **will be called for each vertex in the mesh**. It takes a `Vertex` input, which contains the vertex data such as position, normal, and UV coordinates.
+   1. We use Bevy's helper function `get_world_from_local` to get the model matrix for the current instance and transform the vertex position from local space to world space.
+   2. We then **apply the wobble effect** by modifying the `z` coordinate of  the world position based on a sine wave function. The sine wave is calculated using the `x` position of the vertex, the `frequency`, `speed`, and `phase` parameters, and the current time.
+   3. Finally, we fill the `VertexOutput` struct with the transformed world position, clip position, world normal, and UV coordinates. The `position_world_to_clip` function is used to transform the world position to clip space, which is necessary for rendering.
+   4. The `mesh_normal_local_to_world` function is used to transform the normal vector from local space to world space, which is useful for lighting calculations later on.
+
+Let's go back to the `setup` function in `src/main.rs` and see how we can use this material to improve the rendering of our fish sprites.

@@ -218,3 +218,59 @@ Let's break it down step by step:
    4. The `mesh_normal_local_to_world` function is used to transform the normal vector from local space to world space, which is useful for lighting calculations later on.
 
 Let's go back to the `setup` function in `src/main.rs` and see how we can use this material to improve the rendering of our fish sprites.
+
+`src/main.rs` *(continued)*:
+
+```rust
+mod fish_wobble;
+
+fn main() {
+    App::new()
+        // ... Same as before
+        .add_plugins(MaterialPlugin::<FishMaterialExt>::default()) // New
+        .add_systems(Update, shader_fish_wobble) // New
+        .run();
+}
+
+fn setup(
+    assets: Res<TextureAssets>,
+    mut commands: Commands,
+    mut materials: ResMut<Assets<FishMaterialExt>>,
+    mut meshes: ResMut<Assets<Mesh3d>>,
+) {
+    // ... (other setup code)
+
+    // Spawn multiple fish at different positions
+    let N = assets.fish.len();
+    for i in 0..N {
+        let w = /* ... */; // Width of the fish sprite
+        let h = /* ... */; // Height of the fish sprite
+        let x = (i as f32 - N as f32 / 2.0) * 0.2;
+        commands.spawn((
+            Name::new(format!("Fish {}", i)),
+            Mesh3d(meshes.add(RectangleMeshBuilder::new(w, h).build())),
+            MeshMaterial3d(materials.add(ExtendedMaterial {
+                base: StandardMaterial { /* ... */ }, // Same as before
+                extension: FishWobbleExt {
+                    params: WobbleParams {
+                        amplitude: 0.03,
+                        frequency: 15.0,
+                        speed: 2.0,
+                        phase: index as f32 * 17.5,
+                        ..default()
+                    },
+                },
+            })),
+            Transform::from_xyz(x, 0.0, 0.0)
+        ));
+    }
+}
+
+/// Update the fish wobble parameters every frame
+/// to animate the wobble effect in the shader.
+fn shader_fish_wobble(mut mats: ResMut<Assets<FishMaterialExt>>, time: Res<Time>) {
+    for (_id, mat) in mats.iter_mut() {
+        mat.extension.params.time = time.elapsed_secs();
+    }
+}
+```

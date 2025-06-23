@@ -296,7 +296,7 @@ Even though the fish sprites are now wobbling, they still look like dead flat re
 It is missing snappy and lively fluid motion of real fish.\
 Our shader is agnostic to the mesh we use, so we can **improve the visual effect by subdividing the rectangle into smaller vertical quads**.
 
-{{< figure src="images/quad_triangles.png" alt="subdivided quad" width="200" caption="Quad mesh from triangle list" >}}
+{{< figure src="/images/quad_triangles.png" alt="subdivided quad" width="200" caption="Quad mesh from triangle list" >}}
 
 `src/main.rs`:
 

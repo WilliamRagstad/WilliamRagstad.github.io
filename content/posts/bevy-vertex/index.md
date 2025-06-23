@@ -22,3 +22,77 @@ Being my first attempt at writing vertex shaders, I was struggling and had a har
 I hope this post will help others who are new to Bevy and vertex shaders to get started with creating interesting visual effects.
 
 Let's *dive in*!
+
+## Terminology
+
+Before we get started, let's clarify some technical details that are important to understand when working with Bevy and shaders.
+
+| Word            | Definition                                                                                                                                                                         |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Vertex          | **Point in 3D space** *(+normal and UV info)* used to define object models and shapes.                                                                                             |
+| Mesh            | **Collection of vertices** that define an object.                                                                                                                                  |
+| Shader          | Code that runs **in parallel** on the GPU written in a language like [**GLSL**](https://sv.wikipedia.org/wiki/OpenGL_Shading_Language) or [**WGSL**](https://www.w3.org/TR/WGSL/). |
+| Vertex Shader   | Process vertex data and **transform vertex positions**.                                                                                                                            |
+| Fragment Shader | **Calculate the color of a pixel** (≈ fragment) on the screen.                                                                                                                     |
+| Compute Shader  | Perform **general-purpose computations** on the GPU.                                                                                                                               |
+| Pipeline        | **Sequence of processes** to render a scene, e.g., `vertex shader` → `fragment shader`.                                                                                            |
+
+## Game Setup
+
+Let's begin by defining the main function that initializes the Bevy app and sets up the necessary plugins and resources.
+
+`src/main.rs`:
+
+```rust
+use crate::fish_wobble::{FishWobbleExt, WobbleParams, stripe_quads};
+use bevy::prelude::*;
+use bevy::pbr::ExtendedMaterial;
+
+fn main() {
+    App::new()
+        .add_plugins(DefaultPlugins.set(ImagePlugin::default_nearest()))
+        .insert_resource(ClearColor(Color::srgb(0.15, 0.2, 0.5)))
+        .add_systems(Startup, setup)
+        .run();
+}
+
+fn setup(
+    assets: Res<TextureAssets>,
+    mut commands: Commands,
+    mut meshes: ResMut<Assets<Mesh3d>>,
+    mut materials: ResMut<Assets<StandardMaterial>>,
+) {
+    // Setup the camera
+    commands.spawn((
+        Name::new("Main Camera"),
+        Camera3d::default(),
+        Transform::from_xyz(0.0, 1.75, 1.75).looking_at(Vec3::ZERO, Vec3::Y)
+    ))
+
+    // Spawn multiple fish at different positions
+    let N = assets.fish.len();
+    for i in 0..N {
+        let x = (i as f32 - N as f32 / 2.0) * 0.2;
+        commands.spawn((
+            Name::new(format!("Fish {}", i)),
+            Mesh3d(meshes.add(RectangleMeshBuilder::new(w, h).build())),
+            MeshMaterial3d(materials.add(StandardMaterial {
+                base_color_texture: Some(assets.fish[i].clone()),
+                unlit: true,
+                alpha_mode: AlphaMode::Blend,
+                ..default()
+            })),
+            Transform::from_xyz(x, 0.0, 0.0)
+        ));
+    }
+}
+```
+
+> Asset loading, mesh building and unrelated code is redacted for brevity.\
+> You can find the complete code on [GitHub](https://github.com/WilliamRagstad/bevy_coralbeef).
+
+This refers to a `setup` function that will be called when the app starts, and a `shader_fish_wobble` function that will update the fish wobble `time` parameter every frame.
+We will come back to these functions later.
+\
+Before using any custom shaders, simply loading all assets and rendering them using `StandardMaterial` and `RectangleMeshBuilder`, our game looks like this:
+![initial game setup](featured.png)

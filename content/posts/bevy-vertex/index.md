@@ -12,7 +12,7 @@ draft = false
 
 I recently started learning the [Bevy](https://bevy.org/) game engine to build a [*2.5D perspective*](https://en.wikipedia.org/wiki/2.5D) game with similar aesthetics to [The Last Night](https://store.steampowered.com/app/612400/The_Last_Night/) and [Delver](https://store.steampowered.com/app/249630/Delver/).
 
-![example](assets/the_last_night.gif)
+![example](images/the_last_night.gif)
 
 I envision a simple **underwater [shoot 'em up](https://sv.wikipedia.org/wiki/Shoot_%27em_up)** game with lots of fish swimming around.
 \
@@ -287,7 +287,7 @@ world_pos.z += sin(phase) * params.amplitude;
 With these changes, our fish sprites will now wobble by moving the vertices in the `z` direction.
 Our game now looks like this:
 
-![fish wobble effect rect](assets/rect_wobble.gif)
+![fish wobble effect rect](images/rect_wobble.gif)
 
 ### Subdividing
 
@@ -382,7 +382,7 @@ commands.spawn((
 
 With this final change, our fish sprites now have a more dynamic and pronounced wobbling effects.
 
-![fish wobble effect rect](assets/strips_wobble.gif)
+![fish wobble effect rect](images/strips_wobble.gif)
 
 ## Further Improvements
 

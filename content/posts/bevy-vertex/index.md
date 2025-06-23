@@ -274,3 +274,17 @@ fn shader_fish_wobble(mut mats: ResMut<Assets<FishMaterialExt>>, time: Res<Time>
     }
 }
 ```
+
+We need to update the `time` parameter of each component with the `FishWobbleExt` material to *drive* the wobble effect.
+Remember the formula in the shader? `time` is used to calculate the phase of the sine wave.
+
+```wgsl
+let phase = in.position.x * params.frequency +
+            (params.time + params.phase) * params.speed;
+world_pos.z += sin(phase) * params.amplitude;
+```
+
+With these changes, our fish sprites will now wobble by moving the vertices in the `z` direction.
+Our game now looks like this:
+
+![fish wobble effect rect](images/rect_wobble.gif)

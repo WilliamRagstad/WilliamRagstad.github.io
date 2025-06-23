@@ -95,6 +95,7 @@ This refers to a `setup` function that will be called when the app starts, and a
 We will come back to these functions later.
 \
 Before using any custom shaders, simply loading all assets and rendering them using `StandardMaterial` and `RectangleMeshBuilder`, our game looks like this:
+
 ![initial game setup](featured.png)
 
 ## Fish Wobble Shader
@@ -288,3 +289,117 @@ With these changes, our fish sprites will now wobble by moving the vertices in t
 Our game now looks like this:
 
 ![fish wobble effect rect](/images/rect_wobble.gif)
+
+### Subdividing
+
+Even though the fish sprites are now wobbling, they still look like dead flat rectangles.
+It is missing snappy and lively fluid motion of real fish.\
+Our shader is agnostic to the mesh we use, so we can **improve the visual effect by subdividing the rectangle into smaller vertical quads**.
+
+{{< figure src="images/quad_triangles.png" alt="subdivided quad" width="200" caption="Quad mesh from triangle list" >}}
+
+`src/main.rs`:
+
+```rust
+pub fn stripe_quads(w: f32, h: f32) -> Mesh {
+    let mut mesh = Mesh::new(
+        bevy::render::mesh::PrimitiveTopology::TriangleList,
+        RenderAssetUsages::default(),
+    );
+    let mut positions = Vec::new();
+    let mut normals = Vec::new();
+    let mut uvs = Vec::new();
+    let mut indices = Vec::new();
+    let stripe_width = w / 8.0; // 8 stripes
+    let stripe_height = h;
+    let mut x_offset = 0.0;
+    for i in 0..8 {
+        // Rectangle corners
+        let bl = Vec3::new(x_offset, 0.0, 0.0); // Bottom-left
+        let br = Vec3::new(x_offset + stripe_width, 0.0, 0.0); // Bottom-right
+        let tr = Vec3::new(x_offset + stripe_width, stripe_height, 0.0); // Top-right
+        let tl = Vec3::new(x_offset, stripe_height, 0.0); // Top-left
+
+        positions.extend_from_slice(&[bl, br, tr, tl]);
+        // All normals point out of the screen (z+)
+        normals.extend_from_slice(&[
+            [0.0, 0.0, 1.0],
+            [0.0, 0.0, 1.0],
+            [0.0, 0.0, 1.0],
+            [0.0, 0.0, 1.0],
+        ]);
+        // UVs: map each stripe to its portion of the texture
+        let u0 = x_offset / w;
+        let u1 = (x_offset + stripe_width) / w;
+        uvs.extend_from_slice(&[
+            [u0, 1.0], // bl
+            [u1, 1.0], // br
+            [u1, 0.0], // tr
+            [u0, 0.0], // tl
+        ]);
+        let start_index = (i * 4) as u32;
+        indices.extend_from_slice(&[
+            start_index,     // Bottom-left
+            start_index + 1, // Bottom-right
+            start_index + 2, // Top-right
+            start_index,     // Bottom-left
+            start_index + 2, // Top-right
+            start_index + 3, // Top-left
+        ]);
+        x_offset += stripe_width;
+    }
+    mesh.insert_attribute(Mesh::ATTRIBUTE_POSITION, positions);
+    mesh.insert_attribute(Mesh::ATTRIBUTE_NORMAL, normals);
+    mesh.insert_attribute(Mesh::ATTRIBUTE_UV_0, uvs);
+    mesh.insert_indices(bevy::render::mesh::Indices::U32(indices));
+    mesh
+}
+```
+
+Then let's update the `setup` function to use this new mesh instead of the flat rectangle mesh.
+
+`src/main.rs` *(continued)*:
+
+```rust
+// ... (other setup code)
+commands.spawn((
+    Name::new(format!("Fish {}", i)),
+    Mesh3d(meshes.add(stripe_quads(w, h))),
+    MeshMaterial3d(materials.add(ExtendedMaterial {
+        base: StandardMaterial { /* ... */ }, // Same as before
+        extension: FishWobbleExt {
+            params: WobbleParams {
+                amplitude: 0.03,
+                frequency: 15.0,
+                speed: 2.0,
+                phase: index as f32 * 17.5,
+                ..default()
+            },
+        },
+    })),
+    Transform::from_xyz(x, 0.0, 0.0)
+));
+```
+
+With this final change, our fish sprites now have a more dynamic and pronounced wobbling effects.
+
+![fish wobble effect rect](/images/strips_wobble.gif)
+
+## Further Improvements
+
+There are many ways to improve the fish wobble effect and make it more visually appealing. Here are some ideas:
+
+- **Add more parameters**: Introduce more parameters to control the wobble effect, such as `damping`, `randomness`, or `direction`.
+- **Use noise functions**: Instead of a simple sine wave, use noise functions like [Perlin noise](https://en.wikipedia.org/wiki/Perlin_noise) or [Simplex noise](https://en.wikipedia.org/wiki/Simplex_noise) to create more organic and natural movement.
+- Implement `deferred_vertex_shader` to also render shadows in deferred rendering pipelines.
+- **Combine with fragment shaders**: Use fragment shaders to add more visual effects, such as color gradients, lighting, or texture blending.
+- **Animate the fish**: Add animations to the fish sprites to make them more lively, such as moving their fins or tails.
+
+## Conclusion
+
+In this post, we explored how to create a simple fish wobble effect using Bevy's vertex shaders.
+We learned how to define a custom material that extends `StandardMaterial` and how to write a vertex shader that modifies the vertex positions based on a sine wave function.
+We also saw how to use Bevy's helper functions to transform positions from model space to world space and then to clip space.
+
+---
+{{< support >}}

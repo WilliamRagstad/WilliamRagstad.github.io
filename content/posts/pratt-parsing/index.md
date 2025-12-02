@@ -103,13 +103,11 @@ The `parse_top_expr` method is the **entry point** for parsing a new expression 
 
 ```rust
 fn parse_top_expr(&mut self) -> ParseResult {
-    let lhs = self.parse_primary()?;
-    self.parse_expr(lhs, 0)
+    self.parse_expr(0)
 }
 ```
 
-The `parse_top_expr` method first parses the **primary** expression, the starting point of any expression.
-It then calls the `parse_expr` method to parse the rest of the expression with a precedence level `0`.
+The `parse_top_expr` method calls the `parse_expr` method to parse the rest of the expression with a precedence level `0`.
 
 ```rust
 fn parse_primary(&mut self) -> Result<Ast, ParseError> {
@@ -124,6 +122,7 @@ fn parse_primary(&mut self) -> Result<Ast, ParseError> {
 The `parse_expr` method is a **recursive method** that uses precedence climbing using a **while loop** to parse the expression with operators of increasing precedence.
 It checks the next token in the input and compares its precedence with the minimum precedence level required to parse the following expression, initially `min_prec` and then `curr_op.precedence`.
 
+<!--
 ```rust
 fn parse_expr(&mut self, mut lhs: Ast, min_prec: Precedence)
     -> ParseResult {
@@ -147,9 +146,44 @@ fn parse_expr(&mut self, mut lhs: Ast, min_prec: Precedence)
     Ok(lhs)
 }
 ```
+-->
 
-The `parse_expr` method uses the `check_op` method to determine if the next token is an operator used in a binary expression.
-The function `check_op` helps to determine the order of evaluation in `parse_expr` by checking the precedence of the **next operator** token against the current operator as the minimum precedence based on the following conditions:
+```rust
+fn parse_expr(&mut self, min_prec: Precedence) -> ParseResult {
+    let mut expr = self.parse_primary()?;
+    while let Ok(nt) = self.lexer.peek_token(0) {
+        if nt.token.is_terminator() { break; }
+        if let Token::Operator(op) = &nt.token {
+            if let Some(op) = self.check_postfix_op(min_prec, op) {
+                self.lexer.next_token().unwrap();
+                expr = Ast::Unary {
+                    info: expr.info().join(&nt.info),
+                    op_info: op.clone(),
+                    expr: Box::new(expr),
+                };
+                continue;
+            } else if let Some(op) = self.check_binary_op(min_prec, op) {
+                self.lexer.next_token().unwrap();
+                let rhs = self.parse_expr(op.precedence)?;
+                expr = Ast::Binary {
+                    lhs: Box::new(expr),
+                    op_info: op.clone(),
+                    rhs: Box::new(rhs),
+                    info: expr.info().join(rhs.info()),
+                };
+                continue;
+            } else { break; }
+        } else { break; }
+    }
+    Ok(expr)
+}
+```
+
+The `parse_expr` method uses the `check_postfix_op` and `check_binary_op` methods to determine if the next token is an operator used in an expression.
+This implementation does not take function application or postfix operators into account for simplicity.
+It first parses the **primary** expression, the starting point of any expression.
+
+The function `check_binary_op` helps to determine the order of evaluation in `parse_expr` by checking the precedence of the **next operator** token against the current operator as the minimum precedence based on the following conditions:
 
 $$
 \begin{align*}
@@ -161,10 +195,11 @@ $$
 \end{align*}
 $$
 
-Suggested implementation for the `check_op` method:
+Suggested implementation for the `check_binary_op` method:
 
+<!--
 ```rust
-fn check_op(&self, token: Token, min_prec: Precedence)
+fn check_binary_op(&self, token: Token, min_prec: Precedence)
     -> Option<(Symbol, Operator)> {
     if let Token::Operator(symbol) = token {
         if let Some(op) = self.operators.get(&symbol) {
@@ -177,6 +212,21 @@ fn check_op(&self, token: Token, min_prec: Precedence)
         }
     }
     None
+}
+```
+-->
+
+```rust
+fn check_binary_op(&self, min_prec: Precedence, op: &str) -> Option<Operator> {
+    let op = self.find_operator(op, |op| op.position == Position::Infix)?;
+    let is_greater = op.precedence > min_prec;
+    let is_right_assoc = op.associativity == Associativity::Right;
+    let is_equal = op.precedence == min_prec;
+    if is_greater || (is_right_assoc && is_equal) {
+        Some(op.clone())
+    } else {
+        None
+    }
 }
 ```
 

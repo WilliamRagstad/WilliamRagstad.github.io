@@ -24,9 +24,9 @@ It can be used to apply multiple customizations at once.
 ## Usage
 
 ```html
-<command- for=".content h1#properties" bold italic style="color: red;"/>
-<command- for-all=".content p" center/>
-<command- for=".content h2#intro" toc-collapse/>
+<command- for=".content h1#properties" bold italic style="color: red;"></command->
+<command- for-all=".content p" center></command->
+<command- for=".content h2#intro" toc-collapse></command->
 ```
 
 ## Notes

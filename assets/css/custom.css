@@ -181,3 +181,39 @@ figure {
     stroke: var(--mermaid-node-border) !important;
     stroke-width: 1px;
 }
+
+.project-webx {
+	max-width: 220px;
+}
+
+.project-lento {
+	max-width: 130px;
+}
+
+.project-mini {
+	max-width: 280px;
+}
+
+.project-apc {
+	max-width: 120px;
+}
+
+.project-knight {
+	max-width: 150px;
+}
+
+.project-pond {
+	max-width: 170px;
+}
+
+.project-font-manager {
+	max-width: 300px;
+}
+
+.project-quansy {
+	max-width: 250px;
+}
+
+.project-aphnix {
+	max-width: 200px;
+}

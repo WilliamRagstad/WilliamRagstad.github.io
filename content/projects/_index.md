@@ -18,11 +18,10 @@ A DSL and framework for building minimal but powerful hypermedia system driven w
     src="https://github.com/webx-net/webx/blob/main/assets/webx.png?raw=true"
     alt="WebX logo"
     caption="Logo from [webx.sh](https://webx.sh/)"
-    width="220px"
-    center="true"
+    class="project-webx"
 >}}
 
-{{< github repo="webx-net/webx" >}}
+{{< github repo="webx-net/webx" showThumbnail=false >}}
 
 {{< keywordList >}}
     {{< keyword icon="code" >}} DSL {{< /keyword >}}
@@ -46,11 +45,10 @@ A general purpose, strong and statically typed, lazy evaluated, programming lang
     src="https://github.com/lento-lang/Lento/blob/main/assets/logo_white.png?raw=true"
     alt="Lento logo"
     caption="Logo from [lento-lang.org](https://www.lento-lang.org/)"
-    width="130px"
-    center="true"
+    class="project-lento"
 >}}
 
-{{< github repo="lento-lang/lento" >}}
+{{< github repo="lento-lang/lento" showThumbnail=false >}}
 
 {{< keywordList >}}
     {{< keyword icon="code" >}} Functional {{< /keyword >}}
@@ -118,11 +116,10 @@ There are support for both functional and object oriented programming paradigms.
     src="https://github.com/mini-lang/mini-lang/blob/main/assets/logo_small.png?raw=true"
     alt="Mini logo"
     caption="Logo from [mini-lang.org](https://www.mini-lang.org/)"
-    width="280px"
-    center="true"
+    class="project-mini"
 >}}
 
-{{< github repo="mini-lang/mini-lang" >}}
+{{< github repo="mini-lang/mini-lang" showThumbnail=false >}}
 
 {{< keywordList >}}
     {{< keyword icon="code" >}} Functional {{< /keyword >}}
@@ -168,11 +165,10 @@ A collection of yet "Another Parser Combinator" libraries made to build optimize
     src="https://avatars.githubusercontent.com/u/69253022?s=200&v=4"
     alt="APC logo"
     caption="Logo from [https://github.com/APClib](https://github.com/APClib)"
-    width="120px"
-    center="true"
+    class="project-apc"
 >}}
 
-{{< github repo="APClib/APCSharp" >}}
+{{< github repo="APClib/APCSharp" showThumbnail=false >}}
 
 {{< keywordList >}}
     {{< keyword icon="code" >}} Parser Combinator {{< /keyword >}}
@@ -193,11 +189,10 @@ Build scalable controller-based CRUD APIs with ease.
     src="https://raw.githubusercontent.com/WilliamRagstad/Knight/main/assets/logo.png"
     alt="Knight logo"
     caption="Logo from [github.com/WilliamRagstad/Knight](https://github.com/WilliamRagstad/Knight)"
-    width="150px"
-    center="true"
+    class="project-knight"
 >}}
 
-{{< github repo="WilliamRagstad/Knight" >}}
+{{< github repo="WilliamRagstad/Knight" showThumbnail=false >}}
 
 {{< keywordList >}}
     {{< keyword icon="code" >}} Web {{< /keyword >}}
@@ -221,11 +216,10 @@ You write all the content in Markdown, which is then combined with the correct H
     src="https://github.com/WilliamRagstad/Pond/raw/master/assets/logo.png"
     alt="Pond logo"
     caption="Logo from [github.com/WilliamRagstad/Pond](https://github.com/WilliamRagstad/Pond)"
-    width="170px"
-    center="true"
+    class="project-pond"
 >}}
 
-{{< github repo="WilliamRagstad/Pond" >}}
+{{< github repo="WilliamRagstad/Pond" showThumbnail=false >}}
 
 {{< keywordList >}}
     {{< keyword icon="code" >}} Web {{< /keyword >}}
@@ -252,11 +246,10 @@ A simple and easy-to-use font manager for Counter-Strike: Global Offensive.
     src="https://github.com/WilliamRagstad/Font-Manager/raw/master/CSGO%20Font%20Manager/Resources/fontmanager.png?raw=true"
     alt="Font Manager logo"
     caption="Logo from [github.com/WilliamRagstad/Font-Manager](https://github.com/WilliamRagstad/Font-Manager)"
-    width="300px"
-    center="true"
+    class="project-font-manager"
 >}}
 
-{{< github repo="WilliamRagstad/Font-Manager" >}}
+{{< github repo="WilliamRagstad/Font-Manager" showThumbnail=false >}}
 
 {{< keywordList >}}
     {{< keyword icon="code" >}} Desktop {{< /keyword >}}
@@ -277,8 +270,7 @@ It is built with a focus on performance and scalability.
     src="https://quansycms.wordpress.com/wp-content/uploads/2019/06/cropped-logo-1.png"
     alt="Quansy logo"
     caption="Logo from [quansycms.wordpress.com](https://quansycms.wordpress.com/)"
-    width="250px"
-    center="true"
+    class="project-quansy"
 >}}
 
 {{< lead >}}
@@ -308,8 +300,7 @@ It was disbanded in 2021.
 	src="https://aphnix.weebly.com/uploads/7/4/4/8/74480685/published/logo-inline-mapmakers-palette-transparent-text.png?1589477465"
 	alt="Aphnix logo"
 	caption="Logo from [aphnix.com](https://aphnix.weebly.com/)"
-	width="200px"
-	center="true"
+	class="project-aphnix"
 >}}
 
 {{< lead >}}

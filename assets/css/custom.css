@@ -39,6 +39,8 @@ figure {
 }
 
 .mermaid {
+	display: flex;
+	justify-content: center;
 	--mermaid-edge-background: #1a1a1ae0;
 	--mermaid-edge-color: rgba(var(--color-primary-400), 1);
 	/* var(--tw-prose-links) #7b7b7b #00ff73; */

@@ -8,7 +8,7 @@ categories = ["mathematics"]
 draft = true
 +++
 {{< katex >}}
-<command- for-all="span.katex-mathml" remove-element defer>
+<command- for-all="span.katex-mathml" remove-element defer></command->
 
 This article is part of a series on understanding different concepts in mathematics and computer science.
 In this post, we will explore the concept of order theory.

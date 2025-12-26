@@ -223,3 +223,7 @@ figure {
 .project-aphnix {
 	max-width: 200px;
 }
+
+#button_likes_heart.hidden {
+	display: none;
+}

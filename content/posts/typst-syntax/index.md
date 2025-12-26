@@ -5,7 +5,7 @@ description = "A tutorial on how to create custom syntax themes for Typst's code
 tags = [ "syntax highlighting", "themes", "customization", "languages"]
 categories = ["typst"]
 showHero = true
-draft = false
+draft = true
 +++
 
 

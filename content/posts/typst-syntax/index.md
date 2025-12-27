@@ -264,6 +264,11 @@ And even inline ```lt int x = 42;``` works too!
 
 Improve your code snippets with packages like `Codly`[^CodlyPackage] for even nicer styling!
 
+## Conclusion
+
+This implementation of custom languages improves on a previously hacky process to a stable and scalable process.
+We've managed to add Lento language support via `sublime-syntax` and `tmTheme` definitions, demonstrating the power of Typst's scripting capabilities!
+
 ---
 {{< support >}}
 

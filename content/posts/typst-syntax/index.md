@@ -140,6 +140,7 @@ This is just an example and will not work out of the box.
 But it should give you a good starting point for defining the syntax of your new language.
 
 This definition is based on the `RustEnhanced`[^RustSyntax] Sublime syntax.
+See other examples like `JSON`[^JsonSyntax] for inspiration which is used as test data in the `Syntect` syntax highlighting library used by Typst internally.
 
 ## Theming
 
@@ -262,7 +263,36 @@ And even inline ```lt int x = 42;``` works too!
 
 ![Result](./result.png)
 
-Improve your code snippets with packages like `Codly`[^CodlyPackage] for even nicer styling!
+Let's improve the code snippets with the `Codly`[^CodlyPackage] package for even nicer styling!
+First we need to initialize Codly, then we can define our languages list by adding Lento to the existing Codly languages.
+
+````typ
+#import "@preview/codly:1.3.0": *
+#import "@preview/codly-languages:0.1.1": codly-languages
+#show: codly-init
+#let languages = (
+    (
+        (
+            lento: (
+            name: "Lento",
+            color: rgb("#94601c"),
+            icon: {
+                box(
+                    image("lento.svg", height: 150%, fit: "contain"),
+                    inset: 0pt,
+                    outset: 0pt,
+                )
+                h(0.3em)
+            },
+            ),
+        )
+    )
+    + codly-languages
+)
+#codly(languages: languages, zebra-fill: luma(98%), lang-stroke: none)
+````
+
+![Result](./result2.png)
 
 ## Conclusion
 
@@ -275,6 +305,8 @@ We've managed to add Lento language support via `sublime-syntax` and `tmTheme` d
 <!-------------------------------------------------------------------->
 
 [^RustSyntax]: [Rust Enhanced Sublime Syntax](https://github.com/rust-lang/rust-enhanced/blob/master/RustEnhanced.sublime-syntax) An example of a Sublime Text syntax definition for the Rust programming language.
+
+[^JsonSyntax]: [JSON Sublime Syntax](https://github.com/trishume/syntect/blob/f329b32051d199741bcf30892e50cc16f36bf4cf/testdata/JSON.sublime-syntax) Syntec test data for JSON syntax highlighting.
 
 <!-- [^DaxSyntax]: [cAttte/dax.sublime-syntax](https://gist.github.com/cAttte/40a8123c714ced3a2c15568e95ab83d6) DAX syntax highlighting definitions. -->
 

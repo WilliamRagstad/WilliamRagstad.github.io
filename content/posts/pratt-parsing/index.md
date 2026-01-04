@@ -2,9 +2,9 @@
 title = 'Pratt Parsing'
 date = 2024-07-13T17:32:10+02:00
 draft = false
-series = ['Parsing Techniques']
-series_order = 1
-tags = ["pratt parsing", "recursive descent parsing", "top-down parsing", "operator precedence parsing"]
+series = ['Understanding']
+series_order = 3
+tags = ["recursive descent", "top-down", "operator precedence"]
 categories = ["computer science", "compilers", "parsing", "algorithms"]
 showHero = true
 +++

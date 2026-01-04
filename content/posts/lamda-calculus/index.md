@@ -1,9 +1,9 @@
 +++
 title = 'Lambda Calculus'
 date = 2024-11-26T20:36:18+01:00
-series = ['Computational Theory']
+series = ['Computation']
 series_order = 1
-tags = ['lambda calculus', 'theoretical computer science']
+tags = ['lambda calculus', 'theory', 'model']
 categories = ['computer science', 'mathematics', 'computation']
 showHero = true
 +++

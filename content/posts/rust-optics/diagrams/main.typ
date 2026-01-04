@@ -1,39 +1,43 @@
 #import "@preview/fletcher:0.5.8": *
 
+#set page(fill: none, margin: 5mm, width: auto, height: auto)
+
 // Image of a morphism and its kernel
-#set page(width: auto, height: auto, margin: 5mm)
-#align(center + horizon, diagram(
-  cell-size: 8mm,
+#diagram(
+  cell-size: 2cm,
+  spacing: 8mm,
   $
     & G edge(f, ->) edge("d", pi, ->>)               & im(f) \
     & G slash ker(f) edge("ur", tilde(f), "hook-->") \
   $,
-))
+)
 
 // Simple commutative diagram of morphisms
-#set page(width: auto, height: auto, margin: 5mm)
-#align(center + horizon, diagram(
-  cell-size: 8mm,
+#pagebreak()
+#diagram(
+  cell-size: 2cm,
+  spacing: 8mm,
   $
     & A edge("rr", g compose f, "->") edge("rd", f, "->") &                       & C \
     &                                                     & B edge("tr", g, "->") &
   $,
-))
+)
 
 // Functor diagram
-#set page(width: auto, height: auto, margin: 5mm)
-#align(center + horizon, diagram(
-  cell-size: 8mm,
+#pagebreak()
+#diagram(
+  cell-size: 2cm,
+  spacing: 8mm,
   $
     & A edge("rr", g compose f, "->") edge("rd", f, "->") edge("ddd", F, "-->") & & C edge("ddd", F, "-->") \
     & & B edge("rt", g, "->") edge("b", F, "-->") & \
     & & F(B) edge("rb", F_g, "->") & \
     & F(A) edge("rr", F_(g compose f), "->") edge("rt", F_f, "->") & & F(C) \
   $,
-))
+)
 
 // Yoneda lemma diagram
-#set page(width: auto, height: auto, margin: 5mm)
+#pagebreak()
 #let member(..args) = edge(..args, " ", label: $in$, label-side: center, label-angle: right)
 #diagram(
   spacing: 8mm,
@@ -52,7 +56,7 @@
 )
 
 // Quiver diagram
-#set page(width: auto, height: auto, margin: 5mm, fill: white)
+#pagebreak()
 #diagram(
   mark-scale: 130%,
   $

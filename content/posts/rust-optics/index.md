@@ -25,7 +25,7 @@ In order to understand the following concepts, we first need to cover some basic
 
 Briefly put, the **morphisms** $f$ and $g$ are structure-preserving mappings between two objects in the categories $A$ to $B$ and $B$ to $C$ respectively. Together, they can be composed to form a new morphism $g \circ f$ that maps directly from $A$ to $C$ as shown in the diagram below:
 
-![Morphisms](./diagrams/2.svg)
+{{< figure src="./diagrams/2.svg" alt="Morphisms" class="math-diagram" >}}
 
 A morphism can be seen as a **function** in a program that **map values of one type to another**.
 For example, consider the function `to_string` method taking an $i32$ and returning it as a $String$.
@@ -53,7 +53,7 @@ This means that for any two morphisms $f: A \rarr B$ and $g: B \rarr C$, the fun
 
 This can be visualized in the following diagram:
 
-![Functors](./diagrams/3.svg)
+{{< figure src="./diagrams/3.svg" alt="Functors" class="math-diagram" >}}
 
 Notice how every object and morphism is mapped to a corresponding object and morphism in the target category, while preserving the composition of morphisms.
 Going back to our Rust example, the `Option` type can be seen as a functor that maps a type $A$ to `Option<A>`, and a function $f: A \rarr B$ to a function $Option \ f: Option \ A \rarr Option \ B$.

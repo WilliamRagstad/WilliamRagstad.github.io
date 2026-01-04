@@ -1,6 +1,7 @@
 #import "@preview/fletcher:0.5.8": *
 
 #set page(fill: none, margin: 5mm, width: auto, height: auto)
+#set text(size: 16pt)
 
 // Image of a morphism and its kernel
 #diagram(

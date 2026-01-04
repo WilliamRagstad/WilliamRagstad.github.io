@@ -57,12 +57,6 @@ This can be visualized in the following diagram:
 {{< figure src="./diagrams/3.svg" alt="Functors" class="math-diagram" >}}
 
 Notice how every object and morphism is mapped to a corresponding object and morphism in the target category, while preserving the composition of morphisms.
-
-$$
-F(g \circ f) = F(g) \circ F(f) \\\
-F(id_A) = id_{F(A)} \\\
-$$
-
 Going back to our Rust example, the `Option` type can be seen as a functor that maps a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function $Option \ f: Option \ A \rarr Option \ B$.
 
 <!-- <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;"> -->

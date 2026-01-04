@@ -46,17 +46,24 @@ $$
 
 A **functor** $F$ is a **mapping between categories** that preserves the structure of the categories, meaning it maps *objects to objects* and *morphisms to morphisms* in a way that respects **composition** and **identity**.
 This means that for any two morphisms $f: A \rarr B$ and $g: B \rarr C$, the functor $F$ satisfies the following properties:
+
 1. **Composition Preservation**: $F(g \circ f) = F(g) \circ F(f)$
-2. **Identity Preservation**: $F(id_A) = id_{F(A)}$
-3. **Object Mapping**: For every object $A$ in the source category, there is a corresponding object $F(A)$ in the target category.
-4. **Morphism Mapping**: For every morphism $f: A \rarr B$ in the source category, there is a corresponding morphism $F(f): F(A) \rarr F(B)$ in the target category.
+1. **Identity Preservation**: $F(id_A) = id_{F(A)}$
+1. **Object Mapping**: For every object $A$ in the source category, there is a corresponding object $F(A)$ in the target category.
+1. **Morphism Mapping**: For every morphism $f: A \rarr B$ in the source category, there is a corresponding morphism $F(f): F(A) \rarr F(B)$ in the target category.
 
 This can be visualized in the following diagram:
 
 {{< figure src="./diagrams/3.svg" alt="Functors" class="math-diagram" >}}
 
 Notice how every object and morphism is mapped to a corresponding object and morphism in the target category, while preserving the composition of morphisms.
-Going back to our Rust example, the `Option` type can be seen as a functor that maps a type $A$ to `Option<A>`, and a function $f: A \rarr B$ to a function $Option \ f: Option \ A \rarr Option \ B$.
+
+$$
+F(g \circ f) = F(g) \circ F(f) \\\
+F(id_A) = id_{F(A)} \\\
+$$
+
+Going back to our Rust example, the `Option` type can be seen as a functor that maps a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function $Option \ f: Option \ A \rarr Option \ B$.
 
 <!-- <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;"> -->
 

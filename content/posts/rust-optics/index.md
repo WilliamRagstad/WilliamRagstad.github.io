@@ -30,19 +30,18 @@ Briefly put, the **morphisms** $f$ and $g$ are structure-preserving mappings bet
 A morphism can be seen as a **function** in a program that **map values of one type to another**.
 For example, consider the function `to_string` method taking an $i32$ and returning it as a $String$.
 
-<!-- <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;"> -->
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
 
 ```rust
 let x: i32 = 42;
 let s: String = x.to_string();
 ```
-<!--
+
 $$
-\text{to\\\_string} : i32 \rarr String \\\
-\text{to\\\_string} \ 42 \rarr "42" \\\
+i32 \xrightarrow{\quad\text{to\\\_string}\quad} String
 $$
 
-</div> -->
+</div>
 
 A **functor** $F$ is a **mapping between categories** that preserves the structure of the categories, meaning it maps *objects to objects* and *morphisms to morphisms* in a way that respects **composition** and **identity**.
 This means that for any two morphisms $f: A \rarr B$ and $g: B \rarr C$, the functor $F$ satisfies the following properties:
@@ -59,20 +58,10 @@ This can be visualized in the following diagram:
 Notice how every object and morphism is mapped to a corresponding object and morphism in the target category, while preserving the composition of morphisms.
 Going back to our Rust example, the `Option` type can be seen as a functor that maps a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function $Option \ f: Option \ A \rarr Option \ B$.
 
-<!-- <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;"> -->
-
 ```rust
 let x: Option<i32> = Some(42);
 let s: Option<String> = x.map(i32::to_string);
 ```
-
-<!-- $$
-\text{Some} : A \rarr Option \ A \\\
-\text{Option} \ f : Option \ A \rarr Option \ B \\\
-\text{to\\\_string} : Option \ i32 \rarr Option \ String \\\
-$$ -->
-
-<!-- </div> -->
 
 ### What are Optics?
 

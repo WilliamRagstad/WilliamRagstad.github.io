@@ -6,7 +6,7 @@ series_order = 4
 tags = ["rust", "optics", "functional programming"]
 categories = ["computer science", "programming languages", "category theory"]
 showHero = true
-draft = true
+draft = false
 +++
 {{< katex >}}
 
@@ -56,7 +56,7 @@ This can be visualized in the following diagram:
 {{< figure src="./diagrams/3.svg" alt="Functors" class="math-diagram" >}}
 
 Notice how every object and morphism is mapped to a corresponding object and morphism in the target category, while preserving the composition of morphisms.
-Going back to our Rust example, the `Option` type can be seen as a functor that maps a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function $Option \ f: Option \ A \rarr Option \ B$.
+Going back to our Rust example, the `Option` type can be seen as a functor that maps a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function $Option(f): Option(A) \rarr Option(B)$.
 
 ```rust
 let x: Option<i32> = Some(42);

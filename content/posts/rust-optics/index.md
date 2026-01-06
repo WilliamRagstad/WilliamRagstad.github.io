@@ -63,11 +63,20 @@ let x: Option<i32> = Some(42);
 let s: Option<String> = x.map(i32::to_string);
 ```
 
-### What are Optics?
+### What Are Optics?
 
-### What is a Profunctor?
+### What Is a Profunctor?
 
 ## Profunctor Optics
+
+### Why Use Them?
+
+### How to Implement Them
+
+So, how would we go about implementing profunctor optics in idiomatic Rust?
+We have discussed the theoretical background, benefits, and motivations, but now it's time to see how we can bring these concepts to life in code.
+
+## Conclusion
 
 ---
 {{< support >}}

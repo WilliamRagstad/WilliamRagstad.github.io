@@ -44,24 +44,37 @@ $$
 </div>
 
 A **functor** $F$ is a **mapping between categories** that preserves the structure of the categories, meaning it maps *objects to objects* and *morphisms to morphisms* in a way that respects **composition** and **identity**.
-This means that for any two morphisms $f: A \rarr B$ and $g: B \rarr C$, the functor $F$ satisfies the following properties:
+This means that for any two morphisms $f: A \rarr B$ and $g: B \rarr C$, the functor $F$ obey the following rules:
 
 1. **Composition Preservation**: $F(g \circ f) = F(g) \circ F(f)$
 1. **Identity Preservation**: $F(id_A) = id_{F(A)}$
-1. **Object Mapping**: For every object $A$ in the source category, there is a corresponding object $F(A)$ in the target category.
-1. **Morphism Mapping**: For every morphism $f: A \rarr B$ in the source category, there is a corresponding morphism $F(f): F(A) \rarr F(B)$ in the target category.
 
-This can be visualized in the following diagram:
+There are also two properties of functors regarding how they map objects and morphisms:
 
-{{< figure src="./diagrams/3.svg" alt="Functors" class="math-diagram" >}}
+- **Object Mapping**: For every object $A$ in the source category, there is a corresponding object $F(A)$ in the target category.
+- **Morphism Mapping**: For every morphism $f: A \rarr B$ in the source category, there is a corresponding morphism $F(f): F(A) \rarr F(B)$ in the target category. In Rust, functor morphism $F(f)$ is the `map` function.
+
+These can be visualized by the following diagram:
+
+{{< figure src="./diagrams/3.svg" alt="Abstract Functors" class="math-diagram" >}}
 
 Notice how every object and morphism is mapped to a corresponding object and morphism in the target category, while preserving the composition of morphisms.
-Going back to our Rust example, the `Option` type can be seen as a functor that maps a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function $Option(f): Option(A) \rarr Option(B)$.
+Going back to our Rust example, the `Option` type can be seen as a functor that **maps** a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function `map` defining functor morphisms, as shown below:
+
+$$
+\text{map}_{Option}(f) \equiv Option(f) \ : \ Option(A) \rarr Option(B)
+$$
 
 ```rust
 let x: Option<i32> = Some(42);
 let s: Option<String> = x.map(i32::to_string);
 ```
+
+As seen in the code above, the `.map(f)` method applies the function `i32::to_string` to the value inside the `Option` without changing the structure of the `Option` itself.
+A `map` method exists for all functor types such as `Option`, `Result`, `Vec`, etc.
+The `Option` operations we did above can be visualized as a functor in the following commutative diagram which represents how a functor $Option$ preserves the structure of morphism/function $\text{to\\_string}$:
+
+{{< figure src="./diagrams/4.svg" alt="Option Functor" class="math-diagram" >}}
 
 ### What Are Optics?
 

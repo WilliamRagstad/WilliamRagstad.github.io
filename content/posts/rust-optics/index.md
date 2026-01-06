@@ -17,8 +17,6 @@ Recently, I came across the concept of **profunctor optics**, which I found out 
 I'll admit that understanding profunctor optics was quite the challenge for me, especially when trying to grasp the underlying category theory concepts behind them and decode the dense academic notation used to explain them.
 So that's why I decided to write this post, to share my journey of understanding profunctor optics, why they are useful and how to implement them in Rust.
 
-## Background
-
 In order to understand the following concepts, we first need to cover some basic category theory notation, terminology, and fundamental ideas.
 
 ### Morphisms and Functors

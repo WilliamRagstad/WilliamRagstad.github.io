@@ -1,6 +1,6 @@
 #import "@preview/fletcher:0.5.8": *
 
-#set page(fill: none, margin: 5mm, width: auto, height: auto)
+#set page(fill: none, margin: 3mm, width: auto, height: auto)
 #set text(size: 16pt)
 
 // Image of a morphism and its kernel
@@ -26,6 +26,7 @@
 
 // Functor diagram
 #pagebreak()
+#v(-6pt)
 #diagram(
   cell-size: 2cm,
   spacing: 8mm,
@@ -34,6 +35,18 @@
     & & B edge("rt", g, "->") edge("b", F, "-->") & \
     & & F(B) edge("rb", F_g, "->") & \
     & F(A) edge("rr", F_(g compose f), "->") edge("rt", F_f, "->") & & F(C) \
+  $,
+)
+
+// Int -> String morphism + functor diagram
+#pagebreak()
+#v(-6pt)
+#diagram(
+  cell-size: 2cm,
+  spacing: 16mm,
+  $
+    & italic("i32") edge("rr", text("to_string"), "->") edge("d", italic("Option"), "-->") & & italic("String") edge("d", italic("Option"), "-->") \
+    & italic("Option(i32)") edge("rr", text("map(to_string)"), "->") & & italic("Option(String)") \
   $,
 )
 

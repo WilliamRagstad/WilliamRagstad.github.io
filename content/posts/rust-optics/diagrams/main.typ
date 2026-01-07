@@ -3,6 +3,18 @@
 #set page(fill: none, margin: 3mm, width: auto, height: auto)
 #set text(size: 16pt)
 
+#let member(..args) = edge(..args, " ", label: $in$, label-side: center, label-angle: right)
+#let tint(c) = (stroke: c, fill: rgb(..c.components().slice(0, 3), 5%), inset: 8pt)
+
+// #math.scr($C$)
+// #math.mono($C$)
+// #math.cal($C$)
+// #math.bold($C$)
+// #math.script($C$)
+// #math.frak($C$)
+// #math.bb($C$)
+// #math.serif($C$)
+
 // Image of a morphism and its kernel
 #diagram(
   cell-size: 2cm,
@@ -46,13 +58,76 @@
   spacing: 16mm,
   $
     & italic("i32") edge("rr", text("to_string"), "->") edge("d", italic("Option"), "-->") & & italic("String") edge("d", italic("Option"), "-->") \
-    & italic("Option(i32)") edge("rr", text("map(to_string)"), "->") & & italic("Option(String)") \
+    & italic("Option(i32)") edge("rr", text("fmap(to_string)"), "->") & & italic("Option(String)") \
   $,
 )
 
+// Profunctor diagram
+#pagebreak()
+#diagram(
+  spacing: 12mm,
+  node-inset: 7pt,
+  node-corner-radius: 10pt,
+  // Nodes
+  node((0, 0), $A times B$, name: <AB>),
+  node((0, 2), $A' times B'$, name: <ApBp>),
+  node((2, 0), $P(A, B)$, name: <PAB>),
+  node((2, 2), $P(A', B')$, name: <PApBp>),
+  // Cross edges
+  edge(<AB>, <PAB>, $P$, "-->"),
+  edge(<ApBp>, <PApBp>, $P$, "-->"),
+  // Inner edges
+  edge((-0.25, 2), "tt", $f$, label-side: left, "->"),
+  edge((0.25, 0), "dd", $g$, label-side: left, "->"),
+  edge((2, 0), "dd", $P_(f, g)$, label-side: right, "->"),
+  // Enclosures
+  node((0, -0.6), $cal(C)^italic("op") times cal(C)$),
+  node(enclose: ((0, 0), (0, 2)), ..tint(teal), name: <Cop_C>),
+  node((2, -0.6), $bold("Set")$),
+  node(enclose: ((2, 0), (2, 2)), ..tint(purple), name: <Set>),
+)
+
+
+#pagebreak()
+#diagram(
+  node-corner-radius: 4pt,
+  node-inset: 5pt,
+  spacing: 20mm,
+  node((0, 0), $S a$),
+  node((1, 0), $T b$),
+  node((0, 1), $S a'$),
+  node((1, 1), $T b'$),
+  edge((0, 0), (1, 0), "->", $f$),
+  edge((0, 1), (1, 1), "->", $f'$),
+  edge((0, 0), (0, 1), "->", $alpha$),
+  edge((1, 0), (1, 1), "->", $beta$),
+
+  node((2, 0), $(a, b, f)$),
+  edge("->", text(0.8em, $(alpha, beta)$)),
+  node((2, 1), $(a', b', f')$),
+
+  node((0, 2), $S a$),
+  edge("->", $f$),
+  node((1, 2), $T b$),
+
+  node((2, 2), $(a, b, f)$),
+
+  {
+    node(enclose: ((0, 0), (1, 1)), ..tint(teal), name: <big>)
+    node(enclose: ((2, 0), (2, 1)), ..tint(teal), name: <tall>)
+    node(enclose: ((0, 2), (1, 2)), ..tint(green), name: <wide>)
+    node(enclose: ((2, 2),), ..tint(green), name: <small>)
+  },
+
+  edge(<big>, <tall>, "<==>", stroke: teal + .75pt),
+  edge(<wide>, <small>, "<==>", stroke: green + .75pt),
+  edge(<big>, <wide>, "<=>", stroke: .75pt),
+  edge(<tall>, <small>, "<=>", stroke: .75pt),
+)
+
+
 // Yoneda lemma diagram
 #pagebreak()
-#let member(..args) = edge(..args, " ", label: $in$, label-side: center, label-angle: right)
 #diagram(
   spacing: 8mm,
   node-inset: 7pt,

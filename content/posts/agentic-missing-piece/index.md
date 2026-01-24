@@ -80,7 +80,7 @@ Many teams gravitate toward stronger types as AI writes more code. Without them,
 
 But mainstream static types often stop short of what agentic workflows demand. They don't encode behavioral promises, constrain effects precisely, prove protocol adherence, expose minimal counterexamples, or turn intent into a first-class review artifact.[^NVLang][^LinearPromises][^TypestatesBeyond]
 
-## Readability as throughput
+## Readability as Throughput
 
 When humans mostly review, source code targets future reviewers, security auditors, incident responders, and the agent itself, all of which benefit from consistent structure.
 
@@ -90,7 +90,7 @@ Language becomes a review UI.
 
 If syntax encourages cleverness, deeply nested abstractions, or implicit control flow, agentic iteration produces diffs humans can't confidently approve. Adversaries can compromise AI agents by embedding hard-to-detect backdoors during data collection, leading agents to perform unsafe or malicious actions when triggered. Once humans lose confidence, the agent becomes a liability rather than a productivity tool.[^ReflectionDrivenControl][^HiddenQualityCostsAIGeneratedCode][^LiabilityAuditRiskAIGeneratedCode]
 
-## Making intent checkable
+## Making Intent Checkable
 
 Agentic development works best when intent is expressed formally and readably, verified at compile time, constraining agent behavior while humans review intent first, then skim implementation for hazards, with the compiler emitting machine-actionable counterexamples when encoding fails.
 Related work includes runtime verification for agents, improved LLM-assisted specification generation for complex loop functions, and hybrid generative + verification workflows.[^SpecGen][^AgentGuard][^SLDSpec][^Genefication]

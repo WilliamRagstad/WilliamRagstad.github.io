@@ -12,15 +12,15 @@ Define your goal, let AI suggest solutions, and refine until it works.
 In demos, agents add features, refactor code, and close tickets while you sit back and relax.
 But in large-scale projects, the challenges become clear.
 The difficult part isn't generating code.
-It's getting the right results quickly and safely as things change and security matters, without overloading people with reviews and debugging.
+It's getting the right results **quickly and safely** as things change and security matters, without overloading people with reviews and debugging.
 
 Most programming tools were built for a world where people write code and computers run it.
 With agentic workflows, computers suggest code and people check direction.
 This shift exposes limits in our languages, compilers, and tools.[^TDFlow]
 
-In reality, tools like **Claude Code** and **OpenCode** are bringing agentic workflows into daily development, not just demos.
-As adoption grows, teams converge on orchestration patterns such as planner/executor loops, tool routing, reflection, and multi-agent decomposition.
-One popular "overnight iteration" pattern is the **Ralph Wiggum** self-referential development loop, where you keep the agent running and iterating persistently. In the morning, you review any changes made to the project.[^ClaudeCode][^OpenCode][^AIAgentDesignPatterns][^RalphVentureBeat][^RalphRepo][^RalphAwesomeClaude]
+In reality, tools like **Claude Code** and **OpenCode** are bringing agentic workflows into **daily development**, not just demos.[^ClaudeCode][^OpenCode]
+As adoption grows, teams converge on *agentic orchestration* patterns such as *planner/executor loops*, *tool routing*, *reflection*, and *multi-agent decomposition*.[^AIAgentDesignPatterns]
+One popular **"overnight iteration"** pattern is the **Ralph Wiggum** self-referential development loop, where you keep the agent running with *persistent iteration*, then review the changes in the morning.[^RalphVentureBeat][^RalphRepo][^RalphAwesomeClaude]
 
 ## The Bottleneck
 
@@ -32,7 +32,7 @@ You need high-bandwidth, low-latency signals showing whether the agent is moving
 
 Today's workflows still rely on delayed signals: integration tests that run later, runtime crashes discovered in staging, flaky CI that confuses cause and effect, and security issues found after the fact.
 In an agentic loop, delayed signals are poison.
-Feedback must be immediate, localized, and deterministic, or the loop becomes an expensive random walk.
+Feedback must be **immediate**, **localized**, and **deterministic**, or the loop becomes an expensive random walk.
 
 ## A Role Shift
 
@@ -47,7 +47,7 @@ Agentic reviewing requires the opposite.
 Interface and **intent must be the artifact**, and implementation treated as refinement.
 
 This **demands a deeper understanding** of fundamentals like type systems, logic, semantics, threat modeling, and protocol reasoning.
-Not because we're becoming academics, but because verification literacy is the job.
+Not because we're becoming academics, but because ***verification literacy* is the job**.
 Education should reflect this paradigm shift, relying less on pragmatic details and more on a big-picture understanding of good systems design.[^VerifyUnderstand][^AgenticRefactoring]
 
 > The misunderstanding of new technology requirements on human resources has famously led to scandalous layoffs at Salesforce, where the CEO thought he needed fewer engineers "because I need less heads with AI."
@@ -59,7 +59,7 @@ Most compilers still "speak human." They produce free-form text errors, cascadin
 For agents, that's a low-quality signal.
 For reviewers, it creates cognitive overload.[^ChameleonIDE]
 
-What agentic loops/workflows need, are compilers and interpreters that behave like **verification oracles**.
+What agentic loops/workflows need are compilers and interpreters that behave like **verification oracles**.
 These include structured diagnostics (machine-readable), stable error IDs and deterministic ordering, precise provenance ("this constraint came from this rule and this span"), reduced/minimal **unsatisfiable cores** (the smallest inconsistency witness), and actionable "fix-its" (edits with rationale).[^ClangExpressiveDiagnostics][^GCCDiagnosticsGuidelines]
 
 Why unsat cores matter is simple.
@@ -86,14 +86,14 @@ Review, maintenance, and security become harder as consistency breaks down.[^Sof
 
 Worse, the default behavior in many ecosystems is to import another package.
 This is manageable when humans choose dependencies carefully.
-With agents, it becomes a supply-chain hazard generator, introducing risks such as abandonware, typosquatting, malware packages, vulnerable transitive dependencies, and subtle behavioral differences across libraries.
+With agents, it becomes a **supply-chain hazard generator**, introducing risks such as abandonware, typosquatting, malware packages, vulnerable transitive dependencies, and subtle behavioral differences across libraries.
 Agentic coding amplifies productivity and creativity, but also **expands the attack surface**.[^PackageHallucinations][^AISupplyChainDumpsterFire][^AInvestSupplyChainSabotage]
 
 ## Typing for Convergence
 
 There's a **misconception** that types are about developer preference.
 In agentic workflows, strong static typing becomes something else entirely.
-It serves as a dense reward signal for iterative synthesis, a persistent executable specification in the codebase, a refactoring safety net under extreme churn, a boundary enforcer for architecture and effects, and a way to push correctness earlier than tests can.[^DirectPathDependableSoftware][^EmergentMindAgenticRefactoring][^SimpleModelingExecutableSpecification]
+It serves as a dense reward signal for iterative synthesis, a **persistent executable specification** in the codebase, a refactoring safety net under extreme churn, a boundary enforcer for architecture and effects, and a way to push correctness earlier than tests can.[^DirectPathDependableSoftware][^EmergentMindAgenticRefactoring][^SimpleModelingExecutableSpecification]
 
 Many teams gravitate toward stronger types as AI writes more code.
 Without them, you're **"navigating fog" with runtime errors as your compass**.

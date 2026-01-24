@@ -123,6 +123,7 @@ $$
 So, how would we go about implementing profunctor optics in idiomatic Rust?
 We have discussed the theoretical background, benefits, and motivations, but now it's time to see how we can bring these concepts to life in code.
 
+<!--
 ### The Path to Zero-Cost: Static ZST Optics
 
 #### Defining Optics as Types, Not Values
@@ -146,7 +147,7 @@ We have discussed the theoretical background, benefits, and motivations, but now
 #### Virtual Fields and Computed Isomorphisms
 
 #### Fusing Prisms and Lenses: The Fallibility Chain
-
+-->
 
 ## Conclusion
 

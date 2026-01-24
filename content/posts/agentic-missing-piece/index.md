@@ -46,6 +46,9 @@ This **demands a deeper understanding** of fundamentals like type systems, logic
 Not because we're becoming academics, but because verification literacy is the job.
 Education should reflect this paradigm shift, relying less on pragmatic details and more on a big-picture understanding of good systems design.[^VerifyUnderstand][^AgenticRefactoring]
 
+> The misunderstanding of new technology requirements on human resources has famously led to scandalous layoffs at Salesforce, where the CEO thought he needed fewer engineers "because I need less heads with AI."
+> [^SalesforceLayoffs]
+
 ## Compiler as a Tool
 
 Most compilers still "speak human." They produce free-form text errors, cascading diagnostics, inconsistent error ordering, little or no structured causality, and weak, non-actionable suggestions.
@@ -179,3 +182,4 @@ The path forward lies in toolchains and languages that prioritize verification, 
 [^IntentDrivenProgramming]: Yang, Y., Duracz, A., Bartha, F. A., Sai, R., Pervaiz, A., Barati, S., Nguyen, D., Cartwright, R., Hoffmann, H. & Palem, K. V. (2019). Language Support for Adaptation: Intent-Driven Programming in FAST. arXiv preprint arXiv:1907.08695. https://doi.org/10.48550/arXiv.1907.08695
 [^Agint]: Chivukula, A., Somasundaram, J. & Somasundaram, V. (2025). Agint: Agentic Graph Compilation for Software Engineering Agents. arXiv preprint arXiv:2511.19635. https://doi.org/10.48550/arXiv.2511.19635
 [^JavaCtx]: Salvaneschi, G., Ghezzi, C. & Pradella, M. (2011). JavaCtx: Seamless Toolchain Integration for Context-Oriented Programming. arXiv preprint arXiv:1104.1351. https://doi.org/10.48550/arXiv.1104.1351
+[^SalesforceLayoffs]: (September 2, 2025). Salesforce CEO confirms 4,000 layoffs ‘because I need less heads’ with AI. CNBC. https://www.cnbc.com/2025/09/02/salesforce-ceo-confirms-4000-layoffs-because-i-need-less-heads-with-ai.html

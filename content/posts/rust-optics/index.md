@@ -95,7 +95,6 @@ So, let me instead examine what it can do for us instead, by looking at its mapp
 For functors, we saw how they map a single morphism $f: A \rarr B$ to another $F(f): F(A) \rarr F(B)$, otherwise known as $\text{fmap}_F(f)$. \
 A **Profunctor** $P$ on the other hand is slightly more complex as it deals with **two morphisms** simultaneously, usually performing mappings using both $f$ and $g$ at once via $\text{dimap}_P(f, g)$. The Greek prefix **di-** is a shortened form of dis meaning "two, double, twice, twofold".
 
-
 $$
 \begin{align*}
 & f: A \rarr B \\\
@@ -106,7 +105,6 @@ $$
 $$
 
 {{< figure src="./diagrams/5.svg" alt="Profunctor" class="math-diagram" >}}
-
 
 ## What Does Optics Mean?
 

@@ -33,17 +33,17 @@ Traditional reviewing assumes implementation is the primary artifact. Agentic re
 This **demands a deeper understanding** of fundamentals like type systems, logic, semantics, threat modeling, and protocol reasoning. Not because we're becoming academics, but because verification literacy is the job.
 Education should reflect this paradigm shift, relying less on pragmatic details and more on a big-picture understanding of good systems design.[^VerifyUnderstand][^AgenticRefactoring]
 
-## Compilers for Agentic Loops
+## Compiler as a Tool
 
 Most compilers still "speak human." They produce free-form text errors, cascading diagnostics, inconsistent error ordering, little or no structured causality, and weak, non-actionable suggestions.
 For agents, that's a low-quality signal. For reviewers, it creates cognitive overload.[^ChameleonIDE]
 
-What agentic workflows needs, are compilers and interpreters that behave like **verification oracles**. These include structured diagnostics (machine-readable), stable error IDs and deterministic ordering, precise provenance ("this constraint came from this rule and this span"), reduced/minimal **unsatisfiable cores** (the smallest inconsistency witness), and actionable "fix-its" (edits with rationale).[^ClangExpressiveDiagnostics][^GCCDiagnosticsGuidelines]
+What agentic loops/workflows need, are compilers and interpreters that behave like **verification oracles**. These include structured diagnostics (machine-readable), stable error IDs and deterministic ordering, precise provenance ("this constraint came from this rule and this span"), reduced/minimal **unsatisfiable cores** (the smallest inconsistency witness), and actionable "fix-its" (edits with rationale).[^ClangExpressiveDiagnostics][^GCCDiagnosticsGuidelines]
 
 Why unsat cores matter is simple. An LLM is essentially a fuzzy translator of intent into code.
 To help it converge, you must provide sharp counterexamples, not a thousand symptoms. A minimal unsat core is the densest possible feedback: "You got this specific promise wrong."[^LLMsTranslators]
 
-## Intent Versus Implementation
+## Clarifying Intent
 
 Most languages don't **separate intent from implementation**.
 We bury intent across comments, ticket descriptions, Slack threads, unit tests written after the fact, and implicit conventions.
@@ -59,7 +59,7 @@ When there are several ways to represent errors, serialization, data modeling, a
 Worse, the default behavior in many ecosystems is to import another package. This is manageable when humans choose dependencies carefully. With agents, it becomes a supply-chain hazard generator, introducing risks such as abandonware, typosquatting, malware packages, vulnerable transitive dependencies, and subtle behavioral differences across libraries.
 Agentic coding amplifies productivity and creativity, but also **expands the attack surface**.[^PackageHallucinations][^AISupplyChainDumpsterFire][^AInvestSupplyChainSabotage]
 
-## Static Typing for Convergence
+## Typing for Convergence
 
 There's a **misconception** that types are about developer preference.
 In agentic workflows, strong static typing becomes something else entirely. It serves as a dense reward signal for iterative synthesis, a persistent executable specification in the codebase, a refactoring safety net under extreme churn, a boundary enforcer for architecture and effects, and a way to push correctness earlier than tests can.[^DirectPathDependableSoftware][^EmergentMindAgenticRefactoring][^SimpleModelingExecutableSpecification]
@@ -106,7 +106,6 @@ This defines **Lento**, a readable language in which flexible formal specificati
 &nbsp;
 
 Agentic development demands more than better models. It requires a **verification-native** foundation. Without that, the loop won't scale beyond toy demos, and humans remain the bottleneck.
-
 **This is the missing piece**. The path forward lies in toolchains and languages that prioritize verification, clear formal intent, and immediate feedback for scalable agent-human collaboration systems.
 
 ---

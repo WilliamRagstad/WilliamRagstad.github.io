@@ -228,6 +228,19 @@ figure {
 	display: none;
 }
 
+/* Ensure the like icon has a stable size when toggled via JS */
+#button_likes_heart,
+#button_likes_empty_heart {
+	display: inline-block;
+	line-height: 1;
+}
+
+#button_likes_heart svg,
+#button_likes_empty_heart svg {
+	width: 1em;
+	height: 1em;
+}
+
 /* Math diagram shortcode: invert diagrams in dark mode */
 .math-diagram {
 	/* Light mode: keep original colors */

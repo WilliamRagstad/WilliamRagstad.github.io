@@ -48,6 +48,7 @@ if (typeof auth !== "undefined") {
 
   if (liked) {
     liked_page = true;
+    document.getElementById("button_likes_heart").classList.remove("hidden");
     document.querySelectorAll("span[id='button_likes_heart']")[0].style.display = "";
     document.querySelectorAll("span[id='button_likes_empty_heart']")[0].style.display = "none";
     document.querySelectorAll("span[id='button_likes_text']")[0].innerText = "";
@@ -64,6 +65,7 @@ function like_article(id_likes) {
         .then((doc) => {
           liked_page = true;
           localStorage.setItem(id_likes, true);
+          document.getElementById("button_likes_heart").classList.remove("hidden");
           document.querySelectorAll("span[id='button_likes_heart']")[0].style.display = "";
           document.querySelectorAll("span[id='button_likes_empty_heart']")[0].style.display = "none";
           document.querySelectorAll("span[id='button_likes_text']")[0].innerText = "";
@@ -98,6 +100,7 @@ function remove_like_article(id_likes) {
         .then((doc) => {
           liked_page = false;
           localStorage.removeItem(id_likes);
+          document.getElementById("button_likes_heart").classList.add("hidden");
           document.querySelectorAll("span[id='button_likes_heart']")[0].style.display = "none";
           document.querySelectorAll("span[id='button_likes_empty_heart']")[0].style.display = "";
           document.querySelectorAll("span[id='button_likes_text']")[0].innerText = "\xa0Like";

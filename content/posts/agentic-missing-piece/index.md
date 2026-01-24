@@ -32,7 +32,7 @@ Developers are becoming reviewers and directors rather than manual constructors.
 
 But most orgs aren’t prepared for that shift.
 
-If an agent writes 80% of the diff, a human reviewer must answer critical questions. Does this align with product requirements? Is the design sound? Are the security boundaries correct? Is the behavior actually what we intended? Are there hidden side effects or policy violations?
+If an agent writes 80% of the diff, a human reviewer must answer critical questions. Does this align with product requirements? Is the design sound? Are the security boundaries correct? Is the behavior actually what we intended? Are there hidden side effects or policy violations?[^OverReliance]
 
 Traditional reviewing assumes implementation is the primary artifact. Agentic reviewing requires the opposite. Interface and intent must be the artifact, and implementation treated as refinement.
 

@@ -4,7 +4,7 @@ date = 2026-01-24T19:00:59+01:00
 tags = ["LLMs", "agentic", "productivity"]
 categories = ["artificial intelligence", "software development", "tools"]
 showHero = true
-draft = true
+draft = false
 +++
 
 Agentic development makes software engineering feel like an optimization problem. Define your goal, let AI suggest solutions, and refine until it works. In demos, agents add features, refactor code, and close tickets while you sit back and relax.

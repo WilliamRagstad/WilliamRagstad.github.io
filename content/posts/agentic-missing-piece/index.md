@@ -18,7 +18,7 @@ Most programming tools were built for a world where people write code and comput
 With agentic workflows, computers suggest code and people check direction.
 This shift exposes limits in our languages, compilers, and tools.[^TDFlow]
 
-In practice, tools like **Claude Code** and **OpenCode** are making agentic workflows part of everyday development, not just demos.
+In reality, tools like **Claude Code** and **OpenCode** are bringing agentic workflows into daily development, not just demos.
 As adoption grows, teams converge on orchestration patterns such as planner/executor loops, tool routing, reflection, and multi-agent decomposition.
 One popular "overnight iteration" pattern is the **Ralph Wiggum** self-referential development loop, where you keep the agent running and iterating persistently. In the morning, you review any changes made to the project.[^ClaudeCode][^OpenCode][^AIAgentDesignPatterns][^RalphVentureBeat][^RalphRepo][^RalphAwesomeClaude]
 

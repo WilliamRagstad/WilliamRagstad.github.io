@@ -26,7 +26,7 @@ In an agentic loop, delayed signals are poison. Feedback must be immediate, loca
 
 ## A Role Shift
 
-Developers are becoming reviewers and directors rather than manual constructors. Informal “vibe coding” is acceptable, but “vibe reviewing” is catastrophic.
+Developers are becoming reviewers and directors rather than manual constructors. Informal "vibe coding" is acceptable, but "vibe reviewing" is catastrophic.
 
 But most orgs aren't prepared for that shift.
 
@@ -38,13 +38,13 @@ That demands a deeper understanding of fundamentals like type systems, logic, se
 
 ## Compilers for Agentic Loops
 
-Most compilers still “speak human.” They produce free-form text errors, cascading diagnostics, inconsistent error ordering, little or no structured causality, and weak, non-actionable suggestions.[^ChameleonIDE]
+Most compilers still "speak human." They produce free-form text errors, cascading diagnostics, inconsistent error ordering, little or no structured causality, and weak, non-actionable suggestions.[^ChameleonIDE]
 
 For agents, that's a low-quality signal. For reviewers, it creates cognitive overload.
 
-What agentic workflows need are compilers and interpreters that behave like verification oracles. These include structured diagnostics (machine-readable), stable error IDs and deterministic ordering, precise provenance (“this constraint came from this rule and this span”), reduced/minimal unsatisfiable cores (the smallest inconsistency witness), and actionable “fix-its” (edits with rationale).[^ClangExpressiveDiagnostics][^GCCDiagnosticsGuidelines]
+What agentic workflows need are compilers and interpreters that behave like verification oracles. These include structured diagnostics (machine-readable), stable error IDs and deterministic ordering, precise provenance ("this constraint came from this rule and this span"), reduced/minimal unsatisfiable cores (the smallest inconsistency witness), and actionable "fix-its" (edits with rationale).[^ClangExpressiveDiagnostics][^GCCDiagnosticsGuidelines]
 
-Why unsat cores matter is simple. An LLM is essentially a fuzzy translator of intent into code.[^LLMsTranslators] To help it converge, you must provide sharp counterexamples, not a thousand symptoms. A minimal unsat core is the densest possible feedback: “You got this specific promise wrong.”
+Why unsat cores matter is simple. An LLM is essentially a fuzzy translator of intent into code.[^LLMsTranslators] To help it converge, you must provide sharp counterexamples, not a thousand symptoms. A minimal unsat core is the densest possible feedback: "You got this specific promise wrong."
 
 ## Intent Versus Implementation
 
@@ -54,7 +54,7 @@ We bury intent across comments, ticket descriptions, Slack threads, unit tests w
 
 Humans must infer intent from implementation while agents infer it from loosely specified prompts.
 
-That's why agentic coding feels unstable. The agent optimizes for “passes CI” or “looks plausible” rather than “provably satisfies the requirement.”
+That's why agentic coding feels unstable. The agent optimizes for "passes CI" or "looks plausible" rather than "provably satisfies the requirement."
 
 Without formal intent encoding, reviewers must reconstruct semantics. Every PR becomes a detective story.
 
@@ -105,7 +105,7 @@ These requirements point toward a language designed for the agentic era from fir
 * Separation of intent and implementation means developers encode behavioral promises (contracts, invariants) and admissible side effects (capabilities/effects) directly in the source.
 * Static verification as the inner loop means type checking doesn't just catch mismatches. It validates intent constraints, refinement obligations, and protocol/session compliance.
 * Diagnostics built for agents and reviewers include structured errors, deterministic output, provenance, reduced/minimal unsat cores, and repair-oriented suggestions.
-* A large, opinionated standard library provides “one right way” patterns that reduce entropy, improve readability, and minimize supply-chain risk through reduced dependency sprawl.
+* A large, opinionated standard library provides "one right way" patterns that reduce entropy, improve readability, and minimize supply-chain risk through reduced dependency sprawl.
 * Optimization informed by specification means richer intent enables more aggressive, safe compilation, such as bounds-check elimination, specialization, and effect-aware reordering.
 
 This defines Lento, a readable language in which flexible formal specification is the primary product, implementations are refinements, and the compiler is an active participant in the iterative synthesis workflow. Read more at https://lento-lang.org/.

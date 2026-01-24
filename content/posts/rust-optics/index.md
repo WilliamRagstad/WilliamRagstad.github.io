@@ -125,6 +125,31 @@ $$
 So, how would we go about implementing profunctor optics in idiomatic Rust?
 We have discussed the theoretical background, benefits, and motivations, but now it's time to see how we can bring these concepts to life in code.
 
+### The Path to Zero-Cost: Static ZST Optics
+
+#### Defining Optics as Types, Not Values
+
+#### The Lens and LensMut Dualism (In-place Mutation)
+
+#### Inductive Prisms: Navigating Recursive Enums
+
+#### Composition as Type-Level Induction
+
+### Automation via Procedural Macros
+
+#### Generating ZSTs from Struct Definitions
+
+#### Synthesizing Inherent Wrappers (The view_field API)
+
+#### Handling Generics and Lifetimes in Macro Space
+
+### Advanced Patterns
+
+#### Virtual Fields and Computed Isomorphisms
+
+#### Fusing Prisms and Lenses: The Fallibility Chain
+
+
 ## Conclusion
 
 ---

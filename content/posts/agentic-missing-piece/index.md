@@ -34,7 +34,8 @@ If an agent writes 80% of the diff, a human reviewer must answer critical questi
 
 Traditional reviewing assumes implementation is the primary artifact. Agentic reviewing requires the opposite. Interface and intent must be the artifact, and implementation treated as refinement.
 
-That demands a deeper understanding of fundamentals like type systems, logic, semantics, threat modeling, and protocol reasoning. Not because we're becoming academics, but because verification literacy is the job.[^VerifyUnderstand] Education should reflect this paradigm shift, relying less on pragmatic details and more on a big-picture understanding of good systems design.[^AgenticRefactoring]
+That demands a deeper understanding of fundamentals like type systems, logic, semantics, threat modeling, and protocol reasoning. Not because we're becoming academics, but because verification literacy is the job.
+Education should reflect this paradigm shift, relying less on pragmatic details and more on a big-picture understanding of good systems design.[^VerifyUnderstand][^AgenticRefactoring]
 
 ## Compilers for Agentic Loops
 
@@ -44,7 +45,8 @@ For agents, that's a low-quality signal. For reviewers, it creates cognitive ove
 
 What agentic workflows need are compilers and interpreters that behave like verification oracles. These include structured diagnostics (machine-readable), stable error IDs and deterministic ordering, precise provenance ("this constraint came from this rule and this span"), reduced/minimal unsatisfiable cores (the smallest inconsistency witness), and actionable "fix-its" (edits with rationale).[^ClangExpressiveDiagnostics][^GCCDiagnosticsGuidelines]
 
-Why unsat cores matter is simple. An LLM is essentially a fuzzy translator of intent into code.[^LLMsTranslators] To help it converge, you must provide sharp counterexamples, not a thousand symptoms. A minimal unsat core is the densest possible feedback: "You got this specific promise wrong."
+Why unsat cores matter is simple. An LLM is essentially a fuzzy translator of intent into code.
+To help it converge, you must provide sharp counterexamples, not a thousand symptoms. A minimal unsat core is the densest possible feedback: "You got this specific promise wrong."[^LLMsTranslators]
 
 ## Intent Versus Implementation
 
@@ -90,13 +92,13 @@ If syntax encourages cleverness, deeply nested abstractions, or implicit control
 
 ## Making intent checkable
 
-Agentic development works best when intent is expressed formally and readably, verified at compile time, constraining agent behavior while humans review intent first, then skim implementation for hazards, with the compiler emitting machine-actionable counterexamples when encoding fails.[^SpecGen]
-Related work includes runtime verification for agents,[^AgentGuard] improved LLM-assisted specification generation for complex loop functions,[^SLDSpec] and hybrid generative + verification workflows.[^Genefication]
+Agentic development works best when intent is expressed formally and readably, verified at compile time, constraining agent behavior while humans review intent first, then skim implementation for hazards, with the compiler emitting machine-actionable counterexamples when encoding fails.
+Related work includes runtime verification for agents, improved LLM-assisted specification generation for complex loop functions, and hybrid generative + verification workflows.[^SpecGen][^AgentGuard][^SLDSpec][^Genefication]
 
 This isn't about more tests. Tests are still essential. This is about moving from post-hoc validation to specification-driven construction.
 
-We need languages where what the program must do becomes an explicit, checkable artifact, not just a vibe.[^IntentDrivenProgramming]
-Adjacent directions include agentic graph compilation,[^Agint] and context-oriented toolchain integration.[^JavaCtx]
+We need languages where what the program must do becomes an explicit, checkable artifact, not just a vibe.
+Adjacent directions include agentic graph compilation and context-oriented toolchain integration.[^IntentDrivenProgramming][^Agint][^JavaCtx]
 
 ## A Proposed Direction
 

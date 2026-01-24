@@ -18,6 +18,10 @@ Most programming tools were built for a world where people write code and comput
 With agentic workflows, computers suggest code and people check direction.
 This shift exposes limits in our languages, compilers, and tools.[^TDFlow]
 
+In practice, tools like **Claude Code** and **OpenCode** are making agentic workflows part of everyday development, not just demos.
+As adoption grows, teams converge on orchestration patterns such as planner/executor loops, tool routing, reflection, and multi-agent decomposition.
+One popular "overnight iteration" pattern is the **Ralph Wiggum** self-referential development loop, where you keep the agent running and iterating persistently. In the morning, you review any changes made to the project.[^ClaudeCode][^OpenCode][^AIAgentDesignPatterns][^RalphVentureBeat][^RalphRepo][^RalphAwesomeClaude]
+
 ## The Bottleneck
 
 With agents, producing another implementation is almost free.
@@ -183,3 +187,9 @@ The path forward lies in toolchains and languages that prioritize verification, 
 [^Agint]: Chivukula, A., Somasundaram, J. & Somasundaram, V. (2025). Agint: Agentic Graph Compilation for Software Engineering Agents. arXiv preprint arXiv:2511.19635. https://doi.org/10.48550/arXiv.2511.19635
 [^JavaCtx]: Salvaneschi, G., Ghezzi, C. & Pradella, M. (2011). JavaCtx: Seamless Toolchain Integration for Context-Oriented Programming. arXiv preprint arXiv:1104.1351. https://doi.org/10.48550/arXiv.1104.1351
 [^SalesforceLayoffs]: (September 2, 2025). Salesforce CEO confirms 4,000 layoffs ‘because I need less heads’ with AI. CNBC. https://www.cnbc.com/2025/09/02/salesforce-ceo-confirms-4000-layoffs-because-i-need-less-heads-with-ai.html
+[^ClaudeCode]: (n.d.). Claude Code overview. Anthropic. https://code.claude.com/docs/en/overview
+[^OpenCode]: (n.d.). OpenCode: The open source coding agent. GitHub. https://github.com/anomalyco/opencode
+[^RalphVentureBeat]: (n.d.). How Ralph Wiggum went from The Simpsons to the biggest name in AI right now. VentureBeat. https://venturebeat.com/technology/how-ralph-wiggum-went-from-the-simpsons-to-the-biggest-name-in-ai-right-now
+[^RalphRepo]: (n.d.). snarktank/ralph. GitHub. https://github.com/snarktank/ralph
+[^RalphAwesomeClaude]: (n.d.). Ralph Wiggum. AwesomeClaude.ai. https://awesomeclaude.ai/ralph-wiggum
+[^AIAgentDesignPatterns]: (n.d.). AI agent design patterns. Microsoft Learn. https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns

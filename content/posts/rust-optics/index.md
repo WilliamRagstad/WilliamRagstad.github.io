@@ -91,10 +91,9 @@ You might have seen some attempts to summarize the whole idea of profunctors in 
 > "A **profunctor** *just* a bifunctor that is contravariant in its first argument and covariant in its second."
 
 Which frankly **doesn't help much** if you don't already know what a *bifunctor* is, or what *covariance* and *contravariance* mean.
-So, let me instead examine what it can do for us by looking at its functional mapping properties more closely.
-For functors, we saw how they map a single morphism $f: A \rarr B$ to another $F(f): F(A) \rarr F(B)$, otherwise known as $\text{fmap}_F(f)$.
-
-A **Profunctor** $P$, on the other hand, is a bit more complex as it deal with **two morphisms** simultaneously, performing mappings using $f$ and $g$ at once via $\text{dimap}_P(f, g)$. The Greek prefix **di-** is a shortened form of dis meaning "two, double, twice, twofold".
+So, let me instead examine what it can do for us instead, by looking at its mapping properties more closely.
+For functors, we saw how they map a single morphism $f: A \rarr B$ to another $F(f): F(A) \rarr F(B)$, otherwise known as $\text{fmap}_F(f)$. \
+A **Profunctor** $P$ on the other hand is slightly more complex as it deals with **two morphisms** simultaneously, usually performing mappings using both $f$ and $g$ at once via $\text{dimap}_P(f, g)$. The Greek prefix **di-** is a shortened form of dis meaning "two, double, twice, twofold".
 
 
 $$

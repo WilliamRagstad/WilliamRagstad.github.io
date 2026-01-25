@@ -1,2 +1,3 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThis includes learning about the different parsing techniques^Parsing used to parse expressions in programming languages.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QOne of my many interests is understanding how programming languages are designed and implemented, including learning about the different parsing techniques^Parsing used to parse expressions in programming languages.\\E$"}
+{"rule":"DIS","sentence":"^\\QThe Greek prefix di- is a shortened form of dis, meaning \"two, double, twice, twofold\".\\E$"}

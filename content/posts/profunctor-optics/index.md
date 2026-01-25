@@ -31,10 +31,14 @@ For example, consider a function `to_string` taking an $Int$ and returning a $St
 
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
 
+<div style="flex: 1">
+
 ```rust
 let x: Int = 42;
 let s: String = to_string(x);
 ```
+
+</div>
 
 $$
 Int \xrightarrow{\quad\text{to\\_string}\quad} String
@@ -125,6 +129,11 @@ Different optics correspond to different shapes of data:
 
 A **lens** focuses on *exactly one* component that is **always present** (a product-like "field inside a struct").
 Operationally, it’s just a get/read function $view : S \to A$, update $set : S \to B \to T$, and modify $over : (A \to B) \to S \to T$ can be derived for convenience as seen below. The function $over\ f\ s$ means "apply $f$ to the focused part of $s$ and rebuild it".
+The three Lens laws are summarized in the table below:
+
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+
+<div style="flex: 1">
 
 ```rust
 extern fn view(s: S) -> A;
@@ -136,30 +145,27 @@ fn over(f: (A -> B), s: S) -> T {
 }
 ```
 
-For example, if $S$ is a `User` record and $A$ is the `email` field, then a lens for `email` lets you read the email and also update it without caring about the rest of the fields.
-
-Lenses are usually expected to satisfy three laws (these are what make lenses feel *predictable*):
-
-1. **Get-Put**: setting back what you just viewed changes nothing.
-	$$ set\ s\ (view\ s) = s $$
-2. **Put-Get**: if you set a value and then view, you get the value you set.
-	$$ view\ (set\ s\ b) = b $$
-3. **Put-Put**: setting twice is the same as only keeping the last set.
-	$$ set\ (set\ s\ b_1)\ b_2 = set\ s\ b_2 $$
-
-These laws are not about category theory for its own sake; they are simply the reason you can trust a lens-based update pipeline to behave like “normal field update”.
-
 ### Prisms
+</div>
+<div>
 
 A **prism** is the optic you want when the focus is *optional* because the structure is a *choice*.
 Think “enum variant”: a value is *one* of several constructors.
+| Law     | Equation                        |
+| ------- | ------------------------------- |
+| Get-Put | $set\ s\ (view\ s)=s$           |
+| Put-Get | $view\ (set\ s\ b)=b$           |
+| Put-Put | $set\ (set\ s\ b)\ c=set\ s\ c$ |
 
 Operationally, prisms are described by:
+</div>
 
 - a **matcher** (sometimes called `preview`): $match : S \to Option\ A$
 - a **builder** (often called `review`): $build : B \to T$
+</div>
 
 Intuitively:
+For example, if $S$ is a `User` record and $A$ is the `email` field, then a lens for `email` lets you read the email and also update it without caring about the rest of the fields.
 
 - `match` tries to zoom in on the desired variant and extract its payload.
 - `build` injects a payload back into the sum type.

@@ -116,15 +116,15 @@ Concretely, an optic describes a relationship between a **whole** structure $S$ 
 
 You will often see this written as $Optic\ S\ T\ A\ B$, which you can read as:
 
-> “An optic lets me find an $A$ inside an $S$, and if I can turn that $A$ into a $B$, then I can turn the whole $S$ into a $T$.”
+> "An optic lets me find an $A$ inside an $S$, and if I can turn that $A$ into a $B$, then I can turn the whole $S$ into a $T$."
 
 Different optics correspond to different shapes of data:
 **Lenses** focus on *exactly one* part of a *product-like* structure (structs/tuples), **prisms** focus on *at most one* part of a *sum-like* structure (enums/variants), and **traversals** focus on *zero or more* parts inside containers (lists, trees, nested structures).
 
 ### Lenses
 
-A **lens** is the optic you want when the focus is *always present*.
-Think “field access”: a struct always has its fields.
+A **lens** focuses on *exactly one* component that is **always present** (a product-like "field inside a struct").
+Operationally, it’s just "read" + "update", with "modify" as a derived convenience:
 
 At the level of operations, a lens gives you two things:
 
@@ -181,12 +181,12 @@ This second law encodes the idea that the prism targets a *specific* variant in 
 ### Traversals
 
 A **traversal** is the optic you want when there may be **many** focuses.
-Think “all elements in a list”, “all leaves in a tree”, or “all `Some` values inside nested options”.
+Think "all elements in a list", "all leaves in a tree", or "all `Some` values inside nested options".
 
-Traversals generalize the idea of “map, but through a structure you don’t want to manually recurse through”.
+Traversals generalize the idea of "map, but through a structure you don’t want to manually recurse through".
 Instead of focusing on exactly one part (lens) or maybe one part (prism), a traversal focuses on **zero or more** parts.
 
-The core operation is “apply an effectful transformation to every focus and rebuild the whole”.
+The core operation is "apply an effectful transformation to every focus and rebuild the whole".
 In functional programming this is often expressed using an *applicative* functor; conceptually:
 
 $$
@@ -196,7 +196,7 @@ $$
 If you choose $F$ to be the identity functor, this reduces to a pure mapping over the focuses.
 If you choose $F$ to collect logs, short-circuit, or accumulate errors, the same traversal can do all of those things while still rebuilding the final structure.
 
-Traversals come with laws too; the most important ones are “do nothing does nothing” and “composition behaves like composition”. In practice, the laws are what justify treating traversals as a principled abstraction rather than a fancy loop.
+Traversals come with laws too; the most important ones are "do nothing does nothing" and "composition behaves like composition". In practice, the laws are what justify treating traversals as a principled abstraction rather than a fancy loop.
 
 ## Profunctor Optics
 
@@ -204,9 +204,9 @@ So far, we have described lenses, prisms, and traversals in terms of the operati
 That is useful, but it has a downside: each optic *kind* tends to have its own representation and its own composition story.
 
 **Profunctor optics** solve this by giving a *single* representation for many optic kinds.
-Instead of saying “a lens is a getter + setter”, we say:
+Instead of saying "a lens is a getter + setter", we say:
 
-> “An optic is something that transforms one profunctor into another.”
+> "An optic is something that transforms one profunctor into another."
 
 The standard profunctor optic encoding looks like this (often shown in Haskell-like notation):
 
@@ -218,7 +218,7 @@ Read it as:
 pick a profunctor $p$ (that supports some capability $C$), assume you can transform $A$ to $B$ inside $p$ (that is $p\ A\ B$), and then the optic tells you how to get a transformation from $S$ to $T$ inside the same $p$.
 
 This is where the earlier `dimap` becomes relevant: the optic is essentially a structured way of pre- and post-processing a transformation.
-It “routes” the transformation through the larger structure.
+It "routes" the transformation through the larger structure.
 
 Different optic kinds correspond to different additional capabilities on $p$:
 A **lens** corresponds to profunctors that can move through *products* (pairs/structs), which is usually called `Strong`. A **prism** corresponds to profunctors that can move through *sums* (either/enums), which is usually called `Choice`. A **traversal** corresponds to profunctors that can move through *many* elements in a structure, which is often packaged as `Wander`.
@@ -247,7 +247,7 @@ From that one encoding you get:
 
 ## Conclusion
 
-Without optics, a lot of code ends up reimplementing the same shape of “dig in, modify, rebuild” for many different structures.
+Without optics, a lot of code ends up reimplementing the same shape of "dig in, modify, rebuild" for many different structures.
 Optics let you name these focuses once and reuse them everywhere.
 In a follow-up post, we’ll translate this idea into a concrete implementation and see what an idiomatic design looks like.
 **Stay tuned!**

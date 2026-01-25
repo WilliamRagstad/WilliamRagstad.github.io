@@ -10,13 +10,13 @@ draft = false
 +++
 {{< katex >}}
 
-
 ## Introduction
 
 For some time now, I've had an interest in learning more about category theory and its applications in functional programming.
 Recently, I came across the concept of **profunctor optics**, which I found out to be super powerful abstractions for **manipulating data structures in a composable way**.
 I'll admit that understanding profunctor optics was quite the challenge for me, especially when trying to grasp the underlying category theory concepts behind them and decode the dense academic notation used to explain them.
-So that's why I decided to write this post, to share my journey of understanding profunctor optics, why they are useful and how to implement them in Rust.
+So that's why I decided to write this post, to share my journey of understanding profunctor optics and why they are useful.
+<!-- A separate follow-up post will cover concrete implementations. -->
 
 In order to understand the following concepts, we first need to cover some basic category theory notation, terminology, and fundamental ideas.
 
@@ -27,18 +27,17 @@ Briefly put, the **morphisms** $f$ and $g$ are structure-preserving mappings bet
 {{< figure src="./diagrams/2.svg" alt="Morphisms" class="math-diagram" >}}
 
 A morphism can be seen as a **function** in a program that **map values of one type to another**.
-For example, consider the function `to_string` method taking an $i32$ and returning it as a $String$.
+For example, consider a function `to_string` taking an $Int$ and returning a $String$.
 
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
 
 ```rust
-let x: i32 = 42;
-let s: String = x.to_string();
+let x: Int = 42;
 let s: String = to_string(x);
 ```
 
 $$
-i32 \xrightarrow{\quad\text{to\\\_string}\quad} String
+Int \xrightarrow{\quad\text{to\\_string}\quad} String
 $$
 
 </div>
@@ -54,7 +53,7 @@ This means that for any two morphisms $f: A \rarr B$ and $g: B \rarr C$, the fun
 There are also two properties of functors regarding how they map objects and morphisms between the source and target categories:
 
 - **Object Mapping**: For every object $A$ there is a corresponding object $F(A)$.
-- **Morphism Mapping**: For every morphism $f: A \rarr B$ there is a corresponding morphism $F_f = F(f) = \text{fmap}_F(f)$, or the `map` method in Rust.
+- **Morphism Mapping**: For every morphism $f: A \rarr B$ there is a corresponding morphism $F_f = F(f) = \text{fmap}_F(f)$, often called `map`.
 
 $$
 \begin{align*}
@@ -69,20 +68,20 @@ These can be visualized by the following diagram:
 {{< figure src="./diagrams/3.svg" alt="Abstract Functors" class="math-diagram" >}}
 
 Notice how every object and morphism is mapped to a corresponding object and morphism in the target category, while preserving the composition of morphisms.
-Going back to our Rust example, the `Option` type can be seen as a functor that **maps** a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function $\text{fmap}(f)$, or `map` in Rust, defining functor morphisms:
+As a concrete example, an *optional* type `Maybe`/`Option` can be seen as a functor that **maps** a type $A$ to $Option(A)$, and a function $f: A \rarr B$ to a function $\text{fmap}(f)$ (or `map`), defining functor morphisms:
 
 $$
 \text{fmap}_{Option}(f) \ : \ Option(A) \rarr Option(B)
 $$
 
 ```rust
-let x: Option<i32> = Some(42);
-let s: Option<String> = x.map(i32::to_string);
+let x: Option<Int> = Some(42);
+let s: Option<String> = x.map(to_string);
 ```
 
-As seen in the code above, the `.map(f)` method applies the function `i32::to_string` to the value inside the `Option` without changing the structure of the `Option` itself.
-A `map` method exists for all functor types such as `Option`, `Result`, `Vec`, etc.
-The `Option` operations we did above can be visualized as a functor in the following commutative diagram which represents how a functor $Option$ preserves the structure of morphism/function $\text{to\\\_string}$:
+As seen in the code above, `.map(f)` applies the function `to_string` to the value inside `Option` without changing the container structure.
+A `map`/`fmap` method must exist for all functor types such as `Maybe`/`Option`, `Result`/`Either`, `List`/`Vec`/`Array`, etc.
+The mapping we did above can be visualized as a functor in the following commutative diagram which represents how a functor $Option$ preserves the structure of the morphism/function $\text{to\\\_string}$:
 
 {{< figure src="./diagrams/4.svg" alt="Option Functor" class="math-diagram" >}}
 

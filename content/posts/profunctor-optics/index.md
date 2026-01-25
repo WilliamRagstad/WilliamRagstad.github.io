@@ -124,20 +124,17 @@ Different optics correspond to different shapes of data:
 ### Lenses
 
 A **lens** focuses on *exactly one* component that is **always present** (a product-like "field inside a struct").
-Operationally, it’s just "read" + "update", with "modify" as a derived convenience:
+Operationally, it’s just a get/read function $view : S \to A$, update $set : S \to B \to T$, and modify $over : (A \to B) \to S \to T$ can be derived for convenience as seen below. The function $over\ f\ s$ means "apply $f$ to the focused part of $s$ and rebuild it".
 
-At the level of operations, a lens gives you two things:
-
-- a **getter**: $view : S \to A$
-- a **setter**: $set : S \to B \to T$
-
-It’s also common to talk about modifying the focus:
-
-$$
-over : (A \to B) \to (S \to T)
-$$
-
-where $over\ f$ means “apply $f$ to the focused part and rebuild the whole”.
+```rust
+extern fn view(s: S) -> A;
+extern fn set(s: S, b: B) -> T;
+fn over(f: (A -> B), s: S) -> T {
+    let a = view(s);
+    let b = f(a);
+    return set(s, b);
+}
+```
 
 For example, if $S$ is a `User` record and $A$ is the `email` field, then a lens for `email` lets you read the email and also update it without caring about the rest of the fields.
 

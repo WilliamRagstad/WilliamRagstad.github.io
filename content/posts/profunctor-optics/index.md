@@ -128,7 +128,7 @@ Different optics correspond to different shapes of data:
 ### Lenses
 
 A **lens** focuses on *exactly one* component that is **always present** (a product-like "field inside a struct").
-Operationally, it’s just a get/read function $view : S \to A$, update $set : S \to B \to T$, and modify $over : (A \to B) \to S \to T$ can be derived for convenience as seen below. The function $over\ f\ s$ means "apply $f$ to the focused part of $s$ and rebuild it".
+Operationally, it's just a get/read function $view : S \to A$, update $set : S \to B \to T$, and modify $over : (A \to B) \to S \to T$ can be derived for convenience as seen below. The function $over\ f\ s$ means "apply $f$ to the focused part of $s$ and rebuild it".
 The three Lens laws are summarized in the table below:
 
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
@@ -136,8 +136,8 @@ The three Lens laws are summarized in the table below:
 <div style="flex: 1">
 
 ```rust
-extern fn view(s: S) -> A;
-extern fn set(s: S, b: B) -> T;
+fn view(s: S) -> A;
+fn set(s: S, b: B) -> T;
 fn over(f: (A -> B), s: S) -> T {
     let a = view(s);
     let b = f(a);
@@ -163,15 +163,15 @@ For example, if $S$ is a `User` record and $A$ is the `email` field, then a lens
 ### Prisms
 
 A **prism** focuses on *at most one* payload inside a **sum/choice** (an enum variant).
-Operationally, it’s just a matcher $preview : S \to Option\ A$ and builder $review : B \to T$. The two prism laws are summarized in the table below:
+Operationally, it's just a matcher $preview : S \to Option\ A$ and builder $review : B \to T$. The two prism laws are summarized in the table below:
 
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
 
 <div style="flex: 1">
 
 ```rust
-extern fn preview(s: S) -> Option<A>;
-extern fn review(b: B) -> T;
+fn preview(s: S) -> Option<A>;
+fn review(b: B) -> T;
 ```
 
 </div>
@@ -268,7 +268,7 @@ From that one encoding you get:
 
 Without optics, a lot of code ends up reimplementing the same shape of "dig in, modify, rebuild" for many different structures.
 Optics let you name these focuses once and reuse them everywhere.
-In a follow-up post, we’ll translate this idea into a concrete implementation and see what an idiomatic design looks like.
+In a follow-up post, we'll translate this idea into a concrete implementation and see what an idiomatic design looks like.
 **Stay tuned!**
 
 ---

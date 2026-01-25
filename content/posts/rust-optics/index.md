@@ -108,27 +108,17 @@ $$
 
 ## What Does Optics Mean?
 
-In everyday programming, we constantly do some variation of:
-
-- **Read** a value from inside a larger structure.
-- **Update** that value while keeping the rest of the structure intact.
-- **Compose** such transformations to build bigger ones.
+In everyday programming, we constantly do some variation of reading a value from inside a larger structure, updating that value while keeping the rest of the structure intact, and composing such transformations to build bigger ones.
 
 An **optic** is a small, reusable abstraction that packages this idea of *focusing* on some part(s) of a structure.
-Concretely, an optic describes a relationship between:
-
-- a **whole** structure $S$ (and possibly an updated structure $T$), and
-- a **focus** inside it $A$ (and possibly an updated focus $B$).
+Concretely, an optic describes a relationship between a **whole** structure $S$ (and possibly an updated structure $T$) and a **focus** inside it $A$ (and possibly an updated focus $B$).
 
 You will often see this written as $Optic\ S\ T\ A\ B$, which you can read as:
 
 > “An optic lets me find an $A$ inside an $S$, and if I can turn that $A$ into a $B$, then I can turn the whole $S$ into a $T$.”
 
 Different optics correspond to different shapes of data:
-
-- **Lenses** focus on *exactly one* part of a *product-like* structure (structs/tuples).
-- **Prisms** focus on *at most one* part of a *sum-like* structure (enums/variants).
-- **Traversals** focus on *zero or more* parts inside containers (lists, trees, nested structures).
+**Lenses** focus on *exactly one* part of a *product-like* structure (structs/tuples), **prisms** focus on *at most one* part of a *sum-like* structure (enums/variants), and **traversals** focus on *zero or more* parts inside containers (lists, trees, nested structures).
 
 ### Lenses
 
@@ -224,25 +214,16 @@ Optic\ S\ T\ A\ B \;\cong\; \forall p.\; C\ p \Rightarrow p\ A\ B \to p\ S\ T
 $$
 
 Read it as:
-
-- pick a profunctor $p$ (that supports some capability $C$),
-- assume you can transform $A$ to $B$ inside $p$ (that is $p\ A\ B$),
-- then the optic tells you how to get a transformation from $S$ to $T$ inside the same $p$.
+pick a profunctor $p$ (that supports some capability $C$), assume you can transform $A$ to $B$ inside $p$ (that is $p\ A\ B$), and then the optic tells you how to get a transformation from $S$ to $T$ inside the same $p$.
 
 This is where the earlier `dimap` becomes relevant: the optic is essentially a structured way of pre- and post-processing a transformation.
 It “routes” the transformation through the larger structure.
 
 Different optic kinds correspond to different additional capabilities on $p$:
-
-- A **lens** corresponds to profunctors that can move through *products* (pairs/structs). This is usually called `Strong`.
-- A **prism** corresponds to profunctors that can move through *sums* (either/enums). This is usually called `Choice`.
-- A **traversal** corresponds to profunctors that can move through *many* elements in a structure. This is often packaged as `Wander`.
+A **lens** corresponds to profunctors that can move through *products* (pairs/structs), which is usually called `Strong`. A **prism** corresponds to profunctors that can move through *sums* (either/enums), which is usually called `Choice`. A **traversal** corresponds to profunctors that can move through *many* elements in a structure, which is often packaged as `Wander`.
 
 You do not need to memorize those names to get the intuition:
-
-- `Strong` means “I can apply a transformation to one part of a pair and keep the other part untouched.”
-- `Choice` means “I can apply a transformation to one branch of an either, and leave the other branch alone.”
-- `Wander` means “I can apply a transformation to every focus inside some traversable shape and rebuild it.”
+`Strong` means “I can apply a transformation to one part of a pair and keep the other part untouched.” `Choice` means “I can apply a transformation to one branch of an either, and leave the other branch alone.” `Wander` means “I can apply a transformation to every focus inside some traversable shape and rebuild it.”
 
 Once you have this encoding, an optic becomes a *single* function that works for any profunctor with the right structure.
 That is what gives profunctor optics their power: the optic is independent of how you later interpret it.

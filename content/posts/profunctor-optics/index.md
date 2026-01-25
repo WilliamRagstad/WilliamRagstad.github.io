@@ -165,8 +165,11 @@ For example, if $S$ is a `User` record and $A$ is the `email` field, then a lens
 A **prism** focuses on *at most one* payload inside a **sum/choice** (an enum variant).
 Operationally, it’s just a matcher $preview : S \to Option\ A$ and builder $review : B \to T$. The two prism laws are summarized in the table below:
 
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
 
+<div style="flex: 1">
 
+```rust
 extern fn preview(s: S) -> Option<A>;
 extern fn review(b: B) -> T;
 ```
@@ -181,8 +184,9 @@ extern fn review(b: B) -> T;
 
 </div>
 
+</div>
 
-For example, in sum types like `Result<A, E>` or `Either<E, A>`, a prism for the `Ok` (or `Right`) case can extract the payload when present and can build the corresponding variant from a payload.
+For example, in a sum type like `Result<A, E>`, a prism for the `Ok` case can extract the `A` if it is present, and can also build a new `Ok` from a value.
 
 ### Traversals
 

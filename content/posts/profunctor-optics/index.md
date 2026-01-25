@@ -190,23 +190,32 @@ For example, in a sum type like `Result<A, E>`, a prism for the `Ok` case can ex
 
 ### Traversals
 
-A **traversal** is the optic you want when there may be **many** focuses.
-Think "all elements in a list", "all leaves in a tree", or "all `Some` values inside nested options".
+A **traversal** focuses on **zero or more** parts ("all elements in a list", "all leaves in a tree", etc.).
+Traversals generalize the idea of a functor $\text{fmap}_F$, but through a structure you don't want to manually recurse through.
+Operationally, $traverse : (A \to F\ B) \to S \to F\ T$ means given a function $f : A \to F\ B$, it transforms a whole $S$ into $F\ T$ by **visiting every focus**, applying an *effectful* function, and rebuilding the structure inside the applicative functor $F$.
 
-Traversals generalize the idea of "map, but through a structure you don’t want to manually recurse through".
-Instead of focusing on exactly one part (lens) or maybe one part (prism), a traversal focuses on **zero or more** parts.
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
 
-The core operation is "apply an effectful transformation to every focus and rebuild the whole".
-In functional programming this is often expressed using an *applicative* functor; conceptually:
+<div style="flex: 1">
 
-$$
-traverse : (A \to F\ B) \to (S \to F\ T)
-$$
+```rust
+fn traverse(f: (A -> F<B>), s: S) -> F<T>;
+```
 
-If you choose $F$ to be the identity functor, this reduces to a pure mapping over the focuses.
-If you choose $F$ to collect logs, short-circuit, or accumulate errors, the same traversal can do all of those things while still rebuilding the final structure.
+</div>
+<div>
 
-Traversals come with laws too; the most important ones are "do nothing does nothing" and "composition behaves like composition". In practice, the laws are what justify treating traversals as a principled abstraction rather than a fancy loop.
+| Law         | Equation                                                                                                     |
+| ----------- | ------------------------------------------------------------------------------------------------------------ |
+| Identity    | $traverse\ (Id\ \circ\ f)\ s\newline = Id\ (over\ f\ s)$                                                     |
+| Composition | $traverse\ (fmap_F\ g \circ f)\ s\newline = fmap_F\newline\quad (traverse\ g)\newline\quad (traverse\ f\ s)$ |
+
+</div>
+
+</div>
+
+No matter if you choose $F$ to (1) *collect logs*, (2) *short-circuit*, or (3) *accumulate errors*, the same traversal structure does that uniformly while still rebuilding the final structure $T$.
+In practice, the laws are what justify treating traversals as a principled abstraction rather than a fancy loop.
 
 ## Profunctor Optics
 

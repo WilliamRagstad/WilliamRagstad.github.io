@@ -6,7 +6,7 @@ series_order = 4
 tags = ["rust", "optics", "functional programming"]
 categories = ["computer science", "programming languages", "category theory"]
 showHero = true
-draft = true
+draft = false
 +++
 {{< katex >}}
 

@@ -234,7 +234,7 @@ Different optic kinds correspond to different additional capabilities on $p$:
 A **lens** corresponds to profunctors that can move through *products* (pairs/structs), which is usually called `Strong`. A **prism** corresponds to profunctors that can move through *sums* (either/enums), which is usually called `Choice`. A **traversal** corresponds to profunctors that can move through *many* elements in a structure, which is often packaged as `Wander`.
 
 You do not need to memorize those names to get the intuition:
-`Strong` means “I can apply a transformation to one part of a pair and keep the other part untouched.” `Choice` means “I can apply a transformation to one branch of an either, and leave the other branch alone.” `Wander` means “I can apply a transformation to every focus inside some traversable shape and rebuild it.”
+`Strong` means "I can apply a transformation to one part of a pair and keep the other part untouched." `Choice` means "I can apply a transformation to one branch of an either, and leave the other branch alone." `Wander` means "I can apply a transformation to every focus inside some traversable shape and rebuild it."
 
 Once you have this encoding, an optic becomes a *single* function that works for any profunctor with the right structure.
 That is what gives profunctor optics their power: the optic is independent of how you later interpret it.

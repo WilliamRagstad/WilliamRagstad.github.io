@@ -34,6 +34,7 @@ For example, consider the function `to_string` method taking an $i32$ and return
 ```rust
 let x: i32 = 42;
 let s: String = x.to_string();
+let s: String = to_string(x);
 ```
 
 $$

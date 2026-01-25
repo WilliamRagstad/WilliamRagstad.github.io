@@ -145,41 +145,44 @@ fn over(f: (A -> B), s: S) -> T {
 }
 ```
 
-### Prisms
 </div>
 <div>
 
-A **prism** is the optic you want when the focus is *optional* because the structure is a *choice*.
-Think “enum variant”: a value is *one* of several constructors.
 | Law     | Equation                        |
 | ------- | ------------------------------- |
 | Get-Put | $set\ s\ (view\ s)=s$           |
 | Put-Get | $view\ (set\ s\ b)=b$           |
 | Put-Put | $set\ (set\ s\ b)\ c=set\ s\ c$ |
 
-Operationally, prisms are described by:
 </div>
 
-- a **matcher** (sometimes called `preview`): $match : S \to Option\ A$
-- a **builder** (often called `review`): $build : B \to T$
 </div>
 
-Intuitively:
 For example, if $S$ is a `User` record and $A$ is the `email` field, then a lens for `email` lets you read the email and also update it without caring about the rest of the fields.
 
-- `match` tries to zoom in on the desired variant and extract its payload.
-- `build` injects a payload back into the sum type.
+### Prisms
 
-For example, in an enum `Result<A, E>`, a prism for the `Ok` case can extract the `A` if it is present, and can also build a new `Ok` from a value.
+A **prism** focuses on *at most one* payload inside a **sum/choice** (an enum variant).
+Operationally, it’s just a matcher $preview : S \to Option\ A$ and builder $review : B \to T$. The two prism laws are summarized in the table below:
 
-Prisms also have laws. One clean way to state them is:
 
-1. **Build-Match**: if you build and then match, you succeed and get back what you built.
-	$$ match\ (build\ b) = Some\ b $$
-2. **Match-Build**: if matching succeeds, rebuilding the extracted value gives you back the same structure.
-	$$ match\ s = Some\ a \implies build\ a = s $$
 
-This second law encodes the idea that the prism targets a *specific* variant in a lossless way: if you successfully recognized the variant, rebuilding it should reproduce the original value.
+extern fn preview(s: S) -> Option<A>;
+extern fn review(b: B) -> T;
+```
+
+</div>
+<div>
+
+| Law         | Equation                                              |
+| ----------- | ----------------------------------------------------- |
+| Build-Match | $preview\ (review\ b)\newline =Some\ b$               |
+| Match-Build | $preview\ s=Some\ a\newline \Rightarrow\ review\ a=s$ |
+
+</div>
+
+
+For example, in sum types like `Result<A, E>` or `Either<E, A>`, a prism for the `Ok` (or `Right`) case can extract the payload when present and can build the corresponding variant from a payload.
 
 ### Traversals
 

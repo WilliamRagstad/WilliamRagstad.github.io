@@ -232,36 +232,26 @@ That is what gives profunctor optics their power: the optic is independent of ho
 
 ### Why Use Them?
 
-Profunctor optics can look abstract at first, so it’s worth being explicit about the practical payoff.
+Profunctor optics can look abstract, but the payoff is significant!
 
-1. **One representation, many optic kinds**
+| Optic kind | Encoding              | Capability on $p$ | Intuition                     |
+| ---------- | --------------------- | :---------------: | ----------------------------- |
+| Lens       | $p\ A\ B \to p\ S\ T$ |     `Strong`      | act on one part of a product  |
+| Prism      | $p\ A\ B \to p\ S\ T$ |     `Choice`      | act on one branch of a sum    |
+| Traversal  | $p\ A\ B \to p\ S\ T$ |     `Wander`      | act on all focuses in a shape |
 
-	Lenses, prisms, and traversals can all be represented in the same “$p\ A\ B \to p\ S\ T$” shape, only differing by which profunctor capabilities they require.
-	This gives a uniform way to talk about optics.
+From that one encoding you get:
 
-2. **Composition is straightforward and type-directed**
-
-	If an optic is a function transforming profunctors, then composing optics is just function composition.
-	The types ensure you only compose compatible optics.
-
-3. **Many interpretations (getters, setters, folds) from the same optic**
-
-	The same optic can be “run” with different profunctors to get different behavior:
-
-	- pick a profunctor that behaves like a pure function to get an update,
-	- pick a profunctor that only accumulates information to get a fold,
-	- pick a profunctor that performs effects to get a traversal with effects.
-
-	The key point is that the optic itself does not change.
-
-4. **Less ad-hoc plumbing in large codebases**
-
-	Without optics, a lot of code ends up re-implementing the same shape of “dig in, modify, rebuild” for many different structures.
-	Optics let you name these focuses once and reuse them everywhere.
-
-In the next section, we’ll translate this idea into Rust and see what an idiomatic design looks like.
+1. **Uniform representation**: Lenses, prisms, and traversals can all be represented in one shape $p\ A\ B \to p\ S\ T$, only different profunctor *capabilities* are required.
+2. **Type-directed composition**: Optics become function transforming profunctors, then composing optics is just ordinary function composition. Their enclosed types ensure only compatible optics are composable.
+3. **Multiple interpretations**: **Different $p$ give different behavior** (*get/set update* vs *query/fold* vs *effectful traversal*) **without rewriting the same optic**.
 
 ## Conclusion
+
+Without optics, a lot of code ends up reimplementing the same shape of “dig in, modify, rebuild” for many different structures.
+Optics let you name these focuses once and reuse them everywhere.
+In a follow-up post, we’ll translate this idea into a concrete implementation and see what an idiomatic design looks like.
+**Stay tuned!**
 
 ---
 {{< support >}}

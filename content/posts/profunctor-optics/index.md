@@ -12,21 +12,21 @@ draft = false
 
 ## Introduction
 
-For some time now, I've had an interest in learning more about category theory and its applications in functional programming.
-Recently, I came across the concept of **profunctor optics**, which I found out to be super powerful abstractions for **manipulating data structures in a composable way**.
+For some time now, I’ve been interested in learning more about category theory and its applications in functional programming.
+Recently, I came across the concept of **profunctor optics**, which I found to be super powerful abstractions for **manipulating data structures in a composable way**.
 I'll admit that understanding profunctor optics was quite the challenge for me, especially when trying to grasp the underlying category theory concepts behind them and decode the dense academic notation used to explain them.
 So that's why I decided to write this post, to share my journey of understanding profunctor optics and why they are useful.
 <!-- A separate follow-up post will cover concrete implementations. -->
 
-In order to understand the following concepts, we first need to cover some basic category theory notation, terminology, and fundamental ideas.
+To understand the following concepts, we first need to cover some basic category-theoretic notation, terminology, and fundamental ideas.
 
 ### Morphisms
 
-Briefly put, the **morphisms** $f$ and $g$ are structure-preserving mappings between two objects in the categories $A$ to $B$ and $B$ to $C$ respectively. Together, they can be composed to form a new morphism $g \circ f$ that maps directly from $A$ to $C$ as shown in the diagram below:
+Briefly put, the **morphisms** $f$ and $g$ are structure-preserving mappings between two objects in the categories $A$ to $B$ and $B$ to $C$, respectively. Together, they can be composed to form a new morphism $g \circ f$ that map directly from $A$ to $C$ as shown in the diagram below:
 
 {{< figure src="./diagrams/2.svg" alt="Morphisms" class="math-diagram" >}}
 
-A morphism can be seen as a **function** in a program that **map values of one type to another**.
+A morphism is a **function** in a program that **map values of one type to another**.
 For example, consider a function `to_string` taking an $Int$ and returning a $String$.
 
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
@@ -91,14 +91,14 @@ The mapping we did above can be visualized as a functor in the following commuta
 
 ### Profunctors
 
-You might have seen some attempts to summarize the whole idea of profunctors in a single sentence similar to:
+You might have seen some attempts to summarize the whole idea of profunctors in a single sentence, similar to:
 
-> "A **profunctor** *just* a bifunctor that is contravariant in its first argument and covariant in its second."
+> "A **profunctor** is *just* a bifunctor that is contravariant in its first argument and covariant in its second."
 
-Which frankly **doesn't help much** if you don't already know what a *bifunctor* is, or what *covariance* and *contravariance* mean.
-So, let me instead examine what it can do for us instead, by looking at its mapping properties more closely.
+Which, frankly, **doesn't help much** if you don't already know what a *bifunctor* is or what *covariance* and *contravariance* mean.
+So, let me instead examine what it can do for us by looking more closely at its mapping properties.
 For functors, we saw how they map a single morphism $f: A \rarr B$ to another $F(f): F(A) \rarr F(B)$, otherwise known as $\text{fmap}_F(f)$. \
-A **Profunctor** $P$ on the other hand is slightly more complex as it deals with **two morphisms** simultaneously, usually performing mappings using both $f$ and $g$ at once via $\text{dimap}_P(f, g)$. The Greek prefix **di-** is a shortened form of dis meaning "two, double, twice, twofold".
+A **Profunctor** $P$ on the other hand is slightly more complex as it deals with **two morphisms** simultaneously, usually performing mappings using both $f$ and $g$ at once via $\text{dimap}_P(f, g)$. The Greek prefix **di-** is a shortened form of dis, meaning "two, double, twice, twofold".
 
 $$
 \begin{align*}
@@ -113,7 +113,7 @@ $$
 
 ## What Does Optics Mean?
 
-In everyday programming, we constantly do some variation of reading a value from inside a larger structure, updating that value while keeping the rest of the structure intact, and composing such transformations to build bigger ones.
+In everyday programming, we constantly perform a variation of reading a value from within a larger structure, updating that value while keeping the rest of the structure intact, and composing such transformations to build bigger ones.
 
 An **optic** is a small, reusable abstraction that packages this idea of *focusing* on some part(s) of a structure.
 Concretely, an optic describes a relationship between a **whole** structure $S$ (and possibly an updated structure $T$) and a **focus** inside it $A$ (and possibly an updated focus $B$).
@@ -158,7 +158,7 @@ fn over(f: (A -> B), s: S) -> T {
 
 </div>
 
-For example, if $S$ is a `User` record and $A$ is the `email` field, then a lens for `email` lets you read the email and also update it without caring about the rest of the fields.
+For example, if $S$ is a `User` record and $A$ is the `email` field, then a lens for `email` lets you read and update the email without caring about the rest of the fields.
 
 ### Prisms
 
@@ -220,7 +220,7 @@ In practice, the laws are what justify treating traversals as a principled abstr
 ## Profunctor Optics
 
 So far, we have described lenses, prisms, and traversals in terms of the operations they support.
-That is useful, but it has a downside: each optic *kind* tends to have its own representation and its own composition story.
+That is useful, but it has a downside: each optic type tends to have its own representation and composition story.
 
 **Profunctor optics** solve this by giving a *single* representation for many optic kinds.
 Instead of saying "a lens is a getter + setter", we say:
@@ -258,10 +258,10 @@ Profunctor optics can look abstract, but the payoff is significant!
 | Prism      | $p\ A\ B \to p\ S\ T$ |     `Choice`      | act on one branch of a sum    |
 | Traversal  | $p\ A\ B \to p\ S\ T$ |     `Wander`      | act on all focuses in a shape |
 
-From that one encoding you get:
+From that one encoding, you get:
 
 1. **Uniform representation**: Lenses, prisms, and traversals can all be represented in one shape $p\ A\ B \to p\ S\ T$, only different profunctor *capabilities* are required.
-2. **Type-directed composition**: Optics become function transforming profunctors, then composing optics is just ordinary function composition. Their enclosed types ensure only compatible optics are composable.
+2. **Type-directed composition**: Optics become function-transforming profunctors, then composing optics is just ordinary function composition. Their enclosed types ensure only compatible optics can be composed.
 3. **Multiple interpretations**: **Different $p$ give different behavior** (*get/set update* vs *query/fold* vs *effectful traversal*) **without rewriting the same optic**.
 
 ## Conclusion

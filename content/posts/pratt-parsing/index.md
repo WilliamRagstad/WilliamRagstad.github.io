@@ -19,7 +19,7 @@ This article will discuss the Pratt parsing methodology and how to use it, provi
 
 Pratt parsing is a **top-down operator precedence parsing technique**[^OperatorPrecedenceParsing] used to parse complex expressions with operators in **context-free**[^ContextFreeLanguage] **formal grammars**[^FormalGrammar], such as programming languages.
 This technique offers a different approach to parsing expressions with specific operator precedence compared to the related **recursive descent parsing** and **precedence climbing**[^OperatorPrecedenceParsing] techniques.
-It efficiently manages to parse expressions with different operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity], allowing for both prefix, infix, and postfix positions of operators in language expressions.
+It efficiently manages to parse expressions with different operator **precedence**[^OperatorPrecedence] and **associativity**[^Associativity], allowing for prefix, infix, and postfix positions of operators in language expressions.
 **Vaughan Pratt**[^Pratt] introduced the enhanced technique in his paper *"Top down operator precedence"* from 1973.[^TDOP]
 
 The main advantages of Pratt parsing include:
@@ -61,7 +61,7 @@ Let's consider the following parser implementation in Rust:
 
 ```rust
 struct Parser {
-    pub lexer: Lexer, // Omited for simplicity
+    pub lexer: Lexer, // Omitted for simplicity
     pub operators: HashMap<Symbol, Operator>,
 }
 type Symbol = String;
@@ -94,6 +94,7 @@ The `Parser` methods parse expressions and construct an **abstract syntax tree**
 enum Ast {
     Number(f64),
     Identifier(String),
+    Unary(Box<Ast>, Symbol),
     Binary(Box<Ast>, Symbol, Box<Ast>),
 }
 ```
@@ -114,13 +115,19 @@ fn parse_primary(&mut self) -> Result<Ast, ParseError> {
     match self.lexer.next_token()? {
         Token::Number(n) => Ok(Ast::Number(n)),
         Token::Identifier(id) => Ok(Ast::Identifier(id)),
+        Token::Operator(symbol) => {
+            let op = self.check_prefix_op(&symbol)
+                .ok_or(ParseError::UnexpectedToken)?;
+            let rhs = self.parse_expr(op.precedence)?;
+            Ok(Ast::Unary(Box::new(rhs), symbol))
+        }
         _ => Err(ParseError::UnexpectedToken),
     }
 }
 ```
 
 The `parse_expr` method is a **recursive method** that uses precedence climbing using a **while loop** to parse the expression with operators of increasing precedence.
-It checks the next token in the input and compares its precedence with the minimum precedence level required to parse the following expression, initially `min_prec` and then `curr_op.precedence`.
+It checks the next token in the input and compares its precedence with the minimum precedence level required to parse the following expression, initially `min_prec` and then `op.precedence`.
 
 <!--
 ```rust
@@ -151,28 +158,14 @@ fn parse_expr(&mut self, mut lhs: Ast, min_prec: Precedence)
 ```rust
 fn parse_expr(&mut self, min_prec: Precedence) -> ParseResult {
     let mut expr = self.parse_primary()?;
-    while let Ok(nt) = self.lexer.peek_token(0) {
-        if nt.token.is_terminator() { break; }
-        if let Token::Operator(op) = &nt.token {
-            if let Some(op) = self.check_postfix_op(min_prec, op) {
-                self.lexer.next_token().unwrap();
-                expr = Ast::Unary {
-                    info: expr.info().join(&nt.info),
-                    op_info: op.clone(),
-                    expr: Box::new(expr),
-                };
-                continue;
-            } else if let Some(op) = self.check_binary_op(min_prec, op) {
-                self.lexer.next_token().unwrap();
-                let rhs = self.parse_expr(op.precedence)?;
-                expr = Ast::Binary {
-                    lhs: Box::new(expr),
-                    op_info: op.clone(),
-                    rhs: Box::new(rhs),
-                    info: expr.info().join(rhs.info()),
-                };
-                continue;
-            } else { break; }
+    while let Ok(Token::Operator(symbol)) = self.lexer.peek_token() {
+        if self.check_postfix_op(min_prec, &symbol).is_some() {
+            self.lexer.next_token()?;
+            expr = Ast::Unary(Box::new(expr), symbol);
+        } else if let Some(op) = self.check_binary_op(min_prec, &symbol) {
+            self.lexer.next_token()?;
+            let rhs = self.parse_expr(op.precedence)?;
+            expr = Ast::Binary(Box::new(expr), symbol, Box::new(rhs));
         } else { break; }
     }
     Ok(expr)
@@ -180,7 +173,7 @@ fn parse_expr(&mut self, min_prec: Precedence) -> ParseResult {
 ```
 
 The `parse_expr` method uses the `check_postfix_op` and `check_binary_op` methods to determine if the next token is an operator used in an expression.
-This implementation does not take function application or postfix operators into account for simplicity.
+This implementation handles prefix, infix, and postfix operators, but omits function application for simplicity.
 It first parses the **primary** expression, the starting point of any expression.
 
 The function `check_binary_op` helps to determine the order of evaluation in `parse_expr` by checking the precedence of the **next operator** token against the current operator as the minimum precedence based on the following conditions:
@@ -218,7 +211,8 @@ fn check_binary_op(&self, token: Token, min_prec: Precedence)
 
 ```rust
 fn check_binary_op(&self, min_prec: Precedence, op: &str) -> Option<Operator> {
-    let op = self.find_operator(op, |op| op.position == Position::Infix)?;
+    let op = self.operators.get(op)
+        .filter(|op| op.position == Position::Infix)?;
     let is_greater = op.precedence > min_prec;
     let is_right_assoc = op.associativity == Associativity::Right;
     let is_equal = op.precedence == min_prec;
@@ -229,6 +223,41 @@ fn check_binary_op(&self, min_prec: Precedence, op: &str) -> Option<Operator> {
     }
 }
 ```
+
+The `check_prefix_op` method only checks the operator's position: a prefix operator starts a new operand, even inside an expression with a higher minimum precedence.
+The `check_postfix_op` method also checks precedence, since a postfix operator attaches to the expression already parsed.
+
+```rust
+fn check_prefix_op(&self, symbol: &str) -> Option<Operator> {
+    self.operators.get(symbol)
+        .filter(|op| op.position == Position::Prefix)
+        .cloned()
+}
+
+fn check_postfix_op(&self, min_prec: Precedence, symbol: &str)
+    -> Option<Operator> {
+    self.operators.get(symbol)
+        .filter(|op| op.position == Position::Postfix &&
+            op.precedence > min_prec)
+        .cloned()
+}
+```
+
+### Prefix and Postfix Precedence
+
+For a **prefix** operator, `parse_primary` parses its operand using `parse_expr(op.precedence)`.
+This allows operators with higher precedence, and right-associative infix operators at equal precedence, to become part of that operand.
+For example, with prefix `-` at precedence `30` and multiplication at `20`, `-3 * 4` is parsed as `(-3) * 4`.
+Prefix operators do not always have the highest precedence: in Python, `-2**2` means `-(2**2)`, while `2**-2` means `2**(-2)`.[^PythonPrecedence]
+
+A **postfix** operator is handled in the loop after an operand, without parsing a right-hand side.
+With factorial `!` at precedence `40`, `-3!` becomes `-(3!)`, and `3 * 4!` becomes `3 * (4!)`.
+Here, `check_postfix_op` requires precedence strictly greater than `min_prec`; equal precedence leaves the postfix operator for the enclosing call.
+Nested prefixes group from right to left (`--x` means `-(-x)`), while repeated postfixes attach from left to right (`x!!` means `(x!)!`).
+This corresponds to the **right binding power** of a prefix operator and the **left binding power** of a postfix operator in a Pratt parser.[^PrattBindingPower]
+Rust similarly places postfix `?`, calls, and indexing above unary operators in its precedence table.[^RustPrecedence]
+
+> **Note:** This simplified operator table stores one position per symbol. To support both prefix and infix `-`, store separate entries for each position, for example using `(Symbol, Position)` as the key.
 
 Now, the input is parsed using the `Parser` struct:
 
@@ -266,16 +295,14 @@ fn add_op(parser: &mut Parser, sym: &str, prec: Precedence,
 
 Let's consider the expression `3 + 4 * 5` and parse it using the Pratt parsing technique manually:
 
-1. `parse_top_expr`: Parse the primary expression `3` as `Ast::Number(3)`.
-2. `parse_top_expr`: Parse an expression with a left-hand side `Ast::Number(3)` and a minimum precedence level of `0`.
-    1. `parse_expr(3, 0)`: Look ahead and check the next token `+` as an operator with precedence `10` (larger than `0`).
-    2. `parse_expr(3, 0)`: Parse the primary expression `4` as `Ast::Number(4)`.
-    3. `parse_expr(3, 0)`: Look ahead and check the next token `*` as an operator with precedence `20` (larger than `10`).
-    4. `parse_expr(3, 0)`: Recursively call `parse_expr(4, 20)`.
-        1. `parse_expr(4, 20)`: Parse the primary expression `5` as `Ast::Number(5)`.
-        2. `parse_expr(4, 20)`: No more operators to parse. *(End of input)*
-        3. `parse_expr(4, 20)`: Build and return the multiplication binary expression `Ast::Binary(Ast::Number(4), "*", Ast::Number(5))`.
-    5. `parse_expr(3, 0)`: Build and return the addition binary expression.
+1. `parse_top_expr`: Call `parse_expr(0)`.
+2. `parse_expr(0)`: Parse the primary expression `3` as `Ast::Number(3)`.
+    1. Look ahead and check `+` at precedence `10` (larger than `0`).
+    2. Consume `+` and call `parse_expr(10)`, which parses the primary expression `4`.
+    3. Look ahead and check `*` at precedence `20` (larger than `10`).
+    4. Consume `*` and call `parse_expr(20)`, which parses `5` and returns it at the end of input.
+    5. `parse_expr(10)`: Build and return the multiplication binary expression.
+    6. `parse_expr(0)`: Build and return the addition binary expression.
 3. The final AST is:
 
 ```rust
@@ -393,23 +420,23 @@ To determine the two complexities, we use **Big O notation** to describe the upp
 
 ### Time Complexity
 
-The `parse_expr` method in the Pratt parsing algorithm has two `while` loops that each iterate over the input tokens from the lexer using the `next_token` and `peek_token` methods, no backtracking is required.
-`parse_expr` calls `check_op` and `parse_primary` for each token, and the `check_op` method performs a constant lookup in the operator table using `self.operator.get()` in \\(O(1)\\) time.
-The `parse_primary` method also performs a constant operation using `self.lexer.next_token()` in \\(O(c)\\) time, which we can consider as \\(O(1)\\) for simplicity as the number of characters is usually small, and we assume the lexer is efficient.
-Because both loops read from the same stream of tokens, they therefore have a **linear time complexity** of \\(O(n)\\).
-In the inner loop, the `parse_expr` method recursively calls itself, but this call is actually a **continuation** of the current state limited by the lexer's input stream \\(n\\), so it does not increase the time complexity, only the space complexity.
+The `parse_expr` method in the Pratt parsing algorithm has a `while` loop that iterates over the input tokens from the lexer using the `next_token` and `peek_token` methods, no backtracking is required.
+`parse_expr` and `parse_primary` use the operator-checking methods, which perform an expected constant-time lookup in the operator table using `self.operators.get()` in \\(O(1)\\) time.
+Assuming tokens are already available, each lexer operation takes \\(O(1)\\) time. Including lexical analysis, reading the input takes \\(O(c)\\) time.
+Because each token is consumed once, parsing has a **linear time complexity** of \\(O(n)\\).
+The `parse_expr` and `parse_primary` methods recursively call each other, but this call is actually a **continuation** of the current state limited by the lexer's input stream \\(n\\), so it does not increase the time complexity, only the space complexity.
 
 Therefore, the Pratt parsing algorithm has a **linear time complexity** of \\(O(n)\\) for parsing expressions.
 
 ### Space Complexity
 
 The Pratt parsing algorithm uses a **recursive call stack** to parse expressions, which can grow linearly with the depth of the expression tree limited by the number of operators in the input stream \\(p\\), so the space complexity is \\(O(p)\\).
-Apart from the call stack, additional space is used for storing the abstract syntax tree (AST), which also **scales with the depth of the expression tree** and recurive calls in \\(O(p)\\).
+Apart from the call stack, additional space is used for storing the abstract syntax tree (AST), which **scales with the number of nodes** in \\(O(n)\\).
 
-The Pratt parser completly relies on the **lexer** to provide tokens, so the space complexity of the lexer is also important.
+The Pratt parser completely relies on the **lexer** to provide tokens, so the space complexity of the lexer is also important.
 In the optimal case, the lexer should be able to produce tokens efficiently via streaming, resulting in a **constant space complexity** of \\(O(1)\\) for the lexer. However, if the lexer tokenizes the entire input into a list of tokens, the space complexity of the lexer would be \\(O(n)\\), but with a slight performance increase as a benefit.
 
-Therefore, the Pratt parsing algorithm has a **space complexity** of \\(O(p)\\), where \\(p\\) is the number of operators in the input (potential depth of the expression tree).
+Therefore, the Pratt parsing algorithm has a **space complexity** of \\(O(n)\\) including the AST, with up to \\(O(p)\\) additional call stack space.
 
 ## Comparison
 
@@ -509,3 +536,9 @@ I hope you found this post informative and helpful in understanding the Pratt pa
 [^ShiftReduceParsing]: [Shift-reduce parsing](https://en.wikipedia.org/wiki/Shift-reduce_parser) is a type of **bottom-up parsing** that uses a shift operation to add input symbols to the parsing stack and a reduce operation to replace a sequence of symbols on the stack with a non-terminal symbol. Shift-reduce parsing is used in parsers that can predict the next action based on the current input symbol and the symbols on the parsing stack.
 
 [^ParsingTable]: [Parsing table](https://en.wikipedia.org/wiki/Parsing_table) is a data structure used in parsing algorithms to determine the next action to take based on the current input symbol and the symbols on the parsing stack. Parsing tables are used in **LL parsing**, **LR parsing**, and **shift-reduce parsing** to guide the parsing process and ensure that the input is parsed correctly. -->
+
+[^PrattBindingPower]: [Simple but Powerful Pratt Parsing](https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html), by Aleksey Kladov, demonstrates separate prefix, infix, and postfix binding powers.
+
+[^PythonPrecedence]: [Python language reference: The power operator](https://docs.python.org/3/reference/expressions.html#the-power-operator) specifies how exponentiation binds relative to unary operators.
+
+[^RustPrecedence]: [Rust Reference: Expression precedence](https://doc.rust-lang.org/reference/expressions.html#expression-precedence) lists postfix forms above unary operators.
